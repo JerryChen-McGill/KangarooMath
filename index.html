@@ -55,10 +55,14 @@ button.ok { background: var(--ok-light); border-color: var(--ok); color: var(--o
 button.ok:hover { background: var(--ok); color: #fff; }
 main { padding: 24px; max-width: 1200px; margin: 0 auto; }
 .tag-cloud { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; width: 100%; }
+.tag-cloud.hidden { display: none; }
 .tag-chip { padding: 5px 12px; border-radius: 16px; background: #f3f4f6; color: #374151; border: 1px solid var(--border); font-size: 13px; cursor: pointer; transition: .15s; user-select: none; }
 .tag-chip:hover { background: #e5e7eb; }
 .tag-chip.active { background: var(--accent); color: #fff; border-color: var(--accent); }
 .tag-chip .count { margin-left: 4px; opacity: .75; font-size: 11px; }
+.active-tags { display: inline-flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+.active-tag { padding: 3px 10px; border-radius: 14px; background: var(--accent-light); color: var(--accent); font-size: 12px; font-weight: 600; }
+.active-tag.none { background: #f3f4f6; color: var(--muted); font-weight: 400; }
 .view-ans { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 20px; margin-bottom: 24px; box-shadow: var(--shadow); }
 .ans-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(90px, 1fr)); gap: 10px; margin-top: 12px; }
 .ans-cell { display: flex; justify-content: space-between; align-items: center; padding: 8px 12px; border-radius: 8px; background: #f3f4f6; font-size: 14px; }
@@ -116,11 +120,15 @@ footer { text-align: center; color: var(--muted); padding: 30px; font-size: 13px
     </select>
     <input type="number" id="singleNo" min="1" max="30" placeholder="题号" style="width:80px;display:none">
     <input type="text" id="search" placeholder="搜索题目内容/关键词/标签">
+    <button id="btnToggleTags" class="secondary">标签筛选 ▼</button>
     <button id="btnToggleAns" class="ok">显示所有答案</button>
     <button id="btnExpandSol" class="secondary">展开全部详解</button>
   </div>
+  <div class="controls-row" id="tagRow">
+    <span id="activeTags" class="active-tags"><span class="active-tag none">未选标签</span></span>
+  </div>
   <div class="controls-row">
-    <div class="tag-cloud" id="tagCloud"></div>
+    <div class="tag-cloud hidden" id="tagCloud"></div>
   </div>
 </div>
 
@@ -150,6 +158,8 @@ function renderTagCloud() {
     });
     tagCloud.appendChild(chip);
   });
+  renderActiveTags();
+  updateTagToggleButton();
 }
 
 let state = { year: 'all', view: 'list', showAnswer: false, showSolution: false, showMethods: false, showDiagram: false, search: '', tags: new Set(), singleNo: 1 };
@@ -160,6 +170,22 @@ const singleNo = document.getElementById('singleNo');
 const search = document.getElementById('search');
 const btnToggleAns = document.getElementById('btnToggleAns');
 const btnExpandSol = document.getElementById('btnExpandSol');
+const btnToggleTags = document.getElementById('btnToggleTags');
+const activeTagsEl = document.getElementById('activeTags');
+
+function renderActiveTags() {
+  if (!state.tags.size) {
+    activeTagsEl.innerHTML = '<span class="active-tag none">未选标签</span>';
+    return;
+  }
+  activeTagsEl.innerHTML = [...state.tags].map(t => '<span class="active-tag">' + escapeHtml(t) + '</span>').join('');
+}
+
+function updateTagToggleButton() {
+  const arrow = tagCloud.classList.contains('hidden') ? '▼' : '▲';
+  const count = state.tags.size ? ' (' + state.tags.size + ')' : '';
+  btnToggleTags.textContent = '标签筛选' + count + ' ' + arrow;
+}
 
 function getQuestions() {
   const ys = state.year === 'all' ? years : [state.year];
@@ -332,6 +358,11 @@ btnToggleAns.addEventListener('click', () => {
   render();
 });
 btnExpandSol.addEventListener('click', () => { state.showSolution = !state.showSolution; btnExpandSol.textContent = state.showSolution ? '收起全部详解' : '展开全部详解'; render(); });
+
+btnToggleTags.addEventListener('click', () => {
+  tagCloud.classList.toggle('hidden');
+  updateTagToggleButton();
+});
 
 renderTagCloud();
 render();
