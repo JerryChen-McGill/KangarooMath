@@ -63,6 +63,7 @@ main { padding: 24px; max-width: 1200px; margin: 0 auto; }
 .active-tags { display: inline-flex; flex-wrap: wrap; gap: 6px; align-items: center; }
 .active-tag { padding: 3px 10px; border-radius: 14px; background: var(--accent-light); color: var(--accent); font-size: 12px; font-weight: 600; }
 .active-tag.none { background: #f3f4f6; color: var(--muted); font-weight: 400; }
+.ans-hint { font-size: 13px; color: var(--muted); margin-left: auto; }
 .view-ans { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 20px; margin-bottom: 24px; box-shadow: var(--shadow); }
 .ans-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(90px, 1fr)); gap: 10px; margin-top: 12px; }
 .ans-cell { display: flex; justify-content: space-between; align-items: center; padding: 8px 12px; border-radius: 8px; background: #f3f4f6; font-size: 14px; }
@@ -126,6 +127,7 @@ footer { text-align: center; color: var(--muted); padding: 30px; font-size: 13px
   </div>
   <div class="controls-row" id="tagRow">
     <span id="activeTags" class="active-tags"><span class="active-tag none">未选标签</span></span>
+    <span id="ansHint" class="ans-hint"></span>
   </div>
   <div class="controls-row">
     <div class="tag-cloud hidden" id="tagCloud"></div>
@@ -181,6 +183,12 @@ function renderActiveTags() {
   activeTagsEl.innerHTML = [...state.tags].map(t => '<span class="active-tag">' + escapeHtml(t) + '</span>').join('');
 }
 
+function renderAnsHint() {
+  const el = document.getElementById('ansHint');
+  if (!el) return;
+  el.textContent = state.showAnswer ? '已全局显示答案。如只想核对，可切换到“全卷答案”视图。' : '';
+}
+
 function updateTagToggleButton() {
   const arrow = tagCloud.classList.contains('hidden') ? '▼' : '▲';
   const count = state.tags.size ? ' (' + state.tags.size + ')' : '';
@@ -221,7 +229,20 @@ function optionCard(q, letter, text) {
   const correct = q.answer === letter;
   const reveal = state.showAnswer;
   const cls = 'option' + (reveal && correct ? ' correct' : '');
-  return '<div class="' + cls + '" data-letter="' + letter + '"><span class="letter">' + letter + '</span><span>' + escapeHtml(text) + (reveal && correct ? ' ✅' : '') + '</span></div>';
+  return '<div class="' + cls + '" data-letter="' + letter + '"><span class="letter">' + letter + '</span><span class="opt-text">' + escapeHtml(text) + '</span>' + (reveal && correct ? '<span class="check"> ✅</span>' : '') + '</div>';
+}
+
+function setCardAnswer(card, q, show) {
+  const opt = card.querySelector('.option[data-letter="' + q.answer + '"]');
+  if (!opt) return;
+  const checkSpan = opt.querySelector('.check');
+  if (show) {
+    opt.classList.add('correct');
+    if (!checkSpan) opt.insertAdjacentHTML('beforeend', '<span class="check"> ✅</span>');
+  } else {
+    opt.classList.remove('correct');
+    if (checkSpan) checkSpan.remove();
+  }
 }
 
 function tagClickHandler(e) {
@@ -252,9 +273,6 @@ function questionCard(q) {
   if (svgFor(q.year, q.no) || q.diagram) html += '<button onclick="toggleOne(this, \'diagram\')">' + (state.showDiagram ? '隐藏图解' : '显示图解') + '</button>';
   html += '</div>';
 
-  if (state.showAnswer) {
-    html += '<div class="section solution" style="display:block"><h4>答案：' + q.answer + '</h4><p>' + escapeHtml(q.options[q.answer]) + '</p></div>';
-  }
   if (state.showSolution) {
     html += '<div class="section solution"><h4>详细解答</h4><p>' + escapeHtml(q.solution).replace(/\n/g, '<br>') + '</p></div>';
   }
@@ -279,10 +297,7 @@ function questionCard(q) {
 function renderList() {
   const qs = getQuestions();
   if (!qs.length) { app.innerHTML = '<div class="empty">没有匹配的题目</div>'; return; }
-  let html = '';
-  if (state.showAnswer) html += '<div class="view-ans"><p>已全局显示答案。如只想核对，可切换到“全卷答案”视图。</p></div>';
-  html += '<div class="q-list">' + qs.map(questionCard).join('') + '</div>';
-  app.innerHTML = html;
+  app.innerHTML = '<div class="q-list">' + qs.map(questionCard).join('') + '</div>';
   document.querySelectorAll('.q-tag').forEach(el => el.addEventListener('click', tagClickHandler));
 }
 
@@ -315,22 +330,25 @@ window.toggleOne = function(btn, kind) {
   const no = Number(card.dataset.no);
   const q = KANGAROO_DATA[year].find(x => x.no === no);
   const mapped = {...q, year};
+  if (kind === 'answer') {
+    const showing = btn.textContent.includes('隐藏');
+    setCardAnswer(card, mapped, !showing);
+    btn.textContent = showing ? '显示答案' : '隐藏答案';
+    return;
+  }
   let section = null;
   const sections = card.querySelectorAll('.section');
   sections.forEach(sec => {
     const h4 = sec.querySelector('h4');
     if (!h4) return;
     const text = h4.textContent;
-    if (kind === 'answer' && text.startsWith('答案')) section = sec;
     if (kind === 'solution' && text.includes('详细')) section = sec;
     if (kind === 'methods' && text.includes('思路')) section = sec;
     if (kind === 'diagram' && text.includes('图解')) section = sec;
   });
   if (section) { section.remove(); btn.textContent = btn.textContent.replace('隐藏','显示'); return; }
   let insertHtml = '';
-  if (kind === 'answer') {
-    insertHtml = '<div class="section solution"><h4>答案：' + mapped.answer + '</h4><p>' + escapeHtml(mapped.options[mapped.answer]) + '</p></div>';
-  } else if (kind === 'solution') {
+  if (kind === 'solution') {
     insertHtml = '<div class="section solution"><h4>详细解答</h4><p>' + escapeHtml(mapped.solution).replace(/\n/g,'<br>') + '</p></div>';
   } else if (kind === 'methods') {
     insertHtml = '<div class="section methods"><h4>其他思路</h4><ul>' + mapped.methods.map(m => '<li>' + escapeHtml(m).replace(/\n/g,'<br>') + '</li>').join('') + '</ul></div>';
@@ -355,6 +373,7 @@ btnToggleAns.addEventListener('click', () => {
   state.showAnswer = !state.showAnswer;
   btnToggleAns.textContent = state.showAnswer ? '隐藏所有答案' : '显示所有答案';
   btnToggleAns.className = state.showAnswer ? 'danger' : 'ok';
+  renderAnsHint();
   render();
 });
 btnExpandSol.addEventListener('click', () => { state.showSolution = !state.showSolution; btnExpandSol.textContent = state.showSolution ? '收起全部详解' : '展开全部详解'; render(); });
@@ -365,6 +384,7 @@ btnToggleTags.addEventListener('click', () => {
 });
 
 renderTagCloud();
+renderAnsHint();
 render();
 </script>
 </body>
