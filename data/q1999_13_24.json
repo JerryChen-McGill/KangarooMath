@@ -5,181 +5,306 @@
       "no": 13,
       "points": 4,
       "text": "A pail filled with milk to the top weighs 25 kilograms, and a pail filled half-way weighs 13 kilograms. How much does an empty pail weigh?",
-      "options": {"A":"2 kilograms","B":"1½ kilogram","C":"1 ½ kilograms","D":"1 kilogram","E":"2 ½ kilograms"},
+      "options": {
+        "A": "2 kilograms",
+        "B": "1½ kilogram",
+        "C": "1 ½ kilograms",
+        "D": "1 kilogram",
+        "E": "2 ½ kilograms"
+      },
       "answer": "D",
-      "category": "Mass / equations",
       "solution": "Let P = weight of the empty pail and M = weight of a full pail of milk.\nP + M = 25\nP + M/2 = 13\nSubtract the second equation from the first:\nM/2 = 12, so M = 24 kg.\nThen P = 25 - 24 = 1 kg.\nSo the empty pail weighs 1 kilogram.",
       "methods": [
         "Subtract the two weighings: the difference (25-13=12 kg) is the missing half-pail of milk, so the full milk is 24 kg.",
         "Set up and solve the system P+M=25, P+M/2=13."
       ],
       "diagram": "A pail shown full (25 kg) and half-full (13 kg); the difference equals half the milk.",
-      "tip": "The change in weight comes only from the milk; the pail's weight stays the same."
+      "tip": "The change in weight comes only from the milk; the pail's weight stays the same.",
+      "tags": [
+        "代数",
+        "方程",
+        "测量",
+        "单位换算"
+      ]
     },
     {
       "no": 14,
       "points": 4,
       "text": "In Grandma's pantry, there is a jar with 650 g of jam. Each day her grandson Tom eats 5 teaspoons of jam from the jar. Each teaspoon holds 6 g of jam. How much jam will be left after 20 days?",
-      "options": {"A":"50 g","B":"530 g","C":"550 g","D":"1250 g","E":"The jar will be empty."},
+      "options": {
+        "A": "50 g",
+        "B": "530 g",
+        "C": "550 g",
+        "D": "1250 g",
+        "E": "The jar will be empty."
+      },
       "answer": "A",
-      "category": "Multiplication / subtraction",
       "solution": "Daily amount eaten: 5 teaspoons x 6 g = 30 g.\nAfter 20 days: 20 x 30 g = 600 g.\nJam left: 650 - 600 = 50 g.\nSo 50 grams remain.",
       "methods": [
         "First find daily consumption, then multiply by 20 days, then subtract from 650 g.",
         "Total teaspoons = 100; each 6 g -> 600 g eaten."
       ],
       "diagram": null,
-      "tip": "Compute total eaten before subtracting; don't stop at daily amount."
+      "tip": "Compute total eaten before subtracting; don't stop at daily amount.",
+      "tags": [
+        "数与运算",
+        "乘法",
+        "应用题"
+      ]
     },
     {
       "no": 15,
       "points": 4,
       "text": "Each of the kangaroo's eleven children has eleven children, and each of them also has eleven children. How many great-grandchildren does the kangaroo have?",
-      "options": {"A":"111","B":"121","C":"11211","D":"1331","E":"12321"},
+      "options": {
+        "A": "111",
+        "B": "121",
+        "C": "11211",
+        "D": "1331",
+        "E": "12321"
+      },
       "answer": "D",
-      "category": "Powers / generations",
       "solution": "Kangaroo's children: 11.\nGrandchildren: 11 x 11 = 121 (each child has 11).\nGreat-grandchildren: 11 x 11 x 11 = 1331 (each grandchild has 11).\nSo the kangaroo has 1331 great-grandchildren.",
       "methods": [
         "Multiply 11 x 11 x 11 = 11^3.",
         "Add generation by generation: 11 children, 121 grandchildren, 1331 great-grandchildren."
       ],
       "diagram": "Family tree: 1 -> 11 -> 121 -> 1331.",
-      "tip": "'Each of them also has eleven children' applies to the grandchildren, so multiply by 11 once more."
+      "tip": "'Each of them also has eleven children' applies to the grandchildren, so multiply by 11 once more.",
+      "tags": [
+        "数与运算",
+        "指数",
+        "乘法原理",
+        "家谱树"
+      ]
     },
     {
       "no": 16,
       "points": 4,
       "text": "What is the least possible number of children in the Kowalski family if each child has at least one brother and at least one sister?",
-      "options": {"A":"1","B":"2","C":"3","D":"4","E":"5"},
+      "options": {
+        "A": "1",
+        "B": "2",
+        "C": "3",
+        "D": "4",
+        "E": "5"
+      },
       "answer": "D",
-      "category": "Logic / counting",
       "solution": "Every child must have at least one brother and one sister.\nIf there is only 1 boy, he needs at least 1 sister.\nIf there is only 1 girl, she needs at least 1 brother.\nSo we need at least 2 boys and at least 2 girls.\nMinimum children = 2 + 2 = 4.\nWith 4 children (2 boys, 2 girls), each boy has a brother and a sister, and each girl has a brother and a sister.",
       "methods": [
         "Minimum configuration: 2 boys and 2 girls; verify every child has both a brother and a sister.",
         "Show smaller numbers fail: 1 child, 2 same-sex, or 1+1 cannot satisfy 'at least one of each' for everyone."
       ],
       "diagram": null,
-      "tip": "Each boy needs a brother; each girl needs a sister — so at least 2 of each sex."
+      "tip": "Each boy needs a brother; each girl needs a sister — so at least 2 of each sex.",
+      "tags": [
+        "逻辑推理",
+        "最坏情况",
+        "分类讨论"
+      ]
     },
     {
       "no": 17,
       "points": 4,
       "text": "Peter opened a book and found that the sum of the page number on the left and the page number on the right is 21. What is the product of the two page numbers?",
-      "options": {"A":"121","B":"100","C":"420","D":"110","E":"426"},
+      "options": {
+        "A": "121",
+        "B": "100",
+        "C": "420",
+        "D": "110",
+        "E": "426"
+      },
       "answer": "D",
-      "category": "Consecutive pages / algebra",
       "solution": "Open book pages are consecutive. Let the left page be n; the right page is n+1.\nn + (n+1) = 21\n2n + 1 = 21\n2n = 20\nn = 10.\nThe pages are 10 and 11.\nProduct = 10 x 11 = 110.",
       "methods": [
         "Set left = n, right = n+1; solve n+(n+1)=21.",
         "Average is 10.5, so the consecutive pages are 10 and 11."
       ],
       "diagram": "An open book with left page 10 and right page 11.",
-      "tip": "Two facing pages always differ by 1; their sum is twice the smaller page plus 1."
+      "tip": "Two facing pages always differ by 1; their sum is twice the smaller page plus 1.",
+      "tags": [
+        "代数",
+        "方程",
+        "页码问题"
+      ]
     },
     {
       "no": 18,
       "points": 4,
       "text": "Father Virgil is taking care of 143 children. Each day, each child gets half a liter of milk with breakfast. The milk from one cow is enough for 40 children. What is the least number of cows that Father Virgil needs to have?",
-      "options": {"A":"2","B":"3","C":"4","D":"5","E":"6"},
+      "options": {
+        "A": "2",
+        "B": "3",
+        "C": "4",
+        "D": "5",
+        "E": "6"
+      },
       "answer": "C",
-      "category": "Division / ceiling",
       "solution": "Each cow provides enough milk for 40 children.\n143 children / 40 children per cow = 3.575.\n3 cows would cover only 120 children, leaving 23 uncovered.\nTherefore at least 4 cows are needed.\n(4 cows can cover 160 children, which is enough.)",
       "methods": [
         "Divide 143 by 40 and round up to the next whole number.",
         "Check multiples: 3 cows -> 120 (not enough); 4 cows -> 160 (enough)."
       ],
       "diagram": null,
-      "tip": "When a real-world quantity 'must be enough', always round up, even if the decimal is small."
+      "tip": "When a real-world quantity 'must be enough', always round up, even if the decimal is small.",
+      "tags": [
+        "数与运算",
+        "除法",
+        "进一法",
+        "应用题"
+      ]
     },
     {
       "no": 19,
       "points": 4,
       "text": "A kangaroo wants to make a rectangular bedspread 1.5 m long and 1 m wide using square scraps which measure 10 cm x 10 cm. At every point where four squares meet she wants to place a fancy button. How many buttons will she need?",
-      "options": {"A":"150","B":"104","C":"126","D":"140","E":"135"},
+      "options": {
+        "A": "150",
+        "B": "104",
+        "C": "126",
+        "D": "140",
+        "E": "135"
+      },
       "answer": "C",
-      "category": "Grid / counting intersections",
       "solution": "Convert to cm: length = 150 cm, width = 100 cm.\nNumber of 10-cm squares along the length: 150/10 = 15.\nAlong the width: 100/10 = 10.\nButtons go where four squares meet, which are the interior grid intersections.\nInterior vertical lines: 15 - 1 = 14.\nInterior horizontal lines: 10 - 1 = 9.\nTotal buttons = 14 x 9 = 126.",
       "methods": [
         "Buttons = (squares along length - 1) x (squares along width - 1).",
         "Count all grid intersections ((15+1)(10+1)=176) and subtract boundary intersections (50) to get 126."
       ],
       "diagram": "A 15 by 10 grid of small squares with dots at the interior intersections where four squares meet.",
-      "tip": "Four squares can meet only inside the bedspread, not on the outer edge."
+      "tip": "Four squares can meet only inside the bedspread, not on the outer edge.",
+      "tags": [
+        "几何",
+        "网格",
+        "计数",
+        "乘法原理"
+      ]
     },
     {
       "no": 20,
       "points": 4,
       "text": "Pinocchio's wooden nose is 3 cm long. Whenever Pinocchio lies, the length of his nose doubles. How long will his nose be after he tells 6 lies?",
-      "options": {"A":"192 cm","B":"67 cm","C":"96 cm","D":"18 cm","E":"384 cm"},
+      "options": {
+        "A": "192 cm",
+        "B": "67 cm",
+        "C": "96 cm",
+        "D": "18 cm",
+        "E": "384 cm"
+      },
       "answer": "A",
-      "category": "Powers / doubling",
       "solution": "Start: 3 cm.\nAfter each lie the length is multiplied by 2.\nAfter 6 lies: 3 x 2^6 = 3 x 64 = 192 cm.\nSo the nose will be 192 cm long.",
       "methods": [
         "Compute 3 x 2^6 = 192.",
         "Step by step: 3 -> 6 -> 12 -> 24 -> 48 -> 96 -> 192."
       ],
       "diagram": "A nose doubling in length six times: 3, 6, 12, 24, 48, 96, 192.",
-      "tip": "Repeated doubling is exponential: after n lies the length is initial x 2^n."
+      "tip": "Repeated doubling is exponential: after n lies the length is initial x 2^n.",
+      "tags": [
+        "数与运算",
+        "指数",
+        "递推"
+      ]
     },
     {
       "no": 21,
       "points": 4,
       "text": "In the yard there is an equal number of pigs, ducks, and chickens. Together, they have 144 legs. How many ducks are there in the yard?",
-      "options": {"A":"18","B":"21","C":"35","D":"42","E":"43"},
+      "options": {
+        "A": "18",
+        "B": "21",
+        "C": "35",
+        "D": "42",
+        "E": "43"
+      },
       "answer": "A",
-      "category": "Algebra / animals",
       "solution": "Let n = number of each animal.\nPigs have 4 legs, ducks have 2 legs, chickens have 2 legs.\nTotal legs = 4n + 2n + 2n = 8n.\n8n = 144\nn = 144/8 = 18.\nThere are 18 of each animal, so there are 18 ducks.",
       "methods": [
         "Group one pig, one duck, one chicken: together 4+2+2 = 8 legs. 144/8 = 18 groups.",
         "Let n = number of each and solve 4n+2n+2n=144."
       ],
       "diagram": null,
-      "tip": "Group one of each animal to turn the problem into simple division."
+      "tip": "Group one of each animal to turn the problem into simple division.",
+      "tags": [
+        "代数",
+        "方程",
+        "应用题"
+      ]
     },
     {
       "no": 22,
       "points": 4,
       "text": "One number was chosen from 51, 52, 53, 54, and 55, and the digit 0 was placed between the digits of that number. What is the difference between the new number and the number which was chosen?",
-      "options": {"A":"500","B":"50","C":"550","D":"450","E":"The difference depends on which number was chosen."},
+      "options": {
+        "A": "500",
+        "B": "50",
+        "C": "550",
+        "D": "450",
+        "E": "The difference depends on which number was chosen."
+      },
       "answer": "D",
-      "category": "Place value / algebra",
       "solution": "Take a two-digit number 10a + b (for 51-55, a=5 and b=1,2,3,4,5).\nPlacing 0 between the digits gives 100a + b.\nDifference = (100a + b) - (10a + b) = 90a.\nSince a = 5 for all choices, the difference is 90 x 5 = 450.\nCheck with 51: 501 - 51 = 450.\nSo the answer is always 450.",
       "methods": [
         "Use algebra: (100a+b)-(10a+b)=90a; for a=5 the difference is 450.",
         "Try one example (e.g. 51 -> 501, difference 450) and note all numbers have the same tens digit, so the answer is the same."
       ],
       "diagram": null,
-      "tip": "Inserting a 0 after the tens digit multiplies the tens digit by 100 instead of 10, increasing it by 90 times the tens digit."
+      "tip": "Inserting a 0 after the tens digit multiplies the tens digit by 100 instead of 10, increasing it by 90 times the tens digit.",
+      "tags": [
+        "数与运算",
+        "位值",
+        "代数"
+      ]
     },
     {
       "no": 23,
       "points": 4,
       "text": "If Grandma gave each of her grandchildren 10 pieces of candy, there would not be any candy left over for one of the grandchildren. If she gave each one of them 8 pieces of candy, she would have 6 pieces of candy left. How many grandchildren does she have?",
-      "options": {"A":"4","B":"6","C":"8","D":"10","E":"12"},
+      "options": {
+        "A": "4",
+        "B": "6",
+        "C": "8",
+        "D": "10",
+        "E": "12"
+      },
       "answer": "C",
-      "category": "Diophantine equations",
       "solution": "Let g = number of grandchildren, C = total candy.\n'10 pieces each, one gets none' means C = 10(g-1). (One grandchild gets 0 and the rest get 10.)\n'8 pieces each leaves 6 over' means C = 8g + 6.\nSet equal: 10(g-1) = 8g + 6\n10g - 10 = 8g + 6\n2g = 16\ng = 8.\nSo Grandma has 8 grandchildren (and C = 70 pieces of candy).",
       "methods": [
         "Write two equations for total candy and solve for g.",
         "Reason: giving each 8 instead of 10 saves 2 per grandchild. If all g got 8, there are 6 left; to reach the 10-each plan we would need to take 10 from the pile for each of the (g-1) grandchildren who actually receive candy. Equating total candy leads to g=8."
       ],
       "diagram": null,
-      "tip": "Translate the word problem into equations for total candy; then eliminate C."
+      "tip": "Translate the word problem into equations for total candy; then eliminate C.",
+      "tags": [
+        "代数",
+        "方程",
+        "应用题"
+      ]
     },
     {
       "no": 24,
       "points": 4,
       "text": "The figure shown rotates clockwise and makes one full rotation in one hour. Its position at 12:00 p.m. is shown in the picture. What will it look like at 2:15 p.m.?",
-      "options": {"A":"A","B":"B","C":"C","D":"D","E":"E"},
+      "options": {
+        "A": "A",
+        "B": "B",
+        "C": "C",
+        "D": "D",
+        "E": "E"
+      },
       "answer": "A",
-      "category": "Rotation / angles",
       "solution": "The figure makes one full 360° clockwise rotation in 60 minutes, so it rotates 360°/60 = 6° per minute.\nFrom 12:00 p.m. to 2:15 p.m. is 2 hours 15 minutes = 135 minutes.\nTotal rotation = 135 x 6° = 810°.\n810° = 2 full rotations (720°) + 90°.\nTwo full rotations bring the figure back to the starting position; the extra 90° clockwise rotation gives the final orientation, which matches option A.",
       "methods": [
         "Find degrees per minute (6°), multiply by elapsed minutes (135), reduce by full rotations (720°), rotate the remaining 90° clockwise.",
         "Reason directly: 135 minutes = 2h15m = 2 full turns + a quarter turn clockwise."
       ],
       "diagram": "A figure and its orientation after 90° clockwise rotation from the 12:00 position.",
-      "tip": "Only the remainder of the rotation after removing full turns matters for the final picture."
+      "tip": "Only the remainder of the rotation after removing full turns matters for the final picture.",
+      "tags": [
+        "几何",
+        "旋转",
+        "角度",
+        "周期"
+      ]
     }
   ]
 }

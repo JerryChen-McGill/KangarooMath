@@ -40,6 +40,7 @@ header p { margin: 6px 0 0; color: var(--muted); font-size: 14px; }
   padding: 16px 24px; background: var(--surface); border-bottom: 1px solid var(--border);
   position: sticky; top: 78px; z-index: 10;
 }
+.controls-row { width: 100%; display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
 select, input[type="text"], input[type="number"], button {
   font: inherit; padding: 8px 12px; border-radius: 8px; border: 1px solid var(--border);
   background: var(--surface); color: var(--text);
@@ -53,6 +54,11 @@ button.danger:hover { background: var(--danger); color: #fff; }
 button.ok { background: var(--ok-light); border-color: var(--ok); color: var(--ok); }
 button.ok:hover { background: var(--ok); color: #fff; }
 main { padding: 24px; max-width: 1200px; margin: 0 auto; }
+.tag-cloud { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; width: 100%; }
+.tag-chip { padding: 5px 12px; border-radius: 16px; background: #f3f4f6; color: #374151; border: 1px solid var(--border); font-size: 13px; cursor: pointer; transition: .15s; user-select: none; }
+.tag-chip:hover { background: #e5e7eb; }
+.tag-chip.active { background: var(--accent); color: #fff; border-color: var(--accent); }
+.tag-chip .count { margin-left: 4px; opacity: .75; font-size: 11px; }
 .view-ans { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 20px; margin-bottom: 24px; box-shadow: var(--shadow); }
 .ans-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(90px, 1fr)); gap: 10px; margin-top: 12px; }
 .ans-cell { display: flex; justify-content: space-between; align-items: center; padding: 8px 12px; border-radius: 8px; background: #f3f4f6; font-size: 14px; }
@@ -61,9 +67,10 @@ main { padding: 24px; max-width: 1200px; margin: 0 auto; }
 .q-list { display: grid; gap: 20px; }
 .q-card { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 20px; box-shadow: var(--shadow); }
 .q-header { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; margin-bottom: 12px; }
-.q-badge { background: var(--accent-light); color: var(--accent); padding: 3px 10px; border-radius: 20px; font-size: 13px; font-weight: 600; }
+.q-badge { padding: 3px 10px; border-radius: 20px; font-size: 13px; font-weight: 600; }
 .q-points { background: var(--warn-light); color: var(--warn); }
-.q-category { background: #f3e8ff; color: #7e22ce; }
+.q-tag { background: #f3e8ff; color: #7e22ce; cursor: pointer; }
+.q-tag:hover { background: #e9d5ff; }
 .q-title { font-size: 18px; font-weight: 700; }
 .q-text { font-size: 16px; margin: 10px 0; }
 .options { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 10px; margin: 14px 0; }
@@ -92,56 +99,78 @@ footer { text-align: center; color: var(--muted); padding: 30px; font-size: 13px
 <body>
 <header>
   <h1>🦘 Math Kangaroo 备课站</h1>
-  <p>1999 & 2002  Grade 5-6 · 全部题目 · 答案 · 详解 · 多种思路 · 图解</p>
+  <p>1999 &amp; 2002 · Grade 5-6 · 全部题目 · 答案 · 详解 · 多种思路 · 图解 · 标签筛选</p>
 </header>
 
 <div class="controls">
-  <select id="yearSel">
-    <option value="all">全部试卷</option>
-    <option value="1999">1999 年</option>
-    <option value="2002">2002 年</option>
-  </select>
-  <select id="viewSel">
-    <option value="list">全部题目</option>
-    <option value="single">单题查看</option>
-    <option value="answers">全卷答案</option>
-  </select>
-  <input type="number" id="singleNo" min="1" max="30" placeholder="题号" style="width:80px;display:none">
-  <input type="text" id="search" placeholder="搜索题目内容/关键词">
-  <select id="catSel"><option value="all">全部分类</option></select>
-  <button id="btnShowAllAns" class="ok">显示所有答案</button>
-  <button id="btnHideAllAns" class="danger">隐藏所有答案</button>
-  <button id="btnExpandSol" class="secondary">展开全部详解</button>
+  <div class="controls-row">
+    <select id="yearSel">
+      <option value="all">全部试卷</option>
+      <option value="1999">1999 年</option>
+      <option value="2002">2002 年</option>
+    </select>
+    <select id="viewSel">
+      <option value="list">全部题目</option>
+      <option value="single">单题查看</option>
+      <option value="answers">全卷答案</option>
+    </select>
+    <input type="number" id="singleNo" min="1" max="30" placeholder="题号" style="width:80px;display:none">
+    <input type="text" id="search" placeholder="搜索题目内容/关键词/标签">
+    <button id="btnToggleAns" class="ok">显示所有答案</button>
+    <button id="btnExpandSol" class="secondary">展开全部详解</button>
+  </div>
+  <div class="controls-row">
+    <div class="tag-cloud" id="tagCloud"></div>
+  </div>
 </div>
 
 <main id="app"></main>
 
 <footer>
-  Generated for lesson prep · Math Kangaroo 1999 & 2002 (Grades 5-6)
+  Generated for lesson prep · Math Kangaroo 1999 &amp; 2002 (Grades 5-6)
 </footer>
 
 <script>
 const years = Object.keys(KANGAROO_DATA).sort();
-const categories = new Set();
-years.forEach(y => KANGAROO_DATA[y].forEach(q => categories.add(q.category)));
-const catSel = document.getElementById('catSel');
-[...categories].sort().forEach(c => { const opt=document.createElement('option'); opt.value=c; opt.textContent=c; catSel.appendChild(opt); });
+const allTags = {};
+years.forEach(y => KANGAROO_DATA[y].forEach(q => {
+  (q.tags || []).forEach(t => { allTags[t] = (allTags[t] || 0) + 1; });
+}));
+const tagCloud = document.getElementById('tagCloud');
+function renderTagCloud() {
+  tagCloud.innerHTML = '';
+  Object.entries(allTags).sort((a,b)=>b[1]-a[1]).forEach(([tag, count]) => {
+    const chip = document.createElement('span');
+    chip.className = 'tag-chip' + (state.tags.has(tag) ? ' active' : '');
+    chip.innerHTML = escapeHtml(tag) + '<span class="count">' + count + '</span>';
+    chip.addEventListener('click', () => {
+      if (state.tags.has(tag)) state.tags.delete(tag); else state.tags.add(tag);
+      renderTagCloud();
+      render();
+    });
+    tagCloud.appendChild(chip);
+  });
+}
 
-let state = { year: 'all', view: 'list', showAnswer: false, showSolution: false, showMethods: false, showDiagram: false, search: '', category: 'all', singleNo: 1 };
+let state = { year: 'all', view: 'list', showAnswer: false, showSolution: false, showMethods: false, showDiagram: false, search: '', tags: new Set(), singleNo: 1 };
 const app = document.getElementById('app');
 const yearSel = document.getElementById('yearSel');
 const viewSel = document.getElementById('viewSel');
 const singleNo = document.getElementById('singleNo');
 const search = document.getElementById('search');
+const btnToggleAns = document.getElementById('btnToggleAns');
+const btnExpandSol = document.getElementById('btnExpandSol');
 
 function getQuestions() {
   const ys = state.year === 'all' ? years : [state.year];
   let qs = [];
   ys.forEach(y => qs = qs.concat(KANGAROO_DATA[y].map(q => ({...q, year: y}))));
-  if (state.category !== 'all') qs = qs.filter(q => q.category === state.category);
+  if (state.tags.size) {
+    qs = qs.filter(q => (q.tags || []).some(t => state.tags.has(t)));
+  }
   if (state.search.trim()) {
     const term = state.search.toLowerCase();
-    qs = qs.filter(q => q.text.toLowerCase().includes(term) || String(q.no).includes(term) || q.category.toLowerCase().includes(term));
+    qs = qs.filter(q => q.text.toLowerCase().includes(term) || String(q.no).includes(term) || (q.tags || []).some(t => t.toLowerCase().includes(term)));
   }
   return qs;
 }
@@ -169,9 +198,21 @@ function optionCard(q, letter, text) {
   return '<div class="' + cls + '" data-letter="' + letter + '"><span class="letter">' + letter + '</span><span>' + escapeHtml(text) + (reveal && correct ? ' ✅' : '') + '</span></div>';
 }
 
+function tagClickHandler(e) {
+  const tag = e.target.dataset.tag;
+  if (!tag) return;
+  if (state.tags.has(tag)) state.tags.delete(tag); else state.tags.add(tag);
+  renderTagCloud();
+  render();
+}
+
 function questionCard(q) {
   let html = '<div class="q-card" data-year="' + q.year + '" data-no="' + q.no + '">';
-  html += '<div class="q-header"><span class="q-title">' + q.year + ' · Q' + q.no + '</span><span class="q-badge q-points">' + q.points + ' 分</span><span class="q-badge q-category">' + escapeHtml(q.category) + '</span></div>';
+  html += '<div class="q-header"><span class="q-title">' + q.year + ' · Q' + q.no + '</span><span class="q-badge q-points">' + q.points + ' 分</span>';
+  (q.tags || []).forEach(t => {
+    html += '<span class="q-badge q-tag" data-tag="' + escapeHtml(t) + '">' + escapeHtml(t) + '</span>';
+  });
+  html += '</div>';
   html += '<div class="q-text">' + escapeHtml(q.text).replace(/\n/g, '<br>') + '</div>';
   html += '<div class="options">';
   ['A','B','C','D','E'].forEach(letter => {
@@ -216,6 +257,7 @@ function renderList() {
   if (state.showAnswer) html += '<div class="view-ans"><p>已全局显示答案。如只想核对，可切换到“全卷答案”视图。</p></div>';
   html += '<div class="q-list">' + qs.map(questionCard).join('') + '</div>';
   app.innerHTML = html;
+  document.querySelectorAll('.q-tag').forEach(el => el.addEventListener('click', tagClickHandler));
 }
 
 function renderSingle() {
@@ -227,6 +269,7 @@ function renderSingle() {
   }
   if (!found) { app.innerHTML = '<div class="empty">未找到该题号，请切换年份或输入有效题号</div>'; return; }
   app.innerHTML = '<div class="q-list">' + questionCard(found) + '</div>';
+  document.querySelectorAll('.q-tag').forEach(el => el.addEventListener('click', tagClickHandler));
 }
 
 function render() {
@@ -237,7 +280,7 @@ function render() {
 
 function escapeHtml(s) {
   if (!s) return '';
-  return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+  return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
 }
 
 window.toggleOne = function(btn, kind) {
@@ -246,12 +289,17 @@ window.toggleOne = function(btn, kind) {
   const no = Number(card.dataset.no);
   const q = KANGAROO_DATA[year].find(x => x.no === no);
   const mapped = {...q, year};
-  const sectionClass = kind === 'answer' ? 'solution' : (kind === 'methods' ? 'methods' : (kind === 'diagram' ? 'diagram' : 'solution'));
   let section = null;
   const sections = card.querySelectorAll('.section');
-  sections.forEach(sec => { if (sec.querySelector('h4') && sec.querySelector('h4').textContent.includes(kind==='answer'?'答案':kind==='solution'?'详细':kind==='methods'?'思路':'图解')) section = sec; });
-
-  // Simplest: rebuild the card with the specific kind toggled globally? Better: per-card manual insertion.
+  sections.forEach(sec => {
+    const h4 = sec.querySelector('h4');
+    if (!h4) return;
+    const text = h4.textContent;
+    if (kind === 'answer' && text.startsWith('答案')) section = sec;
+    if (kind === 'solution' && text.includes('详细')) section = sec;
+    if (kind === 'methods' && text.includes('思路')) section = sec;
+    if (kind === 'diagram' && text.includes('图解')) section = sec;
+  });
   if (section) { section.remove(); btn.textContent = btn.textContent.replace('隐藏','显示'); return; }
   let insertHtml = '';
   if (kind === 'answer') {
@@ -276,12 +324,16 @@ viewSel.addEventListener('change', e => {
 });
 singleNo.addEventListener('input', e => { state.singleNo = Number(e.target.value); if (state.view === 'single') render(); });
 search.addEventListener('input', e => { state.search = e.target.value; render(); });
-catSel.addEventListener('change', e => { state.category = e.target.value; render(); });
 
-document.getElementById('btnShowAllAns').addEventListener('click', () => { state.showAnswer = true; render(); });
-document.getElementById('btnHideAllAns').addEventListener('click', () => { state.showAnswer = false; render(); });
-document.getElementById('btnExpandSol').addEventListener('click', () => { state.showSolution = !state.showSolution; document.getElementById('btnExpandSol').textContent = state.showSolution ? '收起全部详解' : '展开全部详解'; render(); });
+btnToggleAns.addEventListener('click', () => {
+  state.showAnswer = !state.showAnswer;
+  btnToggleAns.textContent = state.showAnswer ? '隐藏所有答案' : '显示所有答案';
+  btnToggleAns.className = state.showAnswer ? 'danger' : 'ok';
+  render();
+});
+btnExpandSol.addEventListener('click', () => { state.showSolution = !state.showSolution; btnExpandSol.textContent = state.showSolution ? '收起全部详解' : '展开全部详解'; render(); });
 
+renderTagCloud();
 render();
 </script>
 </body>
