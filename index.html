@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Math Kangaroo 备课站 (1999 & 2002 G5-6)</title>
+<script src="site_data.js"></script>
+<script src="diagrams.js"></script>
+<style>
+:root {
+  --bg: #f8fafc;
+  --surface: #ffffff;
+  --text: #1f2937;
+  --muted: #6b7280;
+  --accent: #2563eb;
+  --accent-light: #dbeafe;
+  --danger: #dc2626;
+  --danger-light: #fee2e2;
+  --ok: #16a34a;
+  --ok-light: #dcfce7;
+  --warn: #d97706;
+  --warn-light: #fef3c7;
+  --border: #e5e7eb;
+  --shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Microsoft YaHei", sans-serif;
+  background: var(--bg); color: var(--text); line-height: 1.6;
+}
+header {
+  background: var(--surface); border-bottom: 1px solid var(--border);
+  padding: 18px 24px; position: sticky; top: 0; z-index: 20;
+  box-shadow: var(--shadow);
+}
+header h1 { margin: 0; font-size: 22px; display: flex; align-items: center; gap: 10px; }
+header p { margin: 6px 0 0; color: var(--muted); font-size: 14px; }
+.controls {
+  display: flex; flex-wrap: wrap; gap: 12px; align-items: center;
+  padding: 16px 24px; background: var(--surface); border-bottom: 1px solid var(--border);
+  position: sticky; top: 78px; z-index: 10;
+}
+select, input[type="text"], input[type="number"], button {
+  font: inherit; padding: 8px 12px; border-radius: 8px; border: 1px solid var(--border);
+  background: var(--surface); color: var(--text);
+}
+button { cursor: pointer; transition: .15s; background: var(--accent-light); border-color: var(--accent); color: var(--accent); font-weight: 600; }
+button:hover { background: var(--accent); color: #fff; }
+button.secondary { background: var(--bg); border-color: var(--border); color: var(--text); }
+button.secondary:hover { background: #eef2ff; color: var(--accent); }
+button.danger { background: var(--danger-light); border-color: var(--danger); color: var(--danger); }
+button.danger:hover { background: var(--danger); color: #fff; }
+button.ok { background: var(--ok-light); border-color: var(--ok); color: var(--ok); }
+button.ok:hover { background: var(--ok); color: #fff; }
+main { padding: 24px; max-width: 1200px; margin: 0 auto; }
+.view-ans { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 20px; margin-bottom: 24px; box-shadow: var(--shadow); }
+.ans-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(90px, 1fr)); gap: 10px; margin-top: 12px; }
+.ans-cell { display: flex; justify-content: space-between; align-items: center; padding: 8px 12px; border-radius: 8px; background: #f3f4f6; font-size: 14px; }
+.ans-cell .q { color: var(--muted); }
+.ans-cell .a { font-weight: bold; color: var(--accent); font-size: 16px; }
+.q-list { display: grid; gap: 20px; }
+.q-card { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 20px; box-shadow: var(--shadow); }
+.q-header { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; margin-bottom: 12px; }
+.q-badge { background: var(--accent-light); color: var(--accent); padding: 3px 10px; border-radius: 20px; font-size: 13px; font-weight: 600; }
+.q-points { background: var(--warn-light); color: var(--warn); }
+.q-category { background: #f3e8ff; color: #7e22ce; }
+.q-title { font-size: 18px; font-weight: 700; }
+.q-text { font-size: 16px; margin: 10px 0; }
+.options { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 10px; margin: 14px 0; }
+.option { border: 2px solid var(--border); border-radius: 10px; padding: 10px 14px; display: flex; align-items: center; gap: 10px; cursor: pointer; transition: .15s; }
+.option:hover { border-color: var(--accent); background: #f8fafc; }
+.option .letter { width: 28px; height: 28px; display: flex; align-items: center; justify-content: center; border-radius: 50%; background: #f3f4f6; font-weight: 700; }
+.option.correct { border-color: var(--ok); background: var(--ok-light); }
+.option.correct .letter { background: var(--ok); color: #fff; }
+.q-actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+.section { margin-top: 14px; padding: 14px; border-radius: 10px; background: #f8fafc; border: 1px solid var(--border); }
+.section h4 { margin: 0 0 8px; font-size: 15px; color: var(--accent); }
+.section.solution { background: #eff6ff; border-color: #bfdbfe; }
+.section.methods { background: #f5f3ff; border-color: #ddd6fe; }
+.section.diagram { background: #fffbeb; border-color: #fde68a; text-align: center; }
+.section.tip { background: #f0fdf4; border-color: #bbf7d0; }
+.section.tip h4 { color: var(--ok); }
+.mk-diagram { max-width: 100%; height: auto; max-height: 260px; }
+.empty { text-align: center; color: var(--muted); padding: 60px 20px; }
+footer { text-align: center; color: var(--muted); padding: 30px; font-size: 13px; }
+@media (max-width: 640px) {
+  .controls { top: 0; position: relative; }
+  .options { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+<header>
+  <h1>🦘 Math Kangaroo 备课站</h1>
+  <p>1999 & 2002  Grade 5-6 · 全部题目 · 答案 · 详解 · 多种思路 · 图解</p>
+</header>
+
+<div class="controls">
+  <select id="yearSel">
+    <option value="all">全部试卷</option>
+    <option value="1999">1999 年</option>
+    <option value="2002">2002 年</option>
+  </select>
+  <select id="viewSel">
+    <option value="list">全部题目</option>
+    <option value="single">单题查看</option>
+    <option value="answers">全卷答案</option>
+  </select>
+  <input type="number" id="singleNo" min="1" max="30" placeholder="题号" style="width:80px;display:none">
+  <input type="text" id="search" placeholder="搜索题目内容/关键词">
+  <select id="catSel"><option value="all">全部分类</option></select>
+  <button id="btnShowAllAns" class="ok">显示所有答案</button>
+  <button id="btnHideAllAns" class="danger">隐藏所有答案</button>
+  <button id="btnExpandSol" class="secondary">展开全部详解</button>
+</div>
+
+<main id="app"></main>
+
+<footer>
+  Generated for lesson prep · Math Kangaroo 1999 & 2002 (Grades 5-6)
+</footer>
+
+<script>
+const years = Object.keys(KANGAROO_DATA).sort();
+const categories = new Set();
+years.forEach(y => KANGAROO_DATA[y].forEach(q => categories.add(q.category)));
+const catSel = document.getElementById('catSel');
+[...categories].sort().forEach(c => { const opt=document.createElement('option'); opt.value=c; opt.textContent=c; catSel.appendChild(opt); });
+
+let state = { year: 'all', view: 'list', showAnswer: false, showSolution: false, showMethods: false, showDiagram: false, search: '', category: 'all', singleNo: 1 };
+const app = document.getElementById('app');
+const yearSel = document.getElementById('yearSel');
+const viewSel = document.getElementById('viewSel');
+const singleNo = document.getElementById('singleNo');
+const search = document.getElementById('search');
+
+function getQuestions() {
+  const ys = state.year === 'all' ? years : [state.year];
+  let qs = [];
+  ys.forEach(y => qs = qs.concat(KANGAROO_DATA[y].map(q => ({...q, year: y}))));
+  if (state.category !== 'all') qs = qs.filter(q => q.category === state.category);
+  if (state.search.trim()) {
+    const term = state.search.toLowerCase();
+    qs = qs.filter(q => q.text.toLowerCase().includes(term) || String(q.no).includes(term) || q.category.toLowerCase().includes(term));
+  }
+  return qs;
+}
+
+function renderAnswers() {
+  const ys = state.year === 'all' ? years : [state.year];
+  let html = '<div class="view-ans"><h2>全卷答案</h2><p>选中试卷：' + (state.year==='all' ? '1999 + 2002' : state.year) + '</p>';
+  ys.forEach(y => {
+    html += '<h3>' + y + ' 年</h3><div class="ans-grid">';
+    KANGAROO_DATA[y].forEach(q => {
+      html += '<div class="ans-cell"><span class="q">Q' + q.no + '</span><span class="a">' + q.answer + '</span></div>';
+    });
+    html += '</div>';
+  });
+  html += '</div>';
+  app.innerHTML = html;
+}
+
+function svgFor(year, no) { return DIAGRAMS[year + '-' + no] || null; }
+
+function optionCard(q, letter, text) {
+  const correct = q.answer === letter;
+  const reveal = state.showAnswer;
+  const cls = 'option' + (reveal && correct ? ' correct' : '');
+  return '<div class="' + cls + '" data-letter="' + letter + '"><span class="letter">' + letter + '</span><span>' + escapeHtml(text) + (reveal && correct ? ' ✅' : '') + '</span></div>';
+}
+
+function questionCard(q) {
+  let html = '<div class="q-card" data-year="' + q.year + '" data-no="' + q.no + '">';
+  html += '<div class="q-header"><span class="q-title">' + q.year + ' · Q' + q.no + '</span><span class="q-badge q-points">' + q.points + ' 分</span><span class="q-badge q-category">' + escapeHtml(q.category) + '</span></div>';
+  html += '<div class="q-text">' + escapeHtml(q.text).replace(/\n/g, '<br>') + '</div>';
+  html += '<div class="options">';
+  ['A','B','C','D','E'].forEach(letter => {
+    if (q.options[letter]) html += optionCard(q, letter, q.options[letter]);
+  });
+  html += '</div>';
+  html += '<div class="q-actions">';
+  html += '<button onclick="toggleOne(this, \'answer\')">' + (state.showAnswer ? '隐藏答案' : '显示答案') + '</button>';
+  html += '<button onclick="toggleOne(this, \'solution\')">' + (state.showSolution ? '隐藏详解' : '显示详解') + '</button>';
+  html += '<button onclick="toggleOne(this, \'methods\')">' + (state.showMethods ? '隐藏思路' : '显示多种思路') + '</button>';
+  if (svgFor(q.year, q.no) || q.diagram) html += '<button onclick="toggleOne(this, \'diagram\')">' + (state.showDiagram ? '隐藏图解' : '显示图解') + '</button>';
+  html += '</div>';
+
+  if (state.showAnswer) {
+    html += '<div class="section solution" style="display:block"><h4>答案：' + q.answer + '</h4><p>' + escapeHtml(q.options[q.answer]) + '</p></div>';
+  }
+  if (state.showSolution) {
+    html += '<div class="section solution"><h4>详细解答</h4><p>' + escapeHtml(q.solution).replace(/\n/g, '<br>') + '</p></div>';
+  }
+  if (state.showMethods && q.methods && q.methods.length) {
+    html += '<div class="section methods"><h4>其他思路</h4><ul>' + q.methods.map(m => '<li>' + escapeHtml(m).replace(/\n/g, '<br>') + '</li>').join('') + '</ul></div>';
+  }
+  if (state.showDiagram) {
+    const svg = svgFor(q.year, q.no);
+    if (svg) {
+      html += '<div class="section diagram"><h4>参考图解</h4>' + svg + '</div>';
+    } else if (q.diagram) {
+      html += '<div class="section diagram"><h4>参考图解</h4><p style="text-align:left">' + escapeHtml(q.diagram) + '</p></div>';
+    }
+  }
+  if (q.tip) {
+    html += '<div class="section tip"><h4>备课提示</h4><p>' + escapeHtml(q.tip).replace(/\n/g, '<br>') + '</p></div>';
+  }
+  html += '</div>';
+  return html;
+}
+
+function renderList() {
+  const qs = getQuestions();
+  if (!qs.length) { app.innerHTML = '<div class="empty">没有匹配的题目</div>'; return; }
+  let html = '';
+  if (state.showAnswer) html += '<div class="view-ans"><p>已全局显示答案。如只想核对，可切换到“全卷答案”视图。</p></div>';
+  html += '<div class="q-list">' + qs.map(questionCard).join('') + '</div>';
+  app.innerHTML = html;
+}
+
+function renderSingle() {
+  const ys = state.year === 'all' ? years : [state.year];
+  let found = null;
+  for (const y of ys) {
+    const q = KANGAROO_DATA[y].find(x => x.no === Number(state.singleNo));
+    if (q) { found = {...q, year: y}; break; }
+  }
+  if (!found) { app.innerHTML = '<div class="empty">未找到该题号，请切换年份或输入有效题号</div>'; return; }
+  app.innerHTML = '<div class="q-list">' + questionCard(found) + '</div>';
+}
+
+function render() {
+  if (state.view === 'answers') { renderAnswers(); return; }
+  if (state.view === 'single') { renderSingle(); return; }
+  renderList();
+}
+
+function escapeHtml(s) {
+  if (!s) return '';
+  return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+}
+
+window.toggleOne = function(btn, kind) {
+  const card = btn.closest('.q-card');
+  const year = card.dataset.year;
+  const no = Number(card.dataset.no);
+  const q = KANGAROO_DATA[year].find(x => x.no === no);
+  const mapped = {...q, year};
+  const sectionClass = kind === 'answer' ? 'solution' : (kind === 'methods' ? 'methods' : (kind === 'diagram' ? 'diagram' : 'solution'));
+  let section = null;
+  const sections = card.querySelectorAll('.section');
+  sections.forEach(sec => { if (sec.querySelector('h4') && sec.querySelector('h4').textContent.includes(kind==='answer'?'答案':kind==='solution'?'详细':kind==='methods'?'思路':'图解')) section = sec; });
+
+  // Simplest: rebuild the card with the specific kind toggled globally? Better: per-card manual insertion.
+  if (section) { section.remove(); btn.textContent = btn.textContent.replace('隐藏','显示'); return; }
+  let insertHtml = '';
+  if (kind === 'answer') {
+    insertHtml = '<div class="section solution"><h4>答案：' + mapped.answer + '</h4><p>' + escapeHtml(mapped.options[mapped.answer]) + '</p></div>';
+  } else if (kind === 'solution') {
+    insertHtml = '<div class="section solution"><h4>详细解答</h4><p>' + escapeHtml(mapped.solution).replace(/\n/g,'<br>') + '</p></div>';
+  } else if (kind === 'methods') {
+    insertHtml = '<div class="section methods"><h4>其他思路</h4><ul>' + mapped.methods.map(m => '<li>' + escapeHtml(m).replace(/\n/g,'<br>') + '</li>').join('') + '</ul></div>';
+  } else if (kind === 'diagram') {
+    const svg = svgFor(year, no);
+    if (svg) insertHtml = '<div class="section diagram"><h4>参考图解</h4>' + svg + '</div>';
+    else if (mapped.diagram) insertHtml = '<div class="section diagram"><h4>参考图解</h4><p style="text-align:left">' + escapeHtml(mapped.diagram) + '</p></div>';
+  }
+  if (insertHtml) { card.insertAdjacentHTML('beforeend', insertHtml); btn.textContent = btn.textContent.replace('显示','隐藏'); }
+};
+
+yearSel.addEventListener('change', e => { state.year = e.target.value; state.singleNo = 1; if (state.year !== 'all') singleNo.max = KANGAROO_DATA[state.year].length; else singleNo.max = 30; render(); });
+viewSel.addEventListener('change', e => {
+  state.view = e.target.value;
+  singleNo.style.display = state.view === 'single' ? 'inline-block' : 'none';
+  render();
+});
+singleNo.addEventListener('input', e => { state.singleNo = Number(e.target.value); if (state.view === 'single') render(); });
+search.addEventListener('input', e => { state.search = e.target.value; render(); });
+catSel.addEventListener('change', e => { state.category = e.target.value; render(); });
+
+document.getElementById('btnShowAllAns').addEventListener('click', () => { state.showAnswer = true; render(); });
+document.getElementById('btnHideAllAns').addEventListener('click', () => { state.showAnswer = false; render(); });
+document.getElementById('btnExpandSol').addEventListener('click', () => { state.showSolution = !state.showSolution; document.getElementById('btnExpandSol').textContent = state.showSolution ? '收起全部详解' : '展开全部详解'; render(); });
+
+render();
+</script>
+</body>
+</html>

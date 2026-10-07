@@ -1,0 +1,253 @@
+{
+  "year": 1999,
+  "questions": [
+    {
+      "no": 1,
+      "points": 3,
+      "text": "Beata has two dolls, three apples, one chocolate bar, two oranges, five peaches, and one bike. How many pieces of fruit does Beata have?",
+      "options": {
+        "A": "3",
+        "B": "5",
+        "C": "10",
+        "D": "18",
+        "E": "21"
+      },
+      "answer": "C",
+      "category": "Counting and classification",
+      "solution": "List only the fruit items:\n- apples: 3\n- oranges: 2\n- peaches: 5\nDolls, the chocolate bar, and the bike are NOT fruit, so ignore them.\nTotal fruit = 3 + 2 + 5 = 10.",
+      "methods": [
+        "Add only the fruit counts and skip non-fruit objects"
+      ],
+      "diagram": "A simple grouping picture separating fruit (apples, oranges, peaches) from non-fruit (dolls, chocolate, bike).",
+      "tip": "Read carefully: only count fruit, not every object mentioned."
+    },
+    {
+      "no": 2,
+      "points": 3,
+      "text": "What number is in the part that is common to four circles? (A central region where all four overlapping circles overlap contains a number.)",
+      "options": {
+        "A": "5",
+        "B": "9",
+        "C": "7",
+        "D": "4",
+        "E": "6"
+      },
+      "answer": "E",
+      "category": "Sets and Venn diagrams",
+      "solution": "The region common to all four circles is the single central overlap where every circle meets.\nLook at the number placed in that central shared region of the diagram.\nThat number is 6, so the value in the part common to all four circles is 6.",
+      "methods": [
+        "Identify the central intersection of all four circles and read its label"
+      ],
+      "diagram": "Four overlapping circles; the central region shared by all four shows the number 6.",
+      "tip": "The 'common to four circles' region is only the very center where all four overlap, not the other overlaps."
+    },
+    {
+      "no": 3,
+      "points": 3,
+      "text": "In how many places do we need to break a wooden stick in order to get 5 pieces?",
+      "options": {
+        "A": "3",
+        "B": "4",
+        "C": "5",
+        "D": "6",
+        "E": "It depends on how long the stick is."
+      },
+      "answer": "B",
+      "category": "Logical reasoning",
+      "solution": "Each break increases the number of pieces by 1.\nStart with 1 piece (the whole stick).\nAfter 1 break -> 2 pieces.\nAfter 2 breaks -> 3 pieces.\nAfter 3 breaks -> 4 pieces.\nAfter 4 breaks -> 5 pieces.\nSo we need 4 breaks to make 5 pieces. This does not depend on the stick's length.",
+      "methods": [
+        "Count that each break adds exactly one piece, so pieces = breaks + 1"
+      ],
+      "diagram": "A stick drawn with 4 cut marks producing 5 equal segments.",
+      "tip": "Common mistake: thinking 5 pieces need 5 breaks. Remember pieces = breaks + 1."
+    },
+    {
+      "no": 4,
+      "points": 3,
+      "text": "Karl is now 10 years old, and Alice is 3 years old. How many years from now will Karl be twice as old as Alice?",
+      "options": {
+        "A": "5",
+        "B": "10",
+        "C": "4",
+        "D": "1",
+        "E": "3"
+      },
+      "answer": "C",
+      "category": "Age problems / algebra",
+      "solution": "Let x = number of years from now.\nKarl's age then: 10 + x\nAlice's age then: 3 + x\nWe want Karl to be twice Alice's age:\n10 + x = 2(3 + x)\n10 + x = 6 + 2x\nSubtract x from both sides: 10 = 6 + x\nSubtract 6: x = 4\nCheck: in 4 years Karl is 14, Alice is 7, and 14 = 2 x 7. Correct.",
+      "methods": [
+        "Set up equation 10+x = 2(3+x) and solve",
+        "Test the answer choices by checking each"
+      ],
+      "diagram": "A small table: years from now | Karl | Alice | twice Alice?",
+      "tip": "Set up an equation with x years; both ages grow by the same amount."
+    },
+    {
+      "no": 5,
+      "points": 3,
+      "text": "Anna and her sister Barbara go to the same school, but take two different ways (two grid paths between the same two points). Whose way is shorter?",
+      "options": {
+        "A": "Anna's way",
+        "B": "Barbara's way",
+        "C": "It depends",
+        "D": "Both ways have the same length.",
+        "E": "Impossible to determine."
+      },
+      "answer": "D",
+      "category": "Paths on a grid",
+      "solution": "On a square grid, moving along the grid lines, the length of a path is the number of unit steps.\nBoth paths go between the same start and end points using only horizontal and vertical grid moves.\nCount the steps: each path must move the same number of units right/left and up/down to connect the same two points, so both paths have the same total length.",
+      "methods": [
+        "Count unit grid steps on each path and compare"
+      ],
+      "diagram": "Two different grid routes between the same two corners, each made of the same number of unit segments.",
+      "tip": "On a grid, any monotone path between two points has the same length if it only uses right/up (or equivalent) moves."
+    },
+    {
+      "no": 6,
+      "points": 3,
+      "text": "Our class has 30 students. The number of boys is four times the number of girls. How many girls are there?",
+      "options": {
+        "A": "24",
+        "B": "16",
+        "C": "12",
+        "D": "8",
+        "E": "6"
+      },
+      "answer": "E",
+      "category": "Ratio and basic equations",
+      "solution": "Let g = number of girls.\nThen boys = 4g.\nTotal students: g + 4g = 30\n5g = 30\ng = 6\nSo there are 6 girls (and 24 boys).\nCheck: 6 + 24 = 30, and 24 is four times 6.",
+      "methods": [
+        "Use g + 4g = 30",
+        "Think of 5 equal parts of 30, one part is girls"
+      ],
+      "diagram": "A bar split into 5 equal parts: 1 part girls, 4 parts boys, total 30.",
+      "tip": "Set the smaller group as 1 part; the total is 5 parts."
+    },
+    {
+      "no": 7,
+      "points": 3,
+      "text": "How much does the orange weigh? (Balance puzzle: an apple plus an orange balances 255 g; an apple plus two oranges balances 410 g.)",
+      "options": {
+        "A": "200 g",
+        "B": "205 g",
+        "C": "155 g",
+        "D": "5 g",
+        "E": "cannot be determined."
+      },
+      "answer": "C",
+      "category": "Balance / systems of equations",
+      "solution": "Let A = weight of apple, O = weight of orange.\nFrom the first balance: A + O = 255\nFrom the second balance: A + 2O = 410\nSubtract the first equation from the second:\n(A + 2O) - (A + O) = 410 - 255\nO = 155\nSo the orange weighs 155 g.",
+      "methods": [
+        "Subtract the two balance equations to remove the apple",
+        "Compare both pans: adding one orange adds 155 g"
+      ],
+      "diagram": "Two balance scales: left pan apple+orange = 255g; left pan apple+2 oranges = 410g.",
+      "tip": "Compare the two balances: the extra orange accounts for the extra weight."
+    },
+    {
+      "no": 8,
+      "points": 3,
+      "text": "The cat says, 'The length of my tail is 12 cm and half the length of my tail.' How long is the cat's tail?",
+      "options": {
+        "A": "18 cm",
+        "B": "24 cm",
+        "C": "12 cm",
+        "D": "9 cm",
+        "E": "6 cm"
+      },
+      "answer": "B",
+      "category": "Algebra / fractions",
+      "solution": "Let L = length of the tail.\nThe cat says: L = 12 + (1/2)L\nSubtract (1/2)L from both sides: (1/2)L = 12\nMultiply by 2: L = 24\nSo the tail is 24 cm long.\nCheck: half of 24 is 12, and 12 + 12 = 24.",
+      "methods": [
+        "Solve L = 12 + L/2",
+        "Notice '12 and half the tail' means 12 equals the other half"
+      ],
+      "diagram": "A tail split into two halves: one half labeled 12 cm, the other half also 12 cm.",
+      "tip": "If 12 cm is half the tail, the whole tail is double that."
+    },
+    {
+      "no": 9,
+      "points": 3,
+      "text": "Mom's birthday is on a Sunday. Dad's birthday is 55 days later. On what day of the week is dad's birthday?",
+      "options": {
+        "A": "Sunday",
+        "B": "Monday",
+        "C": "Tuesday",
+        "D": "Thursday",
+        "E": "Saturday"
+      },
+      "answer": "E",
+      "category": "Days of the week / modulo 7",
+      "solution": "A week has 7 days, so we work modulo 7.\n55 days = 7 x 7 + 6 = 49 + 6, so 55 mod 7 = 6.\n55 days later is the same as 6 days later in the week.\nSunday + 6 days: Mon(1), Tue(2), Wed(3), Thu(4), Fri(5), Sat(6).\nSo dad's birthday is on a Saturday.",
+      "methods": [
+        "Compute 55 mod 7 = 6, then add 6 days to Sunday",
+        "Count weeks: 7 weeks (49 days) brings back to Sunday, plus 6 more days"
+      ],
+      "diagram": "A 7-day week strip showing Sunday then counting 6 steps forward to Saturday.",
+      "tip": "Only the remainder when divided by 7 matters for the day of the week."
+    },
+    {
+      "no": 10,
+      "points": 4,
+      "text": "Two basketball teams play a tournament. The first team to win 4 games wins the tournament. There are no ties. What is the greatest possible number of games?",
+      "options": {
+        "A": "8",
+        "B": "7",
+        "C": "6",
+        "D": "5",
+        "E": "4"
+      },
+      "answer": "B",
+      "category": "Combinatorics / tournament",
+      "solution": "The tournament ends as soon as one team reaches 4 wins.\nTo make the tournament as long as possible, the two teams should be as close as possible.\nThe longest case: one team gets its 4th win on the final game, while the other team has 3 wins.\nTotal games = 4 + 3 = 7.\n(Example: wins go A,B,A,B,A,B,A -> A wins 4-3 in 7 games.)\nIt cannot be 8 because after 7 games someone must have at least 4 wins.",
+      "methods": [
+        "Max games = 4 + (4-1) = 7",
+        "If 8 games were played, one team would have at least 4 wins earlier"
+      ],
+      "diagram": "A scoreboard showing wins 4 to 3 after 7 games.",
+      "tip": "The loser can win at most one fewer than the winner; add the two totals."
+    },
+    {
+      "no": 11,
+      "points": 4,
+      "text": "Instead of adding 27 to a number, John subtracted 27. What is the difference between his result and the correct result?",
+      "options": {
+        "A": "27",
+        "B": "0",
+        "C": "54",
+        "D": "100",
+        "E": "3"
+      },
+      "answer": "C",
+      "category": "Number operations",
+      "solution": "Let the number be n.\nCorrect result: n + 27\nJohn's result: n - 27\nDifference: (n + 27) - (n - 27) = n + 27 - n + 27 = 54\nSo the difference is 54.\n(It is the same for any n.)",
+      "methods": [
+        "Subtract the two expressions: (n+27)-(n-27)=54",
+        "Try n=0: correct 27, John's -27, difference 54"
+      ],
+      "diagram": "A number line showing n, then n+27 and n-27, with the gap of 54 between them.",
+      "tip": "Adding instead of subtracting (or vice versa) by k changes the answer by 2k."
+    },
+    {
+      "no": 12,
+      "points": 4,
+      "text": "A golden cube with edge 4 cm is cut into small cubes with edge 1 cm. How many small cubes are there?",
+      "options": {
+        "A": "64",
+        "B": "48",
+        "C": "32",
+        "D": "16",
+        "E": "12"
+      },
+      "answer": "A",
+      "category": "Volume / 3D division",
+      "solution": "Along each edge of the big cube we can fit 4 / 1 = 4 small cubes.\nSo the big cube is 4 small cubes long, 4 wide, and 4 high.\nTotal small cubes = 4 x 4 x 4 = 64.\n(Equivalently, volume of big cube = 4x4x4 = 64 cm^3; each small cube = 1 cm^3; 64 / 1 = 64.)",
+      "methods": [
+        "4 x 4 x 4 layered counting",
+        "Compare volumes: 64 cm^3 / 1 cm^3 = 64"
+      ],
+      "diagram": "A 4x4x4 grid of small cubes forming the large cube.",
+      "tip": "In three dimensions, multiply the number along each edge; don't just do 4 x 4."
+    }
+  ]
+}
