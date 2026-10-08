@@ -3,9 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Math Kangaroo 备课站 (1999 & 2002 G5-6)</title>
+<title>Math Kangaroo 备课站 (1999 G3-4 & 2002 G5-6)</title>
 <script src="site_data.js"></script>
 <script src="diagrams.js"></script>
+<script src="hints.js"></script>
 <style>
 :root {
   --bg: #f8fafc;
@@ -99,20 +100,50 @@ footer { text-align: center; color: var(--muted); padding: 30px; font-size: 13px
   .controls { top: 0; position: relative; }
   .options { grid-template-columns: 1fr; }
 }
+
+html, body { height: 100%; }
+body { height: 100dvh; display: flex; flex-direction: column; overflow: hidden; }
+header, .controls { position: static; flex-shrink: 0; }
+header { padding: 12px 24px; }
+#modeToggle { float: right; margin-left: 12px; }
+.controls { padding: 10px 24px; gap: 6px; max-height: 40dvh; overflow-y: auto; }
+.controls-row:has(.tag-cloud.hidden) { display: none; }
+main { width: 100%; flex: 1; min-height: 0; overflow-y: auto; overscroll-behavior: contain; padding: 16px 24px; }
+.q-list { display: block; }
+.q-card { min-height: 100%; }
+#pager { display: flex; justify-content: center; align-items: center; gap: 18px; padding: 10px; border-top: 1px solid var(--border); background: white; }
+footer { padding: 4px; font-size: 11px; }
+button:disabled { opacity: .4; cursor: default; }
+.option { background: white; color: var(--text); font-weight: 400; text-align: left; }
+.option:hover { color: var(--text); }
+.option.incorrect { border-color: var(--danger); background: var(--danger-light); }
+.option.incorrect .letter { background: var(--danger); color: white; }
+.feedback { min-height: 1.6em; font-weight: 600; }
+.feedback.correct { color: var(--ok); }
+.feedback.incorrect { color: var(--danger); }
+.section.hint { background: #fffbeb; border-color: #fde68a; }
+button:focus-visible, main:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+@media (max-width: 640px) {
+  header { padding: 8px 12px; } header h1 { font-size: 17px; } header p { font-size: 12px; }
+  #modeToggle { font-size: 12px; padding: 6px; }
+  .controls { padding: 8px 12px; } .controls-row { gap: 6px; }
+  #search { width: 100%; } main { padding: 10px; } .q-card { padding: 14px; }
+  #pager { gap: 10px; font-size: 13px; } footer { display: none; }
+}
 </style>
 </head>
 <body>
 <header>
-  <h1>🦘 Math Kangaroo 备课站</h1>
-  <p>1999 &amp; 2002 · Grade 5-6 · 全部题目 · 答案 · 详解 · 多种思路 · 图解 · 标签筛选</p>
+  <button id="modeToggle" class="secondary" aria-pressed="false">教学版 · 切换练习版</button><h1>🦘 Math Kangaroo 备课站</h1>
+  <p>1999 · Grade 3–4 ｜ 2002 · Grade 5–6</p>
 </header>
 
 <div class="controls">
   <div class="controls-row">
     <select id="yearSel">
       <option value="all">全部试卷</option>
-      <option value="1999">1999 年</option>
-      <option value="2002">2002 年</option>
+      <option value="1999">1999 年 · Grade 3–4</option>
+      <option value="2002">2002 年 · Grade 5–6</option>
     </select>
     <select id="viewSel">
       <option value="list">全部题目</option>
@@ -134,10 +165,11 @@ footer { text-align: center; color: var(--muted); padding: 30px; font-size: 13px
   </div>
 </div>
 
-<main id="app"></main>
+<main id="app" tabindex="0" aria-label="题目浏览区"></main>
+<nav id="pager" aria-label="题目导航"><button id="prevQuestion" class="secondary">↑ 上一题</button><span id="progress" aria-live="polite"></span><button id="nextQuestion" class="secondary">下一题 ↓</button></nav>
 
 <footer>
-  Generated for lesson prep · Math Kangaroo 1999 &amp; 2002 (Grades 5-6)
+  Generated for lesson prep · Math Kangaroo 1999 (Grade 3–4) &amp; 2002 (Grade 5–6)
 </footer>
 
 <script>
@@ -155,7 +187,7 @@ function renderTagCloud() {
     chip.innerHTML = escapeHtml(tag) + '<span class="count">' + count + '</span>';
     chip.addEventListener('click', () => {
       if (state.tags.has(tag)) state.tags.delete(tag); else state.tags.add(tag);
-      renderTagCloud();
+      state.index = 0; renderTagCloud();
       render();
     });
     tagCloud.appendChild(chip);
@@ -164,8 +196,11 @@ function renderTagCloud() {
   updateTagToggleButton();
 }
 
-let state = { year: 'all', view: 'list', showAnswer: false, showSolution: false, showMethods: false, showDiagram: false, search: '', tags: new Set(), singleNo: 1 };
+let state = { mode: 'teaching', index: 0, year: 'all', view: 'list', showAnswer: false, showSolution: false, showMethods: false, showDiagram: false, search: '', tags: new Set(), singleNo: 1 };
 const app = document.getElementById('app');
+const attempts = new Map();
+const hintProgress = new Map();
+const questionKey = q => q.year + '-' + q.no;
 const yearSel = document.getElementById('yearSel');
 const viewSel = document.getElementById('viewSel');
 const singleNo = document.getElementById('singleNo');
@@ -213,7 +248,7 @@ function renderAnswers() {
   const ys = state.year === 'all' ? years : [state.year];
   let html = '<div class="view-ans"><h2>全卷答案</h2><p>选中试卷：' + (state.year==='all' ? '1999 + 2002' : state.year) + '</p>';
   ys.forEach(y => {
-    html += '<h3>' + y + ' 年</h3><div class="ans-grid">';
+    html += '<h3>' + y + ' 年 · Grade ' + (y === '1999' ? '3–4' : '5–6') + '</h3><div class="ans-grid">';
     KANGAROO_DATA[y].forEach(q => {
       html += '<div class="ans-cell"><span class="q">Q' + q.no + '</span><span class="a">' + q.answer + '</span></div>';
     });
@@ -226,10 +261,11 @@ function renderAnswers() {
 function svgFor(year, no) { return DIAGRAMS[year + '-' + no] || null; }
 
 function optionCard(q, letter, text) {
+  const selected = state.mode === 'practice' && attempts.get(questionKey(q)) === letter;
   const correct = q.answer === letter;
-  const reveal = state.showAnswer;
-  const cls = 'option' + (reveal && correct ? ' correct' : '');
-  return '<div class="' + cls + '" data-letter="' + letter + '"><span class="letter">' + letter + '</span><span class="opt-text">' + escapeHtml(text) + '</span>' + (reveal && correct ? '<span class="check"> ✅</span>' : '') + '</div>';
+  const reveal = state.mode === 'teaching' && state.showAnswer && correct;
+  const cls = 'option' + (reveal || (selected && correct) ? ' correct' : selected ? ' incorrect' : '');
+  return '<button type="button" class="' + cls + '" data-letter="' + letter + '" onclick="chooseAnswer(this)"><span class="letter">' + letter + '</span><span class="opt-text">' + escapeHtml(text) + '</span>' + (selected || reveal ? '<span class="check">' + (correct ? ' ✅' : ' ❌') + '</span>' : '') + '</button>';
 }
 
 function setCardAnswer(card, q, show) {
@@ -249,13 +285,13 @@ function tagClickHandler(e) {
   const tag = e.target.dataset.tag;
   if (!tag) return;
   if (state.tags.has(tag)) state.tags.delete(tag); else state.tags.add(tag);
-  renderTagCloud();
+  state.index = 0; renderTagCloud();
   render();
 }
 
 function questionCard(q) {
   let html = '<div class="q-card" data-year="' + q.year + '" data-no="' + q.no + '">';
-  html += '<div class="q-header"><span class="q-title">' + q.year + ' · Q' + q.no + '</span><span class="q-badge q-points">' + q.points + ' 分</span>';
+  html += '<div class="q-header"><span class="q-title">' + q.year + ' · Grade ' + q.grade + ' · Q' + q.no + '</span><span class="q-badge q-points">' + q.points + ' 分</span>';
   (q.tags || []).forEach(t => {
     html += '<span class="q-badge q-tag" data-tag="' + escapeHtml(t) + '">' + escapeHtml(t) + '</span>';
   });
@@ -266,20 +302,26 @@ function questionCard(q) {
     if (q.options[letter]) html += optionCard(q, letter, q.options[letter]);
   });
   html += '</div>';
-  html += '<div class="q-actions">';
+  const attempt = attempts.get(questionKey(q));
+  if (state.mode === 'practice') html += '<div class="feedback ' + (attempt ? (attempt === q.answer ? 'correct' : 'incorrect') : '') + '" role="status">' + (attempt ? (attempt === q.answer ? '✅ 正确！' : '❌ 错误，再试一次。') : '请选择一个答案') + '</div>';
+  html += '<div class="q-actions"><button onclick="showHint(this)">显示 Hint</button>';
+  if (state.mode === 'teaching') {
   html += '<button onclick="toggleOne(this, \'answer\')">' + (state.showAnswer ? '隐藏答案' : '显示答案') + '</button>';
   html += '<button onclick="toggleOne(this, \'solution\')">' + (state.showSolution ? '隐藏详解' : '显示详解') + '</button>';
   html += '<button onclick="toggleOne(this, \'methods\')">' + (state.showMethods ? '隐藏思路' : '显示多种思路') + '</button>';
   if (svgFor(q.year, q.no) || q.diagram) html += '<button onclick="toggleOne(this, \'diagram\')">' + (state.showDiagram ? '隐藏图解' : '显示图解') + '</button>';
+  }
   html += '</div>';
+  const hintIndex = hintProgress.get(questionKey(q));
+  if (hintIndex !== undefined) html += hintSection(q, hintIndex);
 
-  if (state.showSolution) {
+  if (state.mode === 'teaching' && state.showSolution) {
     html += '<div class="section solution"><h4>详细解答</h4><p>' + escapeHtml(q.solution).replace(/\n/g, '<br>') + '</p></div>';
   }
-  if (state.showMethods && q.methods && q.methods.length) {
+  if (state.mode === 'teaching' && state.showMethods && q.methods && q.methods.length) {
     html += '<div class="section methods"><h4>其他思路</h4><ul>' + q.methods.map(m => '<li>' + escapeHtml(m).replace(/\n/g, '<br>') + '</li>').join('') + '</ul></div>';
   }
-  if (state.showDiagram) {
+  if (state.mode === 'teaching' && state.showDiagram) {
     const svg = svgFor(q.year, q.no);
     if (svg) {
       html += '<div class="section diagram"><h4>参考图解</h4>' + svg + '</div>';
@@ -287,7 +329,7 @@ function questionCard(q) {
       html += '<div class="section diagram"><h4>参考图解</h4><p style="text-align:left">' + escapeHtml(q.diagram) + '</p></div>';
     }
   }
-  if (q.tip) {
+  if (state.mode === 'teaching' && q.tip) {
     html += '<div class="section tip"><h4>备课提示</h4><p>' + escapeHtml(q.tip).replace(/\n/g, '<br>') + '</p></div>';
   }
   html += '</div>';
@@ -297,7 +339,7 @@ function questionCard(q) {
 function renderList() {
   const qs = getQuestions();
   if (!qs.length) { app.innerHTML = '<div class="empty">没有匹配的题目</div>'; return; }
-  app.innerHTML = '<div class="q-list">' + qs.map(questionCard).join('') + '</div>';
+  app.innerHTML = '<div class="q-list">' + questionCard(qs[state.index]) + '</div>';
   document.querySelectorAll('.q-tag').forEach(el => el.addEventListener('click', tagClickHandler));
 }
 
@@ -314,6 +356,15 @@ function renderSingle() {
 }
 
 function render() {
+  const qs = getQuestions();
+  state.index = Math.max(0, Math.min(state.index, qs.length - 1));
+  const browsing = state.view === 'list';
+  document.getElementById('pager').hidden = !browsing;
+  document.getElementById('pager').style.display = browsing ? 'flex' : 'none';
+  document.getElementById('progress').textContent = qs.length ? (state.index + 1) + ' / ' + qs.length + ' · 上下滚动切题' : '0 / 0';
+  document.getElementById('prevQuestion').disabled = state.index === 0;
+  document.getElementById('nextQuestion').disabled = state.index >= qs.length - 1;
+  app.scrollTop = 0;
   if (state.view === 'answers') { renderAnswers(); return; }
   if (state.view === 'single') { renderSingle(); return; }
   renderList();
@@ -325,6 +376,7 @@ function escapeHtml(s) {
 }
 
 window.toggleOne = function(btn, kind) {
+  if (state.mode !== 'teaching') return;
   const card = btn.closest('.q-card');
   const year = card.dataset.year;
   const no = Number(card.dataset.no);
@@ -360,14 +412,14 @@ window.toggleOne = function(btn, kind) {
   if (insertHtml) { card.insertAdjacentHTML('beforeend', insertHtml); btn.textContent = btn.textContent.replace('显示','隐藏'); }
 };
 
-yearSel.addEventListener('change', e => { state.year = e.target.value; state.singleNo = 1; if (state.year !== 'all') singleNo.max = KANGAROO_DATA[state.year].length; else singleNo.max = 30; render(); });
+yearSel.addEventListener('change', e => { state.year = e.target.value; state.index = 0; state.singleNo = 1; singleNo.value = 1; if (state.year !== 'all') singleNo.max = KANGAROO_DATA[state.year].length; else singleNo.max = 30; render(); });
 viewSel.addEventListener('change', e => {
   state.view = e.target.value;
   singleNo.style.display = state.view === 'single' ? 'inline-block' : 'none';
   render();
 });
 singleNo.addEventListener('input', e => { state.singleNo = Number(e.target.value); if (state.view === 'single') render(); });
-search.addEventListener('input', e => { state.search = e.target.value; render(); });
+search.addEventListener('input', e => { state.search = e.target.value; state.index = 0; render(); });
 
 btnToggleAns.addEventListener('click', () => {
   state.showAnswer = !state.showAnswer;
@@ -381,6 +433,86 @@ btnExpandSol.addEventListener('click', () => { state.showSolution = !state.showS
 btnToggleTags.addEventListener('click', () => {
   tagCloud.classList.toggle('hidden');
   updateTagToggleButton();
+});
+
+function cardQuestion(btn) {
+  const card = btn.closest('.q-card');
+  return {...KANGAROO_DATA[card.dataset.year].find(q => q.no === Number(card.dataset.no)), year: card.dataset.year};
+}
+function hintSection(q, i) {
+  return '<div class="section hint" role="status"><h4>Hint ' + (i + 1) + ' / ' + q.hints.length + '</h4><p>' + escapeHtml(q.hints[i]) + '</p><small>由浅到深；全部看完后再次点击将回到第一条。</small></div>';
+}
+window.showHint = function(btn) {
+  const q = cardQuestion(btn);
+  const i = ((hintProgress.get(questionKey(q)) ?? -1) + 1) % q.hints.length;
+  if (!window.confirm('确认查看 Hint ' + (i + 1) + ' / ' + q.hints.length + ' 吗？')) return;
+  hintProgress.set(questionKey(q), i);
+  const card = btn.closest('.q-card');
+  const old = card.querySelector('.hint');
+  if (old) old.remove();
+  card.querySelector('.q-actions').insertAdjacentHTML('afterend', hintSection(q, i));
+  card.querySelector('.hint').scrollIntoView({block: 'nearest'});
+};
+window.chooseAnswer = function(btn) {
+  if (state.mode !== 'practice') return;
+  const q = cardQuestion(btn);
+  attempts.set(questionKey(q), btn.dataset.letter);
+  const top = app.scrollTop;
+  render();
+  app.scrollTop = top;
+  app.querySelector('[data-letter="' + btn.dataset.letter + '"]').focus({preventScroll: true});
+};
+document.getElementById('modeToggle').addEventListener('click', e => {
+  state.mode = state.mode === 'teaching' ? 'practice' : 'teaching';
+  const practice = state.mode === 'practice';
+  state.showAnswer = state.showSolution = state.showMethods = state.showDiagram = false;
+  btnToggleAns.hidden = btnExpandSol.hidden = practice;
+  btnToggleAns.textContent = '显示所有答案'; btnToggleAns.className = 'ok';
+  btnExpandSol.textContent = '展开全部详解';
+  viewSel.querySelector('[value="answers"]').disabled = practice;
+  viewSel.querySelector('[value="answers"]').hidden = practice;
+  if (practice && state.view === 'answers') { state.view = 'list'; viewSel.value = 'list'; }
+  e.currentTarget.textContent = practice ? '练习版 · 切换教学版' : '教学版 · 切换练习版';
+  e.currentTarget.setAttribute('aria-pressed', String(practice));
+  renderAnsHint(); render();
+});
+let lastNavigation = 0;
+function navigateQuestion(direction) {
+  if (state.view !== 'list') return;
+  const next = Math.max(0, Math.min(getQuestions().length - 1, state.index + direction));
+  if (next === state.index) return;
+  state.index = next; lastNavigation = Date.now(); render();
+}
+document.getElementById('prevQuestion').onclick = () => navigateQuestion(-1);
+document.getElementById('nextQuestion').onclick = () => navigateQuestion(1);
+let wheelTotal = 0, lastWheel = 0;
+app.addEventListener('wheel', e => {
+  if (state.view !== 'list' || e.ctrlKey || Math.abs(e.deltaX) > Math.abs(e.deltaY)) return;
+  const direction = Math.sign(e.deltaY);
+  const atEdge = direction > 0 ? app.scrollTop + app.clientHeight >= app.scrollHeight - 2 : app.scrollTop <= 0;
+  if (!atEdge) { wheelTotal = 0; return; }
+  e.preventDefault();
+  if (Date.now() - lastNavigation < 650) return;
+  if (Date.now() - lastWheel > 200 || Math.sign(wheelTotal) !== direction) wheelTotal = 0;
+  lastWheel = Date.now(); wheelTotal += e.deltaY * (e.deltaMode === 1 ? 16 : e.deltaMode === 2 ? app.clientHeight : 1);
+  if (Math.abs(wheelTotal) >= 65) { navigateQuestion(direction); wheelTotal = 0; }
+}, {passive: false});
+let touchStart = null;
+app.addEventListener('touchstart', e => {
+  touchStart = {y: e.touches[0].clientY, top: app.scrollTop <= 0, bottom: app.scrollTop + app.clientHeight >= app.scrollHeight - 2};
+}, {passive: true});
+app.addEventListener('touchend', e => {
+  if (!touchStart) return;
+  const dy = touchStart.y - e.changedTouches[0].clientY;
+  if (Math.abs(dy) > 70 && Date.now() - lastNavigation > 650 && (dy > 0 ? touchStart.bottom : touchStart.top)) navigateQuestion(Math.sign(dy));
+  touchStart = null;
+}, {passive: true});
+app.addEventListener('keydown', e => {
+  if (e.target !== app) return;
+  if (e.key === 'ArrowDown' || e.key === 'ArrowUp') {
+    const down = e.key === 'ArrowDown';
+    if (down ? app.scrollTop + app.clientHeight >= app.scrollHeight - 2 : app.scrollTop <= 0) { e.preventDefault(); navigateQuestion(down ? 1 : -1); }
+  }
 });
 
 renderTagCloud();
