@@ -209,6 +209,7 @@ let state = { mode: 'teaching', year: 'all', view: 'list', showAnswer: false, sh
 const app = document.getElementById('app');
 const attempts = new Map();
 const hintProgress = new Map();
+const teachingHints = new Set();
 const questionKey = q => q.year + '-' + q.no;
 const yearSel = document.getElementById('yearSel');
 const viewSel = document.getElementById('viewSel');
@@ -313,7 +314,7 @@ function questionCard(q) {
   html += '</div>';
   const attempt = attempts.get(questionKey(q));
   if (state.mode === 'practice') html += '<div class="feedback ' + (attempt ? (attempt === q.answer ? 'correct' : 'incorrect') : '') + '" role="status">' + (attempt ? (attempt === q.answer ? '✅ 正确！' : '❌ 错误，再试一次。') : '请选择一个答案') + '</div>';
-  html += '<div class="q-actions">' + (state.mode === 'teaching' ? '<button onclick="editHints(this)">编辑 Hint</button>' : '<button onclick="showHint(this)">显示 Hint</button>');
+  html += '<div class="q-actions"><button onclick="showHint(this)">' + (state.mode === 'teaching' && teachingHints.has(questionKey(q)) ? '隐藏 Hint' : '显示 Hint') + '</button>';
   if (state.mode === 'teaching') {
   html += '<button onclick="toggleOne(this, \'answer\')">' + (state.showAnswer ? '隐藏答案' : '显示答案') + '</button>';
   html += '<button onclick="toggleOne(this, \'solution\')">' + (state.showSolution ? '隐藏详解' : '显示详解') + '</button>';
@@ -322,8 +323,8 @@ function questionCard(q) {
   }
   html += '</div>';
   const hintIndex = hintProgress.get(questionKey(q));
-  if (state.mode === 'teaching') html += '<div class="section hint"><h4>全部 Hint</h4><ol>' + hintsFor(q).map(h => '<li>' + escapeHtml(h) + '</li>').join('') + '</ol></div>';
-  else if (hintIndex !== undefined) html += hintSection(q, hintIndex % hintsFor(q).length);
+  if (state.mode === 'teaching' && teachingHints.has(questionKey(q))) html += teachingHintSection(q);
+  else if (state.mode === 'practice' && hintIndex !== undefined) html += hintSection(q, hintIndex % hintsFor(q).length);
 
   if (state.mode === 'teaching' && state.showSolution) {
     html += '<div class="section solution"><h4>详细解答</h4><p>' + escapeHtml(q.solution).replace(/\n/g, '<br>') + '</p></div>';
@@ -483,11 +484,25 @@ document.getElementById('hintForm').onsubmit = e => {
   customHints = updated; hintProgress.delete(questionKey(editingQuestion));
   hintEditor.close(); const top = app.scrollTop; render(); app.scrollTop = top;
 };
+function teachingHintSection(q) {
+  return '<div class="section hint"><h4>全部 Hint</h4><ol>' + hintsFor(q).map(h => '<li>' + escapeHtml(h) + '</li>').join('') + '</ol><button class="secondary" onclick="editHints(this)">编辑 Hint</button></div>';
+}
 function hintSection(q, i) {
   return '<div class="section hint" role="status"><h4>Hint ' + (i + 1) + ' / ' + hintsFor(q).length + '</h4><p>' + escapeHtml(hintsFor(q)[i]).replace(/\n/g, '<br>') + '</p><small>由浅到深；全部看完后再次点击将回到第一条。</small></div>';
 }
 window.showHint = function(btn) {
   const q = cardQuestion(btn);
+  if (state.mode === 'teaching') {
+    const card = btn.closest('.q-card');
+    if (teachingHints.has(questionKey(q))) {
+      teachingHints.delete(questionKey(q)); card.querySelector('.hint')?.remove(); btn.textContent = '显示 Hint';
+    } else {
+      teachingHints.add(questionKey(q));
+      card.querySelector('.q-actions').insertAdjacentHTML('afterend', teachingHintSection(q));
+      btn.textContent = '隐藏 Hint';
+    }
+    return;
+  }
   const i = ((hintProgress.get(questionKey(q)) ?? -1) + 1) % hintsFor(q).length;
   if (!window.confirm('确认查看 Hint ' + (i + 1) + ' / ' + hintsFor(q).length + ' 吗？')) return;
   hintProgress.set(questionKey(q), i);
