@@ -109,9 +109,8 @@ header { padding: 12px 24px; }
 .controls { padding: 10px 24px; gap: 6px; max-height: 40dvh; overflow-y: auto; }
 .controls-row:has(.tag-cloud.hidden) { display: none; }
 main { width: 100%; flex: 1; min-height: 0; overflow-y: auto; overscroll-behavior: contain; padding: 16px 24px; }
-.q-list { display: block; }
-.q-card { min-height: 100%; }
-#pager { display: flex; justify-content: center; align-items: center; gap: 18px; padding: 10px; border-top: 1px solid var(--border); background: white; }
+.q-list { display: grid; gap: 20px; }
+.q-card { min-height: 0; }
 footer { padding: 4px; font-size: 11px; }
 button:disabled { opacity: .4; cursor: default; }
 .option { background: white; color: var(--text); font-weight: 400; text-align: left; }
@@ -128,8 +127,14 @@ button:focus-visible, main:focus-visible { outline: 3px solid var(--accent); out
   #modeToggle { font-size: 12px; padding: 6px; }
   .controls { padding: 8px 12px; } .controls-row { gap: 6px; }
   #search { width: 100%; } main { padding: 10px; } .q-card { padding: 14px; }
-  #pager { gap: 10px; font-size: 13px; } footer { display: none; }
+  footer { display: none; }
 }
+dialog { width: min(640px, 94vw); max-height: 85dvh; overflow: auto; border: 1px solid var(--border); border-radius: 14px; padding: 24px; }
+dialog::backdrop { background: #0f172a80; }
+.hint-field { margin: 16px 0; }
+.hint-field textarea { display: block; width: 100%; min-height: 90px; resize: vertical; font: inherit; padding: 10px; border: 1px solid var(--border); border-radius: 8px; }
+.hint li { white-space: pre-wrap; margin: 8px 0; }
+#hintError { color: var(--danger); }
 </style>
 </head>
 <body>
@@ -166,7 +171,11 @@ button:focus-visible, main:focus-visible { outline: 3px solid var(--accent); out
 </div>
 
 <main id="app" tabindex="0" aria-label="题目浏览区"></main>
-<nav id="pager" aria-label="题目导航"><button id="prevQuestion" class="secondary">↑ 上一题</button><span id="progress" aria-live="polite"></span><button id="nextQuestion" class="secondary">下一题 ↓</button></nav>
+<dialog id="hintEditor" aria-labelledby="hintEditorTitle">
+<form id="hintForm"><h2 id="hintEditorTitle">编辑 Hint</h2><p>按由浅到深排列。保存到当前浏览器，刷新后保留；不会同步到其他设备。</p>
+<div id="hintFields"></div><button type="button" id="addHint">＋ 添加一条</button>
+<p id="hintError" role="alert"></p><div class="q-actions"><button type="submit">保存 Hint</button><button type="button" id="cancelHints" class="secondary">取消</button></div></form>
+</dialog>
 
 <footer>
   Generated for lesson prep · Math Kangaroo 1999 (Grade 3–4) &amp; 2002 (Grade 5–6)
@@ -187,7 +196,7 @@ function renderTagCloud() {
     chip.innerHTML = escapeHtml(tag) + '<span class="count">' + count + '</span>';
     chip.addEventListener('click', () => {
       if (state.tags.has(tag)) state.tags.delete(tag); else state.tags.add(tag);
-      state.index = 0; renderTagCloud();
+      renderTagCloud();
       render();
     });
     tagCloud.appendChild(chip);
@@ -196,7 +205,7 @@ function renderTagCloud() {
   updateTagToggleButton();
 }
 
-let state = { mode: 'teaching', index: 0, year: 'all', view: 'list', showAnswer: false, showSolution: false, showMethods: false, showDiagram: false, search: '', tags: new Set(), singleNo: 1 };
+let state = { mode: 'teaching', year: 'all', view: 'list', showAnswer: false, showSolution: false, showMethods: false, showDiagram: false, search: '', tags: new Set(), singleNo: 1 };
 const app = document.getElementById('app');
 const attempts = new Map();
 const hintProgress = new Map();
@@ -285,7 +294,7 @@ function tagClickHandler(e) {
   const tag = e.target.dataset.tag;
   if (!tag) return;
   if (state.tags.has(tag)) state.tags.delete(tag); else state.tags.add(tag);
-  state.index = 0; renderTagCloud();
+  renderTagCloud();
   render();
 }
 
@@ -304,7 +313,7 @@ function questionCard(q) {
   html += '</div>';
   const attempt = attempts.get(questionKey(q));
   if (state.mode === 'practice') html += '<div class="feedback ' + (attempt ? (attempt === q.answer ? 'correct' : 'incorrect') : '') + '" role="status">' + (attempt ? (attempt === q.answer ? '✅ 正确！' : '❌ 错误，再试一次。') : '请选择一个答案') + '</div>';
-  html += '<div class="q-actions"><button onclick="showHint(this)">显示 Hint</button>';
+  html += '<div class="q-actions">' + (state.mode === 'teaching' ? '<button onclick="editHints(this)">编辑 Hint</button>' : '<button onclick="showHint(this)">显示 Hint</button>');
   if (state.mode === 'teaching') {
   html += '<button onclick="toggleOne(this, \'answer\')">' + (state.showAnswer ? '隐藏答案' : '显示答案') + '</button>';
   html += '<button onclick="toggleOne(this, \'solution\')">' + (state.showSolution ? '隐藏详解' : '显示详解') + '</button>';
@@ -313,7 +322,8 @@ function questionCard(q) {
   }
   html += '</div>';
   const hintIndex = hintProgress.get(questionKey(q));
-  if (hintIndex !== undefined) html += hintSection(q, hintIndex);
+  if (state.mode === 'teaching') html += '<div class="section hint"><h4>全部 Hint</h4><ol>' + hintsFor(q).map(h => '<li>' + escapeHtml(h) + '</li>').join('') + '</ol></div>';
+  else if (hintIndex !== undefined) html += hintSection(q, hintIndex % hintsFor(q).length);
 
   if (state.mode === 'teaching' && state.showSolution) {
     html += '<div class="section solution"><h4>详细解答</h4><p>' + escapeHtml(q.solution).replace(/\n/g, '<br>') + '</p></div>';
@@ -339,7 +349,7 @@ function questionCard(q) {
 function renderList() {
   const qs = getQuestions();
   if (!qs.length) { app.innerHTML = '<div class="empty">没有匹配的题目</div>'; return; }
-  app.innerHTML = '<div class="q-list">' + questionCard(qs[state.index]) + '</div>';
+  app.innerHTML = '<div class="q-list">' + qs.map(questionCard).join('') + '</div>';
   document.querySelectorAll('.q-tag').forEach(el => el.addEventListener('click', tagClickHandler));
 }
 
@@ -356,15 +366,6 @@ function renderSingle() {
 }
 
 function render() {
-  const qs = getQuestions();
-  state.index = Math.max(0, Math.min(state.index, qs.length - 1));
-  const browsing = state.view === 'list';
-  document.getElementById('pager').hidden = !browsing;
-  document.getElementById('pager').style.display = browsing ? 'flex' : 'none';
-  document.getElementById('progress').textContent = qs.length ? (state.index + 1) + ' / ' + qs.length + ' · 上下滚动切题' : '0 / 0';
-  document.getElementById('prevQuestion').disabled = state.index === 0;
-  document.getElementById('nextQuestion').disabled = state.index >= qs.length - 1;
-  app.scrollTop = 0;
   if (state.view === 'answers') { renderAnswers(); return; }
   if (state.view === 'single') { renderSingle(); return; }
   renderList();
@@ -412,14 +413,14 @@ window.toggleOne = function(btn, kind) {
   if (insertHtml) { card.insertAdjacentHTML('beforeend', insertHtml); btn.textContent = btn.textContent.replace('显示','隐藏'); }
 };
 
-yearSel.addEventListener('change', e => { state.year = e.target.value; state.index = 0; state.singleNo = 1; singleNo.value = 1; if (state.year !== 'all') singleNo.max = KANGAROO_DATA[state.year].length; else singleNo.max = 30; render(); });
+yearSel.addEventListener('change', e => { state.year = e.target.value; state.singleNo = 1; singleNo.value = 1; if (state.year !== 'all') singleNo.max = KANGAROO_DATA[state.year].length; else singleNo.max = 30; render(); });
 viewSel.addEventListener('change', e => {
   state.view = e.target.value;
   singleNo.style.display = state.view === 'single' ? 'inline-block' : 'none';
   render();
 });
 singleNo.addEventListener('input', e => { state.singleNo = Number(e.target.value); if (state.view === 'single') render(); });
-search.addEventListener('input', e => { state.search = e.target.value; state.index = 0; render(); });
+search.addEventListener('input', e => { state.search = e.target.value; render(); });
 
 btnToggleAns.addEventListener('click', () => {
   state.showAnswer = !state.showAnswer;
@@ -439,13 +440,56 @@ function cardQuestion(btn) {
   const card = btn.closest('.q-card');
   return {...KANGAROO_DATA[card.dataset.year].find(q => q.no === Number(card.dataset.no)), year: card.dataset.year};
 }
+const HINT_STORAGE = 'kangaroo-hints-v1';
+let customHints = {};
+try {
+  const saved = JSON.parse(localStorage.getItem(HINT_STORAGE) || '{}');
+  if (saved && typeof saved === 'object' && !Array.isArray(saved)) {
+    for (const [key, value] of Object.entries(saved)) {
+      if (Array.isArray(value) && value.length && value.every(h => typeof h === 'string' && h.trim())) customHints[key] = value;
+    }
+  }
+} catch (_) { /* Default hints remain available when storage is unavailable. */ }
+function hintsFor(q) { return customHints[questionKey(q)] || q.hints; }
+const hintEditor = document.getElementById('hintEditor');
+const hintFields = document.getElementById('hintFields');
+let editingQuestion = null;
+function addHintField(value = '') {
+  const row = document.createElement('div'); row.className = 'hint-field';
+  const label = document.createElement('label'); label.textContent = 'Hint（由浅到深）';
+  const input = document.createElement('textarea'); input.value = value; input.required = true;
+  label.appendChild(input); row.appendChild(label);
+  const remove = document.createElement('button'); remove.type = 'button'; remove.className = 'secondary'; remove.textContent = '删除此条';
+  remove.onclick = () => row.remove(); row.appendChild(remove); hintFields.appendChild(row);
+}
+window.editHints = function(btn) {
+  if (state.mode !== 'teaching') return;
+  editingQuestion = cardQuestion(btn); hintFields.replaceChildren();
+  document.getElementById('hintEditorTitle').textContent = editingQuestion.year + ' · Q' + editingQuestion.no + ' 编辑 Hint';
+  document.getElementById('hintError').textContent = '';
+  hintsFor(editingQuestion).forEach(addHintField); hintEditor.showModal();
+};
+document.getElementById('addHint').onclick = () => addHintField();
+document.getElementById('cancelHints').onclick = () => hintEditor.close();
+document.getElementById('hintForm').onsubmit = e => {
+  e.preventDefault();
+  const values = [...hintFields.querySelectorAll('textarea')].map(el => el.value.trim());
+  if (!values.length || values.some(h => !h)) {
+    document.getElementById('hintError').textContent = '请至少保留一条 Hint，且内容不能为空。'; return;
+  }
+  const updated = {...customHints, [questionKey(editingQuestion)]: values};
+  try { localStorage.setItem(HINT_STORAGE, JSON.stringify(updated)); }
+  catch (_) { document.getElementById('hintError').textContent = '浏览器无法保存，请允许网站存储后重试。编辑内容已保留。'; return; }
+  customHints = updated; hintProgress.delete(questionKey(editingQuestion));
+  hintEditor.close(); const top = app.scrollTop; render(); app.scrollTop = top;
+};
 function hintSection(q, i) {
-  return '<div class="section hint" role="status"><h4>Hint ' + (i + 1) + ' / ' + q.hints.length + '</h4><p>' + escapeHtml(q.hints[i]) + '</p><small>由浅到深；全部看完后再次点击将回到第一条。</small></div>';
+  return '<div class="section hint" role="status"><h4>Hint ' + (i + 1) + ' / ' + hintsFor(q).length + '</h4><p>' + escapeHtml(hintsFor(q)[i]).replace(/\n/g, '<br>') + '</p><small>由浅到深；全部看完后再次点击将回到第一条。</small></div>';
 }
 window.showHint = function(btn) {
   const q = cardQuestion(btn);
-  const i = ((hintProgress.get(questionKey(q)) ?? -1) + 1) % q.hints.length;
-  if (!window.confirm('确认查看 Hint ' + (i + 1) + ' / ' + q.hints.length + ' 吗？')) return;
+  const i = ((hintProgress.get(questionKey(q)) ?? -1) + 1) % hintsFor(q).length;
+  if (!window.confirm('确认查看 Hint ' + (i + 1) + ' / ' + hintsFor(q).length + ' 吗？')) return;
   hintProgress.set(questionKey(q), i);
   const card = btn.closest('.q-card');
   const old = card.querySelector('.hint');
@@ -460,7 +504,7 @@ window.chooseAnswer = function(btn) {
   const top = app.scrollTop;
   render();
   app.scrollTop = top;
-  app.querySelector('[data-letter="' + btn.dataset.letter + '"]').focus({preventScroll: true});
+  app.querySelector('.q-card[data-year="' + q.year + '"][data-no="' + q.no + '"] [data-letter="' + btn.dataset.letter + '"]').focus({preventScroll: true});
 };
 document.getElementById('modeToggle').addEventListener('click', e => {
   state.mode = state.mode === 'teaching' ? 'practice' : 'teaching';
@@ -475,44 +519,6 @@ document.getElementById('modeToggle').addEventListener('click', e => {
   e.currentTarget.textContent = practice ? '练习版 · 切换教学版' : '教学版 · 切换练习版';
   e.currentTarget.setAttribute('aria-pressed', String(practice));
   renderAnsHint(); render();
-});
-let lastNavigation = 0;
-function navigateQuestion(direction) {
-  if (state.view !== 'list') return;
-  const next = Math.max(0, Math.min(getQuestions().length - 1, state.index + direction));
-  if (next === state.index) return;
-  state.index = next; lastNavigation = Date.now(); render();
-}
-document.getElementById('prevQuestion').onclick = () => navigateQuestion(-1);
-document.getElementById('nextQuestion').onclick = () => navigateQuestion(1);
-let wheelTotal = 0, lastWheel = 0;
-app.addEventListener('wheel', e => {
-  if (state.view !== 'list' || e.ctrlKey || Math.abs(e.deltaX) > Math.abs(e.deltaY)) return;
-  const direction = Math.sign(e.deltaY);
-  const atEdge = direction > 0 ? app.scrollTop + app.clientHeight >= app.scrollHeight - 2 : app.scrollTop <= 0;
-  if (!atEdge) { wheelTotal = 0; return; }
-  e.preventDefault();
-  if (Date.now() - lastNavigation < 650) return;
-  if (Date.now() - lastWheel > 200 || Math.sign(wheelTotal) !== direction) wheelTotal = 0;
-  lastWheel = Date.now(); wheelTotal += e.deltaY * (e.deltaMode === 1 ? 16 : e.deltaMode === 2 ? app.clientHeight : 1);
-  if (Math.abs(wheelTotal) >= 65) { navigateQuestion(direction); wheelTotal = 0; }
-}, {passive: false});
-let touchStart = null;
-app.addEventListener('touchstart', e => {
-  touchStart = {y: e.touches[0].clientY, top: app.scrollTop <= 0, bottom: app.scrollTop + app.clientHeight >= app.scrollHeight - 2};
-}, {passive: true});
-app.addEventListener('touchend', e => {
-  if (!touchStart) return;
-  const dy = touchStart.y - e.changedTouches[0].clientY;
-  if (Math.abs(dy) > 70 && Date.now() - lastNavigation > 650 && (dy > 0 ? touchStart.bottom : touchStart.top)) navigateQuestion(Math.sign(dy));
-  touchStart = null;
-}, {passive: true});
-app.addEventListener('keydown', e => {
-  if (e.target !== app) return;
-  if (e.key === 'ArrowDown' || e.key === 'ArrowUp') {
-    const down = e.key === 'ArrowDown';
-    if (down ? app.scrollTop + app.clientHeight >= app.scrollHeight - 2 : app.scrollTop <= 0) { e.preventDefault(); navigateQuestion(down ? 1 : -1); }
-  }
 });
 
 renderTagCloud();
