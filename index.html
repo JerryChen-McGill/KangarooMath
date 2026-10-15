@@ -7,6 +7,7 @@
 <script src="site_data.js"></script>
 <script src="diagrams.js"></script>
 <script src="hints.js"></script>
+<script src="extensions.js"></script>
 <style>
 :root {
   --bg: #f8fafc;
@@ -135,6 +136,21 @@ dialog::backdrop { background: #0f172a80; }
 .hint-field textarea { display: block; width: 100%; min-height: 90px; resize: vertical; font: inherit; padding: 10px; border: 1px solid var(--border); border-radius: 8px; }
 .hint li { white-space: pre-wrap; margin: 8px 0; }
 #hintError { color: var(--danger); }
+.section.extension { background: #f0fdfa; border-color: #99f6e4; }
+.extension .extension-text { white-space: pre-wrap; line-height: 1.8; }
+.extension .extension-context { color: var(--muted); font-size: 14px; }
+.extension details { margin-top: 14px; border-top: 1px solid #99f6e4; padding-top: 12px; }
+.extension summary { cursor: pointer; color: #0f766e; font-weight: 600; }
+.extension summary:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+
+button.disclosure { display: inline-flex; align-items: center; gap: 7px; background: var(--surface); border-color: var(--border); color: var(--muted); font-weight: 500; }
+button.disclosure:hover { background: var(--bg); color: var(--accent); border-color: #93c5fd; }
+button.disclosure[aria-expanded="true"] { background: #eff6ff; border-color: #bfdbfe; color: var(--accent); }
+.disclosure svg { width: 16px; height: 16px; flex-shrink: 0; transition: transform 180ms ease; }
+.disclosure[aria-expanded="true"] svg { transform: rotate(90deg); }
+.section { animation: panel-in 180ms ease-out; }
+@keyframes panel-in { from { opacity: 0; transform: translateY(-6px); } to { opacity: 1; transform: translateY(0); } }
+@media (prefers-reduced-motion: reduce) { .section { animation: none; } .disclosure svg { transition: none; } }
 </style>
 </head>
 <body>
@@ -210,6 +226,7 @@ const app = document.getElementById('app');
 const attempts = new Map();
 const hintProgress = new Map();
 const teachingHints = new Set();
+const openExtensions = new Set();
 const questionKey = q => q.year + '-' + q.no;
 const yearSel = document.getElementById('yearSel');
 const viewSel = document.getElementById('viewSel');
@@ -237,7 +254,7 @@ function renderAnsHint() {
 function updateTagToggleButton() {
   const arrow = tagCloud.classList.contains('hidden') ? '▼' : '▲';
   const count = state.tags.size ? ' (' + state.tags.size + ')' : '';
-  btnToggleTags.textContent = '标签筛选' + count + ' ' + arrow;
+  styleDisclosure(btnToggleTags, '标签筛选' + count, !tagCloud.classList.contains('hidden'));
 }
 
 function getQuestions() {
@@ -320,11 +337,14 @@ function questionCard(q) {
   html += '<button onclick="toggleOne(this, \'solution\')">' + (state.showSolution ? '隐藏详解' : '显示详解') + '</button>';
   html += '<button onclick="toggleOne(this, \'methods\')">' + (state.showMethods ? '隐藏思路' : '显示多种思路') + '</button>';
   if (svgFor(q.year, q.no) || q.diagram) html += '<button onclick="toggleOne(this, \'diagram\')">' + (state.showDiagram ? '隐藏图解' : '显示图解') + '</button>';
+  if (q.tip) html += '<button onclick="toggleOne(this, \'tip\')">显示备课提示</button>';
   }
+  html += '<button type="button" onclick="toggleExtension(this)">延申拓展</button>';
   html += '</div>';
   const hintIndex = hintProgress.get(questionKey(q));
   if (state.mode === 'teaching' && teachingHints.has(questionKey(q))) html += teachingHintSection(q);
   else if (state.mode === 'practice' && hintIndex !== undefined) html += hintSection(q, hintIndex % hintsFor(q).length);
+  if (openExtensions.has(questionKey(q))) html += extensionSection(q);
 
   if (state.mode === 'teaching' && state.showSolution) {
     html += '<div class="section solution"><h4>详细解答</h4><p>' + escapeHtml(q.solution).replace(/\n/g, '<br>') + '</p></div>';
@@ -339,9 +359,6 @@ function questionCard(q) {
     } else if (q.diagram) {
       html += '<div class="section diagram"><h4>参考图解</h4><p style="text-align:left">' + escapeHtml(q.diagram) + '</p></div>';
     }
-  }
-  if (state.mode === 'teaching' && q.tip) {
-    html += '<div class="section tip"><h4>备课提示</h4><p>' + escapeHtml(q.tip).replace(/\n/g, '<br>') + '</p></div>';
   }
   html += '</div>';
   return html;
@@ -366,16 +383,73 @@ function renderSingle() {
   document.querySelectorAll('.q-tag').forEach(el => el.addEventListener('click', tagClickHandler));
 }
 
-function render() {
+function renderContent() {
   if (state.view === 'answers') { renderAnswers(); return; }
   if (state.view === 'single') { renderSingle(); return; }
   renderList();
 }
 
+const buttonLabels = {answer: '答案', solution: '详解', methods: '多种思路', diagram: '图解', tip: '备课提示'};
+function styleDisclosure(btn, label, expanded) {
+  btn.classList.remove('ok', 'danger'); btn.classList.add('disclosure');
+  btn.setAttribute('aria-expanded', String(expanded));
+  btn.title = (expanded ? '隐藏' : '显示') + label;
+  btn.innerHTML = '<svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="m7 4 6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg><span>' + label + '</span>';
+}
+function closePanel(panel, btn) {
+  if (!panel) return;
+  if (matchMedia('(prefers-reduced-motion: reduce)').matches) { panel.remove(); return; }
+  btn.disabled = true;
+  panel.animate([{opacity: 1, transform: 'translateY(0)'}, {opacity: 0, transform: 'translateY(-6px)'}], {duration: 160, easing: 'ease-in'}).finished.finally(() => { panel.remove(); btn.disabled = false; });
+}
+function render() {
+  renderContent();
+  app.querySelectorAll('.q-actions > button').forEach(btn => {
+    const action = btn.getAttribute('onclick') || '';
+    if (action.includes('toggleExtension')) {
+      const key = questionKey(cardQuestion(btn));
+      styleDisclosure(btn, '延申拓展', openExtensions.has(key));
+      btn.setAttribute('aria-controls', 'extension-' + key);
+      return;
+    }
+    if (action.includes('showHint')) {
+      if (state.mode === 'teaching') styleDisclosure(btn, 'Hint', teachingHints.has(questionKey(cardQuestion(btn))));
+      return;
+    }
+    const kind = Object.keys(buttonLabels).find(k => action.includes("'" + k + "'"));
+    if (kind) styleDisclosure(btn, buttonLabels[kind], btn.textContent.includes('隐藏'));
+  });
+  styleDisclosure(btnToggleAns, '全部答案', state.showAnswer);
+  styleDisclosure(btnExpandSol, '全部详解', state.showSolution);
+  updateTagToggleButton();
+}
 function escapeHtml(s) {
   if (!s) return '';
   return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
 }
+
+function extensionSection(q) {
+  const extension = KANGAROO_EXTENSIONS[questionKey(q)];
+  return '<div class="section extension" id="extension-' + questionKey(q) + '"><h4>延申拓展</h4>' +
+    '<p class="extension-text" lang="en">' + escapeHtml(extension.text) + '</p>' +
+    '<p class="extension-context"><strong>小改动：</strong>' + escapeHtml(extension.change) + '</p>' +
+    '<details class="extension-method"><summary>同类方法提示</summary><p>' + escapeHtml(extension.method) + '</p></details>' +
+    '<details class="extension-answer"><summary>拓展答案与解析</summary><p><strong>' + escapeHtml(extension.answer) + '</strong></p><p>' + escapeHtml(extension.solution) + '</p></details></div>';
+}
+window.toggleExtension = function(btn) {
+  const q = cardQuestion(btn);
+  const key = questionKey(q);
+  const card = btn.closest('.q-card');
+  if (openExtensions.has(key)) {
+    openExtensions.delete(key);
+    closePanel(card.querySelector('.extension'), btn);
+    styleDisclosure(btn, '延申拓展', false);
+  } else {
+    openExtensions.add(key);
+    card.querySelector('.q-actions').insertAdjacentHTML('afterend', extensionSection(q));
+    styleDisclosure(btn, '延申拓展', true);
+  }
+};
 
 window.toggleOne = function(btn, kind) {
   if (state.mode !== 'teaching') return;
@@ -385,9 +459,9 @@ window.toggleOne = function(btn, kind) {
   const q = KANGAROO_DATA[year].find(x => x.no === no);
   const mapped = {...q, year};
   if (kind === 'answer') {
-    const showing = btn.textContent.includes('隐藏');
+    const showing = btn.getAttribute('aria-expanded') === 'true';
     setCardAnswer(card, mapped, !showing);
-    btn.textContent = showing ? '显示答案' : '隐藏答案';
+    styleDisclosure(btn, '答案', !showing);
     return;
   }
   let section = null;
@@ -399,19 +473,22 @@ window.toggleOne = function(btn, kind) {
     if (kind === 'solution' && text.includes('详细')) section = sec;
     if (kind === 'methods' && text.includes('思路')) section = sec;
     if (kind === 'diagram' && text.includes('图解')) section = sec;
+    if (kind === 'tip' && text.includes('备课提示')) section = sec;
   });
-  if (section) { section.remove(); btn.textContent = btn.textContent.replace('隐藏','显示'); return; }
+  if (section) { closePanel(section, btn); styleDisclosure(btn, buttonLabels[kind], false); return; }
   let insertHtml = '';
   if (kind === 'solution') {
     insertHtml = '<div class="section solution"><h4>详细解答</h4><p>' + escapeHtml(mapped.solution).replace(/\n/g,'<br>') + '</p></div>';
   } else if (kind === 'methods') {
     insertHtml = '<div class="section methods"><h4>其他思路</h4><ul>' + mapped.methods.map(m => '<li>' + escapeHtml(m).replace(/\n/g,'<br>') + '</li>').join('') + '</ul></div>';
+  } else if (kind === 'tip') {
+    insertHtml = '<div class="section tip"><h4>备课提示</h4><p>' + escapeHtml(mapped.tip).replace(/\n/g, '<br>') + '</p></div>';
   } else if (kind === 'diagram') {
     const svg = svgFor(year, no);
     if (svg) insertHtml = '<div class="section diagram"><h4>参考图解</h4>' + svg + '</div>';
     else if (mapped.diagram) insertHtml = '<div class="section diagram"><h4>参考图解</h4><p style="text-align:left">' + escapeHtml(mapped.diagram) + '</p></div>';
   }
-  if (insertHtml) { card.insertAdjacentHTML('beforeend', insertHtml); btn.textContent = btn.textContent.replace('显示','隐藏'); }
+  if (insertHtml) { card.insertAdjacentHTML('beforeend', insertHtml); styleDisclosure(btn, buttonLabels[kind], true); }
 };
 
 yearSel.addEventListener('change', e => { state.year = e.target.value; state.singleNo = 1; singleNo.value = 1; if (state.year !== 'all') singleNo.max = KANGAROO_DATA[state.year].length; else singleNo.max = 30; render(); });
@@ -495,11 +572,11 @@ window.showHint = function(btn) {
   if (state.mode === 'teaching') {
     const card = btn.closest('.q-card');
     if (teachingHints.has(questionKey(q))) {
-      teachingHints.delete(questionKey(q)); card.querySelector('.hint')?.remove(); btn.textContent = '显示 Hint';
+      teachingHints.delete(questionKey(q)); closePanel(card.querySelector('.hint'), btn); styleDisclosure(btn, 'Hint', false);
     } else {
       teachingHints.add(questionKey(q));
       card.querySelector('.q-actions').insertAdjacentHTML('afterend', teachingHintSection(q));
-      btn.textContent = '隐藏 Hint';
+      styleDisclosure(btn, 'Hint', true);
     }
     return;
   }
