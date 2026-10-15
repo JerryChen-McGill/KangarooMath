@@ -297,10 +297,10 @@ function renderAnswers() {
 
 function svgFor(year, no) { return DIAGRAMS[year + '-' + no] || null; }
 
-function optionCard(q, letter, text) {
-  const selected = state.mode === 'practice' && attempts.get(questionKey(q)) === letter;
+function optionCard(q, letter, text, revealAnswer = state.mode === 'teaching' && state.showAnswer) {
+  const selected = attempts.get(questionKey(q)) === letter;
   const correct = q.answer === letter;
-  const reveal = state.mode === 'teaching' && state.showAnswer && correct;
+  const reveal = revealAnswer && correct;
   const cls = 'option' + (reveal || (selected && correct) ? ' correct' : selected ? ' incorrect' : '');
   return '<button type="button" class="' + cls + '" data-letter="' + letter + '" onclick="chooseAnswer(this)"><span class="letter">' + letter + '</span><span class="opt-text">' + escapeHtml(text) + '</span>' + (selected || reveal ? '<span class="check">' + (correct ? ' ✅' : ' ❌') + '</span>' : '') + '</button>';
 }
@@ -309,7 +309,7 @@ function setCardAnswer(card, q, show) {
   const opt = card.querySelector('.option[data-letter="' + q.answer + '"]');
   if (!opt) return;
   const checkSpan = opt.querySelector('.check');
-  if (show) {
+  if (show || attempts.get(questionKey(q)) === q.answer) {
     opt.classList.add('correct');
     if (!checkSpan) opt.insertAdjacentHTML('beforeend', '<span class="check"> ✅</span>');
   } else {
@@ -340,7 +340,7 @@ function questionCard(q) {
   });
   html += '</div>';
   const attempt = attempts.get(questionKey(q));
-  if (state.mode === 'practice') html += '<div class="feedback ' + (attempt ? (attempt === q.answer ? 'correct' : 'incorrect') : '') + '" role="status">' + (attempt ? (attempt === q.answer ? '✅ 正确！' : '❌ 错误，再试一次。') : '请选择一个答案') + '</div>';
+  html += '<div class="feedback ' + (attempt ? (attempt === q.answer ? 'correct' : 'incorrect') : '') + '" role="status">' + (attempt ? (attempt === q.answer ? '✅ 正确！' : '❌ 错误，再试一次。') : '请选择一个答案') + '</div>';
   html += '<div class="q-actions"><button onclick="showHint(this)">' + (state.mode === 'teaching' && teachingHints.has(questionKey(q)) ? '隐藏 Hint' : '显示 Hint') + '</button>';
   if (state.mode === 'teaching') {
   html += '<button onclick="toggleOne(this, \'answer\')">' + (state.showAnswer ? '隐藏答案' : '显示答案') + '</button>';
@@ -600,13 +600,17 @@ window.showHint = function(btn) {
   card.querySelector('.hint').scrollIntoView({block: 'nearest'});
 };
 window.chooseAnswer = function(btn) {
-  if (state.mode !== 'practice') return;
   const q = cardQuestion(btn);
-  attempts.set(questionKey(q), btn.dataset.letter);
-  const top = app.scrollTop;
-  render();
-  app.scrollTop = top;
-  app.querySelector('.q-card[data-year="' + q.year + '"][data-no="' + q.no + '"] [data-letter="' + btn.dataset.letter + '"]').focus({preventScroll: true});
+  const card = btn.closest('.q-card');
+  const letter = btn.dataset.letter;
+  attempts.set(questionKey(q), letter);
+  const reveal = state.mode === 'teaching' && card.querySelector('.q-actions button[onclick*="answer"]')?.getAttribute('aria-expanded') === 'true';
+  card.querySelector('.options').innerHTML = Object.entries(q.options).filter(([, text]) => text).map(([key, text]) => optionCard(q, key, text, reveal)).join('');
+  const feedback = card.querySelector('.feedback');
+  const correct = letter === q.answer;
+  feedback.className = 'feedback ' + (correct ? 'correct' : 'incorrect');
+  feedback.textContent = correct ? '✅ 正确！' : '❌ 错误，再试一次。';
+  card.querySelector('.option[data-letter="' + letter + '"]').focus({preventScroll: true});
 };
 document.getElementById('modeToggle').addEventListener('click', e => {
   state.mode = state.mode === 'teaching' ? 'practice' : 'teaching';
