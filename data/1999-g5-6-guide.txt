@@ -1,0 +1,889 @@
+﻿Math Kangaroo 1999 (Grade 5–6) — Complete Teaching Guide
+30 Questions · Student-Friendly English Lesson Preparation
+Source: Math Kangaroo 1999 (Grade 5–6) PDF. Refer to original diagrams for figure-dependent problems. The source answer key and the printed expression for Question 1 disagree; this discrepancy is explicitly noted. Some answers depend on the diagrams in the uploaded source.
+
+
+3-Point Questions (1–10)
+
+
+1. Subtraction and Place Value
+Answer: B — 1090
+
+
+Solution
+Subtract from left to right: 1999 − 999 = 1000; 1000 − 99 = 901; 901 − 9 = 892. Important: the PDF answer key says B (1090), but the expression as printed evaluates to 892; none of the choices matches. This is a source inconsistency to point out in class.
+
+
+Three Progressive Hints
+Hint 1: What is 1999 minus 999?
+Hint 2: Perform each subtraction in written order.
+Hint 3: Then subtract 99 and 9 separately.
+
+
+Alternative Approaches
+Approach 1: Group 999 + 99 + 9 = 1107 and subtract from 1999.
+Approach 2: Use column subtraction.
+
+
+Extension Question
+Change only the last subtraction: calculate 1999 − 999 − 99 − 19.
+What Changed
+The final subtracted number changes from 9 to 19; the subtraction structure stays identical.
+Same-Method Hint
+Group the three subtrahends first or subtract step by step.
+Extension Answer & Explanation
+882: 1999 − 999 = 1000; − 99 = 901; − 19 = 882.
+
+
+2. Two Paths to School
+Answer: D — Both paths have the same length
+
+
+Solution
+The drawing shows both paths travel the same total horizontal distance and the same total vertical distance without moving backward. Their horizontal segments can be lined up, and so can their vertical segments. Consequently, both routes have equal lengths.
+
+
+Three Progressive Hints
+Hint 1: What directions are the path segments?
+Hint 2: Can you combine all horizontal pieces into one segment?
+Hint 3: Compare total horizontal travel and total vertical travel, not the number of turns.
+
+
+Alternative Approaches
+Approach 1: Straighten each staircase path mentally.
+Approach 2: Use a grid and count rightward and downward unit lengths.
+
+
+Extension Question
+Draw two new staircase paths from (0,0) to (6,4), each using only right and down steps. Which is longer?
+What Changed
+Replace the pictured paths with two different routes but preserve the same endpoints and directions.
+Same-Method Hint
+Add the total horizontal and vertical distances for each path.
+Extension Answer & Explanation
+They are equal at 10 units: 6 right + 4 down on either route.
+
+
+3. A Quarter of a Half of Double
+Answer: B — 8
+
+
+Solution
+Double 32 to get 64; take half to get 32; take one-quarter to get 8. In symbols: 32 × 2 × (1/2) × (1/4) = 8.
+
+
+Three Progressive Hints
+Hint 1: What does 'double 32' mean?
+Hint 2: Do the operations in the order described.
+Hint 3: Double, halve, then divide by four.
+
+
+Alternative Approaches
+Approach 1: Notice that doubling and halving cancel.
+Approach 2: Work from the end using fractions.
+
+
+Extension Question
+Find one-quarter of one-half of double 48.
+What Changed
+Only the starting number changes from 32 to 48.
+Same-Method Hint
+Double, take half, then divide by four; or cancel doubling against halving.
+Extension Answer & Explanation
+12: 48 × 2 = 96; half is 48; one-quarter is 12.
+
+
+4. Routes Between Cities
+Answer: D — 6
+
+
+Solution
+The diagram shows three possible paths from city A to city B and two possible paths from B to C. Pair any A–B choice with any B–C choice: 3 × 2 = 6 routes.
+
+
+Three Progressive Hints
+Hint 1: How many choices exist for the first leg?
+Hint 2: How many second-leg choices follow each first leg?
+Hint 3: Multiply the three first-leg possibilities by the two second-leg possibilities.
+
+
+Alternative Approaches
+Approach 1: Draw a branching tree.
+Approach 2: List all ordered pairs of route choices.
+
+
+Extension Question
+A journey has four possible routes from A to B and three from B to C. How many A-to-C routes via B are there?
+What Changed
+Change the numbers of path choices but keep the two-stage route framework.
+Same-Method Hint
+Multiply independent choices, or draw a choice tree.
+Extension Answer & Explanation
+12 routes: 4 × 3 = 12.
+
+
+5. Clock-Hand Speed
+Answer: B — 12 times
+
+
+Solution
+The minute hand makes one complete 360° turn in one hour. The hour hand completes only 1/12 of a turn in that time, or 30°. Thus 360 ÷ 30 = 12.
+
+
+Three Progressive Hints
+Hint 1: How long is one revolution of the minute hand?
+Hint 2: How long is one revolution of the hour hand?
+Hint 3: Compare 60 minutes with 12 × 60 minutes.
+
+
+Alternative Approaches
+Approach 1: Compare degrees per hour (360° versus 30°).
+Approach 2: Compare periods of rotation (1 hour versus 12 hours).
+
+
+Extension Question
+How many degrees does the minute hand turn while the hour hand turns 45°?
+What Changed
+Replace the speed-ratio question with an angle question; the relative speed remains unchanged.
+Same-Method Hint
+Multiply the hour-hand angle by 12.
+Extension Answer & Explanation
+540°: the minute hand moves 12 × 45° = 540°.
+
+
+6. Shaded 9 × 9 Square
+Answer: D — 9
+
+
+Solution
+The pictured 9 × 9 chess-like pattern has 81 unit squares. Alternating colors in an odd-by-odd checkerboard would differ by 1, but the actual drawing has a different shaded distribution. Pair equal shaded and unshaded squares in the symmetric regions as the solution diagram does; its four frames each leave two extra shaded squares, plus the top-left shaded square: 4 × 2 + 1 = 9.
+
+
+Three Progressive Hints
+Hint 1: Can you pair nearby shaded and white squares?
+Hint 2: Use the red-frame grouping shown in the solution diagram.
+Hint 3: Four frames each contribute two extra shaded squares, plus one corner square.
+
+
+Alternative Approaches
+Approach 1: Count each color explicitly by rows.
+Approach 2: Mark pairs of one shaded and one white square and count leftovers.
+
+
+Extension Question
+In an alternating 11 × 11 checkerboard whose top-left corner is shaded, how many more shaded than white unit squares are there?
+What Changed
+Use an 11 × 11 alternating pattern instead of the original shading arrangement; still compare the counts of two colors.
+Same-Method Hint
+Pair neighboring different-colored squares and count the leftover corner color.
+Extension Answer & Explanation
+1 more shaded square: 61 shaded and 60 white.
+
+
+7. Square Area with Midpoint
+Answer: D — 36 cm²
+
+
+Solution
+In the diagram, the shaded triangle has a base half the square's side and a height equal to the full side. Its area is (1/2) × (side/2) × side = one-quarter of the square's area. The shaded area is 9 cm², so the whole square is 4 × 9 = 36 cm².
+
+
+Three Progressive Hints
+Hint 1: What fraction of AB is AM?
+Hint 2: How do you calculate the shaded triangle's area?
+Hint 3: Its base is half the square's side, so the triangle occupies one-quarter of the square.
+
+
+Alternative Approaches
+Approach 1: Fold/cut the square into four equal-area triangles.
+Approach 2: Let the side be s and compare s² with s²/4.
+
+
+Extension Question
+In the same figure, the shaded triangle has area 16 cm². Find the square's area.
+What Changed
+Change only the shaded area from 9 to 16 cm².
+Same-Method Hint
+The shaded region remains one-quarter of the square.
+Extension Answer & Explanation
+64 cm²: 4 × 16 = 64.
+
+
+8. Movie Running Time
+Answer: B — 151 minutes
+
+
+Solution
+From 1:47 p.m. to 2:00 is 13 minutes; from 2:00 to 4:00 is 120 minutes; from 4:00 to 4:18 is 18 minutes. Total 13 + 120 + 18 = 151 minutes.
+
+
+Three Progressive Hints
+Hint 1: How many minutes until 2:00?
+Hint 2: Split the time at whole-hour boundaries.
+Hint 3: Add 13 minutes, 120 minutes, and 18 minutes.
+
+
+Alternative Approaches
+Approach 1: Convert both times to minutes after noon and subtract.
+Approach 2: Jump along a timeline through 2:00 and 4:00.
+
+
+Extension Question
+A movie runs from 1:52 p.m. to 4:23 p.m. How long is it?
+What Changed
+Change only the start and end minutes while keeping the same time-interval method.
+Same-Method Hint
+Count to 2:00, then whole hours, then the last minutes.
+Extension Answer & Explanation
+151 minutes: 8 + 120 + 23 = 151.
+
+
+9. Birthday Months
+Answer: B — 12 people
+
+
+Solution
+There are 12 calendar months. If no two attendees were born in the same month, each month can be represented at most once. The largest possible group has 12 people.
+
+
+Three Progressive Hints
+Hint 1: How many different months exist?
+Hint 2: What happens if two people share a birth month?
+Hint 3: Give each person a unique month; no more than twelve are available.
+
+
+Alternative Approaches
+Approach 1: Use 12 labeled boxes, one per month.
+Approach 2: Apply the pigeonhole principle.
+
+
+Extension Question
+At a gathering, no two people were born on the same day of the week. What is the largest possible group?
+What Changed
+Change the category from birth month to day of the week, keeping the 'all different' restriction.
+Same-Method Hint
+Count how many possible categories are available.
+Extension Answer & Explanation
+7 people: one per weekday.
+
+
+10. Missing Bricks in a Wall
+Answer: A — 26 bricks
+
+
+Solution
+The diagram shows empty positions shaped like equal-size bricks. Count the missing slots row by row: 1 + 3 + 5 + 10 + 3 + 4 = 26. The removed-brick count is the number of blank brick-sized spaces, not the perimeter.
+
+
+Three Progressive Hints
+Hint 1: What counts as one brick-sized missing space?
+Hint 2: Count blanks in each horizontal row.
+Hint 3: Add the row counts 1, 3, 5, 10, 3, and 4.
+
+
+Alternative Approaches
+Approach 1: Shade and number every missing slot.
+Approach 2: Break the gap into smaller rectangular groups.
+
+
+Extension Question
+A wall has empty brick slots in five rows: 2, 4, 6, 5, and 3. How many bricks were removed?
+What Changed
+Change the row-by-row missing-brick counts while retaining the counting strategy.
+Same-Method Hint
+Count the spaces in each row, then sum them.
+Extension Answer & Explanation
+20 bricks: 2 + 4 + 6 + 5 + 3 = 20.
+
+
+
+
+4-Point Questions (11–20)
+
+
+11. Consecutive Book Pages
+Answer: D — 156
+
+
+Solution
+Facing pages have consecutive numbers, with the left page even and right page odd. Two consecutive numbers totaling 25 are 12 and 13. Their product is 12 × 13 = 156.
+
+
+Three Progressive Hints
+Hint 1: Are facing pages consecutive?
+Hint 2: Which consecutive numbers add to 25?
+Hint 3: Multiply 12 and 13.
+
+
+Alternative Approaches
+Approach 1: Try consecutive pairs.
+Approach 2: Use x + (x + 1) = 25.
+
+
+Extension Question
+Two facing pages total 41. What is their product?
+What Changed
+Change the page-number sum from 25 to 41.
+Same-Method Hint
+Find consecutive numbers with the given sum, then multiply.
+Extension Answer & Explanation
+420: the pages are 20 and 21; 20 × 21 = 420.
+
+
+12. Kangaroo Jumps and Metric Units
+Answer: D — 1111
+
+
+Solution
+Convert every quantity to meters: 5000 m + 5000 dm (500 m) + 5000 cm (50 m) + 5000 mm (5 m) = 5555 m. At 5 m per jump: 5555 ÷ 5 = 1111 jumps.
+
+
+Three Progressive Hints
+Hint 1: Are all distances in the same unit?
+Hint 2: Convert decimeters, centimeters and millimeters to meters.
+Hint 3: Add 5000 + 500 + 50 + 5 and divide by 5.
+
+
+Alternative Approaches
+Approach 1: Convert everything to centimeters instead.
+Approach 2: Convert each term into a number of jumps, then add.
+
+
+Extension Question
+A kangaroo jumps 4 m at a time. How many jumps cover 4000 m + 4000 dm + 4000 cm + 4000 mm?
+What Changed
+Change the repeated number from 5000 to 4000 and jump length from 5 to 4.
+Same-Method Hint
+Convert all units to meters before dividing by jump length.
+Extension Answer & Explanation
+1111 jumps: total distance 4444 m; 4444 ÷ 4 = 1111.
+
+
+13. Scale Drawing of a Fence
+Answer: B — 225 cm
+
+
+Solution
+A 1 m = 100 cm stick is drawn as 2 cm, so each drawing centimeter represents 50 actual centimeters. A 4.5 cm drawing represents 4.5 × 50 = 225 cm.
+
+
+Three Progressive Hints
+Hint 1: How long is 1 meter in centimeters?
+Hint 2: What actual length does 1 cm on the drawing represent?
+Hint 3: Multiply 4.5 by 50.
+
+
+Alternative Approaches
+Approach 1: Use a ratio table.
+Approach 2: Set up an equal-ratio equation.
+
+
+Extension Question
+A 1 m stick appears 4 cm long in a picture. A fence appears 6 cm tall. Find the real fence height.
+What Changed
+Change the drawing scale and drawn fence height, but preserve the ratio method.
+Same-Method Hint
+Find actual centimeters per drawn centimeter.
+Extension Answer & Explanation
+150 cm: 100 ÷ 4 = 25 cm per drawing cm; 6 × 25 = 150.
+
+
+14. Missing Digits in Multiplication
+Answer: E — 14
+
+
+Solution
+The vertical multiplication shown in the source is 6□3 × 5 = 3465. Divide 3465 by 5 to get 693, so the missing middle digit is 9. The result's missing digit is 5, giving 9 + 5 = 14. Use the original image to show the blank positions.
+
+
+Three Progressive Hints
+Hint 1: What digit can be found by working backward?
+Hint 2: Divide the product by 5.
+Hint 3: 693 × 5 = 3465; add the two missing digits.
+
+
+Alternative Approaches
+Approach 1: Use long division.
+Approach 2: Use column multiplication and carries.
+
+
+Extension Question
+Fill two blanks in 7□4 × 5 = 3□70 and find the sum of the missing digits.
+What Changed
+Change the digits while keeping the same missing-digit multiplication format.
+Same-Method Hint
+Work right to left with multiplication and carrying.
+Extension Answer & Explanation
+6: 714 × 5 = 3570; the two missing digits are 1 and 5, and 1 + 5 = 6.
+
+
+15. Completing a Rectangle
+Answer: C
+
+
+Solution
+The target figure and five choices appear in the original paper. Rotate/fit each candidate mentally without overlap or gaps. Choice C fills the missing complementary outline to form a rectangle.
+
+
+Three Progressive Hints
+Hint 1: What final outside boundary must you create?
+Hint 2: Compare notches and protrusions in each option.
+Hint 3: Only option C completes all indentations without gaps.
+
+
+Alternative Approaches
+Approach 1: Trace the outline on squared paper.
+Approach 2: Rotate paper cutouts and try to tile a rectangle.
+
+
+Extension Question
+Draw an L-shaped triomino made of three unit squares. What one unit-square arrangement completes a 2 × 2 square?
+What Changed
+Replace the pictured irregular pieces with a simpler complementary shape, keeping the exact-fit logic.
+Same-Method Hint
+Identify the missing cell inside the intended rectangular outline.
+Extension Answer & Explanation
+One unit square in the uncovered corner; the 3-cell L plus 1 square creates a 2 × 2 square.
+
+
+16. Dog, Cat, Mouse and Turnip Weights
+Answer: A — 30 times
+
+
+Solution
+Dog = 9 cats. Cat = 20 mice. So dog = 9 × 20 = 180 mice. Turnip = 6 mice. The dog-to-turnip ratio is 180 ÷ 6 = 30.
+
+
+Three Progressive Hints
+Hint 1: Which animal can serve as the common unit?
+Hint 2: Express dog and turnip weights in mice.
+Hint 3: Divide 9 × 20 by 6.
+
+
+Alternative Approaches
+Approach 1: Use a ratio chain.
+Approach 2: Choose a convenient numerical mouse weight and compare.
+
+
+Extension Question
+The dog weighs 8 cats, a cat weighs 15 mice, and a turnip weighs 5 mice. How many times heavier is the dog?
+What Changed
+Only the three weight multipliers change.
+Same-Method Hint
+Express both objects in mouse units, then divide.
+Extension Answer & Explanation
+24 times: (8 × 15) ÷ 5 = 24.
+
+
+17. Buttons on a Square-Scrap Quilt
+Answer: C — 126
+
+
+Solution
+The quilt is 150 cm by 100 cm, formed from 10 cm square scraps: 15 columns and 10 rows. A button goes only at an interior point where four scraps meet. There are 15 − 1 = 14 vertical interior joins and 10 − 1 = 9 horizontal joins, hence 14 × 9 = 126 buttons.
+
+
+Three Progressive Hints
+Hint 1: How many squares fit along each side?
+Hint 2: Do points along the outer boundary touch four squares?
+Hint 3: Count 14 interior vertical positions times nine interior horizontal positions.
+
+
+Alternative Approaches
+Approach 1: Draw a smaller rectangular grid first.
+Approach 2: Use the formula (columns − 1)(rows − 1).
+
+
+Extension Question
+Make a 2 m × 1.2 m quilt from 10 cm squares. How many four-square interior junctions need buttons?
+What Changed
+Change the quilt's dimensions only.
+Same-Method Hint
+Find the number of columns and rows; subtract one from each before multiplying.
+Extension Answer & Explanation
+209: 20 columns and 12 rows give 19 × 11 = 209.
+
+
+18. Equal Water Added to Two Bowls
+Answer: A — 2.5 liters
+
+
+Solution
+First bowl has 26 L; second has 7 L. After x liters go into both, the first contains three times the second: 26 + x = 3(7 + x). Thus 26 + x = 21 + 3x; 5 = 2x, so x = 2.5 L.
+
+
+Three Progressive Hints
+Hint 1: What stays equal when you pour water into both bowls?
+Hint 2: Write the final amounts in the two bowls.
+Hint 3: The larger final amount is three times the smaller final amount.
+
+
+Alternative Approaches
+Approach 1: Use a bar model based on their constant 19 L difference.
+Approach 2: Test multiple-choice values.
+
+
+Extension Question
+One bowl has 34 L, another has 10 L. Add the same quantity to both so the first has three times the second. How much is added?
+What Changed
+Change the starting water amounts but retain the final 3:1 relationship.
+Same-Method Hint
+Let both additions be x and compare 34 + x with 3(10 + x).
+Extension Answer & Explanation
+2 L: 34 + 2 = 36 and 10 + 2 = 12; 36 is three times 12.
+
+
+19. Magic Square with Missing Values
+Answer: D — 25
+
+
+Solution
+In the shown 3 × 3 square, the complete diagonal 16 + 10 + 4 = 30 gives the common sum. First row 16 + 3 + A = 30 gives A = 11. First column 16 + C + B = 30; from the finished square C = 5 and B = 9. Thus A + B + C = 11 + 9 + 5 = 25. The filled rows are 16,3,11 / 5,10,15 / 9,17,4.
+
+
+Three Progressive Hints
+Hint 1: Find a complete row, column or diagonal first.
+Hint 2: Use its total as the magic sum everywhere.
+Hint 3: The complete diagonal sums to 30; solve the missing cells.
+
+
+Alternative Approaches
+Approach 1: Work from rows/columns with the fewest blanks.
+Approach 2: Use the center-value property of 3 × 3 magic squares.
+
+
+Extension Question
+Add 2 to every number in the original completed magic square. What is the new sum of the cells corresponding to A, B and C?
+What Changed
+Shift every entry by the same constant, preserving the magic-square pattern.
+Same-Method Hint
+The same three target cells each increase by two.
+Extension Answer & Explanation
+31: original A+B+C = 25; three increases of 2 give 31.
+
+
+20. Colored Layers of a Growing Square
+Answer: A — 32 squares
+
+
+Solution
+The square grows from side length 1 to 3 to 5 to 7 to 9 unit squares. The fifth square has 9² = 81 cells; the fourth has 7² = 49. Adam adds the fifth ring: 81 − 49 = 32 squares.
+
+
+Three Progressive Hints
+Hint 1: How does the side length grow each time?
+Hint 2: Find the total cells in the fourth and fifth squares.
+Hint 3: Subtract 7² from 9².
+
+
+Alternative Approaches
+Approach 1: Count the added border as four strips.
+Approach 2: Notice successive rings add 8, 16, 24, 32, ... squares.
+
+
+Extension Question
+How many squares must be added to form the sixth concentric square?
+What Changed
+Increase the target from the fifth to sixth layer; all growth rules stay the same.
+Same-Method Hint
+Compare consecutive odd-sized square areas.
+Extension Answer & Explanation
+40 squares: 11² − 9² = 121 − 81 = 40.
+
+
+
+
+5-Point Questions (21–30)
+
+
+21. Arrival and Departure Times at a Party
+Answer: D — 8 minutes
+
+
+Solution
+Ela arrives five minutes before Stan. Iwona leaves two minutes before Stan and five minutes before Ela, so Ela leaves three minutes after Stan. Ela's duration exceeds Stan's by five minutes at the beginning plus three at the end: 5 + 3 = 8 minutes.
+
+
+Three Progressive Hints
+Hint 1: Who arrives earlier, Ela or Stan?
+Hint 2: Who leaves later, and by how much?
+Hint 3: Ela starts 5 minutes earlier and ends 3 minutes later.
+
+
+Alternative Approaches
+Approach 1: Draw arrival and departure on one timeline.
+Approach 2: Assign arbitrary clock times and compare stays.
+
+
+Extension Question
+Ela arrives 7 minutes before Stan and leaves 4 minutes after him. How much longer does Ela stay?
+What Changed
+Change only the arrival and departure offsets.
+Same-Method Hint
+Add the early-arrival advantage and late-departure advantage.
+Extension Answer & Explanation
+11 minutes: 7 + 4 = 11.
+
+
+22. Hotdogs Without Mustard
+Answer: C — 6006
+
+
+Solution
+Among 606 hotdogs for 606 people, six are without mustard: 6 per 606 people. For 606,606 people, note 606,606 = 606 × 1001. Thus non-mustard hotdogs = 6 × 1001 = 6006.
+
+
+Three Progressive Hints
+Hint 1: How many mustard-free hotdogs are needed per 606 people?
+Hint 2: How many groups of 606 people are in 606,606?
+Hint 3: Multiply six by the number of groups.
+
+
+Alternative Approaches
+Approach 1: Use proportional reasoning.
+Approach 2: Observe the repeated-number factor 1001.
+
+
+Extension Question
+For every 404 people, four hotdogs have no mustard. How many mustard-free hotdogs are needed for 404,404 people?
+What Changed
+Change the group size and exception count, retaining the proportional relationship.
+Same-Method Hint
+Find the number of equal-size groups, then multiply the exception count.
+Extension Answer & Explanation
+4004: 404,404 = 404 × 1001, so 4 × 1001 = 4004.
+
+
+23. Squirrels Sharing Nuts
+Answer: D — 634
+
+
+Solution
+Second and third together eat 1265; first plus fourth = 1999 − 1265 = 734. The fourth eats at least 100, so the first eats at most 634. Also, among the second and third, at least one eats at least 633 (since their sum is 1265). The first must eat more than either, thus at least 634. It must therefore eat exactly 634 nuts. The remaining squirrels can eat 633, 632, and 100.
+
+
+Three Progressive Hints
+Hint 1: What is the sum eaten by first and fourth?
+Hint 2: What is the smallest possible number eaten by the fourth?
+Hint 3: Use the fact that one of the middle squirrels ate at least 633.
+
+
+Alternative Approaches
+Approach 1: Use upper and lower bounds for the first squirrel.
+Approach 2: Try the answer choices and enforce all conditions.
+
+
+Extension Question
+Four squirrels eat 2019 nuts. The second and third together eat 1265, every squirrel eats at least 120, and the first eats the most. How many nuts does the first eat?
+What Changed
+Increase the total from 1999 to 2019 and the minimum per squirrel from 100 to 120; keep the bounding method.
+Same-Method Hint
+Bound the first from above using the fourth squirrel and from below using the larger of the second and third.
+Extension Answer & Explanation
+634 nuts: first + fourth = 2019 − 1265 = 754; fourth ≥ 120 makes first ≤ 634. One of the middle squirrels ate at least 633, so the first must have ≥ 634. Therefore exactly 634.
+
+
+24. Rain, Cat, Mouse and Cheese
+Answer: D — Cat in basement, mouse in room
+
+
+Solution
+It is raining, so the cat is either in the room or basement. If it were in the room, the cheese would be in the refrigerator. The cheese is on the table, so the cat cannot be in the room; it must be in the basement. The stated basement-and-table condition places the mouse in the room.
+
+
+Three Progressive Hints
+Hint 1: What locations can the cat occupy when it rains?
+Hint 2: Would cheese on the table be possible with the cat in the room?
+Hint 3: Eliminate the room, then use the basement-and-table condition.
+
+
+Alternative Approaches
+Approach 1: Use a two-case table.
+Approach 2: Reason by contradiction.
+
+
+Extension Question
+It is raining; if the cat is in the room, the cheese is in the refrigerator; if the cat is in the basement and the cheese is on the counter, the mouse is in the room. The cheese is on the counter. What follows?
+What Changed
+Replace 'table' with 'counter' but leave the conditional logic unchanged.
+Same-Method Hint
+Eliminate the cat-in-room option, then apply the other if–then rule.
+Extension Answer & Explanation
+The cat is in the basement and mouse in the room, by the same elimination.
+
+
+25. Acute Angles Formed by Six Rays
+Answer: E — 15
+
+
+Solution
+Each pair of distinct rays forms one smaller angle. The number of pairs among six rays is 6 × 5 ÷ 2 = 15. Place all six rays within a narrow sector less than 90° wide, and every pair creates an acute angle, so all 15 are possible.
+
+
+Three Progressive Hints
+Hint 1: How many rays define one angle?
+Hint 2: Can all rays lie within a sector narrower than 90°?
+Hint 3: Count the pairs of six rays without counting a pair twice.
+
+
+Alternative Approaches
+Approach 1: List pairs systematically.
+Approach 2: Use the combination formula n(n−1)/2.
+
+
+Extension Question
+What is the maximum number of acute angles made by seven rays from a single point?
+What Changed
+Increase the number of rays from six to seven, leaving the geometric arrangement unchanged.
+Same-Method Hint
+Place all rays inside a 90° sector and count unordered pairs.
+Extension Answer & Explanation
+21 acute angles: 7 × 6 ÷ 2 = 21.
+
+
+26. The Yield of a Number
+Answer: B — 15
+
+
+Solution
+The yield pattern is multiplication of digits: 3 × 6 = 18; 3 × 2 × 5 = 30; 4 × 5 = 20; 3 × 0 = 0. For 531, yield = 5 × 3 × 1 = 15.
+
+
+Three Progressive Hints
+Hint 1: What operation turns 36 into 18?
+Hint 2: Test the same operation on 325 and 45.
+Hint 3: Multiply 5, 3 and 1.
+
+
+Alternative Approaches
+Approach 1: Look for a rule shared by every example.
+Approach 2: Eliminate addition using 30 yielding zero.
+
+
+Extension Question
+What is the yield of 642 using the same rule?
+What Changed
+Change only the input digits, keeping the digit-product rule.
+Same-Method Hint
+Multiply the digits rather than adding them.
+Extension Answer & Explanation
+48: 6 × 4 × 2 = 48.
+
+
+27. Cube Net and Letter Positions
+Answer: E
+
+
+Solution
+The diagram on the original page displays a cube net marked M, N, O, P, R, S and five possible folded cubes. Fold the net mentally. Use N as a reference face and check adjacent faces, opposite faces and their orientation. Choices A–D place a face or letter orientation inconsistently; E is the matching cube (as confirmed by the source solution).
+
+
+Three Progressive Hints
+Hint 1: Which squares touch N in the flat net?
+Hint 2: Which faces become opposite after folding?
+Hint 3: Check not just the three visible letters but their cyclic orientation.
+
+
+Alternative Approaches
+Approach 1: Cut out and fold a paper net.
+Approach 2: Use face-adjacency and opposite-face tables.
+
+
+Extension Question
+Using the same original net, which faces are opposite M, N and O?
+What Changed
+Ask for opposite-face relationships rather than a multiple-choice picture; use the unchanged net.
+Same-Method Hint
+Fold the net mentally or physically, then list opposite pairs.
+Extension Answer & Explanation
+With the source net arranged R above N, S below N, M left of N, O right of N and P right of O: opposite pairs N–P, M–O and R–S.
+
+
+28. Coffee, Cocoa and Tea in Cups
+Answer: B — Cup 2 (750 g)
+
+
+Solution
+The source figure gives five cup amounts: 950 g, 750 g, 550 g, 475 g and 325 g. There are three beverages across five cups; none occupies three cups, so one beverage occupies one cup and the other two occupy two each. Because coffee is twice cocoa, find a two-cup coffee sum double a single-cup cocoa amount: 950 + 550 = 1500 g, exactly twice 750 g. Thus 750 g cup 2 holds cocoa; the other two cups hold tea.
+
+
+Three Progressive Hints
+Hint 1: How many cups can each drink occupy?
+Hint 2: Find one cup whose amount could be doubled by adding two other cups.
+Hint 3: 950 + 550 = 2 × 750.
+
+
+Alternative Approaches
+Approach 1: List sums of two cups systematically.
+Approach 2: Use a table to test candidates for the single cocoa cup.
+
+
+Extension Question
+Five cups contain amounts 1900, 1500, 1100, 950 and 650 g, with the same beverage-count conditions and coffee twice cocoa. Which amount is cocoa?
+What Changed
+Double all five cup quantities, keeping the matching-sums logic.
+Same-Method Hint
+Find the single cup whose amount doubled equals two other cup amounts together.
+Extension Answer & Explanation
+1500 g: 1900 + 1100 = 3000 = 2 × 1500.
+
+
+29. Counting Squares in a Grid Figure
+Answer: B — 47
+
+
+Solution
+The original figure includes a 4 × 4 grid plus internal line segments. First count grid-aligned squares: 1² + 2² + 3² + 4² = 30. The extra segments create 3 additional red-bordered squares, 2 further unit squares within each of those three, and 2 × 4 more small squares: 3 + 6 + 8 = 17. Total = 47. Refer to the original figure to show the added squares.
+
+
+Three Progressive Hints
+Hint 1: Which square sizes exist in the 4 × 4 grid?
+Hint 2: Count all grid-aligned squares first.
+Hint 3: Then locate squares created by the extra interior segments.
+
+
+Alternative Approaches
+Approach 1: Count by side length rather than by position.
+Approach 2: Color-code squares so none are missed.
+
+
+Extension Question
+How many squares are there in a plain 5 × 5 grid with no extra segments?
+What Changed
+Increase the grid size and remove the additional interior segments; retain square-counting by size.
+Same-Method Hint
+Add counts of 1 × 1, 2 × 2, 3 × 3, 4 × 4 and 5 × 5 squares.
+Extension Answer & Explanation
+55: 25 + 16 + 9 + 4 + 1 = 55.
+
+
+30. Digital Clock: All Different Digits
+Answer: E — 898 seconds
+
+
+Solution
+The current display is 19:58:47 and all six digits differ. At 19:58:48 the digit 8 repeats, and at 19:58:49 the 9 repeats. During 19:59 the 9 repeats; throughout 20:00–20:12 the 0 or 2 repeats. The first later six-distinct-digit display is 20:13:45. Elapsed time is 13 seconds to 19:59:00, then 14 minutes 45 seconds to 20:13:45: 13 + 14 × 60 + 45 = 898 seconds.
+
+
+Three Progressive Hints
+Hint 1: Do the very next seconds still have distinct digits?
+Hint 2: What repeated digits occur around 19:59 and 20:00?
+Hint 3: Check 20:13:45 and subtract 19:58:47.
+
+
+Alternative Approaches
+Approach 1: Systematically scan valid hours, minutes, seconds.
+Approach 2: Convert both times to seconds since midnight and subtract.
+
+
+Extension Question
+At 20:13:45, all displayed digits differ. What is the next time the digits are all different?
+What Changed
+Keep the six-distinct-digit digital-clock task but change the starting display.
+Same-Method Hint
+Test seconds in order while avoiding any digit already shown elsewhere.
+Extension Answer & Explanation
+20:13:46, one second later: digits 2,0,1,3,4,6 are all different.
+
+
+Generated for lesson prep · Math Kangaroo 1999 (Grade 5–6)

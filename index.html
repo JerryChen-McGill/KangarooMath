@@ -3,11 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Math Kangaroo 备课站 (1999 G3-4 & 2002 G5-6)</title>
+<title>Math Kangaroo 备课站 (1999 G3-4 / G5-6 & 2002 G5-6)</title>
 <script src="site_data.js"></script>
 <script src="diagrams.js"></script>
 <script src="hints.js"></script>
 <script src="extensions.js"></script>
+<script src="paper-1999-g5-6.js"></script>
 <style>
 :root {
   --bg: #f8fafc;
@@ -145,6 +146,12 @@ dialog::backdrop { background: #0f172a80; }
 .extension details { margin-top: 14px; border-top: 1px solid #99f6e4; padding-top: 12px; }
 .extension summary { cursor: pointer; color: #0f766e; font-weight: 600; }
 .extension summary:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+.question-figure { margin: 14px 0; }
+.question-figure img { display: block; max-width: 100%; height: auto; border-radius: 6px; }
+.question-figure figcaption { color: var(--muted); font-size: 12px; margin-top: 6px; }
+.source-issue { background: #fffbeb; border: 1px solid #fde68a; padding: 12px; border-radius: 8px; }
+.ans-cell .a { overflow-wrap: anywhere; }
+button[hidden] { display: none !important; }
 
 button.disclosure { display: inline-flex; align-items: center; gap: 7px; background: var(--surface); border-color: var(--border); color: var(--muted); font-weight: 500; }
 button.disclosure:hover { background: var(--bg); color: var(--accent); border-color: #93c5fd; }
@@ -159,7 +166,7 @@ button.disclosure[aria-expanded="true"] { background: #eff6ff; border-color: #bf
 <body>
 <header>
   <button type="button" id="modeToggle" aria-pressed="false">教学版</button><h1>🦘 Math Kangaroo 备课站</h1>
-  <p>1999 · Grade 3–4 ｜ 2002 · Grade 5–6</p>
+  <p>1999 · Grade 3–4 / Grade 5–6 ｜ 2002 · Grade 5–6</p>
 </header>
 
 <div class="controls">
@@ -167,6 +174,7 @@ button.disclosure[aria-expanded="true"] { background: #eff6ff; border-color: #bf
     <select id="yearSel">
       <option value="all">全部试卷</option>
       <option value="1999">1999 年 · Grade 3–4</option>
+      <option value="1999-g5-6">1999 年 · Grade 5–6</option>
       <option value="2002">2002 年 · Grade 5–6</option>
     </select>
     <select id="viewSel">
@@ -197,11 +205,14 @@ button.disclosure[aria-expanded="true"] { background: #eff6ff; border-color: #bf
 </dialog>
 
 <footer>
-  Generated for lesson prep · Math Kangaroo 1999 (Grade 3–4) &amp; 2002 (Grade 5–6)
+  Generated for lesson prep · Math Kangaroo 1999 (Grade 3–4 / Grade 5–6) &amp; 2002 (Grade 5–6)
 </footer>
 
 <script>
 const years = Object.keys(KANGAROO_DATA).sort();
+// Paper IDs retain legacy keys so existing saved hints still resolve.
+const paperYear = id => id.split('-')[0];
+const paperLabel = id => paperYear(id) + ' 年 · Grade ' + KANGAROO_DATA[id][0].grade;
 const allTags = {};
 years.forEach(y => KANGAROO_DATA[y].forEach(q => {
   (q.tags || []).forEach(t => { allTags[t] = (allTags[t] || 0) + 1; });
@@ -284,11 +295,11 @@ function getQuestions() {
 
 function renderAnswers() {
   const ys = state.year === 'all' ? years : [state.year];
-  let html = '<div class="view-ans"><h2>全卷答案</h2><p>选中试卷：' + (state.year==='all' ? '1999 + 2002' : state.year) + '</p>';
+  let html = '<div class="view-ans"><h2>全卷答案</h2><p>选中试卷：' + (state.year==='all' ? '全部试卷' : paperLabel(state.year)) + '</p>';
   ys.forEach(y => {
-    html += '<h3>' + y + ' 年 · Grade ' + (y === '1999' ? '3–4' : '5–6') + '</h3><div class="ans-grid">';
+    html += '<h3>' + paperLabel(y) + '</h3><div class="ans-grid">';
     KANGAROO_DATA[y].forEach(q => {
-      html += '<div class="ans-cell"><span class="q">Q' + q.no + '</span><span class="a">' + q.answer + '</span></div>';
+      html += '<div class="ans-cell"><span class="q">Q' + q.no + '</span><span class="a">' + escapeHtml(q.answerDisplay || q.answer) + '</span></div>';
     });
     html += '</div>';
   });
@@ -329,19 +340,21 @@ function tagClickHandler(e) {
 
 function questionCard(q) {
   let html = '<div class="q-card" data-year="' + q.year + '" data-no="' + q.no + '">';
-  html += '<div class="q-header"><span class="q-title">' + q.year + ' · Grade ' + q.grade + ' · Q' + q.no + '</span><span class="q-badge q-points">' + q.points + ' 分</span>';
+  html += '<div class="q-header"><span class="q-title">' + paperYear(q.year) + ' · Grade ' + q.grade + ' · Q' + q.no + '</span><span class="q-badge q-points">' + q.points + ' 分</span>';
   (q.tags || []).forEach(t => {
     html += '<span class="q-badge q-tag" data-tag="' + escapeHtml(t) + '">' + escapeHtml(t) + '</span>';
   });
   html += '</div>';
   html += '<div class="q-text">' + escapeHtml(q.text).replace(/\n/g, '<br>') + '</div>';
+  if (q.figure) html += '<figure class="question-figure"><img src="' + escapeHtml(q.figure) + '" alt="' + escapeHtml(q.figureAlt) + '" loading="lazy"><figcaption>原卷题图</figcaption></figure>';
+  if (q.issue) html += '<p class="source-issue">' + escapeHtml(q.issue) + '</p>';
   html += '<div class="options">';
   ['A','B','C','D','E'].forEach(letter => {
     if (q.options[letter]) html += optionCard(q, letter, q.options[letter]);
   });
   html += '</div>';
   const attempt = attempts.get(questionKey(q));
-  html += '<div class="feedback ' + (attempt ? (attempt === q.answer ? 'correct' : 'incorrect') : '') + '" role="status">' + (attempt ? (attempt === q.answer ? '✅ 正确！' : '❌ 错误，再试一次。') : '请选择一个答案') + '</div>';
+  html += '<div class="feedback ' + (attempt ? (attempt === q.answer ? 'correct' : 'incorrect') : '') + '" role="status">' + (!q.answer ? '原卷选项存在矛盾，本题不自动判分。' : attempt ? (attempt === q.answer ? '✅ 正确！' : '❌ 错误，再试一次。') : '请选择一个答案') + '</div>';
   html += '<div class="q-actions"><button onclick="showHint(this)">' + (state.mode === 'teaching' && teachingHints.has(questionKey(q)) ? '隐藏 Hint' : '显示 Hint') + '</button>';
   if (state.mode === 'teaching') {
   html += '<button onclick="toggleOne(this, \'answer\')">' + (state.showAnswer ? '隐藏答案' : '显示答案') + '</button>';
@@ -560,7 +573,7 @@ function addHintField(value = '') {
 window.editHints = function(btn) {
   if (state.mode !== 'teaching') return;
   editingQuestion = cardQuestion(btn); hintFields.replaceChildren();
-  document.getElementById('hintEditorTitle').textContent = editingQuestion.year + ' · Q' + editingQuestion.no + ' 编辑 Hint';
+  document.getElementById('hintEditorTitle').textContent = paperLabel(editingQuestion.year) + ' · Q' + editingQuestion.no + ' 编辑 Hint';
   document.getElementById('hintError').textContent = '';
   hintsFor(editingQuestion).forEach(addHintField); hintEditor.showModal();
 };
@@ -609,6 +622,7 @@ window.showHint = function(btn) {
 };
 window.chooseAnswer = function(btn) {
   const q = cardQuestion(btn);
+  if (!q.answer) return;
   const card = btn.closest('.q-card');
   const letter = btn.dataset.letter;
   attempts.set(questionKey(q), letter);
