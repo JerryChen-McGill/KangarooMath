@@ -108,7 +108,8 @@ html, body { height: 100%; }
 body { height: 100dvh; display: flex; flex-direction: column; overflow: hidden; }
 header, .controls { position: static; flex-shrink: 0; }
 header { padding: 12px 24px; }
-#modeToggle { float: right; margin-left: 12px; }
+#modeToggle { float: right; margin-left: 12px; border: 0; border-radius: 999px; padding: 5px 12px; background: #eef2ff; color: var(--accent); font-size: 13px; }
+#modeToggle:hover { background: #dbeafe; }
 .controls { padding: 10px 24px; gap: 6px; max-height: 40dvh; overflow-y: auto; }
 .controls-row:has(.tag-cloud.hidden) { display: none; }
 main { width: 100%; flex: 1; min-height: 0; overflow-y: auto; overscroll-behavior: contain; padding: 16px 24px; }
@@ -157,7 +158,7 @@ button.disclosure[aria-expanded="true"] { background: #eff6ff; border-color: #bf
 </head>
 <body>
 <header>
-  <button id="modeToggle" class="secondary" aria-pressed="false">教学版 · 切换练习版</button><h1>🦘 Math Kangaroo 备课站</h1>
+  <button type="button" id="modeToggle" aria-pressed="false">教学版</button><h1>🦘 Math Kangaroo 备课站</h1>
   <p>1999 · Grade 3–4 ｜ 2002 · Grade 5–6</p>
 </header>
 
@@ -423,7 +424,8 @@ function render() {
       return;
     }
     if (action.includes('showHint')) {
-      if (state.mode === 'teaching') styleDisclosure(btn, 'Hint', teachingHints.has(questionKey(cardQuestion(btn))));
+      const key = questionKey(cardQuestion(btn));
+      styleDisclosure(btn, 'Hint', state.mode === 'teaching' ? teachingHints.has(key) : hintProgress.has(key));
       return;
     }
     const kind = Object.keys(buttonLabels).find(k => action.includes("'" + k + "'"));
@@ -446,6 +448,11 @@ function extensionSection(q) {
     '<details class="extension-method"><summary>同类方法提示</summary><p>' + escapeHtml(extension.method) + '</p></details>' +
     '<details class="extension-answer"><summary>拓展答案与解析</summary><p><strong>' + escapeHtml(extension.answer) + '</strong></p><p>' + escapeHtml(extension.solution) + '</p></details></div>';
 }
+app.addEventListener('click', e => {
+  const summary = e.target.closest('.extension details > summary');
+  if (!summary || state.mode !== 'practice' || summary.parentElement.open) return;
+  if (!window.confirm('确认要查看' + summary.textContent + '吗？')) e.preventDefault();
+});
 window.toggleExtension = function(btn) {
   const q = cardQuestion(btn);
   const key = questionKey(q);
@@ -597,6 +604,7 @@ window.showHint = function(btn) {
   const old = card.querySelector('.hint');
   if (old) old.remove();
   card.querySelector('.q-actions').insertAdjacentHTML('afterend', hintSection(q, i));
+  styleDisclosure(btn, 'Hint', true);
   card.querySelector('.hint').scrollIntoView({block: 'nearest'});
 };
 window.chooseAnswer = function(btn) {
@@ -622,7 +630,7 @@ document.getElementById('modeToggle').addEventListener('click', e => {
   viewSel.querySelector('[value="answers"]').disabled = practice;
   viewSel.querySelector('[value="answers"]').hidden = practice;
   if (practice && state.view === 'answers') { state.view = 'list'; viewSel.value = 'list'; }
-  e.currentTarget.textContent = practice ? '练习版 · 切换教学版' : '教学版 · 切换练习版';
+  e.currentTarget.textContent = practice ? '练习版' : '教学版';
   e.currentTarget.setAttribute('aria-pressed', String(practice));
   renderAnsHint(); render();
 });
