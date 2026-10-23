@@ -24,7 +24,8 @@ for(const [i,q] of paper.entries()) {
   assert.doesNotMatch(q.text,/Copyright|Points Each|ANSWER:/);
   if(q.figure) assert.ok(fs.existsSync(q.figure));
 }
-assert.equal(paper.filter(q=>q.figure).length,8);
+// Audited against all four question pages, including graphical answer choices.
+assert.deepEqual(paper.filter(q=>q.figure).map(q=>q.no),[7,14,15,16,18,20,22,23]);
 // Enumerate order-preserving subsequences for the original and extension digit puzzle.
 function smallestThree(s) {
   const numbers=[];
