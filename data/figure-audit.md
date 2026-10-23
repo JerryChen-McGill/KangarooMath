@@ -11,3 +11,7 @@ All 24 questions checked across the four question pages. The eight original figu
 ## 1999 Grade 5–6
 
 All 30 questions checked across the five question pages. Added the missing vertical multiplication figure for Q14, which previously only had a text transcription. The complete original-figure list is Q2, Q4, Q6, Q7, Q10, Q14, Q15, Q19, Q27, Q28 and Q29. Q15 and Q27 include all graphical answer choices. `verify-paper.cjs` checks this exact list and decodes every figure.
+
+## 2000 Grade 5–6
+
+All 30 questions checked. Original figures imported for Q6, Q8, Q9, Q10, Q13, Q15, Q18, Q22, Q24, Q26 and Q29. Q15 preserves all five fence designs. The source question text, five options and answer key are retained, with new teaching explanations and self-contained extensions.

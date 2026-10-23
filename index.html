@@ -3,13 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Math Kangaroo 备课站 (1999 G3-4 / G5-6 · 2000 G3-4 · 2002 G5-6)</title>
+<title>Math Kangaroo 备课站 · Grade 3–4 / Grade 5–6 历年试卷</title>
 <script src="site_data.js"></script>
 <script src="diagrams.js"></script>
 <script src="hints.js"></script>
 <script src="extensions.js"></script>
 <script src="paper-1999-g5-6.js"></script>
 <script src="paper-2000-g3-4.js"></script>
+<script src="paper-2000-g5-6.js"></script>
 <style>
 :root {
   --bg: #f8fafc;
@@ -167,17 +168,13 @@ button.disclosure[aria-expanded="true"] { background: #eff6ff; border-color: #bf
 <body>
 <header>
   <button type="button" id="modeToggle" aria-pressed="false">教学版</button><h1>🦘 Math Kangaroo 备课站</h1>
-  <p>1999 · Grade 3–4 / Grade 5–6 ｜ 2000 · Grade 3–4 ｜ 2002 · Grade 5–6</p>
+  <p id="paperSummary"></p>
 </header>
 
 <div class="controls">
   <div class="controls-row">
     <select id="yearSel">
       <option value="all">全部试卷</option>
-      <option value="1999">1999 年 · Grade 3–4</option>
-      <option value="1999-g5-6">1999 年 · Grade 5–6</option>
-      <option value="2000-g3-4">2000 年 · Grade 3–4</option>
-      <option value="2002">2002 年 · Grade 5–6</option>
     </select>
     <select id="viewSel">
       <option value="list">全部题目</option>
@@ -207,7 +204,7 @@ button.disclosure[aria-expanded="true"] { background: #eff6ff; border-color: #bf
 </dialog>
 
 <footer>
-  Generated for lesson prep · Math Kangaroo 1999 (Grade 3–4 / Grade 5–6), 2000 (Grade 3–4) &amp; 2002 (Grade 5–6)
+  Generated for lesson prep · Math Kangaroo · Grade 3–4 / Grade 5–6
 </footer>
 
 <script>
@@ -242,6 +239,8 @@ const teachingHints = new Set();
 const openExtensions = new Set();
 const questionKey = q => q.year + '-' + q.no;
 const yearSel = document.getElementById('yearSel');
+years.forEach(id => yearSel.add(new Option(paperLabel(id), id)));
+document.getElementById('paperSummary').textContent = years.map(paperLabel).join(' ｜ ');
 const viewSel = document.getElementById('viewSel');
 const singleNo = document.getElementById('singleNo');
 const search = document.getElementById('search');
