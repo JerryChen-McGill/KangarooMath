@@ -11,7 +11,7 @@ const {papers,extensions} = JSON.parse(vm.runInNewContext(scripts.map(f=>fs.read
 const expected = {
   '2000-g5-6': {key:'CADEDEDBEEBEDBCEDEDD DDBBAADEDA'.replace(/ /g,''), figures:[6,8,9,10,13,15,18,22,24,26,29]},
   '2001-g5-6': {key:'BDCBECDECA' + 'DACCBDCDEB' + 'ABACEDACCD', figures:[2,3,8,9,10,14,19,22,23,24,25,27,29]},
-  '2003-g5-6': {key:'CAACBAEDACCBDCBDBBCACDDBDEADCB', figures:[5,7,10,11,12,13,15,22,24,25,27,28]}
+  '2003-g5-6': {key:'CAACBAEDACCBDCBDBBCACDDBDEADCB', figures:[5,7,8,10,11,12,13,15,16,22,24,25,27,28]}
 };
 const ids = process.argv[2] ? [process.argv[2]] : Object.keys(expected).filter(id=>papers[id]);
 const oldTags = new Set([...papers['1999'],...papers['2002']].flatMap(q=>q.tags));
@@ -52,6 +52,23 @@ if(ids.includes('2001-g5-6')) {
     if(!removed)remaining++;
   }
   assert.equal(remaining,88);
+}
+if(ids.includes('2003-g5-6')) {
+  let maxSum=0;
+  for(let h=0;h<24;h++)for(let m=0;m<60;m++)maxSum=Math.max(maxSum,[...String(h)+String(m)].reduce((s,d)=>s+Number(d),0));
+  assert.equal(maxSum,24);
+  const sides=[1,2,3,2001,2002,2003], triangles=[];
+  for(let a=0;a<6;a++)for(let b=a+1;b<6;b++)for(let c=b+1;c<6;c++)if(sides[a]+sides[b]>sides[c])triangles.push([sides[a],sides[b],sides[c]]);
+  assert.equal(triangles.length,6);
+  const marked=new Set();for(let n=1;n<=17;n+=2)marked.add(n);for(let n=17;n>=1;n-=3)marked.add(n);
+  assert.equal(17-marked.size,5);
+  assert.equal(new Date(Date.UTC(2003,2,21,20,3)+2003*60000).toISOString(),'2003-03-23T05:26:00.000Z');
+  let factorial=1n;for(let n=1n;n<=50n;n++)factorial*=n;
+  assert.equal(factorial.toString().match(/0+$/)[0].length,12);
+  const digits=[];for(let s=1;s<=9;s++)for(let t=0;t<=9;t++)for(let c=0;c<=9;c++)if(new Set([s,t,c]).size===3&&321*s+11*t+c===2003)digits.push([s,t,c]);
+  assert.deepEqual(digits,[[6,7,0]]);
+  const dragons=[];for(let r=0;r<=22;r++)for(let g=0;g<=11;g++)if(2*r+4*g===44&&6*g===6*r-6)dragons.push([r,g]);
+  assert.deepEqual(dragons,[[8,7]]);
 }
 (async()=>{
  const browser=await chromium.launch({headless:true,channel:'msedge'});

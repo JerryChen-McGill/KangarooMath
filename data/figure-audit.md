@@ -19,3 +19,7 @@ All 30 questions checked. Original figures imported for Q6, Q8, Q9, Q10, Q13, Q1
 ## 2001 Grade 5–6
 
 All 30 questions checked. Original figures imported for Q2, Q3, Q8, Q9, Q10, Q14, Q19, Q22, Q23, Q24, Q25, Q27 and Q29. Q3, Q8 and Q23 include every graphical choice. Fraction choices in Q2 are transcribed with explicit division bars. Q7 explicitly states the intended whole-number assumption in its source note; Q26 explains both valid digit completions.
+
+## 2003 Grade 5–6
+
+All 30 questions checked. Original figures imported for Q5, Q7, Q8, Q10, Q11, Q12, Q13, Q15, Q16, Q22, Q24, Q25, Q27 and Q28. The fraction in Q8 and barcode in Q16 are retained. Q13 contains the target and all four pieces; Q24 contains the source table and all five options. Q22 removes duplicated/misordered source wording; Q25 keeps the original letter-to-value mapping despite the source column order.
