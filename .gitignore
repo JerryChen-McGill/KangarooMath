@@ -1,0 +1,6 @@
+# Original papers stay on this computer; publish only website assets.
+/past papers/
+/Past paper/
+/Past papers/
+/tmp/
+__pycache__/
