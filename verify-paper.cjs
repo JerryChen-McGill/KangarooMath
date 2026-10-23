@@ -9,6 +9,7 @@ const {questions,extensions} = JSON.parse(data);
 const paper = questions['1999-g5-6'];
 const oldTags = new Set([...questions['1999'],...questions['2002']].flatMap(q=>q.tags));
 assert.equal(paper.length,30);
+assert.deepEqual(paper.filter(q=>q.figure).map(q=>q.no),[2,4,6,7,10,14,15,19,27,28,29]);
 paper.forEach((q,i) => {
   assert.equal(q.no,i+1); assert.equal(q.grade,'5-6');
   assert.equal(q.points,i<10?3:i<20?4:5);

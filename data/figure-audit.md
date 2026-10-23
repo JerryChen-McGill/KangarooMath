@@ -7,3 +7,7 @@ Audited on 2026-10-23 against the local PDFs. Original PDFs remain local and ign
 All 24 questions checked across the four question pages. The eight original figures are present for Q7, Q14, Q15, Q16, Q18, Q20, Q22 and Q23. Q15 includes all five graphical choices; Q23 includes all labelled vertices. Other questions on these pages have no original figure. Solution-page illustrations are distinct from original question figures.
 
 `verify-2000.cjs` checks the exact figure-bearing question numbers and decodes every image in the browser, as well as checking mobile layout.
+
+## 1999 Grade 5–6
+
+All 30 questions checked across the five question pages. Added the missing vertical multiplication figure for Q14, which previously only had a text transcription. The complete original-figure list is Q2, Q4, Q6, Q7, Q10, Q14, Q15, Q19, Q27, Q28 and Q29. Q15 and Q27 include all graphical answer choices. `verify-paper.cjs` checks this exact list and decodes every figure.

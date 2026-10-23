@@ -415,6 +415,8 @@ KANGAROO_DATA["1999-g5-6"] = [
     "no": 14,
     "points": 4,
     "text": "Find the sum of the missing digits.\n6A3 × 5 = 346B. Find A + B (A and B are digits).",
+    "figure": "assets/1999-g5-6/q14.png",
+    "figureAlt": "Vertical multiplication: 6A3 times 5 equals 346B; A and B are the missing digits.",
     "options": {
       "A": "6",
       "B": "8",

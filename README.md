@@ -15,7 +15,7 @@
 - `site_data.js` 是网页使用的题目数据；`data/` 是原始整理数据。
 - `hints.js` 按年份和题号提供每题三条递进提示，并设置题目的年级。
 - `extensions.js` 为原有 54 题逐题提供一道拓展题，题干为英文，变化说明、方法提示和解析为中文。
-- `paper-1999-g5-6.js` 加载新增 30 题的题干、五个选项、三条 Hint、详解、多种思路、备课提示和拓展题。教学内容来自用户指定的 [Google Docs](https://docs.google.com/document/d/1Jm7DdPWc8I9v5D_SNmO81npxUxE9dXx8cb8sm1E42EY/edit)，保留其英文教学内容；题干、选项与原卷 PDF 核对，10 张原卷题图位于 `assets/1999-g5-6/`。全部标签复用旧题库，无新增标签。
+- `paper-1999-g5-6.js` 加载新增 30 题的题干、五个选项、三条 Hint、详解、多种思路、备课提示和拓展题。教学内容来自用户指定的 [Google Docs](https://docs.google.com/document/d/1Jm7DdPWc8I9v5D_SNmO81npxUxE9dXx8cb8sm1E42EY/edit)，保留其英文教学内容；题干、选项与原卷 PDF 核对，11 张原卷题图位于 `assets/1999-g5-6/`。全部标签复用旧题库，无新增标签。
 - 源文档快照为 `data/1999-g5-6-guide.txt`。第 1 题原式算得 892，但原选项无匹配、答案表标 B，因此保留原题并标注，不自动判分。纠正文档第 14 题拓展的多解问题及第 29 题解析中附加正方形的分类数量；补齐部分拓展题独立作答所需条件。
 - `paper-2000-g3-4.js` 导入 [Math Kangaroo 2000 — Teaching Guide (24 Questions)](https://docs.google.com/document/d/1Q5ruCUWX_QysLvPyUuSISmtQWauo1OJN7TcrfZOPi6Q/edit) 的英文教学内容，快照为 `data/2000-g3-4-guide.txt`。24 题均含原题、五个选项、三条 Hint、详解、两种思路、备课提示和拓展题；题干、选项及答案已与本地原卷核对，8 张原卷题图位于 `assets/2000-g3-4/`，全部标签复用旧题库。
 - 2000 卷按原图纠正指南第 15 题的 I 形围栏描述、第 23 题的奇数度顶点说明；第 22 题改为从可见点数推出接触面与相对面。明确第 4 题入口为一楼的约定，修正第 16 题原卷的多余单词，补全第 4、18、22 题拓展的独立作答条件，并为所有拓展补充变化说明、方法提示与计算过程。
@@ -41,3 +41,4 @@
 安装 Playwright 后运行 `node verify.cjs`；也可用 `PLAYWRIGHT_MODULE` 环境变量指定已有 Playwright 模块路径。
 
 教学版备课提示默认折叠；Hint、答案、详解、思路、图解、备课提示及顶部全局展开按钮统一使用固定标签和旋转箭头，展开与关闭带过渡效果，遵循系统减少动态效果设置。
+
