@@ -39,6 +39,20 @@ if(ids.includes('2000-g5-6')) {
   assert.equal(weights.size,13);
   assert.equal(1.1*0.9,0.9900000000000001);
 }
+if(ids.includes('2001-g5-6')) {
+  const products=[];
+  for(let d=1;d<=9;d++){const p=45*(10*d+3);if(p>=3000&&p<4000)products.push([10*d+3,p]);}
+  assert.deepEqual(products,[[73,3285],[83,3735]]);
+  const permutations=a=>a.length===0?[[]]:a.flatMap((n,i)=>permutations(a.filter((_,j)=>j!==i)).map(rest=>[n,...rest]));
+  const gaps=permutations([1,2,3,4,5,6]).map(a=>Math.abs(100*a[0]+10*a[1]+a[2]-100*a[3]-10*a[4]-a[5]));
+  assert.equal(Math.min(...gaps),47);
+  let remaining=0;
+  for(let x=0;x<5;x++)for(let y=0;y<5;y++)for(let z=0;z<5;z++) {
+    const removed=(y===2&&z>=1&&z<=3)||(z===2&&x>=1&&x<=3)||(x===2&&y>=1&&y<=3);
+    if(!removed)remaining++;
+  }
+  assert.equal(remaining,88);
+}
 (async()=>{
  const browser=await chromium.launch({headless:true,channel:'msedge'});
  try {

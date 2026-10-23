@@ -15,3 +15,7 @@ All 30 questions checked across the five question pages. Added the missing verti
 ## 2000 Grade 5–6
 
 All 30 questions checked. Original figures imported for Q6, Q8, Q9, Q10, Q13, Q15, Q18, Q22, Q24, Q26 and Q29. Q15 preserves all five fence designs. The source question text, five options and answer key are retained, with new teaching explanations and self-contained extensions.
+
+## 2001 Grade 5–6
+
+All 30 questions checked. Original figures imported for Q2, Q3, Q8, Q9, Q10, Q14, Q19, Q22, Q23, Q24, Q25, Q27 and Q29. Q3, Q8 and Q23 include every graphical choice. Fraction choices in Q2 are transcribed with explicit division bars. Q7 explicitly states the intended whole-number assumption in its source note; Q26 explains both valid digit completions.
