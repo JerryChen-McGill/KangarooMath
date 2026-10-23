@@ -224,11 +224,7 @@ function renderTagCloud() {
     const chip = document.createElement('span');
     chip.className = 'tag-chip' + (state.tags.has(tag) ? ' active' : '');
     chip.innerHTML = escapeHtml(tag) + '<span class="count">' + count + '</span>';
-    chip.addEventListener('click', () => {
-      if (state.tags.has(tag)) state.tags.delete(tag); else state.tags.add(tag);
-      renderTagCloud();
-      render();
-    });
+    chip.addEventListener('click', () => toggleTag(tag));
     tagCloud.appendChild(chip);
   });
   renderActiveTags();
@@ -236,6 +232,7 @@ function renderTagCloud() {
 }
 
 let state = { mode: 'teaching', year: 'all', view: 'list', showAnswer: false, showSolution: false, showMethods: false, showDiagram: false, search: '', tags: new Set(), singleNo: 1 };
+let tagReturnContext = null;
 const app = document.getElementById('app');
 const attempts = new Map();
 const hintProgress = new Map();
@@ -251,6 +248,50 @@ const btnExpandSol = document.getElementById('btnExpandSol');
 const btnToggleTags = document.getElementById('btnToggleTags');
 const activeTagsEl = document.getElementById('activeTags');
 
+function toggleTag(tag, sourceCard = null) {
+  let returnContext = null;
+  if (state.tags.has(tag)) {
+    state.tags.delete(tag);
+    if (!state.tags.size && tagReturnContext) {
+      returnContext = tagReturnContext;
+      Object.assign(state, returnContext.filters);
+      tagReturnContext = null;
+    }
+  } else {
+    // Keep the original destination until the entire tag exploration ends.
+    if (!state.tags.size) {
+      tagReturnContext = {
+        filters: {year: state.year, view: state.view, singleNo: state.singleNo, search: state.search},
+        question: sourceCard ? {year: sourceCard.dataset.year, no: sourceCard.dataset.no} : null,
+        scrollTop: app.scrollTop
+      };
+    }
+    state.tags.add(tag);
+    state.year = 'all';
+    state.view = 'list';
+    state.search = '';
+  }
+  yearSel.value = state.year;
+  viewSel.value = state.view;
+  singleNo.value = state.singleNo;
+  singleNo.max = state.year === 'all' ? 30 : KANGAROO_DATA[state.year].length;
+  singleNo.style.display = state.view === 'single' ? 'inline-block' : 'none';
+  search.value = state.search;
+  renderTagCloud();
+  render();
+  if (returnContext) {
+    const q = returnContext.question;
+    const card = q && app.querySelector('.q-card[data-year="' + q.year + '"][data-no="' + q.no + '"]');
+    if (card) {
+      app.scrollTop += card.getBoundingClientRect().top - app.getBoundingClientRect().top - 16;
+    } else {
+      app.scrollTop = returnContext.scrollTop;
+    }
+  } else {
+    app.scrollTop = 0;
+  }
+}
+
 function renderActiveTags() {
   if (!state.tags.size) {
     activeTagsEl.innerHTML = '<span class="active-tag none">未选标签</span>';
@@ -261,9 +302,7 @@ function renderActiveTags() {
 activeTagsEl.addEventListener('click', e => {
   const button = e.target.closest('button[data-remove-tag]');
   if (!button) return;
-  state.tags.delete(button.dataset.removeTag);
-  renderTagCloud();
-  render();
+  toggleTag(button.dataset.removeTag);
   (activeTagsEl.querySelector('button') || btnToggleTags).focus({preventScroll: true});
 });
 
@@ -333,9 +372,7 @@ function setCardAnswer(card, q, show) {
 function tagClickHandler(e) {
   const tag = e.target.dataset.tag;
   if (!tag) return;
-  if (state.tags.has(tag)) state.tags.delete(tag); else state.tags.add(tag);
-  renderTagCloud();
-  render();
+  toggleTag(tag, e.target.closest('.q-card'));
 }
 
 function questionCard(q) {

@@ -67,6 +67,58 @@ const path = require('node:path');
   await page.fill('#search', '');
   await page.selectOption('#yearSel', 'all');
   await page.click('#btnToggleTags');
+  // A question tag opens matching questions across papers, then returns to its origin.
+  for (const view of ['list', 'single']) {
+    await page.selectOption('#yearSel', '2002');
+    await page.selectOption('#viewSel', view);
+    if (view === 'single') await page.fill('#singleNo', '10');
+    await page.fill('#search', '10');
+    const origin = page.locator('.q-card[data-year="2002"][data-no="10"]');
+    const tag = await origin.locator('.q-tag').first().getAttribute('data-tag');
+    await origin.locator('.q-tag').first().click();
+    assert.equal(await page.locator('#yearSel').inputValue(), 'all');
+    assert.equal(await page.locator('#viewSel').inputValue(), 'list');
+    assert.equal(await page.locator('#search').inputValue(), '');
+    assert.equal(await page.locator('.q-card').count(), await matchesTags([tag]));
+    assert.ok(await page.locator('.q-card:not([data-year="2002"])').count() > 0);
+    // Adding/removing another tag must not overwrite the first question's destination.
+    await page.click('#btnToggleTags');
+    const extra = page.locator('.tag-chip:not(.active)').first();
+    await extra.click();
+    await page.getByRole('button', {name:'取消“' + tag + '”筛选', exact:true}).click();
+    assert.equal(await page.locator('#yearSel').inputValue(), 'all');
+    await page.locator('#activeTags button').focus();
+    await page.keyboard.press('Space');
+    assert.equal(await page.locator('#yearSel').inputValue(), '2002');
+    assert.equal(await page.locator('#viewSel').inputValue(), view);
+    assert.equal(await page.locator('#search').inputValue(), '10');
+    if (view === 'single') assert.equal(await page.locator('#singleNo').inputValue(), '10');
+    assert.ok(await origin.isVisible());
+    assert.ok(await origin.evaluate(el => el.getBoundingClientRect().top >= document.querySelector('.controls').getBoundingClientRect().bottom));
+    await page.click('#btnToggleTags');
+  }
+  // Same-year papers and repeated sessions retain their own destination; test both other removal paths.
+  await page.fill('#search', '');
+  await page.selectOption('#viewSel', 'list');
+  for (const year of ['1999-g5-6', '1999', '2002']) {
+    await page.selectOption('#yearSel', year);
+    const origin = page.locator(`.q-card[data-year="${year}"][data-no="10"]`);
+    const tag = await origin.locator('.q-tag').first().getAttribute('data-tag');
+    await origin.locator('.q-tag').first().click();
+    if (year === '1999') {
+      await page.click('#btnToggleTags');
+      await page.locator('.tag-chip.active').click();
+    } else {
+      await page.locator('.q-tag').filter({hasText: new RegExp('^' + tag + '$')}).first().click();
+    }
+    assert.equal(await page.locator('#yearSel').inputValue(), year);
+    assert.ok(await origin.evaluate(el => {
+      const top = el.getBoundingClientRect().top;
+      return top >= document.querySelector('.controls').getBoundingClientRect().bottom && top < innerHeight;
+    }));
+    if (year === '1999') await page.click('#btnToggleTags');
+  }
+  await page.selectOption('#yearSel', 'all');
   assert.equal(await page.getByRole('button', {name:'延申拓展', exact:true}).count(), 84);
   assert.equal(await page.locator('.extension').count(), 0);
   const extensionKeys = await page.evaluate(() => Object.keys(KANGAROO_EXTENSIONS));
