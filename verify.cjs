@@ -11,7 +11,7 @@ const path = require('node:path');
   const card = page.locator('.q-card').first();
   assert.equal(await page.locator('#modeToggle').innerText(), '教学版');
   assert.equal(await card.locator('button[onclick="showHint(this)"]').evaluate(el => getComputedStyle(el).backgroundColor), 'rgb(255, 255, 255)');
-  assert.equal(await page.locator('.q-card').count(), 84);
+  assert.equal(await page.locator('.q-card').count(), 108);
   // Teaching answers give the same feedback while preserving open lesson panels.
   await card.getByRole('button', {name:'详解', exact:true}).click();
   await card.getByRole('button', {name:'延申拓展', exact:true}).click();
@@ -53,7 +53,7 @@ const path = require('node:path');
   assert.equal(await page.locator('#activeTags button').count(), 1);
   assert.equal(await page.locator('.tag-chip.active').count(), 1);
   await page.keyboard.press('Enter');
-  assert.equal(await page.locator('.q-card').count(), 84);
+  assert.equal(await page.locator('.q-card').count(), 108);
   assert.equal(await page.locator('#activeTags').innerText(), '未选标签');
   await page.selectOption('#yearSel', '2002');
   await page.fill('#search', '3');
@@ -100,7 +100,7 @@ const path = require('node:path');
   // Same-year papers and repeated sessions retain their own destination; test both other removal paths.
   await page.fill('#search', '');
   await page.selectOption('#viewSel', 'list');
-  for (const year of ['1999-g5-6', '1999', '2002']) {
+  for (const year of ['1999-g5-6', '1999', '2000-g3-4', '2002']) {
     await page.selectOption('#yearSel', year);
     const origin = page.locator(`.q-card[data-year="${year}"][data-no="10"]`);
     const tag = await origin.locator('.q-tag').first().getAttribute('data-tag');
@@ -119,7 +119,7 @@ const path = require('node:path');
     if (year === '1999') await page.click('#btnToggleTags');
   }
   await page.selectOption('#yearSel', 'all');
-  assert.equal(await page.getByRole('button', {name:'延申拓展', exact:true}).count(), 84);
+  assert.equal(await page.getByRole('button', {name:'延申拓展', exact:true}).count(), 108);
   assert.equal(await page.locator('.extension').count(), 0);
   const extensionKeys = await page.evaluate(() => Object.keys(KANGAROO_EXTENSIONS));
   const questionKeys = await page.evaluate(() => Object.entries(KANGAROO_DATA).flatMap(([y, qs]) => qs.map(q => y + '-' + q.no)));
@@ -260,5 +260,5 @@ const path = require('node:path');
   assert.equal(await page.locator('.q-card').count(),30);
   assert.deepEqual(errors, []);
   await browser.close();
-  console.log('PASS: all 84 extensions, independent math checks, keyboard disclosure, answer isolation, filters, mobile layout, existing hints and practice flows.');
+  console.log('PASS: all 108 extensions, independent math checks, keyboard disclosure, answer isolation, filters, mobile layout, existing hints and practice flows.');
 })().catch(e => {console.error(e);process.exitCode=1;});

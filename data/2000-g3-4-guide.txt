@@ -1,0 +1,667 @@
+﻿MATH KANGAROO 2000 — COMPLETE TEACHING GUIDE
+24 QUESTIONS | ALL IN ENGLISH
+
+
+Teaching sequence: Present the original paper, give hints in order, discuss a main solution and alternative thinking, then assign the similar extension question.
+Original question texts and figures: see Math Kangaroo 2000 PDF (especially diagrams for Questions 14–16, 18, 22–23).
+
+
+PART 1 — 3-POINT QUESTIONS (1–8)
+
+
+1. Birthday Candles
+ANSWER: B — 15 minutes
+
+
+SOLUTION
+All 10 candles are lit simultaneously. Each candle burns for 15 minutes, so they all burn out after the same 15 minutes. Do not add their burning times.
+
+
+THREE PROGRESSIVE HINTS
+Hint 1 — Getting Started: Imagine lighting two candles together. Does either burn longer?
+Hint 2 — Finding a Strategy: Are the candles lit together or one after another?
+Hint 3 — Almost There: Because they all burn at the same time, the elapsed time stays 15 minutes.
+
+
+ALTERNATIVE APPROACHES
+Approach 1: Draw ten parallel 15-minute timelines.
+Approach 2: Demonstrate with several candles on a cake.
+
+
+EXTENSION QUESTION
+A candle lasts 25 minutes. How long do 20 identical candles last if lit simultaneously?
+Extension Answer: 25 minutes.
+
+
+────────────────────────
+
+
+2. Taking Medicine
+ANSWER: C — 40 minutes
+
+
+SOLUTION
+Take the first pill at minute 0, the second at minute 20, and the third at minute 40. There are two waiting intervals, so 2 × 20 = 40 minutes.
+
+
+THREE PROGRESSIVE HINTS
+Hint 1 — Getting Started: When is the first pill taken?
+Hint 2 — Finding a Strategy: Mark each pill on a timeline.
+Hint 3 — Almost There: Three pills create only two 20-minute gaps.
+
+
+ALTERNATIVE APPROACHES
+Approach 1: Draw: pill — 20 min — pill — 20 min — pill.
+Approach 2: Use the general rule: (number of pills − 1) × interval.
+
+
+EXTENSION QUESTION
+A patient takes 6 pills, one every 15 minutes. How long from the first to the last pill?
+Extension Answer: 75 minutes.
+
+
+────────────────────────
+
+
+3. Product and Sum of Digits
+ANSWER: D — 222
+
+
+SOLUTION
+Compare each digit product with its digit sum: 112: 2 versus 4; 209: 0 versus 11; 312: 6 versus 6; 222: 8 versus 6; 211: 2 versus 4. Only 222 has product greater than sum.
+
+
+THREE PROGRESSIVE HINTS
+Hint 1 — Getting Started: What does it mean to multiply digits rather than add them?
+Hint 2 — Finding a Strategy: Calculate both totals for each choice.
+Hint 3 — Almost There: For 222, compare 2 × 2 × 2 and 2 + 2 + 2.
+
+
+ALTERNATIVE APPROACHES
+Approach 1: Eliminate 209 immediately because its digit product is zero.
+Approach 2: Notice that factors of 1 do not increase a product.
+
+
+EXTENSION QUESTION
+Which number has digit product greater than digit sum: 123, 224, 311, 402, or 211?
+Extension Answer: 224 (product 16, sum 8).
+
+
+────────────────────────
+
+
+4. Climbing Stairs
+ANSWER: B — 3rd floor
+
+
+SOLUTION
+Gavel climbs one flight from the ground/first floor to the second floor. Pavel climbs twice as many stairs, meaning two equal flights. Two flights reach the third floor.
+
+
+THREE PROGRESSIVE HINTS
+Hint 1 — Getting Started: How many flights reach the second floor?
+Hint 2 — Finding a Strategy: Draw and number the floors of a building.
+Hint 3 — Almost There: Two flights from the first floor lead to floor 3.
+
+
+ALTERNATIVE APPROACHES
+Approach 1: Use a floor diagram and count gaps, not labels.
+Approach 2: Use a number line starting at floor 1.
+
+
+EXTENSION QUESTION
+Emma lives on floor 4 and Jack climbs twice as many stairs as Emma. All flights are equal. Which floor is Jack on?
+Extension Answer: 7th floor.
+
+
+────────────────────────
+
+
+5. Candy Bars and Lollipops
+ANSWER: B — 30 cents
+
+
+SOLUTION
+Four candy bars cost 4 × $0.90 = $3.60. The three lollipops cost $4.50 − $3.60 = $0.90. Each lollipop costs $0.90 ÷ 3 = $0.30.
+
+
+THREE PROGRESSIVE HINTS
+Hint 1 — Getting Started: Which item has a known price?
+Hint 2 — Finding a Strategy: Find the total cost of the four candy bars first.
+Hint 3 — Almost There: Subtract $3.60 from $4.50 and divide by three.
+
+
+ALTERNATIVE APPROACHES
+Approach 1: Work entirely in cents: 450 − 360 = 90.
+Approach 2: Use a bar model or substitute the answer choices.
+
+
+EXTENSION QUESTION
+Five chocolate bars and four lollipops cost $8.20. Each bar costs $1.40. Find one lollipop's price.
+Extension Answer: $0.30.
+
+
+────────────────────────
+
+
+6. Tour Buses
+ANSWER: C — 3 buses
+
+
+SOLUTION
+Two buses seat at most 2 × 55 = 110 people, which is insufficient. Three buses seat 3 × 55 = 165, enough for 160. The minimum is three.
+
+
+THREE PROGRESSIVE HINTS
+Hint 1 — Getting Started: How many people fit on one bus?
+Hint 2 — Finding a Strategy: Compare the capacities of two buses and three buses.
+Hint 3 — Almost There: Two hold 110; three hold 165.
+
+
+ALTERNATIVE APPROACHES
+Approach 1: Divide 160 by 55 and round up because of the remainder.
+Approach 2: Repeatedly subtract groups of 55.
+
+
+EXTENSION QUESTION
+How many 48-seat buses are needed for 238 students?
+Extension Answer: 5 buses.
+
+
+────────────────────────
+
+
+7. Walking Around a Square
+ANSWER: B — 24 minutes
+
+
+SOLUTION
+The larger square has four times the area, so each side is twice as long (for example, 2 × 2 versus 4 × 4). Its perimeter is therefore twice the original perimeter. At the same pace, time doubles: 12 × 2 = 24 minutes.
+
+
+THREE PROGRESSIVE HINTS
+Hint 1 — Getting Started: What matters for walking around a square: area or perimeter?
+Hint 2 — Finding a Strategy: Compare areas and perimeters of squares with sides 2 and 4.
+Hint 3 — Almost There: Four times the area means twice the side length and twice the time.
+
+
+ALTERNATIVE APPROACHES
+Approach 1: Draw a 2-by-2 arrangement of four copies of the small square.
+Approach 2: Compare specific side lengths and perimeters numerically.
+
+
+EXTENSION QUESTION
+A square takes 8 minutes to walk around. How long for a square with nine times its area at the same pace?
+Extension Answer: 24 minutes.
+
+
+────────────────────────
+
+
+8. Airport Bus Schedule
+ANSWER: C — 9:30
+
+
+SOLUTION
+Travel time = 120 km ÷ 60 km/h = 2 hours. To reach the airport by 11:30, the bus must leave by 9:30. Buses depart at half past each hour, so 9:30 is available and latest.
+
+
+THREE PROGRESSIVE HINTS
+Hint 1 — Getting Started: How do distance and speed determine travel time?
+Hint 2 — Finding a Strategy: Divide 120 by 60 to find the journey duration.
+Hint 3 — Almost There: Count back two hours from 11:30.
+
+
+ALTERNATIVE APPROACHES
+Approach 1: Mark departures and arrival on a timeline.
+Approach 2: Test each multiple-choice departure by adding two hours.
+
+
+EXTENSION QUESTION
+A bus travels 180 km at 60 km/h; departures are at :15 each hour. What is the latest departure to arrive by 14:00?
+Extension Answer: 10:15.
+
+
+────────────────────────
+
+
+PART 2 — 4-POINT QUESTIONS (9–16)
+
+
+9. Eating Ice Cream
+ANSWER: B — 4 bowls
+
+
+SOLUTION
+Kathy and Betty's rates are in the ratio 2:3. Each joint group contains five bowls. Ten bowls = two groups, so Kathy eats 2 × 2 = 4 bowls.
+
+
+THREE PROGRESSIVE HINTS
+Hint 1 — Getting Started: What is the ratio between the two girls' bowls?
+Hint 2 — Finding a Strategy: Group the total into sets of 2 + 3.
+Hint 3 — Almost There: Ten bowls make two groups of five; Kathy takes two per group.
+
+
+ALTERNATIVE APPROACHES
+Approach 1: Draw K K B B B twice.
+Approach 2: Kathy's fraction of the total is 2/5.
+
+
+EXTENSION QUESTION
+Tom and Ben eat sandwiches in the ratio 3:5. Together they eat 24. How many does Tom eat?
+Extension Answer: 9 sandwiches.
+
+
+────────────────────────
+
+
+10. Removing Digits
+ANSWER: D — Remove 4, 9, 2, 5 (leaves 108)
+
+
+SOLUTION
+Keep the remaining digits in original order. From 4921508, the smallest possible first (hundreds) digit is 1, so discard 4, 9, 2. Of the four remaining digits 1, 5, 0, 8, remove 5 to keep 1, 0, 8: the smallest possible three-digit number is 108.
+
+
+THREE PROGRESSIVE HINTS
+Hint 1 — Getting Started: Which place value most strongly affects a three-digit number?
+Hint 2 — Finding a Strategy: Find the smallest nonzero first digit that leaves two later digits.
+Hint 3 — Almost There: Keep 1; from 1508 remove the 5.
+
+
+ALTERNATIVE APPROACHES
+Approach 1: Check the five options and compare the three-digit results.
+Approach 2: Use a greedy place-value strategy: choose the smallest possible hundreds, then tens digit.
+
+
+EXTENSION QUESTION
+Remove four digits from 5832047 to make the smallest possible three-digit number while keeping the order.
+Extension Answer: Remove 5, 8, 3, and 7, leaving 204.
+
+
+────────────────────────
+
+
+11. Apples in Two Baskets
+ANSWER: B — 12 apples
+
+
+SOLUTION
+Suppose Aria takes 5 from her basket of 12, leaving 7. Zoe then takes 7 from the other basket, leaving 5. Total left = 7 + 5 = 12. In general, if Aria takes x, the baskets end with (12 − x) and x, whose sum is always 12.
+
+
+THREE PROGRESSIVE HINTS
+Hint 1 — Getting Started: Is Aria's exact number of apples given?
+Hint 2 — Finding a Strategy: Try a specific number such as five.
+Hint 3 — Almost There: The first basket keeps 12 − x while the second keeps x.
+
+
+ALTERNATIVE APPROACHES
+Approach 1: Demonstrate with counters in two baskets.
+Approach 2: Use complementary pairs that always sum to 12.
+
+
+EXTENSION QUESTION
+Two baskets each contain 20 oranges. Emma removes some from the first; Jack removes from the second as many as remain in the first. How many remain in total?
+Extension Answer: 20 oranges.
+
+
+────────────────────────
+
+
+12. Students Walking in Rows
+ANSWER: D — 33 students
+
+
+SOLUTION
+The boys' row is 7th from the front and 5th from the back. Total rows = 7 + 5 − 1 = 11 because their row is counted twice. Each row contains three students, so total = 11 × 3 = 33.
+
+
+THREE PROGRESSIVE HINTS
+Hint 1 — Getting Started: What happens if you count the same row from both ends?
+Hint 2 — Finding a Strategy: Draw the rows before and behind the boys.
+Hint 3 — Almost There: Find 7 + 5 − 1 rows, then multiply by three.
+
+
+ALTERNATIVE APPROACHES
+Approach 1: Count six rows ahead + their row + four rows behind.
+Approach 2: Use the general position formula front + back − 1.
+
+
+EXTENSION QUESTION
+Students walk in rows of four. Lucy is in the 9th row from the front and 6th from the back. How many students?
+Extension Answer: 56 students.
+
+
+────────────────────────
+
+
+13. Cat Moms and Kittens
+ANSWER: B — 4 moms
+
+
+SOLUTION
+Each mom must have at least two kittens, so each mom requires at least three cats total. With 14 cats, four moms need 8 kittens, leaving 2 extra cats to play kittens. Five moms would need at least 10 kittens, totaling 15 cats, which is impossible.
+
+
+THREE PROGRESSIVE HINTS
+Hint 1 — Getting Started: What is the fewest kittens for each mom?
+Hint 2 — Finding a Strategy: Make groups of one mom and two kittens.
+Hint 3 — Almost There: Five such groups would need 15 cats, more than available.
+
+
+ALTERNATIVE APPROACHES
+Approach 1: Draw and count groups of three.
+Approach 2: Let m be moms; 3m ≤ 14.
+
+
+EXTENSION QUESTION
+Twenty-three cats act as moms or kittens; every mom has at least three kittens. What is the greatest number of moms?
+Extension Answer: 5 moms.
+
+
+────────────────────────
+
+
+14. Balanced Scales
+ANSWER: C — 4 plums
+
+
+SOLUTION
+From the picture: 10 plums = 3 apples + 1 pear; 6 plums = 1 apple + 1 pear. Subtract: 4 plums = 2 apples, so one apple = 2 plums. Then 6 plums = 2 plums + 1 pear, so a pear = 4 plums.
+
+
+THREE PROGRESSIVE HINTS
+Hint 1 — Getting Started: What does a balanced scale tell you?
+Hint 2 — Finding a Strategy: Compare the top two scales and cancel matching fruits.
+Hint 3 — Almost There: Four plums equal two apples; replace the apple in the second equation.
+
+
+ALTERNATIVE APPROACHES
+Approach 1: Cross off identical fruit groupings visually.
+Approach 2: Use substitution or simple equations.
+
+
+EXTENSION QUESTION
+One scale shows 12 plums = 3 apples + 1 pear; another shows 8 plums = 1 apple + 1 pear. How many plums equal one pear?
+Extension Answer: 6 plums.
+
+
+────────────────────────
+
+
+15. The Longest Fence
+ANSWER: C — Mr. Jack
+
+
+SOLUTION
+Compare solid fence segments in the five figures on page 3, not the garden areas. In options A, B, D, and E, horizontal/vertical segments can be paired or straightened to the same total as the rectangular boundary. Mr. Jack's T-shaped fenced region includes extra internal turns and has the longest solid fence.
+
+
+THREE PROGRESSIVE HINTS
+Hint 1 — Getting Started: Does equal area imply equal fence length?
+Hint 2 — Finding a Strategy: Compare horizontal and vertical segments separately.
+Hint 3 — Almost There: Look for extra fence length that cannot be matched to the rectangle's boundary.
+
+
+ALTERNATIVE APPROACHES
+Approach 1: Mentally straighten each bent segment.
+Approach 2: Overlay an imaginary grid and count fence units.
+
+
+EXTENSION QUESTION
+A rectangle is 8 m by 5 m. A second boundary replaces a 2 m straight section with a 3 m deep rectangular indentation. How much longer is the second fence?
+Extension Answer: 6 m longer.
+
+
+────────────────────────
+
+
+16. Building with Cubes
+ANSWER: C — 6 hidden cubes
+
+
+SOLUTION
+The first project has 10 cubes and weighs 300 g, so each cube weighs 30 g. The second weighs 900 − 300 = 600 g and therefore contains 600 ÷ 30 = 20 cubes. Its picture shows 14 visible cubes, leaving 20 − 14 = 6 hidden.
+
+
+THREE PROGRESSIVE HINTS
+Hint 1 — Getting Started: Are all cube weights equal?
+Hint 2 — Finding a Strategy: Use the first structure to determine the weight per cube.
+Hint 3 — Almost There: Second structure has 20 cubes in all; 14 are visible.
+
+
+ALTERNATIVE APPROACHES
+Approach 1: Use the 2:1 weight ratio between second and first projects.
+Approach 2: Count the figure in layers or rows.
+
+
+EXTENSION QUESTION
+Two structures together weigh 1,200 g. An 8-cube structure weighs 320 g; the other shows 15 visible cubes. How many cubes are hidden in the second?
+Extension Answer: 7 cubes.
+
+
+────────────────────────
+
+
+PART 3 — 5-POINT QUESTIONS (17–24)
+
+
+17. Feeding Hens
+ANSWER: B — 12 cups
+
+
+SOLUTION
+Three hens are half of six, so in three days they consume half of 8 cups = 4 cups. Nine days is three times as long, so those three hens need 4 × 3 = 12 cups.
+
+
+THREE PROGRESSIVE HINTS
+Hint 1 — Getting Started: Do fewer hens eat more or less over the same period?
+Hint 2 — Finding a Strategy: First adjust the number of hens, then the days.
+Hint 3 — Almost There: Three hens consume four cups in three days; triple for nine days.
+
+
+ALTERNATIVE APPROACHES
+Approach 1: Find cups per hen per day.
+Approach 2: Compare 18 hen-days with 27 hen-days.
+
+
+EXTENSION QUESTION
+Eight rabbits eat 12 kg in four days. How much do six rabbits eat in eight days at the same rate?
+Extension Answer: 18 kg.
+
+
+────────────────────────
+
+
+18. Ribbon Around a Present
+ANSWER: B — 240 cm
+
+
+SOLUTION
+The picture has two short loops around 10 cm × 10 cm cross-sections and two long loops around 30 cm × 10 cm cross-sections. Short loops: 2 × [2(10 + 10)] = 80 cm. Long loops: 2 × [2(30 + 10)] = 160 cm. Total = 240 cm, excluding knots.
+
+
+THREE PROGRESSIVE HINTS
+Hint 1 — Getting Started: Can you trace each ribbon loop?
+Hint 2 — Finding a Strategy: Imagine removing a loop and flattening it into a rectangle.
+Hint 3 — Almost There: Add two 40 cm loops and two 80 cm loops.
+
+
+ALTERNATIVE APPROACHES
+Approach 1: Unfold the paths into flat rectangles.
+Approach 2: Count ribbon lengths running along each box dimension.
+
+
+EXTENSION QUESTION
+A 20 cm × 10 cm × 10 cm gift is wrapped in the identical four-loop pattern. How much ribbon is needed, ignoring knots?
+Extension Answer: 200 cm.
+
+
+────────────────────────
+
+
+19. Kangaroo Ages
+ANSWER: E — 2 years
+
+
+SOLUTION
+Three kangaroos are born four years apart, so the oldest is 8 years older than the youngest. Their ages have ratio 5:1, a difference of four equal parts. Four parts = 8 years, so one part = 2 years. Ages are 2, 6, and 10.
+
+
+THREE PROGRESSIVE HINTS
+Hint 1 — Getting Started: How much older is the oldest than the youngest?
+Hint 2 — Finding a Strategy: Draw one bar for youngest, five for oldest.
+Hint 3 — Almost There: The eight-year gap equals four copies of the youngest's age.
+
+
+ALTERNATIVE APPROACHES
+Approach 1: Test possible youngest ages against the fivefold condition.
+Approach 2: Write 5x − x = 8.
+
+
+EXTENSION QUESTION
+Three brothers were born four years apart. The oldest is three times as old as the youngest. Find the youngest age.
+Extension Answer: 4 years.
+
+
+────────────────────────
+
+
+20. Clock Hands
+ANSWER: C — 6 hours
+
+
+SOLUTION
+At departure, the two hands overlap. In six hours, the minute hand completes six full rotations while the hour hand rotates half a turn. Thus the hands, which started together, end opposite each other. The overlap between 8 and 9 therefore leads to an opposite-hands position between 2 and 3, six hours later.
+
+
+THREE PROGRESSIVE HINTS
+Hint 1 — Getting Started: How do the hands look at departure versus return?
+Hint 2 — Finding a Strategy: What does a six-hour advance do to each hand?
+Hint 3 — Almost There: The minute hand returns to the same direction; the hour hand moves 180 degrees.
+
+
+ALTERNATIVE APPROACHES
+Approach 1: Draw both clocks and rotate forward six hours.
+Approach 2: Use relative angular speed (360 − 30 = 330 degrees per hour).
+
+
+EXTENSION QUESTION
+At some time between 9 and 10, the clock hands overlap. What angle do they form six hours later?
+Extension Answer: 180 degrees.
+
+
+────────────────────────
+
+
+21. Finding a Number
+ANSWER: C — 6
+
+
+SOLUTION
+A number plus half itself makes 1.5 copies. Twice the number makes 2 copies. The gap between 2 and 1.5 copies is half the number, and the problem says that gap is 3. Thus half the number is 3 and the number is 6. Check: 6 + 3 = 12 − 3 = 9.
+
+
+THREE PROGRESSIVE HINTS
+Hint 1 — Getting Started: What does a number plus half of itself look like?
+Hint 2 — Finding a Strategy: Compare 1.5 copies with 2 copies.
+Hint 3 — Almost There: The missing half-copy equals three.
+
+
+ALTERNATIVE APPROACHES
+Approach 1: Draw a two-bar model.
+Approach 2: Write x + x/2 = 2x − 3 or test answer choices.
+
+
+EXTENSION QUESTION
+A number plus one third of itself is eight less than twice the number. Find it.
+Extension Answer: 12.
+
+
+────────────────────────
+
+
+22. Stacked Dice
+ANSWER: A — 1 dot
+
+
+SOLUTION
+The dice in the image are identical, with matching numbers on each touching pair of faces. On a standard die, opposite faces sum to 7: (1,6), (2,5), (3,4). Read the visible orientations of the three dice, then follow the matching touching faces downward. The bottom of the lowest die has 1 dot.
+
+
+THREE PROGRESSIVE HINTS
+Hint 1 — Getting Started: Which numbers appear on opposite faces of an ordinary die?
+Hint 2 — Finding a Strategy: Work from the upper die downward, matching the touching faces.
+Hint 3 — Almost There: Use the 1–6, 2–5 and 3–4 pairs as you trace the stack.
+
+
+ALTERNATIVE APPROACHES
+Approach 1: Stack actual dice with the same orientation as the picture.
+Approach 2: Sketch a face-by-face table or construct paper cubes.
+
+
+EXTENSION QUESTION
+Three identical dice are stacked with matching touching faces. If the top of the highest die shows 4, what appears on the bottom of the lowest die?
+Extension Answer: 3 dots.
+
+
+────────────────────────
+
+
+23. One-Stroke Kangaroo
+ANSWER: E — Impossible
+
+
+SOLUTION
+To draw every edge exactly once without lifting the pencil, a connected network must have zero or two odd-degree points (junctions with an odd number of lines). In the kangaroo drawing on page 4, the endpoints/junctions A, C, D, and E give four odd-degree points. Since there are more than two, no starting point works.
+
+
+THREE PROGRESSIVE HINTS
+Hint 1 — Getting Started: What happens when three lines meet at a junction?
+Hint 2 — Finding a Strategy: Count lines meeting at each point, especially odd counts.
+Hint 3 — Almost There: A one-stroke path may have at most two odd-degree endpoints; find four here.
+
+
+ALTERNATIVE APPROACHES
+Approach 1: Try tracing without repeating edges.
+Approach 2: Reduce the kangaroo to a simple network of dots and lines.
+
+
+EXTENSION QUESTION
+Can a rectangle with one diagonal be drawn in a single stroke without tracing an edge twice? Where should you start?
+Extension Answer: Yes. Start at either endpoint of the diagonal.
+
+
+────────────────────────
+
+
+24. Magical Bouncing Ball
+ANSWER: A — 80 cm
+
+
+SOLUTION
+Each bounce doubles the previous height. Since the ball reaches 320 cm after the second bounce, work backward: after the first bounce it reached 320 ÷ 2 = 160 cm; the original drop was 160 ÷ 2 = 80 cm. Check: 80 → 160 → 320.
+
+
+THREE PROGRESSIVE HINTS
+Hint 1 — Getting Started: Does each bounce double or halve the height?
+Hint 2 — Finding a Strategy: Which operation reverses doubling?
+Hint 3 — Almost There: Divide 320 by two twice.
+
+
+ALTERNATIVE APPROACHES
+Approach 1: Test the answer options forward.
+Approach 2: View two doublings as multiplication by four.
+
+
+EXTENSION QUESTION
+A magical ball bounces three times as high after each bounce. Its third bounce reaches 540 cm. What was the original drop height?
+Extension Answer: 20 cm.
+
+
+────────────────────────
+
+
+TEACHING NOTE
+Reveal one hint at a time. Encourage students to explain why an approach works, not simply to calculate. Use the extension to check transfer of the same mathematical strategy.
