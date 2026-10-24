@@ -1,3 +1,4 @@
+const selectPaper = require('./verify-select-paper.cjs');
 const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const vm = require('node:vm');
@@ -78,7 +79,7 @@ if(ids.includes('2003-g5-6')) {
   await page.goto(pathToFileURL(path.resolve('index.html')).href);
   assert.equal(await page.locator('.q-card').count(),Object.values(papers).flat().length);
   for(const id of ids) {
-   await page.selectOption('#yearSel',id);
+   await selectPaper(page, id);
    assert.equal(await page.locator('.q-card').count(),30);
    for(const q of papers[id].filter(q=>q.figure)) {
     const img=page.locator(`.q-card[data-no="${q.no}"] .question-figure img`);
@@ -91,9 +92,9 @@ if(ids.includes('2003-g5-6')) {
    const first=page.locator('.q-card').first();
    await first.locator(`[data-letter="${papers[id][0].answer}"]`).click();
    assert.equal(await first.locator('.option.correct').count(),1);
-   await page.selectOption('#yearSel','1999');
+   await selectPaper(page, '1999');
    assert.equal(await first.locator('.option.correct').count(),0);
-   await page.selectOption('#yearSel',id);
+   await selectPaper(page, id);
    assert.equal(await first.locator('.option.correct').count(),1);
    await first.getByRole('button',{name:'延申拓展',exact:true}).click();
    assert.ok(await first.locator('.extension').isVisible());

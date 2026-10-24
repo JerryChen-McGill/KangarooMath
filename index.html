@@ -175,8 +175,11 @@ button.disclosure[aria-expanded="true"] { background: #eff6ff; border-color: #bf
 
 <div class="controls">
   <div class="controls-row">
-    <select id="yearSel">
-      <option value="all">全部试卷</option>
+    <select id="gradeSel" aria-label="年级">
+      <option value="all">全部年级</option>
+    </select>
+    <select id="yearSel" aria-label="年份" disabled>
+      <option value="all">全部年份</option>
     </select>
     <select id="viewSel">
       <option value="list">全部题目</option>
@@ -232,7 +235,7 @@ function renderTagCloud() {
   updateTagToggleButton();
 }
 
-let state = { mode: 'teaching', year: 'all', view: 'list', showAnswer: false, showSolution: false, showMethods: false, showDiagram: false, search: '', tags: new Set(), singleNo: 1 };
+let state = { mode: 'teaching', grade: 'all', year: 'all', view: 'list', showAnswer: false, showSolution: false, showMethods: false, showDiagram: false, search: '', tags: new Set(), singleNo: 1 };
 let tagReturnContext = null;
 const app = document.getElementById('app');
 const attempts = new Map();
@@ -241,7 +244,23 @@ const teachingHints = new Set();
 const openExtensions = new Set();
 const questionKey = q => q.year + '-' + q.no;
 const yearSel = document.getElementById('yearSel');
-years.forEach(id => yearSel.add(new Option(paperLabel(id), id)));
+const gradeSel = document.getElementById('gradeSel');
+const paperGrade = id => KANGAROO_DATA[id][0].grade;
+const grades = [...new Set(years.map(paperGrade))].sort((a, b) => a.localeCompare(b, undefined, {numeric: true}));
+grades.forEach(grade => gradeSel.add(new Option('Grade ' + grade.replace('-', '–'), grade)));
+function selectedPapers() {
+  return state.year === 'all' ? years.filter(id => state.grade === 'all' || paperGrade(id) === state.grade) : [state.year];
+}
+function syncPaperSelectors() {
+  gradeSel.value = state.grade;
+  yearSel.replaceChildren(new Option('全部年份', 'all'));
+  if (state.grade !== 'all') {
+    years.filter(id => paperGrade(id) === state.grade).forEach(id => yearSel.add(new Option(paperYear(id) + ' 年', id)));
+  }
+  yearSel.disabled = state.grade === 'all';
+  yearSel.value = state.year;
+  singleNo.max = Math.max(...selectedPapers().map(id => KANGAROO_DATA[id].length));
+}
 document.getElementById('paperSummary').textContent = years.map(paperLabel).join(' ｜ ');
 const viewSel = document.getElementById('viewSel');
 const singleNo = document.getElementById('singleNo');
@@ -264,20 +283,20 @@ function toggleTag(tag, sourceCard = null) {
     // Keep the original destination until the entire tag exploration ends.
     if (!state.tags.size) {
       tagReturnContext = {
-        filters: {year: state.year, view: state.view, singleNo: state.singleNo, search: state.search},
+        filters: {grade: state.grade, year: state.year, view: state.view, singleNo: state.singleNo, search: state.search},
         question: sourceCard ? {year: sourceCard.dataset.year, no: sourceCard.dataset.no} : null,
         scrollTop: app.scrollTop
       };
     }
     state.tags.add(tag);
+    state.grade = 'all';
     state.year = 'all';
     state.view = 'list';
     state.search = '';
   }
-  yearSel.value = state.year;
+  syncPaperSelectors();
   viewSel.value = state.view;
   singleNo.value = state.singleNo;
-  singleNo.max = state.year === 'all' ? 30 : KANGAROO_DATA[state.year].length;
   singleNo.style.display = state.view === 'single' ? 'inline-block' : 'none';
   search.value = state.search;
   renderTagCloud();
@@ -322,7 +341,7 @@ function updateTagToggleButton() {
 }
 
 function getQuestions() {
-  const ys = state.year === 'all' ? years : [state.year];
+  const ys = selectedPapers();
   let qs = [];
   ys.forEach(y => qs = qs.concat(KANGAROO_DATA[y].map(q => ({...q, year: y}))));
   if (state.tags.size) {
@@ -336,8 +355,9 @@ function getQuestions() {
 }
 
 function renderAnswers() {
-  const ys = state.year === 'all' ? years : [state.year];
-  let html = '<div class="view-ans"><h2>全卷答案</h2><p>选中试卷：' + (state.year==='all' ? '全部试卷' : paperLabel(state.year)) + '</p>';
+  const ys = selectedPapers();
+  const selectionLabel = state.year !== 'all' ? paperLabel(state.year) : state.grade === 'all' ? '全部试卷' : 'Grade ' + state.grade + ' · 全部年份';
+  let html = '<div class="view-ans"><h2>全卷答案</h2><p>选中试卷：' + selectionLabel + '</p>';
   ys.forEach(y => {
     html += '<h3>' + paperLabel(y) + '</h3><div class="ans-grid">';
     KANGAROO_DATA[y].forEach(q => {
@@ -436,7 +456,7 @@ function renderList() {
 }
 
 function renderSingle() {
-  const ys = state.year === 'all' ? years : [state.year];
+  const ys = selectedPapers();
   let found = null;
   for (const y of ys) {
     const q = KANGAROO_DATA[y].find(x => x.no === Number(state.singleNo));
@@ -561,7 +581,15 @@ window.toggleOne = function(btn, kind) {
   if (insertHtml) { card.insertAdjacentHTML('beforeend', insertHtml); styleDisclosure(btn, buttonLabels[kind], true); }
 };
 
-yearSel.addEventListener('change', e => { state.year = e.target.value; state.singleNo = 1; singleNo.value = 1; if (state.year !== 'all') singleNo.max = KANGAROO_DATA[state.year].length; else singleNo.max = 30; render(); });
+function changePaperSelection() {
+  state.singleNo = 1;
+  singleNo.value = 1;
+  syncPaperSelectors();
+  render();
+  app.scrollTop = 0;
+}
+gradeSel.addEventListener('change', e => { state.grade = e.target.value; state.year = 'all'; changePaperSelection(); });
+yearSel.addEventListener('change', e => { state.year = e.target.value; changePaperSelection(); });
 viewSel.addEventListener('change', e => {
   state.view = e.target.value;
   singleNo.style.display = state.view === 'single' ? 'inline-block' : 'none';
@@ -689,6 +717,7 @@ document.getElementById('modeToggle').addEventListener('click', e => {
   renderAnsHint(); render();
 });
 
+syncPaperSelectors();
 renderTagCloud();
 renderAnsHint();
 render();
