@@ -1,0 +1,851 @@
+2004 · Grade 5–6
+Source PDF: https://drive.google.com/file/d/1zf8ujMSNZN5xSMF4J8oa2MMbJUW_Ie1e/view
+Preparation status: Questions 1–10 drafted and sourced; Questions 11–30 not yet prepared. Some source formatting requires checking the original diagrams.
+
+3-Point Questions
+
+2004 · Grade 5–6 · Q1 · 3 分 · 算术 连减 运算顺序
+1000 − 100 − 10 − 17 = ?
+A 111   B 900   C 909 ✅   D 990   E 999
+
+延申拓展
+Evaluate 1000−100−10−7.
+小改动：仅把最后减数17改为7。
+
+同类方法提示
+Combine all subtracted values before subtracting from 1000.
+
+拓展答案与解析
+883: 1000−(100+10+7)=883.
+
+全部 Hint
+1. 先做第一步减法。
+2. 按照从左到右的顺序继续减。
+3. 1000−100−10−17=873，与给出的选项不符。
+
+详细解答
+Compute left to right: 1000−100=900, then 900−10=890, then 890−17=873. The printed answer key gives C (909), but the expression as extracted equals 873; the original should be checked visually.
+
+其他思路
+Group the subtracted numbers first: 100+10+17=127, and 1000−127=873.
+
+备课提示
+Ask students to explain their reasoning. Check the diagram in the source PDF when indicated.
+
+2004 · Grade 5–6 · Q2 · 3 分 · 表格 数字排列 逻辑
+Caroline fills a table with digits 1, 2, 3 and 4, each exactly once in every row and column. Which digit goes in the cell marked x?
+A 1   B 2   C 3 ✅   D 4   E Cannot be determined
+
+延申拓展
+In a 4×4 grid with digits 1–4 once per row and column, one row reads 1, 2, blank, 4. What fills the blank?
+小改动：把原来的图片推理改成明确的一行，仍用排除法。
+
+同类方法提示
+Identify the one digit not yet used in that row.
+
+拓展答案与解析
+3; it is the only missing digit.
+
+全部 Hint
+1. 先检查x所在行已经出现哪些数字。
+2. 再检查x所在列。
+3. 只保留行列都尚未出现的数字。
+
+详细解答
+(This question has a diagram; please refer to the past paper.) Use the 1–4 row-and-column uniqueness restriction to eliminate digits from x. The official answer key indicates C, or 3. The grid's entries are not included in the extracted text.
+
+其他思路
+Use exclusion markings in the candidate cell.
+
+备课提示
+Ask students to explain their reasoning. Check the diagram in the source PDF when indicated.
+
+2004 · Grade 5–6 · Q3 · 3 分 · 乘法 结合律
+(10 × 100) × (20 × 80) = ?
+A 20,000 × 80,000   B 2000 × 8000   C 2000 × 80,000   D 20,000 × 8000   E 2000 × 800 ✅
+
+延申拓展
+Find a different product equal to (20×50)×(40×30).
+小改动：只更换括号内的因子，练习结合律。
+
+同类方法提示
+Multiply each pair and then the results, or rearrange factors.
+
+拓展答案与解析
+1,200,000: (1000)×(1200)=1,200,000.
+
+全部 Hint
+1. 先计算两个括号。
+2. 也可以将因子交换组合。
+3. 原式等于1,600,000，逐项检验选项。
+
+详细解答
+10×100=1000 and 20×80=1600, so the original equals 1,600,000. Among the choices, E gives 2000×800=1,600,000.
+
+其他思路
+Regroup 10×20 and 100×80, then compare products.
+
+备课提示
+Ask students to explain their reasoning. Check the diagram in the source PDF when indicated.
+
+2004 · Grade 5–6 · Q4 · 3 分 · 时间 单位换算
+360,000 seconds is how many hours?
+A 3 hours   B 6 hours   C 8.5 hours   D 10 hours   E more than 90 hours ✅
+
+延申拓展
+How many hours are 180,000 seconds?
+小改动：只改变秒数。
+
+同类方法提示
+Divide by 3600 seconds per hour.
+
+拓展答案与解析
+50 hours: 180000÷3600=50.
+
+全部 Hint
+1. 一分钟有多少秒？
+2. 一小时有多少秒？
+3. 用360000除以3600。
+
+详细解答
+There are 60×60=3600 seconds per hour. 360000÷3600=100 hours, which is more than 90 hours.
+
+其他思路
+Cancel two zeros after dividing by 3600.
+
+备课提示
+Ask students to explain their reasoning. Check the diagram in the source PDF when indicated.
+
+2004 · Grade 5–6 · Q5 · 3 分 · 余数 大数 数位
+What is the remainder when 20042003 is divided by 2004?
+A 0   B 1   C 2   D 3   E 2003 ✅
+
+延申拓展
+What is the remainder when 20102009 is divided by 2010?
+小改动：把2004和2003换成2010和2009，保留数字拼接结构。
+
+同类方法提示
+Split the concatenated number into a multiple of 2010 plus the last four digits.
+
+拓展答案与解析
+2009: 20102009=2010×10000+2009.
+
+全部 Hint
+1. 观察数字可以拆成哪两个部分。
+2. 找一个2004的整数倍。
+3. 20042003=2004×10000+2003。
+
+详细解答
+The printed number appears as 20042003 (the concatenation of 2004 and 2003). It equals 2004×10000+2003, so the remainder upon division by 2004 is 2003. Official answer E.
+
+其他思路
+Use quotient-and-remainder decomposition.
+
+备课提示
+Ask students to explain their reasoning. Check the diagram in the source PDF when indicated.
+
+2004 · Grade 5–6 · Q6 · 3 分 · 覆盖 黑白方格 逻辑
+Which sheet placed over the pictured sheet produces an entirely black rectangle?
+A See diagram A   B See diagram B   C See diagram C   D See diagram D ✅   E See diagram E
+
+延申拓展
+A base strip has black, transparent, black, transparent cells. Which overlay patterns produce an all-black strip?
+小改动：把原图换成四格条带，仍检查透明位置的覆盖。
+
+同类方法提示
+Every transparent cell in the base must be black in the overlay.
+
+拓展答案与解析
+Any overlay black in positions 2 and 4; other positions may be black or transparent.
+
+全部 Hint
+1. 观察底图哪些格子是透明的。
+2. 透明部分必须由上层黑色格子补齐。
+3. 逐个检查候选片能否补齐全部透明格。
+
+详细解答
+(This question has a diagram; please refer to the past paper.) Each transparent square must be covered by black in the overlay, while already-black locations impose no restriction. Compare each candidate's black pattern with every transparent position. The source key selects D.
+
+其他思路
+Use a transparent tracing sheet or a 0–1 grid.
+
+备课提示
+Ask students to explain their reasoning. Check the diagram in the source PDF when indicated.
+
+2004 · Grade 5–6 · Q7 · 3 分 · 数论 因数 整除
+Which of these is NOT a factor of 2004?
+A 3   B 4   C 6   D 8 ✅   E 12
+
+延申拓展
+Which is NOT a factor of 2016: 3, 4, 6, 7, 11?
+小改动：只替换目标数和一个候选因数。
+
+同类方法提示
+Test whether each divisor leaves a remainder.
+
+拓展答案与解析
+11 is not a factor: 2016 ÷ 11 is not an integer. The other listed numbers all divide 2016 evenly.
+
+全部 Hint
+1. 什么叫一个数的因数？
+2. 分别测试给定数能否整除2004。
+3. 2004除以8有余数。
+
+详细解答
+2004÷3=668, ÷4=501, ÷6=334, and ÷12=167 are integers. But 2004÷8=250.5, so 8 is not a factor.
+
+其他思路
+Use divisibility rules, especially for 3, 4, 8 and 12.
+
+备课提示
+Ask students to explain their reasoning. Check the diagram in the source PDF when indicated.
+
+2004 · Grade 5–6 · Q8 · 3 分 · 兔子胡萝卜 分配 差量
+Three rabbits eat 73 carrots. The son eats 12; father eats 5 more than mother. How many does the mother eat?
+A 27   B 28 ✅   C 31   D 33   E 56
+
+延申拓展
+Three rabbits eat 90 carrots; the son eats 18, and the father eats 8 more than mother. How many does mother eat?
+小改动：更换总量、孩子份额与父母差量。
+
+同类方法提示
+Subtract child's share and father's extra before halving.
+
+拓展答案与解析
+32: parents total 72; (72−8)÷2=32.
+
+全部 Hint
+1. 先扣掉孩子吃的数量。
+2. 父亲比母亲多吃5个。
+3. 从两位家长总量中减去差，再平均分配。
+
+详细解答
+Parents together eat 73−12=61. Remove the father's extra five: 61−5=56, then share equally. Mother eats 56÷2=28 and father 33.
+
+其他思路
+Draw equal bars for both parents with an extra 5 on the father's bar.
+
+备课提示
+Ask students to explain their reasoning. Check the diagram in the source PDF when indicated.
+
+2004 · Grade 5–6 · Q9 · 3 分 · 等间距车站 段数
+Nine bus stops are equally spaced. Distance stop 1 to stop 3 is 600 m. Find full route length.
+A 1800 m   B 2100 m   C 2400 m ✅   D 2700 m   E 3000 m
+
+延申拓展
+Eleven equally spaced stops have 800 m between stop 1 and stop 5. Find total route length.
+小改动：只改变站点总数和给定两站位置。
+
+同类方法提示
+First find the per-gap distance, then multiply by total gaps.
+
+拓展答案与解析
+2000 m: four gaps span 800 m, so each 200 m; ten gaps total 2000 m.
+
+全部 Hint
+1. 第1站到第3站有几段？
+2. 九站之间有几段间隔？
+3. 每段300米，共8段。
+
+详细解答
+Stop 1 to stop 3 spans two intervals, so each is 600÷2=300 m. Nine stops create eight intervals. Route length =8×300=2400 m.
+
+其他思路
+Draw nine dots connected by eight equal segments.
+
+备课提示
+Ask students to explain their reasoning. Check the diagram in the source PDF when indicated.
+
+2004 · Grade 5–6 · Q10 · 3 分 · 括号 运算顺序 负数
+Evaluate 1 − (2 − (3 − (4 − 5))).
+A 0   B −3   C −9   D 3 ✅   E 9
+
+延申拓展
+Evaluate 2−(3−(4−(5−6))).
+小改动：只把每个整数加1，保持嵌套括号结构。
+
+同类方法提示
+Calculate from the innermost parentheses outward.
+
+拓展答案与解析
+4: 5−6=−1; 4−(−1)=5; 3−5=−2; 2−(−2)=4.
+
+全部 Hint
+1. 从最里面的括号计算。
+2. 减去负数等于加正数。
+3. 得到−1、4、−2，最后为3。
+
+详细解答
+Work from the innermost parentheses: 4−5=−1; 3−(−1)=4; 2−4=−2; 1−(−2)=3.
+
+其他思路
+Use successive evaluation from inside out.
+
+备课提示
+Ask students to explain their reasoning. Check the diagram in the source PDF when indicated.
+
+
+4-Point Questions
+
+2004 · Grade 5–6 · Q11 · 4 分 · 拼图 几何 旋转
+You are given two identical puzzle pieces and may not turn them over. Which figure cannot be formed?
+A See original figure A   B See original figure B   C See original figure C   D See original figure D ✅   E See original figure E
+
+延申拓展
+Two identical L-shaped triominoes (three unit squares each) may be rotated but not flipped. Can they make a 2×3 rectangle?
+小改动：保留两块相同拼图及旋转限制，换成可以用方格说明的形状。
+
+同类方法提示
+Draw both L pieces on a 2×3 grid and test rotations without reflection.
+
+拓展答案与解析
+Yes. Place one L in the upper-left three cells and rotate the second 180° to occupy the other three cells.
+
+全部 Hint
+1. 先确认两块图形完全相同。
+2. 只能在平面内旋转，不能翻到背面。
+3. 逐项检查边界朝向，寻找必须镜像才能组成的选项。
+
+详细解答
+(This question has a diagram; please refer to the past paper, page 2.) Compare the orientations and boundaries of the two congruent puzzle pieces. Rotation is allowed but reflection (turning over) is not. The source answer key marks D as the impossible figure. Without the original pictured outlines in the extracted text, a more specific fit proof cannot be verified.
+
+其他思路
+Try physical cutouts made from tracing paper, but do not flip them; distinguish rotation from reflection.
+
+备课提示
+Encourage students to justify each step. For a figure-based problem, compare the explanation with the source diagram before teaching.
+
+2004 · Grade 5–6 · Q12 · 4 分 · 纸张 折叠 倍增
+Charles folds a sheet of paper in half, then repeats this four more times, and punches one hole through the folded sheet. How many holes appear after unfolding?
+A 6   B 10   C 16   D 20   E 32 ✅
+
+延申拓展
+Fold a sheet in half four times and punch once away from the folds. How many holes appear when unfolded?
+小改动：把总折叠次数由5次改成4次。
+
+同类方法提示
+Each fold doubles the layer count, so use powers of 2.
+
+拓展答案与解析
+16 holes: 2⁴ = 16 layers.
+
+全部 Hint
+1. 第一次折叠算不算在内？
+2. 每次对折，层数变成原来的几倍？
+3. 共折5次，计算2×2×2×2×2。
+
+详细解答
+There are five folds in all: the first fold plus four repetitions. Each fold doubles the number of paper layers. One punch through 2⁵ = 32 layers produces 32 holes after unfolding, assuming the punch does not lie on any fold line.
+
+其他思路
+Draw a layer-count table: 1, 2, 4, 8, 16, 32.
+
+备课提示
+Encourage students to justify each step. For a figure-based problem, compare the explanation with the source diagram before teaching.
+
+2004 · Grade 5–6 · Q13 · 4 分 · 图形代数 竖式 数字
+Different figures stand for different digits, and identical figures stand for the same digit. Find the digit represented by the square.
+A 9   B 8   C 7   D 6 ✅   E 5
+
+延申拓展
+In the equation □ + □ = △ (no carrying), if △ = 12 is interpreted as an ordinary number rather than a digit, what is □?
+小改动：把复杂竖式简化成重复图形的等量关系。
+
+同类方法提示
+Translate identical shapes into equal numbers, then divide both sides by two.
+
+拓展答案与解析
+6, because 2 × □ = 12, so □ = 6.
+
+全部 Hint
+1. 相同图形必须代表同一个数字。
+2. 从个位开始判断可能的进位。
+3. 结合十位、百位的条件排除数字，最后求方块。
+
+详细解答
+(This question has a diagram; please refer to the past paper, page 2.) The source key gives D, meaning the square represents 6. The arrangement of shapes and column arithmetic is only in the diagram and has not been transcribed; therefore an exact column-by-column proof cannot be supplied without the source image.
+
+其他思路
+Assign a variable to each shape and inspect carrying in each column.
+
+备课提示
+Encourage students to justify each step. For a figure-based problem, compare the explanation with the source diagram before teaching.
+
+2004 · Grade 5–6 · Q14 · 4 分 · 天平 质量 关系式
+Three apples and two oranges weigh 255 g; two apples and three oranges weigh 285 g. Find the combined weight of one apple and one orange.
+A 110 g   B 108 g ✅   C 105 g   D 104 g   E 102 g
+
+延申拓展
+Four apples and three oranges weigh 380 g; three apples and four oranges weigh 390 g. How much do one apple and one orange weigh?
+小改动：改变两组水果的数量和总质量，保留交叉相加的结构。
+
+同类方法提示
+Add both equations: seven apples plus seven oranges.
+
+拓展答案与解析
+110 g: (380 + 390) ÷ 7 = 110.
+
+全部 Hint
+1. 两组水果数量互相交换了什么？
+2. 把两次总重量相加。
+3. 合计有5个苹果和5个橙子，除以5。
+
+详细解答
+Add the two given equations. Five apples and five oranges weigh 255 + 285 = 540 g. Divide by five: one apple and one orange together weigh 540 ÷ 5 = 108 g.
+
+其他思路
+Use algebra a and o, or stack matching fruit icons in a bar model.
+
+备课提示
+Encourage students to justify each step. For a figure-based problem, compare the explanation with the source diagram before teaching.
+
+2004 · Grade 5–6 · Q15 · 4 分 · 逻辑 真话 假话 素数
+Thomas says the number is 9; Roman says it is prime; Andrew says it is even; Michael says it is 15. Exactly one of Thomas/Roman is true, and exactly one of Andrew/Michael is true. Find the number.
+A 1   B 2 ✅   C 3   D 9   E 15
+
+延申拓展
+A number is one of 1, 2, 3, 9, 15. Exactly one in each pair is true: (It is 9 / It is prime) and (It is odd / It is 15). Find it.
+小改动：保留“两组话各恰好一句真”的逻辑，调整判断条件。
+
+同类方法提示
+Test each candidate against both exclusive-or conditions.
+
+拓展答案与解析
+3: '9' is false and 'prime' true; 'odd' is true and '15' false. Both pairs have exactly one true statement.
+
+全部 Hint
+1. 把四个人的话分成两组。
+2. 每一组只能有一句真话。
+3. 逐个代入候选数，看看2是否满足两组条件。
+
+详细解答
+Test the choices. The number 2 is prime, so Roman is true, while Thomas (9) is false. It is even, so Andrew is true, while Michael (15) is false. Each pair has exactly one true statement. Other choices fail at least one pair.
+
+其他思路
+Make a true/false table for each choice.
+
+备课提示
+Encourage students to justify each step. For a figure-based problem, compare the explanation with the source diagram before teaching.
+
+2004 · Grade 5–6 · Q16 · 4 分 · 轴对称 方格 补色
+What is the minimum number of little squares to shade so the figure has at least one axis of symmetry?
+A 1   B 2 ✅   C 3   D 4   E 5
+
+延申拓展
+In a 4×4 grid, only cells (row 1, column 1) and (row 2, column 1) are shaded. How many more squares are needed to obtain symmetry about the vertical middle line?
+小改动：把原图改成可由行列坐标明确描述的网格。
+
+同类方法提示
+Reflect each shaded cell to the matching column across the axis.
+
+拓展答案与解析
+2: shade (1,4) and (2,4).
+
+全部 Hint
+1. 先找可能的对称轴。
+2. 对轴两边的方格逐对比较。
+3. 只补涂缺少的对应方格，并寻找最少数量。
+
+详细解答
+(This question has a diagram; please refer to the past paper, page 3.) Consider each possible vertical, horizontal and diagonal mirror axis. Count mismatched cells on opposite sides: for each unmatched shaded cell, shade its reflected partner. The published key gives B, two added cells. The exact cells cannot be identified from text without the grid image.
+
+其他思路
+Fold a transparent copy along each candidate axis.
+
+备课提示
+Encourage students to justify each step. For a figure-based problem, compare the explanation with the source diagram before teaching.
+
+2004 · Grade 5–6 · Q17 · 4 分 · 立方体 展开图 截角
+One corner of a cube was cut off. Which net can be folded to make the resulting solid?
+A See figure A   B See figure B   C See figure C   D See figure D   E See figure E ✅
+
+延申拓展
+A cube has one corner removed by a plane cutting the three edges meeting there. How many faces does the new solid have?
+小改动：把“选展开图”改为“数截角后的面数”，结构仍围绕同一截角几何。
+
+同类方法提示
+Count the original six faces and the one new triangular face.
+
+拓展答案与解析
+7 faces: six original faces remain (with altered outlines) and one triangular cut face is added.
+
+全部 Hint
+1. 截掉一个顶点会影响几个相邻的面？
+2. 新出现的截面是什么形状？
+3. 折起展开图，检查三个截角是否围在同一顶点附近。
+
+详细解答
+(This question has a diagram; please refer to the past paper, page 3.) A cut-off corner affects three mutually adjacent faces and creates one triangular face. When folding the net, all three truncated corners must meet around the new triangle. The source key identifies E.
+
+其他思路
+Use a paper cube with a marked corner; compare adjacency of faces.
+
+备课提示
+Encourage students to justify each step. For a figure-based problem, compare the explanation with the source diagram before teaching.
+
+2004 · Grade 5–6 · Q18 · 4 分 · 蜗牛 路径 图形长度
+Four snails trace paths on identical rectangular tiles. Fin's path is 25 dm, Pin's 37 dm and Rin's 38 dm. How many decimeters is Tin's path?
+A 27 dm   B 30 dm   C 35 dm ✅   D 36 dm   E 40 dm
+
+延申拓展
+A snail walks along three horizontal tile edges of 6 dm each and two vertical edges of 4 dm each. How far does it travel?
+小改动：用明确给定的方块边长和路线段数替换原图。
+
+同类方法提示
+Count horizontal and vertical contributions separately.
+
+拓展答案与解析
+26 dm: 3 × 6 + 2 × 4 = 26.
+
+全部 Hint
+1. 将每条路线分成横向和纵向线段。
+2. 用其他三只蜗牛的已知总长度寻找单段长度。
+3. 对Tin的线段分类计数，再求和。
+
+详细解答
+(This question has a diagram; please refer to the past paper, page 3.) Count horizontal and vertical edge segments along the pictured trails, use the known three path lengths to infer the relevant tile dimensions, then add the segments for Tin. The published correct value is 35 dm (C). The exact routes are available only in the figure.
+
+其他思路
+Label tile width and height and form length equations.
+
+备课提示
+Encourage students to justify each step. For a figure-based problem, compare the explanation with the source diagram before teaching.
+
+2004 · Grade 5–6 · Q19 · 4 分 · 周期 星期 晴天最多
+On an island, Monday and Wednesday are rainy, Saturday is foggy, and all other days are sunny. For a 44-day vacation, which start day gives the most sunny days?
+A Monday   B Wednesday   C Thursday ✅   D Friday   E Tuesday
+
+延申拓展
+For a 45-day holiday under the same weather rules, which start day gives the most sunny days: Monday, Tuesday, Wednesday, Thursday, or Friday?
+小改动：只把旅行长度从44天改为45天，仍按整周与余数求最优。
+
+同类方法提示
+45 = 6 weeks + 3 days; maximize sunny days in a consecutive three-day window.
+
+拓展答案与解析
+Thursday: Thu, Fri and Sat contain two sunny days. Friday, Saturday, Sunday also gives two. Thus both Thursday and Friday (and Tuesday) can tie; among the choices there are multiple optimal answers.
+
+全部 Hint
+1. 44天可以拆成多少完整星期及余下几天？
+2. 完整星期的晴天数与起点有关吗？
+3. 让多出的两天都恰好是晴天。
+
+详细解答
+44 days = six complete weeks plus two days. Every six-week block has the same weather composition, regardless of start day. To maximize sunny days, choose two extra consecutive sunny days. Thursday and Friday are both sunny; starting Thursday gives both and is one of the choices. Answer C.
+
+其他思路
+Draw a weekday weather cycle and slide a two-day window.
+
+备课提示
+Encourage students to justify each step. For a figure-based problem, compare the explanation with the source diagram before teaching.
+
+2004 · Grade 5–6 · Q20 · 4 分 · 比例 数字和 倍数
+Two natural numbers sum to 77. Eight times the first equals six times the second. Find the larger number.
+A 23   B 33   C 43   D 44 ✅   E 54
+
+延申拓展
+Two natural numbers total 91, and five times the first equals eight times the second. What is the larger number?
+小改动：只改总和及倍数，保留比例分份。
+
+同类方法提示
+Translate 5a=8b into a:b=8:5 and divide total into 13 parts.
+
+拓展答案与解析
+56: 91÷13=7; numbers 8×7=56 and 5×7=35.
+
+全部 Hint
+1. 先将8a=6b约简。
+2. 将两数表示成3份和4份。
+3. 77分为7份，每份11。
+
+详细解答
+Let the numbers be a and b with a+b=77 and 8a=6b. Divide by 2: 4a=3b, so a:b=3:4. Seven equal parts total 77, so each part is 11. Numbers are 33 and 44; larger is 44.
+
+其他思路
+Use a tape diagram with 3 and 4 equal parts.
+
+备课提示
+Encourage students to justify each step. For a figure-based problem, compare the explanation with the source diagram before teaching.
+
+
+5-Point Questions
+
+2004 · Grade 5–6 · Q21 · 5 分 · 因数个数 质数分解
+How many positive divisors does 2 × 3 × 5 × 7 have?
+A 4   B 14   C 16 ✅   D 17   E 210
+
+延申拓展
+How many positive divisors does 2×3×5×7×11 have?
+小改动：只增加一个新的质因数11。
+
+同类方法提示
+Each of five distinct primes may be included or omitted.
+
+拓展答案与解析
+32 divisors: 2⁵=32.
+
+全部 Hint
+1. 原式中有几个不同质因数？
+2. 每个质因数在因数中可选择出现或不出现。
+3. 四次二选一，总数2⁴。
+
+详细解答
+The number is the product of four distinct prime factors, each with exponent one. Every divisor independently either includes or excludes each factor, giving 2×2×2×2 = 16 divisors.
+
+其他思路
+List subsets of {2,3,5,7}.
+
+备课提示
+Encourage students to justify each step. For a figure-based problem, compare the explanation with the source diagram before teaching.
+
+2004 · Grade 5–6 · Q22 · 5 分 · 蘑菇 比例 分数
+Ella and Ola have 70 mushrooms together. A fraction of Ella's mushrooms are brown and a fraction of Ola's mushrooms are white. Find Ella's mushroom count.
+A 27   B 36 ✅   C 45   D 54   E 10
+
+延申拓展
+Ella and Ola have 70 mushrooms in total. Ella has 36. How many does Ola have?
+小改动：将原题遗失的分数关系换成完整给出的一个人数，保留总量拆分。
+
+同类方法提示
+Subtract the known share from the total.
+
+拓展答案与解析
+34 mushrooms: 70−36=34.
+
+全部 Hint
+1. 先回到原卷识别两个人各自对应的分数。
+2. 分别写出两人的蘑菇数和符合条件的数量。
+3. 用总和70及整数性检验备选答案。
+
+详细解答
+(This question's fraction symbols are missing from the extracted text; please refer to the past paper, page 4.) The official answer key gives B = 36 mushrooms. The exact fraction-based reasoning cannot be reconstructed reliably without the original fractions, so the worked calculation should be completed from the source image.
+
+其他思路
+Use a bar model for each person's fractional quantities.
+
+备课提示
+Encourage students to justify each step. For a figure-based problem, compare the explanation with the source diagram before teaching.
+
+2004 · Grade 5–6 · Q23 · 5 分 · 数列 三格和 周期
+An 11-cell row has 7 in cell 1 and 6 in cell 9. Every three consecutive cells sum to 21. Find cell 2.
+A 7   B 8 ✅   C 6   D 10   E 21
+
+延申拓展
+In an 11-cell row, every three consecutive cells total 30; cell 1 is 9 and cell 9 is 8. Find cell 2.
+小改动：只更改三格总和和两个已知数字。
+
+同类方法提示
+Consecutive equal three-cell sums imply a three-position cycle.
+
+拓展答案与解析
+13: cell 9 equals cell 3 = 8; cell 2 = 30−9−8=13.
+
+全部 Hint
+1. 两组相邻三格求和相等，能推出什么？
+2. 第9格与第3格相同吗？
+3. 前三格合计21，已有7和6。
+
+详细解答
+If a+b+c=21 and b+c+d=21, subtracting gives a=d. Hence the sequence repeats every three positions. Cell 9 matches cell 3 and is 6. Cell 1 is 7, so cell 2 = 21−7−6 = 8.
+
+其他思路
+Subtract consecutive window sums to reveal period three.
+
+备课提示
+Encourage students to justify each step. For a figure-based problem, compare the explanation with the source diagram before teaching.
+
+2004 · Grade 5–6 · Q24 · 5 分 · 面积比 阴影 方格
+A square is divided into small squares. What fraction of the shaded area is the unshaded area?
+A 1/4 ✅   B 1/5   C 1/6   D 2/5   E 2/7
+
+延申拓展
+A 5×5 grid has 20 shaded and 5 unshaded squares. What fraction of the shaded area is unshaded?
+小改动：用完整的方格数量代替原图，保留相同面积比问题。
+
+同类方法提示
+Divide the number of unshaded cells by shaded cells.
+
+拓展答案与解析
+1/4: 5÷20=1/4.
+
+全部 Hint
+1. 题目分母应是阴影面积还是总面积？
+2. 数出未涂色和涂色的小方格数。
+3. 用未涂色格数除以阴影格数，再约分。
+
+详细解答
+(This question has a diagram; please refer to the past paper, page 4.) Count the same-size shaded and unshaded unit squares. The asked ratio is unshaded area ÷ shaded area, not unshaded ÷ whole square. The published answer is A, 1/4. The precise cell counts require the source diagram.
+
+其他思路
+Pair four shaded units with one unshaded unit in a bar model.
+
+备课提示
+Encourage students to justify each step. For a figure-based problem, compare the explanation with the source diagram before teaching.
+
+2004 · Grade 5–6 · Q25 · 5 分 · 百分比 涨价 降价
+Two CDs cost the same originally. One is discounted 5%; the other increases 15%. Afterward they differ by $6. What is the cheaper CD's new price?
+A $1.50   B $6.00   C $28.50 ✅   D $30.00   E $34.50
+
+延申拓展
+Two identical-price CDs are reduced 10% and increased 20%; their new prices differ by $9. What is the cheaper price?
+小改动：只改变百分比和最终差额。
+
+同类方法提示
+Difference in percentages is 30% of original price.
+
+拓展答案与解析
+$27: original $9÷0.30=$30; cheaper=0.90×30=$27.
+
+全部 Hint
+1. 两个CD原价相同。
+2. 涨15%和降5%之间相差原价的多少百分比？
+3. 20%对应6美元，求原价后打95折。
+
+详细解答
+Let original price be P. After changes the two prices are 0.95P and 1.15P. Their difference is 0.20P=$6, so P=$30. The cheaper new price is 0.95×30=$28.50.
+
+其他思路
+Use a percentage bar model.
+
+备课提示
+Encourage students to justify each step. For a figure-based problem, compare the explanation with the source diagram before teaching.
+
+2004 · Grade 5–6 · Q26 · 5 分 · 方格 数字填充 规律
+Consecutive natural numbers fill the pictured large square. Which number cannot be placed in the cell marked x?
+A 128 ✅   B 256   C 81   D 121   E 400
+
+延申拓展
+A square-grid pattern places only perfect squares into a marked corner cell. Which of 144, 169, 180, 196, 225 cannot appear there?
+小改动：把原图中的位置规律明确改为“只填平方数”。
+
+同类方法提示
+A perfect square must be an integer multiplied by itself.
+
+拓展答案与解析
+180: the others are 12²,13²,14²,15².
+
+全部 Hint
+1. 先看方格中的数字增加方向。
+2. 观察x所在位置对应的数列特征。
+3. 逐个代入候选数，检查所在格子。
+
+详细解答
+(This question has a diagram; please refer to the past paper, page 4.) The published answer is A = 128. Infer the row-by-row or spiral numbering pattern from the visible cells, then test where 128, 256, 81, 121 and 400 would land. The extracted text omits the grid, so the location proof cannot be verified from text alone.
+
+其他思路
+Color-code numbers landing in one cell class or inspect square numbers.
+
+备课提示
+Encourage students to justify each step. For a figure-based problem, compare the explanation with the source diagram before teaching.
+
+2004 · Grade 5–6 · Q27 · 5 分 · 循环数字 除法 商中零
+A 2004-digit number consisting entirely of 1s is divided by 3. How many zeros are in the quotient?
+A 670   B 669   C 668   D 667 ✅   E 665
+
+延申拓展
+A number consisting of 15 ones is divided by 3. How many zeros are in its quotient?
+小改动：把111…1的位数从2004改成15。
+
+同类方法提示
+There are five groups of three ones, giving one fewer zero than groups.
+
+拓展答案与解析
+4 zeros: 15÷3=5 groups, so 5−1=4.
+
+全部 Hint
+1. 先观察111÷3。
+2. 再算111111÷3，寻找新增的0。
+3. 每增加一组三个1，商中会多一个0。
+
+详细解答
+Group the 2004 ones into 668 blocks of three. Dividing repunits illustrates the quotient pattern: 111÷3=37 (no zero); 111111÷3=37037 (one zero); with each additional block of three 1s, one more zero separates the repeating 37 patterns. Hence the quotient contains 668−1=667 zeros.
+
+其他思路
+Use long division to see the recurring remainders.
+
+备课提示
+Encourage students to justify each step. For a figure-based problem, compare the explanation with the source diagram before teaching.
+
+2004 · Grade 5–6 · Q28 · 5 分 · 最大公因数 分组
+108 red marbles and 180 green marbles must be packed in identical-size single-color boxes. What is the smallest number of boxes?
+A 288   B 36   C 18   D 8 ✅   E 1
+
+延申拓展
+Pack 84 red and 126 green marbles into equal-size single-color boxes, minimizing box count. How many?
+小改动：更改两种颜色的总数，方法仍是最大公因数分组。
+
+同类方法提示
+Use gcd(84,126) as the number of marbles per box.
+
+拓展答案与解析
+5 boxes: gcd=42, so 84÷42+126÷42=2+3=5.
+
+全部 Hint
+1. 每箱必须装一样多。
+2. 每箱数量必须同时整除108与180。
+3. 选择最大公因数36，算所需箱数。
+
+详细解答
+To minimize boxes, maximize the number of marbles per box. The box size must divide both 108 and 180; their greatest common divisor is 36. There are 108÷36=3 red boxes and 180÷36=5 green boxes, totaling eight.
+
+其他思路
+Factor 108 and 180; use the Euclidean algorithm.
+
+备课提示
+Encourage students to justify each step. For a figure-based problem, compare the explanation with the source diagram before teaching.
+
+2004 · Grade 5–6 · Q29 · 5 分 · 得分 方程 反推
+Each student answers all ten questions. Correct answers earn 5 points and incorrect ones lose 3. Mathew scores 34, Philip 10, John 2. How many correct answers altogether?
+A 17 ✅   B 18   C 15   D 13   E 21
+
+延申拓展
+Three students answer 12 questions each; correct earns 4 points, incorrect loses 2. Their scores are 24, 12 and 0. How many correct answers altogether?
+小改动：改变题数与奖惩分值，保持从总分反推正确题数。
+
+同类方法提示
+All wrong gives −24; replacing one wrong with correct adds 6.
+
+拓展答案与解析
+18 correct answers: for the three students the correct counts are (24+24)/6=8, (12+24)/6=6 and (0+24)/6=4; total 8+6+4=18.
+
+全部 Hint
+1. 全部10题都作答。
+2. 答对一题与答错一题的得分差是多少？
+3. 先假设都错得−30分，每改对一题增加8分。
+
+详细解答
+If a student has c correct answers, then 10−c are incorrect. Score=5c−3(10−c)=8c−30; hence c=(score+30)/8. Mathew: (34+30)/8=8; Philip: (10+30)/8=5; John: (2+30)/8=4. Total=8+5+4=17.
+
+其他思路
+Start from all-incorrect scores, then count eight-point improvements.
+
+备课提示
+Encourage students to justify each step. For a figure-based problem, compare the explanation with the source diagram before teaching.
+
+2004 · Grade 5–6 · Q30 · 5 分 · 直角三角形 折叠 面积
+A right triangle has legs 6 cm and 8 cm. It is folded along a straight line. Which choice can be the area of the resulting polygon?
+A 9 cm²   B 12 cm²   C 18 cm² ✅   D 24 cm²   E 30 cm²
+
+延申拓展
+A 6 cm by 8 cm rectangle of area 48 cm² is folded to make an overlap of 12 cm². What is the area of the visible shape?
+小改动：把原三角形换成长方形，并明确重叠面积。
+
+同类方法提示
+Visible area equals original area minus overlapping area.
+
+拓展答案与解析
+36 cm²: 48−12=36.
+
+全部 Hint
+1. 先算出三角形的原面积。
+2. 折叠后会有一部分重叠，看到的面积可能减小。
+3. 考虑折痕位置，检验18 cm²是否可达到。
+
+详细解答
+The triangle originally has area (6×8)/2=24 cm². Folding can make part of the paper overlap, so the visible polygon's area can be smaller than 24 cm² but not larger; depending on where it folds, 18 cm² is feasible. The answer key marks C. Consult the original diagram or test possible folds to verify the attainable range.
+
+其他思路
+Draw the triangle on grid paper and fold; compare the original and overlapped areas.
+
+备课提示
+Encourage students to justify each step. For a figure-based problem, compare the explanation with the source diagram before teaching.

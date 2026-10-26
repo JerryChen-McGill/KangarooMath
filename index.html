@@ -13,6 +13,11 @@
 <script src="paper-2000-g5-6.js"></script>
 <script src="paper-2001-g5-6.js"></script>
 <script src="paper-2003-g5-6.js"></script>
+<script src="paper-2004-g5-6.js"></script>
+<script src="paper-2005-g5-6.js"></script>
+<script src="paper-2006-g5-6.js"></script>
+<script src="paper-2007-g5-6.js"></script>
+<script src="paper-2008-g5-6.js"></script>
 <style>
 :root {
   --bg: #f8fafc;
@@ -418,19 +423,19 @@ function questionCard(q) {
   html += '<div class="q-actions"><button onclick="showHint(this)">' + (state.mode === 'teaching' && teachingHints.has(questionKey(q)) ? '隐藏 Hint' : '显示 Hint') + '</button>';
   if (state.mode === 'teaching') {
   html += '<button onclick="toggleOne(this, \'answer\')">' + (state.showAnswer ? '隐藏答案' : '显示答案') + '</button>';
-  html += '<button onclick="toggleOne(this, \'solution\')">' + (state.showSolution ? '隐藏详解' : '显示详解') + '</button>';
-  html += '<button onclick="toggleOne(this, \'methods\')">' + (state.showMethods ? '隐藏思路' : '显示多种思路') + '</button>';
+  if (q.solution) html += '<button onclick="toggleOne(this, \'solution\')">' + (state.showSolution ? '隐藏详解' : '显示详解') + '</button>';
+  if (q.methods?.length) html += '<button onclick="toggleOne(this, \'methods\')">' + (state.showMethods ? '隐藏思路' : '显示多种思路') + '</button>';
   if (svgFor(q.year, q.no) || q.diagram) html += '<button onclick="toggleOne(this, \'diagram\')">' + (state.showDiagram ? '隐藏图解' : '显示图解') + '</button>';
   if (q.tip) html += '<button onclick="toggleOne(this, \'tip\')">显示备课提示</button>';
   }
-  html += '<button type="button" onclick="toggleExtension(this)">延申拓展</button>';
+  if (KANGAROO_EXTENSIONS[questionKey(q)]) html += '<button type="button" onclick="toggleExtension(this)">延申拓展</button>';
   html += '</div>';
   const hintIndex = hintProgress.get(questionKey(q));
   if (state.mode === 'teaching' && teachingHints.has(questionKey(q))) html += teachingHintSection(q);
   else if (state.mode === 'practice' && hintIndex !== undefined) html += hintSection(q, hintIndex % hintsFor(q).length);
   if (openExtensions.has(questionKey(q))) html += extensionSection(q);
 
-  if (state.mode === 'teaching' && state.showSolution) {
+  if (state.mode === 'teaching' && state.showSolution && q.solution) {
     html += '<div class="section solution"><h4>详细解答</h4><p>' + escapeHtml(q.solution).replace(/\n/g, '<br>') + '</p></div>';
   }
   if (state.mode === 'teaching' && state.showMethods && q.methods && q.methods.length) {

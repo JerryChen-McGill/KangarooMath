@@ -1,0 +1,1608 @@
+2008年 · 五至六年级 · 逐题备课详解
+Source: Math Kangaroo Grade 5–6 2008. Original figures are referenced where text extraction is insufficient.
+
+3分题
+2008 · Grade 5–6 · Q1 · 3 分 · 四则运算
+Which number is the smallest?
+(A) 2 + 0 + 0 + 8
+(B) 200 ÷ 8
+(C) 2 x 0 x 0 x 8
+(D) 200 – 8
+(E) 8 + 0 + 0 – 2
+Correct Answer: C ✅
+
+延申拓展
+Evaluate 4+0, 4×0, and 4−0. Which is smallest?
+小改动：将比较选项简化成三项。
+
+同类方法提示
+Calculate multiplication by zero.
+
+拓展答案与解析
+4×0=0 is smallest.
+
+全部 Hint
+1. 先看哪些选项含乘法。
+2. 含0的乘积等于多少？
+3. 将0与其余正数比较。
+
+详细解答
+Compare the five expressions; C contains a factor of zero and equals 0, the smallest value.
+
+其他思路
+Use a table, diagram or inverse check as appropriate to verify the main approach.
+
+备课提示
+Discuss why the method works. For pictured questions, inspect the original past-paper diagram before presenting a complete proof.
+
+2008 · Grade 5–6 · Q2 · 3 分 · 乘法 因数
+In order to make the expression
+= 2 x 2 x 3 x 3 true,
+we need to replace with:
+(A) 2
+(B) 3
+(C) 2 x 3
+(D) 2 x 2
+(E) 3 x 3
+Correct Answer: C ✅
+
+延申拓展
+Find the missing factor: □×2×3=2×2×3×3.
+小改动：把图中缺失等式换成完整的乘法关系。
+
+同类方法提示
+Cancel the common factors.
+
+拓展答案与解析
+6 (2×3).
+
+全部 Hint
+1. 先读原图中等号左边的算式。
+2. 右边可分解为2×2×3×3。
+3. 约掉等号两侧相同因子再找缺项。
+
+详细解答
+The original equation's left-hand expression is missing from extracted text. The answer key selects C (2×3); verify using the pictured expression.
+
+其他思路
+Use a table, diagram or inverse check as appropriate to verify the main approach.
+
+备课提示
+Discuss why the method works. For pictured questions, inspect the original past-paper diagram before presenting a complete proof.
+
+2008 · Grade 5–6 · Q3 · 3 分 · 顺序运算
+John (J) likes to multiply by 3, Pete (P)
+likes to add 2, and Nick (N) likes to
+subtract 1. In what order should they
+perform their favorite operations if
+they start with the number 3 and
+need to end up with 14?
+(A) JPN
+(B) PJN
+(C) JNP
+(D) NJP
+(E) PNJ
+Correct Answer: B ✅
+
+延申拓展
+Start from 4 using P→J→N. What is the result?
+小改动：只改变起始数。
+
+同类方法提示
+Apply +2, ×3, −1 in sequence.
+
+拓展答案与解析
+17: (4+2)×3−1.
+
+全部 Hint
+1. 按顺序执行每人的操作。
+2. 先加2后乘3会得到多少？
+3. 最后减1是否变成14？
+
+详细解答
+Use order P→J→N: start at 3, add 2 to get 5, multiply by 3 to get 15, then subtract 1 to get 14.
+
+其他思路
+Use a table, diagram or inverse check as appropriate to verify the main approach.
+
+备课提示
+Discuss why the method works. For pictured questions, inspect the original past-paper diagram before presenting a complete proof.
+
+2008 · Grade 5–6 · Q4 · 3 分 · 数字算式
+In order to make the expression
+1+1 1 - 2=100 true, we need to replace
+with:
+(A) +
+(B) -
+(C) ÷
+(D) 0
+(E) 1
+3 Points Each
+Correct Answer: D ✅
+
+延申拓展
+Replace a blank in 10□=100 with a digit.
+小改动：将不完整算式换成明确的数字拼接。
+
+同类方法提示
+The blank is the units digit of 100.
+
+拓展答案与解析
+0, giving 100.
+
+全部 Hint
+1. 先从原卷确认缺失位置。
+2. 查看等式右侧的100。
+3. 尝试选项D所代表的数字0能否使等式成立。
+
+详细解答
+The published answer is D; a missing symbol or digit arrangement is not represented reliably in the source extraction. Consult the original problem.
+
+其他思路
+Use a table, diagram or inverse check as appropriate to verify the main approach.
+
+备课提示
+Discuss why the method works. For pictured questions, inspect the original past-paper diagram before presenting a complete proof.
+
+2008 · Grade 5–6 · Q5 · 3 分 · 等边三角形 拼图
+Carol is playing with two identical
+cards shaped like equilateral triangles
+as shown in the picture to the right.
+She puts the cards either next to
+each other or partially overlaps them.
+She then traces the figure made on a
+piece of paper. There is only one
+shape below that she cannot get in
+this way. Which one is it?
+Correct Answer: E ✅
+
+延申拓展
+Two congruent equilateral triangles share one side. What quadrilateral results?
+小改动：固定两块三角形沿一整边连接。
+
+同类方法提示
+Trace the outside boundary of the two triangles.
+
+拓展答案与解析
+A rhombus.
+
+全部 Hint
+1. 先识别两块等边三角形可出现的60°角。
+2. 旋转或重叠，观察轮廓变化。
+3. 判断选项D能否由两块拼出。
+
+详细解答
+The key selects D. The geometry depends on the original pictures; compare outlines attainable by overlapping or adjoining two identical equilateral triangles.
+
+其他思路
+Use a table, diagram or inverse check as appropriate to verify the main approach.
+
+备课提示
+Discuss why the method works. For pictured questions, inspect the original past-paper diagram before presenting a complete proof.
+
+2008 · Grade 5–6 · Q6 · 3 分 · 面积 分数
+At a pirate school, each student had
+to sew a black and white flag. Exactly
+three-fifths of the area of the flag had
+to be black. How many of the flags
+below were made correctly?
+(A) 0
+(B) 1
+(C) 2
+(D) 3
+(E) 4
+Correct Answer: C ✅
+
+延申拓展
+A flag has 20 equal squares, 12 shaded black. Does it meet the rule?
+小改动：把图形换成明确的20小格。
+
+同类方法提示
+Compare 12/20 with 3/5.
+
+拓展答案与解析
+Yes, they are equal.
+
+全部 Hint
+1. 将每面旗帜分成等面积区域。
+2. 黑色占总面积多少？
+3. 约分比较是否等于3/5。
+
+详细解答
+The key indicates E: four flags. For each pictured flag, determine black area divided by total area; count those equal to 3/5.
+
+其他思路
+Use a table, diagram or inverse check as appropriate to verify the main approach.
+
+备课提示
+Discuss why the method works. For pictured questions, inspect the original past-paper diagram before presenting a complete proof.
+
+2008 · Grade 5–6 · Q7 · 3 分 · 方格 数字求和
+Numbers 2, 3, 4 and one more
+number are written in the cells of 2 x 2
+table. The sum of the numbers in the
+first row is equal to 9, and the sum of
+the numbers in the second row is
+equal to 6. The unknown number is
+(A) 5
+(B) 6
+(C) 7
+(D) 8
+(E) 4
+1
+2008
+Correct Answer: B ✅
+
+延申拓展
+A 2×2 table has row sums 10 and 9, with entries 3,4,5 and one blank. Find the blank.
+小改动：改变行和与已知数。
+
+同类方法提示
+Subtract known entries from total row sums.
+
+拓展答案与解析
+7: 10+9−(3+4+5).
+
+全部 Hint
+1. 先将两行总数相加。
+2. 三个已知数字相加是多少？
+3. 总数减去三个已知数。
+
+详细解答
+Both row sums total 9+6=15. Known entries 2+3+4=9, so missing entry 15−9=6, corresponding to C? The source key says B (6); correct option B.
+
+其他思路
+Use a table, diagram or inverse check as appropriate to verify the main approach.
+
+备课提示
+Discuss why the method works. For pictured questions, inspect the original past-paper diagram before presenting a complete proof.
+
+2008 · Grade 5–6 · Q8 · 3 分 · 金钱 逆向
+Paul had some money in his piggy
+bank. On his mother's birthday, he
+borrowed 17 dollars from his sister and
+bought a present for his mother for 21
+dollars. He had 15 dollars left over.
+How many dollars did Paul have in his
+piggy bank in the beginning?
+(A) 32
+(B) 11
+(C) 53
+(D) 38
+(E) 19
+Correct Answer: E ✅
+
+延申拓展
+Borrow $12, spend $28 and finish with $9. Original cash?
+小改动：替换借款、消费与剩余金额。
+
+同类方法提示
+Reverse spending and borrowing.
+
+拓展答案与解析
+$25: 9+28−12.
+
+全部 Hint
+1. 先把花掉的21美元加回来。
+2. 此时还包含借来的17美元。
+3. 再扣掉借款。
+
+详细解答
+Let original cash be x. After borrowing $17 and spending $21, x+17−21=15; hence x=$19.
+
+其他思路
+Use a table, diagram or inverse check as appropriate to verify the main approach.
+
+备课提示
+Discuss why the method works. For pictured questions, inspect the original past-paper diagram before presenting a complete proof.
+
+2008 · Grade 5–6 · Q9 · 3 分 · 乘法表
+The first picture to the right shows a
+multiplication table. The second also
+shows a multiplication table, but
+some of the numbers have been
+erased. What number was found in
+the square with the question mark?
+(A) 54
+(B) 56
+(C) 65
+(D) 36
+(E) 42
+Correct Answer: A ✅
+
+延申拓展
+A multiplication table has row header 6 and column header 9. What entry belongs there?
+小改动：以明确表头替代原图。
+
+同类方法提示
+Multiply the row and column numbers.
+
+拓展答案与解析
+54.
+
+全部 Hint
+1. 确定乘法表的行表头。
+2. 确定问号对应的列表头。
+3. 将两个表头相乘。
+
+详细解答
+Published answer A (54); the table entries and headers are pictured. Multiply the corresponding row and column values after consulting the source.
+
+其他思路
+Use a table, diagram or inverse check as appropriate to verify the main approach.
+
+备课提示
+Discuss why the method works. For pictured questions, inspect the original past-paper diagram before presenting a complete proof.
+
+2008 · Grade 5–6 · Q10 · 3 分 · 立体砖块 计数
+A toy store was selling a brick tower,
+which is a figure made of black and
+white bricks as shown in Figure 1.
+Each layer of the figure is made up of
+bricks of the same color. Figure 2
+shows a view of this tower from the
+top. How many white bricks were
+used to make the tower?
+(A) 9
+(B) 10
+(C) 12
+(D) 13
+(E) 14
+4 Points Each
+Correct Answer: E ✅
+
+延申拓展
+A tower has white layers containing 5 and 7 blocks. Total white blocks?
+小改动：直接给出两层砖数。
+
+同类方法提示
+Count blocks in every white layer.
+
+拓展答案与解析
+12.
+
+全部 Hint
+1. 侧视图中的白色层在哪些高度？
+2. 俯视图透露每层的砖块位置。
+3. 隐藏的白砖也需计数。
+
+详细解答
+Answer E (14 white bricks) according to source. Inspect all tower layers and top view; include hidden bricks.
+
+其他思路
+Use a table, diagram or inverse check as appropriate to verify the main approach.
+
+备课提示
+Discuss why the method works. For pictured questions, inspect the original past-paper diagram before presenting a complete proof.
+
+4分题
+2008 · Grade 5–6 · Q11 · 4 分 · 逻辑 排除
+There are five boxes as shown in the
+picture, and each one contains
+cards with different letters. Paul wants
+to remove cards from the boxes in
+such a way that there is only one
+card left in each box, and that every
+box has a card with a different letter
+in it. Which card will be left in box 5?
+(A) B
+(B) R
+(C) A
+(D) W
+(E) O
+Correct Answer: E ✅
+
+延申拓展
+Three boxes contain {A}, {A,B}, {B,C}. What must remain in box 3?
+小改动：减少盒数并给出全部候选字母。
+
+同类方法提示
+Fix forced A, then B, then C.
+
+拓展答案与解析
+C.
+
+全部 Hint
+1. 先找候选字母最少的盒子。
+2. 各盒留下的字母必须不同。
+3. 从已确定盒中排除重复字母。
+
+详细解答
+Answer E (letter O), from the official key. The letter choices in each pictured box are needed for a rigorous forced-choice chain.
+
+其他思路
+Use a table, diagram or inverse check as appropriate to verify the main approach.
+
+备课提示
+Discuss why the method works. For pictured questions, inspect the original past-paper diagram before presenting a complete proof.
+
+2008 · Grade 5–6 · Q12 · 4 分 · 周长 拼合
+In the picture to the right, the
+perimeters of the square and of the
+triangle are equal. What is the
+perimeter of the pentagon that they
+compose when put together in the
+way shown?
+(A) 12 cm
+(B) 24 cm
+(C) 28 cm
+(D) 32 cm
+(E) 18 cm
+Correct Answer: B ✅
+
+延申拓展
+A square and triangle each have perimeter 20 cm and share a 5 cm side. Find union perimeter.
+小改动：直接给出原周长和共享边。
+
+同类方法提示
+Add perimeters, subtract double shared length.
+
+拓展答案与解析
+30 cm.
+
+全部 Hint
+1. 共享的边属于新图形外周吗？
+2. 两个原周长相加会算共享边两次。
+3. 减去公共边两倍。
+
+详细解答
+Answer B (24 cm) in the key; add both original perimeters and subtract twice the shared side shown in the diagram.
+
+其他思路
+Use a table, diagram or inverse check as appropriate to verify the main approach.
+
+备课提示
+Discuss why the method works. For pictured questions, inspect the original past-paper diagram before presenting a complete proof.
+
+2008 · Grade 5–6 · Q13 · 4 分 · 三角形不等式
+Given the choice of numbers listed
+below, using how many identical
+matches can you not make a
+triangle? (You cannot break the
+matches!)
+(A) 7
+(B) 6
+(C) 5
+(D) 4
+(E) 3
+2
+Correct Answer: D ✅
+
+延申拓展
+Can five identical matches make a triangle using all five?
+小改动：把火柴数量4改为5。
+
+同类方法提示
+Test 1,2,2 against triangle inequality.
+
+拓展答案与解析
+Yes.
+
+全部 Hint
+1. 三条边至少各一根。
+2. 试着将4分为三个正整数。
+3. 1+1是否严格大于2？
+
+详细解答
+With four unit matches, the only positive three-part split is 1,1,2. Since 1+1=2, no triangle is possible; choice D.
+
+其他思路
+Use a table, diagram or inverse check as appropriate to verify the main approach.
+
+备课提示
+Discuss why the method works. For pictured questions, inspect the original past-paper diagram before presenting a complete proof.
+
+2008 · Grade 5–6 · Q14 · 4 分 · 正方形 面积
+What is the area of a square that has
+a side 5 cm longer than the side of a
+square with an area of 121cm²?
+(A)196 cm²
+(B) 400 cm²
+(C)324 cm²
+(D)289 cm²
+(E) 256 cm²
+Correct Answer: E ✅
+
+延申拓展
+Original square area 64; increase side by 3. New area?
+小改动：更换原面积和增量。
+
+同类方法提示
+Take square root, add, then square.
+
+拓展答案与解析
+121 cm².
+
+全部 Hint
+1. 先用面积121求原边长。
+2. 边长增加5厘米后是多少？
+3. 新面积等于新边长的平方。
+
+详细解答
+Original square side √121=11; increase by 5 to 16, and area becomes 16²=256 (E).
+
+其他思路
+Use a table, diagram or inverse check as appropriate to verify the main approach.
+
+备课提示
+Discuss why the method works. For pictured questions, inspect the original past-paper diagram before presenting a complete proof.
+
+2008 · Grade 5–6 · Q15 · 4 分 · 连续分数 剩余
+Mark had a full bottle of juice. He
+poured 1
+3
+of what was in the bottle
+into a glass, and then 3
+4
+of what was
+left in the bottle into a pitcher. What
+fraction of the original amount of
+juice was left in the bottle?
+(A)1
+4
+(B)2
+3
+(C)11
+12
+(D)1
+6
+(E) This cannot be determined.
+Correct Answer: D ✅
+
+延申拓展
+First pour 1/4 away, then 2/3 of the remainder. Fraction left?
+小改动：改变两次倒出的分数。
+
+同类方法提示
+Multiply successive fractions left over.
+
+拓展答案与解析
+1/4.
+
+全部 Hint
+1. 第一次倒出后剩下几分之几？
+2. 第二次取的是剩余量的3/4。
+3. 最后保留(2/3)×(1/4)。
+
+详细解答
+After taking out 1/3, 2/3 remains. Removing 3/4 of that leaves 1/4 of the 2/3, or 1/6 (D).
+
+其他思路
+Use a table, diagram or inverse check as appropriate to verify the main approach.
+
+备课提示
+Discuss why the method works. For pictured questions, inspect the original past-paper diagram before presenting a complete proof.
+
+2008 · Grade 5–6 · Q16 · 4 分 · 组合 得分
+If we throw a dart at a dartboard, we
+can get 2, 3, or 6 points if we hit the
+target (see the picture), or 0 points if
+we miss. How many different scores
+can we obtain by throwing two
+darts?
+(A) 4
+(B) 6
+(C) 8
+(D) 9
+(E) 10
+Correct Answer: D ✅
+
+延申拓展
+Each throw scores 0,1 or 4. How many distinct two-throw totals?
+小改动：改变单次可能得分。
+
+同类方法提示
+List sums without counting duplicates.
+
+拓展答案与解析
+6 totals: 0,1,2,4,5,8.
+
+全部 Hint
+1. 单次可能得分有哪些？
+2. 允许两次相同得分，也允许一次0。
+3. 列出所有和并去重。
+
+详细解答
+Two throws each score 0,2,3 or 6. Distinct sums: 0,2,3,4,5,6,8,9,12; nine possibilities (D).
+
+其他思路
+Use a table, diagram or inverse check as appropriate to verify the main approach.
+
+备课提示
+Discuss why the method works. For pictured questions, inspect the original past-paper diagram before presenting a complete proof.
+
+2008 · Grade 5–6 · Q17 · 4 分 · 分数 数量
+Alexa wanted to put all her CDs on a
+shelf, but one third of them did not fit.
+She put some of the CDs that did not
+fit on the shelf into three boxes. She
+put seven CDs in each box, and she
+still had two CDs that did not fit. She
+left these last two CDs on her desk.
+How many CDs does Alexa have?
+(A) 23
+(B) 81
+(C) 69
+(D) 67
+(E) 93
+Correct Answer: C ✅
+
+延申拓展
+One-quarter don't fit; four boxes each hold 5 and 3 remain. Total?
+小改动：改变未放下比例和盒数。
+
+同类方法提示
+Find the fraction's count, then divide by fraction.
+
+拓展答案与解析
+92 CDs.
+
+全部 Hint
+1. 没放下的唱片有多少张？
+2. 三个盒子各7张，另外还剩2张。
+3. 23张占全部1/3，求总数。
+
+详细解答
+Not-fitting CDs: 3×7+2=23; these are 1/3 of all CDs, giving 69 (C).
+
+其他思路
+Use a table, diagram or inverse check as appropriate to verify the main approach.
+
+备课提示
+Discuss why the method works. For pictured questions, inspect the original past-paper diagram before presenting a complete proof.
+
+2008 · Grade 5–6 · Q18 · 4 分 · 积木 变换
+Each of the figures (A) to (E) shown
+below is made of exactly 5 blocks.
+Which of them can you not make if
+you start with the figure on the right
+and are allowed to move only one
+block?
+Correct Answer: C ✅
+
+延申拓展
+Five occupied cells change by moving one block. At least how many initial positions remain?
+小改动：把立体图形简化为格点计数。
+
+同类方法提示
+One move changes one occupied location.
+
+拓展答案与解析
+At least four.
+
+全部 Hint
+1. 只允许移动一块。
+2. 其余四块原位置应保持不动。
+3. 核对哪个选项无法保留四个相同位置。
+
+详细解答
+The answer key indicates C. Compare the original five-block arrangement with each option; moving one block leaves at least four original positions occupied.
+
+其他思路
+Use a table, diagram or inverse check as appropriate to verify the main approach.
+
+备课提示
+Discuss why the method works. For pictured questions, inspect the original past-paper diagram before presenting a complete proof.
+
+2008 · Grade 5–6 · Q19 · 4 分 · 幂 数字和
+The sum of the digits of the result of
+the operation 10 ¹⁰¹ - 9 is
+(A) 891
+(B) 901
+(C) 991
+(D) 10
+(E) 900
+Correct Answer: B ✅
+
+延申拓展
+Find the digit sum of 10^20−9.
+小改动：将指数改为20。
+
+同类方法提示
+There are n−1 nines and one terminal 1.
+
+拓展答案与解析
+172.
+
+全部 Hint
+1. 先试算1000−9=991。
+2. 观察指数每增加1，结果增加几个9。
+3. 101次幂时有100个9与末位1。
+
+详细解答
+10^101−9 consists of 100 nines followed by 1. Digit sum 100×9+1=901 (B).
+
+其他思路
+Use a table, diagram or inverse check as appropriate to verify the main approach.
+
+备课提示
+Discuss why the method works. For pictured questions, inspect the original past-paper diagram before presenting a complete proof.
+
+2008 · Grade 5–6 · Q20 · 4 分 · 年龄 方程
+In two years, the son of Mr. and Mrs.
+Kowalski will be two times as old as he
+was two years ago. In three years,
+their daughter will be three times as
+old as she was three years ago.
+Which of the statements below is
+true?
+(A) The son is one year older than the
+daughter.
+(B) The daughter is one year older than
+the son.
+(C) The son and the daughter are the
+same age.
+(D) The son is two years older than the
+daughter.
+(E) The daughter is two years older than
+the son.
+3
+Correct Answer: C ✅
+
+延申拓展
+A child in three years is twice their age three years ago. How old now?
+小改动：改变前后时间间隔。
+
+同类方法提示
+Solve x+3=2(x−3).
+
+拓展答案与解析
+9 years.
+
+全部 Hint
+1. 设儿子现在s岁。
+2. 两年前与两年后的年龄怎样表示？
+3. 女儿同理列方程后比较结果。
+
+详细解答
+Son: s+2=2(s−2), yielding s=6. Daughter: d+3=3(d−3), yielding d=6. Same age (C).
+
+其他思路
+Use a table, diagram or inverse check as appropriate to verify the main approach.
+
+备课提示
+Discuss why the method works. For pictured questions, inspect the original past-paper diagram before presenting a complete proof.
+
+5分题
+2008 · Grade 5–6 · Q21 · 5 分 · 图形 数字谜
+The five symbols used in the
+operations below represent different
+digits.
+What digit is
+represented by ^?
+(A) 0
+(B) 2
+(C) 6
+(D) 8
+(E) 9
+Correct Answer: E ✅
+
+延申拓展
+Digits A and B satisfy A+B=11 and A=2. Find B.
+小改动：用完整的两符号等式代替图片。
+
+同类方法提示
+Subtract the known digit.
+
+拓展答案与解析
+9.
+
+全部 Hint
+1. 确认所有不同图形对应不同数字。
+2. 从有唯一解的运算开始排除。
+3. 找到^出现的位置，推断其数字。
+
+详细解答
+The answer key states E (9). The symbol operations are pictured, so the exact digit derivation requires the source image.
+
+其他思路
+Use a table, diagram or inverse check as appropriate to verify the main approach.
+
+备课提示
+Discuss why the method works. For pictured questions, inspect the original past-paper diagram before presenting a complete proof.
+
+2008 · Grade 5–6 · Q22 · 5 分 · 逻辑 职业
+Three friends, Smith, Roberts, and
+Farrell, each have one of three
+professions: doctor, engineer, and
+musician. Each one has a different
+profession. The doctor does not have
+a sister nor a brother. He is the
+youngest of the three friends. Farrell is
+older than the engineer and is
+married to Smith's sister. The names of
+the doctor, the engineer, and the
+musician are listed in the following
+order:
+(A) Farrell, Roberts, Smith
+(B) Farrell, Smith, Roberts
+(C) Roberts, Smith, Farrell
+(D) Roberts, Farrell, Smith
+(E) Smith, Farrell, Roberts
+Correct Answer: C ✅
+
+延申拓展
+If Roberts is doctor and Smith engineer, who is musician?
+小改动：保留职业排他分配但给出两个职位。
+
+同类方法提示
+Assign the only unclaimed profession.
+
+拓展答案与解析
+Farrell.
+
+全部 Hint
+1. Smith的妹妹存在，谁不能是医生？
+2. Farrell比工程师年长，能是最年轻的医生吗？
+3. 确定Roberts后分配其他职业。
+
+详细解答
+Farrell cannot be youngest doctor (older than engineer); Smith has a sister, so cannot be the only-child doctor. Thus Roberts doctor; Smith engineer; Farrell musician. Choice C.
+
+其他思路
+Use a table, diagram or inverse check as appropriate to verify the main approach.
+
+备课提示
+Discuss why the method works. For pictured questions, inspect the original past-paper diagram before presenting a complete proof.
+
+2008 · Grade 5–6 · Q23 · 5 分 · 网格 交替颜色
+A certain robot is moving through a
+small, checkered board (see the
+picture). In each move, it can move
+to a neighboring square, that is, to a
+square that shares a side with the
+square the robot is already on. The
+robot has to move through each of
+the squares on the board exactly
+once. To do this, it can start:
+(A) on the middle square only
+(B) on one of the corner squares only
+(C) on any of the non-shaded squares
+(D) on any of the shaded squares
+(E) on any of the squares
+5 Points Each
+Correct Answer: D ✅
+
+延申拓展
+A nine-cell board has five dark and four light cells. Which color must a path start on?
+小改动：用明确5比4颜色数替代原图。
+
+同类方法提示
+Any covering path alternates colors.
+
+拓展答案与解析
+Dark.
+
+全部 Hint
+1. 机器人每步走到共享边的小格。
+2. 在棋盘双色涂色后，颜色如何交替？
+3. 比较两种颜色格数，推断起点颜色。
+
+详细解答
+Published answer D: the robot may start on a shaded square. A Hamiltonian path alternates checkerboard colors; start/end constraints depend on color counts in pictured board.
+
+其他思路
+Use a table, diagram or inverse check as appropriate to verify the main approach.
+
+备课提示
+Discuss why the method works. For pictured questions, inspect the original past-paper diagram before presenting a complete proof.
+
+2008 · Grade 5–6 · Q24 · 5 分 · 路线 消元
+The picture shows the plan of a town.
+There are four bus routes in the town.
+Bus L1 follows the route C-D-E-F-G-HC, which is 17 km long. Bus L2 follows
+the route A-B-C-F-G-H-A, which is 12
+km long. The route of bus L3 is A-B-CD-E-F-G-H-A, which is 20 km long. Bus
+L4 travels along the route C-F-G-H-C.
+How long is the route of bus L4?
+(A) 5 km
+(B) 8 km
+(C) 9 km
+(D) 12 km
+(E) 15 km
+Correct Answer: C ✅
+
+延申拓展
+Analogous route lengths are 22,17,26. Find L4.
+小改动：改变三条已知路线总长。
+
+同类方法提示
+Compute first+second−third.
+
+拓展答案与解析
+13 km.
+
+全部 Hint
+1. 将四条巴士路线逐段拆开。
+2. L1+L2和L3有哪些路段可抵消？
+3. 代入17+12−20求L4。
+
+详细解答
+L4=L1+L2−L3=17+12−20=9 km (C); routes outside L4 cancel when the edge sequences are compared.
+
+其他思路
+Use a table, diagram or inverse check as appropriate to verify the main approach.
+
+备课提示
+Discuss why the method works. For pictured questions, inspect the original past-paper diagram before presenting a complete proof.
+
+2008 · Grade 5–6 · Q25 · 5 分 · 数轴 距离
+Points A, B, C, and D are marked on a
+straight line in a certain order. We
+know that |AB| = 13, |BC| = 11,
+|CD| = 14 and |DA| = 12 What is
+the distance between the two points
+farthest from each other?
+(A) 14
+(B) 38
+(C) 50
+(D) 25
+(E) 23
+Correct Answer: D ✅
+
+延申拓展
+Points −5,0,12,20 have maximum separation what distance?
+小改动：把点位置直接给出。
+
+同类方法提示
+Subtract smallest coordinate from largest.
+
+拓展答案与解析
+25.
+
+全部 Hint
+1. 不能默认A、B、C、D按字母顺序。
+2. 令A=0，B可在左右13处。
+3. 继续用其余距离筛选合法排列。
+
+详细解答
+Answer D (25), per published key. The four points are not necessarily in alphabetical order; set A=0 and solve positions satisfying AB=13,BC=11,CD=14,DA=12.
+
+其他思路
+Use a table, diagram or inverse check as appropriate to verify the main approach.
+
+备课提示
+Discuss why the method works. For pictured questions, inspect the original past-paper diagram before presenting a complete proof.
+
+2008 · Grade 5–6 · Q26 · 5 分 · 列车 桥 路程
+A train traveling at a steady speed
+crossed a bridge which was 200
+meters long in 1 minute The whole
+train passed a person standing on the
+bridge in 12 seconds. How long was
+the train?
+(A) 100 meters
+(B) 60 meters
+(C) 50 meters
+(D) 40 meters
+(E) 75 meters
+4
+Correct Answer: C ✅
+
+延申拓展
+Train crosses 150 m bridge in 50 s, a person in 20 s. Length?
+小改动：改变桥长与两个时间。
+
+同类方法提示
+Speed is bridge length divided by time difference.
+
+拓展答案与解析
+100 m.
+
+全部 Hint
+1. 经过一个人时移动距离是车长。
+2. 过桥时需要移动车长加桥长。
+3. 两次经过的时间差48秒对应200米。
+
+详细解答
+Let speed v, length L. Person passage gives L=12v; full bridge passage gives L+200=60v. Thus 200=48v, L=50 m (C).
+
+其他思路
+Use a table, diagram or inverse check as appropriate to verify the main approach.
+
+备课提示
+Discuss why the method works. For pictured questions, inspect the original past-paper diagram before presenting a complete proof.
+
+2008 · Grade 5–6 · Q27 · 5 分 · 瓶子 倍数 枚举
+A fairy has 6 bottles. Their volumes are
+16 oz, 18 oz, 22 oz, 24 oz, 32 oz, and
+34 oz. Some are filled with orange
+juice, some are filled with cherry juice,
+and one is empty. There is twice as
+much orange juice as cherry juice.
+What is the volume of the empty
+bottle?
+(A) 18 oz
+(B) 34 oz
+(C) 24 oz
+(D) 32 oz
+(E) 22 oz
+Correct Answer: D ✅
+
+延申拓展
+Bottle volumes 4,6,8. One empty, other liquids in ratio 2:1. Empty volume?
+小改动：缩减瓶子数量并保持倍数关系。
+
+同类方法提示
+Find pair with ratio 1:2.
+
+拓展答案与解析
+6.
+
+全部 Hint
+1. 总容量先求和。
+2. 剩余饮料总量应为3的倍数。
+3. 检验32空瓶时能否分成38和76。
+
+详细解答
+Volumes sum 146. Empty 32 leaves 114, divisible by three. Cherry 16+22=38, orange 18+24+34=76, ratio 2:1. Answer D.
+
+其他思路
+Use a table, diagram or inverse check as appropriate to verify the main approach.
+
+备课提示
+Discuss why the method works. For pictured questions, inspect the original past-paper diagram before presenting a complete proof.
+
+2008 · Grade 5–6 · Q28 · 5 分 · 数位求和
+In every two-digit number, the digit in
+the ones place was subtracted from
+the digit in the tens place. The sum of
+all the results is:
+(A) 90
+(B) 100
+(C) 55
+(D) 45
+(E) 30
+Correct Answer: D ✅
+
+延申拓展
+For 10–19, sum tens digit minus ones digit.
+小改动：把范围缩到10至19。
+
+同类方法提示
+Count digit frequency by place.
+
+拓展答案与解析
+−35.
+
+全部 Hint
+1. 十位数字1至9各出现多少次？
+2. 个位0至9各出现几次？
+3. 用450减405。
+
+详细解答
+Tens contributions across 10–99: 10×(1+⋯+9)=450. Ones contributions: 9×(0+⋯+9)=405. Difference=45 (D).
+
+其他思路
+Use a table, diagram or inverse check as appropriate to verify the main approach.
+
+备课提示
+Discuss why the method works. For pictured questions, inspect the original past-paper diagram before presenting a complete proof.
+
+2008 · Grade 5–6 · Q29 · 5 分 · 整除 因数
+How many natural numbers are there
+for which the quotient 𝑛+41
+𝑛+5
+is a natural
+number?
+(A) 1
+(B) 2
+(C) 4
+(D) 5
+(E) 36
+Correct Answer: D ✅
+
+延申拓展
+For positive n, when is (n+25)/(n+5) an integer? Count values.
+小改动：把41换成25。
+
+同类方法提示
+Count divisors of 20 larger than five.
+
+拓展答案与解析
+2 values: 10 and 20.
+
+全部 Hint
+1. 把n+41拆成(n+5)+36。
+2. 整数商要求n+5整除36。
+3. 选出大于5的正因数。
+
+详细解答
+(n+41)/(n+5)=1+36/(n+5). With positive n, n+5 must be divisor of 36 larger than five: 6,9,12,18,36; five possibilities (D).
+
+其他思路
+Use a table, diagram or inverse check as appropriate to verify the main approach.
+
+备课提示
+Discuss why the method works. For pictured questions, inspect the original past-paper diagram before presenting a complete proof.
+
+2008 · Grade 5–6 · Q30 · 5 分 · 删数字 数位和
+What is the largest number of digits
+that can be erased from the 1000-
+digit number 20082008...2008 so that
+the sum of the remaining digits is
+2008?
+(A) 260
+(B) 510
+(C) 746
+(D) 1020
+(E) 130
+5
+Correct Answer: C ✅
+
+延申拓展
+Ten copies of 2008: how many zero digits can be erased without changing digit sum?
+小改动：仅改为十组，聚焦删除0的原理。
+
+同类方法提示
+Zero contributes nothing to digit sum.
+
+拓展答案与解析
+20 zeros.
+
+全部 Hint
+1. 数字串每组2008有两个0。
+2. 250组共有500个0，可以全部删掉。
+3. 还需降低数字和492，优先删除246个2。
+
+详细解答
+There are 250 blocks 2008. Initial digit sum 2500. To retain sum 2008 remove sum 492; erase 250 zeros and 246 twos. Total 496 erased, leaving 504 digits. The published key D? Check: official C? Source key C per prior read? Key 2008 Q30 C=746, but deleting all zeroes includes two zeroes per block: 500 zeroes, plus 246 twos =746, correct.
+
+其他思路
+Use a table, diagram or inverse check as appropriate to verify the main approach.
+
+备课提示
+Discuss why the method works. For pictured questions, inspect the original past-paper diagram before presenting a complete proof.
+
+2008 · Grade 5–6 — Source-Transcribed Question Bank
+Source: https://drive.google.com/file/d/1ehUfoM8cXNiA1Z0-B0JSWLAWvr8UV1lu/view
+Status: Extracted question text and published answer letters only. Image-dependent text may be incomplete; full solutions and extensions are not yet written.
+
+3-Point Questions
+2008 · Grade 5–6 · Q1 · 3 分 · 待备课
+Which number is the smallest?
+(A) 2 + 0 + 0 + 8
+(B) 200 ÷ 8
+(C) 2 x 0 x 0 x 8
+(D) 200 – 8
+(E) 8 + 0 + 0 – 2
+Published Answer: C
+
+2008 · Grade 5–6 · Q2 · 3 分 · 待备课
+In order to make the expression
+= 2 x 2 x 3 x 3 true,
+we need to replace with:
+(A) 2
+(B) 3
+(C) 2 x 3
+(D) 2 x 2
+(E) 3 x 3
+Published Answer: C
+
+2008 · Grade 5–6 · Q3 · 3 分 · 待备课
+John (J) likes to multiply by 3, Pete (P)
+likes to add 2, and Nick (N) likes to
+subtract 1. In what order should they
+perform their favorite operations if
+they start with the number 3 and
+need to end up with 14?
+(A) JPN
+(B) PJN
+(C) JNP
+(D) NJP
+(E) PNJ
+Published Answer: B
+
+2008 · Grade 5–6 · Q4 · 3 分 · 待备课
+In order to make the expression
+1+1 1 - 2=100 true, we need to replace
+with:
+(A) +
+(B) -
+(C) ÷
+(D) 0
+(E) 1
+3 Points EachCopyright©. Mentorhood Limited. All Rights Reserved. Math Kangaroo Page
+Published Answer: D
+
+2008 · Grade 5–6 · Q5 · 3 分 · 待备课
+Carol is playing with two identical
+cards shaped like equilateral triangles
+as shown in the picture to the right.
+She puts the cards either next to
+each other or partially overlaps them.
+She then traces the figure made on a
+piece of paper. There is only one
+shape below that she cannot get in
+this way. Which one is it?
+Published Answer: E
+
+2008 · Grade 5–6 · Q6 · 3 分 · 待备课
+At a pirate school, each student had
+to sew a black and white flag. Exactly
+three-fifths of the area of the flag had
+to be black. How many of the flags
+below were made correctly?
+(A) 0
+(B) 1
+(C) 2
+(D) 3
+(E) 4
+Published Answer: C
+
+2008 · Grade 5–6 · Q7 · 3 分 · 待备课
+Numbers 2, 3, 4 and one more
+number are written in the cells of 2 x 2
+table. The sum of the numbers in the
+first row is equal to 9, and the sum of
+the numbers in the second row is
+equal to 6. The unknown number is
+(A) 5
+(B) 6
+(C) 7
+(D) 8
+(E) 4
+1
+2008
+Published Answer: B
+
+2008 · Grade 5–6 · Q8 · 3 分 · 待备课
+Paul had some money in his piggy
+bank. On his mother's birthday, he
+borrowed 17 dollars from his sister and
+bought a present for his mother for 21
+dollars. He had 15 dollars left over.
+How many dollars did Paul have in his
+piggy bank in the beginning?
+(A) 32
+(B) 11
+(C) 53
+(D) 38
+(E) 19
+Published Answer: E
+
+2008 · Grade 5–6 · Q9 · 3 分 · 待备课
+The first picture to the right shows a
+multiplication table. The second also
+shows a multiplication table, but
+some of the numbers have been
+erased. What number was found in
+the square with the question mark?
+(A) 54
+(B) 56
+(C) 65
+(D) 36
+(E) 42
+Published Answer: A
+
+2008 · Grade 5–6 · Q10 · 3 分 · 待备课
+A toy store was selling a brick tower,
+which is a figure made of black and
+white bricks as shown in Figure 1.
+Each layer of the figure is made up of
+bricks of the same color. Figure 2
+shows a view of this tower from the
+top. How many white bricks were
+used to make the tower?
+(A) 9
+(B) 10
+(C) 12
+(D) 13
+(E) 14
+4 Points EachCopyright©. Mentorhood Limited. All Rights Reserved. Math Kangaroo Page
+Published Answer: E
+
+4-Point Questions
+2008 · Grade 5–6 · Q11 · 4 分 · 待备课
+There are five boxes as shown in the
+picture, and each one contains
+cards with different letters. Paul wants
+to remove cards from the boxes in
+such a way that there is only one
+card left in each box, and that every
+box has a card with a different letter
+in it. Which card will be left in box 5?
+(A) B
+(B) R
+(C) A
+(D) W
+(E) O
+Published Answer: E
+
+2008 · Grade 5–6 · Q12 · 4 分 · 待备课
+In the picture to the right, the
+perimeters of the square and of the
+triangle are equal. What is the
+perimeter of the pentagon that they
+compose when put together in the
+way shown?
+(A) 12 cm
+(B) 24 cm
+(C) 28 cm
+(D) 32 cm
+(E) 18 cm
+Published Answer: B
+
+2008 · Grade 5–6 · Q13 · 4 分 · 待备课
+Given the choice of numbers listed
+below, using how many identical
+matches can you not make a
+triangle? (You cannot break the
+matches!)
+(A) 7
+(B) 6
+(C) 5
+(D) 4
+(E) 3
+2
+Published Answer: D
+
+2008 · Grade 5–6 · Q14 · 4 分 · 待备课
+What is the area of a square that has
+a side 5 cm longer than the side of a
+square with an area of 121cm²?
+(A)196 cm²
+(B) 400 cm²
+(C)324 cm²
+(D)289 cm²
+(E) 256 cm²
+Published Answer: E
+
+2008 · Grade 5–6 · Q15 · 4 分 · 待备课
+Mark had a full bottle of juice. He
+poured 1
+3
+of what was in the bottle
+into a glass, and then 3
+4
+of what was
+left in the bottle into a pitcher. What
+fraction of the original amount of
+juice was left in the bottle?
+(A)1
+4
+(B)2
+3
+(C)11
+12
+(D)1
+6
+(E) This cannot be determined.
+Published Answer: D
+
+2008 · Grade 5–6 · Q16 · 4 分 · 待备课
+If we throw a dart at a dartboard, we
+can get 2, 3, or 6 points if we hit the
+target (see the picture), or 0 points if
+we miss. How many different scores
+can we obtain by throwing two
+darts?
+(A) 4
+(B) 6
+(C) 8
+(D) 9
+(E) 10
+Published Answer: D
+
+2008 · Grade 5–6 · Q17 · 4 分 · 待备课
+Alexa wanted to put all her CDs on a
+shelf, but one third of them did not fit.
+She put some of the CDs that did not
+fit on the shelf into three boxes. She
+put seven CDs in each box, and she
+still had two CDs that did not fit. She
+left these last two CDs on her desk.
+How many CDs does Alexa have?
+(A) 23
+(B) 81
+(C) 69
+(D) 67
+(E) 93Copyright©. Mentorhood Limited. All Rights Reserved. Math Kangaroo Page
+Published Answer: C
+
+2008 · Grade 5–6 · Q18 · 4 分 · 待备课
+Each of the figures (A) to (E) shown
+below is made of exactly 5 blocks.
+Which of them can you not make if
+you start with the figure on the right
+and are allowed to move only one
+block?
+Published Answer: C
+
+2008 · Grade 5–6 · Q19 · 4 分 · 待备课
+The sum of the digits of the result of
+the operation 10 ¹⁰¹ - 9 is
+(A) 891
+(B) 901
+(C) 991
+(D) 10
+(E) 900
+Published Answer: B
+
+2008 · Grade 5–6 · Q20 · 4 分 · 待备课
+In two years, the son of Mr. and Mrs.
+Kowalski will be two times as old as he
+was two years ago. In three years,
+their daughter will be three times as
+old as she was three years ago.
+Which of the statements below is
+true?
+(A) The son is one year older than the
+daughter.
+(B) The daughter is one year older than
+the son.
+(C) The son and the daughter are the
+same age.
+(D) The son is two years older than the
+daughter.
+(E) The daughter is two years older than
+the son.
+3
+Published Answer: C
+
+5-Point Questions
+2008 · Grade 5–6 · Q21 · 5 分 · 待备课
+The five symbols used in the
+operations below represent different
+digits.
+What digit is
+represented by ^?
+(A) 0
+(B) 2
+(C) 6
+(D) 8
+(E) 9
+Published Answer: E
+
+2008 · Grade 5–6 · Q22 · 5 分 · 待备课
+Three friends, Smith, Roberts, and
+Farrell, each have one of three
+professions: doctor, engineer, and
+musician. Each one has a different
+profession. The doctor does not have
+a sister nor a brother. He is the
+youngest of the three friends. Farrell is
+older than the engineer and is
+married to Smith's sister. The names of
+the doctor, the engineer, and the
+musician are listed in the following
+order:
+(A) Farrell, Roberts, Smith
+(B) Farrell, Smith, Roberts
+(C) Roberts, Smith, Farrell
+(D) Roberts, Farrell, Smith
+(E) Smith, Farrell, Roberts
+Published Answer: C
+
+2008 · Grade 5–6 · Q23 · 5 分 · 待备课
+A certain robot is moving through a
+small, checkered board (see the
+picture). In each move, it can move
+to a neighboring square, that is, to a
+square that shares a side with the
+square the robot is already on. The
+robot has to move through each of
+the squares on the board exactly
+once. To do this, it can start:
+(A) on the middle square only
+(B) on one of the corner squares only
+(C) on any of the non-shaded squares
+(D) on any of the shaded squares
+(E) on any of the squares
+5 Points EachCopyright©. Mentorhood Limited. All Rights Reserved. Math Kangaroo Page
+Published Answer: D
+
+2008 · Grade 5–6 · Q24 · 5 分 · 待备课
+The picture shows the plan of a town.
+There are four bus routes in the town.
+Bus L1 follows the route C-D-E-F-G-HC, which is 17 km long. Bus L2 follows
+the route A-B-C-F-G-H-A, which is 12
+km long. The route of bus L3 is A-B-CD-E-F-G-H-A, which is 20 km long. Bus
+L4 travels along the route C-F-G-H-C.
+How long is the route of bus L4?
+(A) 5 km
+(B) 8 km
+(C) 9 km
+(D) 12 km
+(E) 15 km
+Published Answer: C
+
+2008 · Grade 5–6 · Q25 · 5 分 · 待备课
+Points A, B, C, and D are marked on a
+straight line in a certain order. We
+know that |AB| = 13, |BC| = 11,
+|CD| = 14 and |DA| = 12 What is
+the distance between the two points
+farthest from each other?
+(A) 14
+(B) 38
+(C) 50
+(D) 25
+(E) 23
+Published Answer: D
+
+2008 · Grade 5–6 · Q26 · 5 分 · 待备课
+A train traveling at a steady speed
+crossed a bridge which was 200
+meters long in 1 minute The whole
+train passed a person standing on the
+bridge in 12 seconds. How long was
+the train?
+(A) 100 meters
+(B) 60 meters
+(C) 50 meters
+(D) 40 meters
+(E) 75 meters
+4
+Published Answer: C
+
+2008 · Grade 5–6 · Q27 · 5 分 · 待备课
+A fairy has 6 bottles. Their volumes are
+16 oz, 18 oz, 22 oz, 24 oz, 32 oz, and
+34 oz. Some are filled with orange
+juice, some are filled with cherry juice,
+and one is empty. There is twice as
+much orange juice as cherry juice.
+What is the volume of the empty
+bottle?
+(A) 18 oz
+(B) 34 oz
+(C) 24 oz
+(D) 32 oz
+(E) 22 oz
+Published Answer: D
+
+2008 · Grade 5–6 · Q28 · 5 分 · 待备课
+In every two-digit number, the digit in
+the ones place was subtracted from
+the digit in the tens place. The sum of
+all the results is:
+(A) 90
+(B) 100
+(C) 55
+(D) 45
+(E) 30
+Published Answer: D
+
+2008 · Grade 5–6 · Q29 · 5 分 · 待备课
+How many natural numbers are there
+for which the quotient 𝑛+41
+𝑛+5
+is a natural
+number?
+(A) 1
+(B) 2
+(C) 4
+(D) 5
+(E) 36Copyright©. Mentorhood Limited. All Rights Reserved. Math Kangaroo Page 6
+Published Answer: D
+
+2008 · Grade 5–6 · Q30 · 5 分 · 待备课
+What is the largest number of digits
+that can be erased from the 1000-
+digit number 20082008...2008 so that
+the sum of the remaining digits is
+2008?
+(A) 260
+(B) 510
+(C) 746
+(D) 1020
+(E) 130
+5
+Published Answer: C
+
+2008 · Grade 5–6
+Source past paper: https://drive.google.com/file/d/1ehUfoM8cXNiA1Z0-B0JSWLAWvr8UV1lu/view?usp=drivesdk
+Status: This tab has been created, but question-by-question teaching content has not yet been prepared or verified against the original exam. Do not use this tab as a completed answer key.
+
+Planned question format
+2008 · Grade 5–6 · Q[number] · [points] 分 · [中文知识点与题型]
+Original question and choices (English)
+延申拓展 — Extension question (English)
+小改动 — Change description (中文)
+同类方法提示 — Same-method hint (English)
+拓展答案与解析 — Extension answer and explanation (English)
+全部 Hint — Three progressive hints (中文)
+详细解答 — Worked solution (English)
+其他思路 — Alternative approaches (English)
+备课提示 — Teaching notes (English)

@@ -1,0 +1,1536 @@
+2005 · Grade 5–6 — Verified Teaching Notes (Selected Questions)
+These worked sections supplement the source-transcribed question bank later in this tab. Questions requiring missing diagrams are not represented as fully solved.
+
+2005 · Grade 5–6 · Q2 · 3 分 · 和差问题 糖果
+Together, Anna and Olla have ten pieces of candy. Olla has two more than Anna. How many does Olla have?
+Correct Answer: C — 6
+
+延申拓展
+Together they have 18 candies, and Olla has four more. How many does Olla have?
+小改动：总数10改成18，差2改成4。
+
+同类方法提示
+Subtract the difference, divide the remainder equally, and return the excess to the larger group.
+
+拓展答案与解析
+11: (18 − 4) ÷ 2 + 4 = 11.
+
+全部 Hint
+1. 先找出两人相差多少颗。
+2. 去掉多出来的2颗，剩下平均分。
+3. 每人先分4颗，再给Olla补回2颗。
+
+详细解答
+Remove Olla's extra two candies. The remaining eight split evenly, four each. Give the extra two back to Olla: 4 + 2 = 6.
+
+其他思路
+Draw a two-bar model, with one bar two units longer.
+
+备课提示
+Invite students to explain the approach and check the original problem statement.
+
+2005 · Grade 5–6 · Q4 · 3 分 · 分类 计数 动物腿数
+Eva lives with her parents, a brother, a dog, two cats, two parrots, and four goldfish. How many legs do they have altogether?
+Correct Answer: D — 24
+
+延申拓展
+What if Eva's family also adopted one extra dog? How many legs would there be?
+小改动：只增加一条狗，其余数量不变。
+
+同类方法提示
+Add the new dog's four legs to the original sum.
+
+拓展答案与解析
+28 legs: 24 + 4 = 28.
+
+全部 Hint
+1. 先数清楚一共有几个人。
+2. 分别计算两足和四足动物的腿。
+3. 金鱼没有腿，不要算进去。
+
+详细解答
+Four humans have 8 legs; the dog has 4, the cats have 8, the parrots have 4, and the fish have none. Total: 8 + 4 + 8 + 4 = 24.
+
+其他思路
+Make a species-by-species counting table.
+
+备课提示
+Invite students to explain the approach and check the original problem statement.
+
+2005 · Grade 5–6 · Q5 · 3 分 · 乘法加法 位值
+Evaluate 2005 × 100 + 2005.
+Correct Answer: D — 202505
+
+延申拓展
+Evaluate 2005 × 10 + 2005.
+小改动：把乘数100改为10。
+
+同类方法提示
+Factor the common 2005 or calculate the product before adding.
+
+拓展答案与解析
+22055: 20050 + 2005 = 22055.
+
+全部 Hint
+1. 先算乘法部分。
+2. 2005乘100相当于末尾添两个0。
+3. 再将2005加到200500。
+
+详细解答
+Multiplying by 100 gives 200500. Adding 2005 gives 202505, which corresponds to answer D.
+
+其他思路
+Factor the original expression: 2005 × (100 + 1).
+
+备课提示
+Invite students to explain the approach and check the original problem statement.
+
+2005 · Grade 5–6 · Q7 · 3 分 · 分数 余量 分类
+Of 24 marbles, one-eighth are white, and two-thirds of the remaining marbles are red. How many are brown?
+Correct Answer: D — 7
+
+延申拓展
+There are 48 marbles with the same color fractions. How many are brown?
+小改动：只把总数24增加到48。
+
+同类方法提示
+Apply the one-eighth fraction first, then two-thirds to the remainder.
+
+拓展答案与解析
+14: white 6, remainder 42, red 28, brown 14.
+
+全部 Hint
+1. 先求白色弹珠数。
+2. 红色是剩下弹珠的三分之二，不是原来24颗的三分之二。
+3. 最后从21里减去14。
+
+详细解答
+White = 24 ÷ 8 = 3. Remaining = 21. Red = (2/3) × 21 = 14. Brown = 21 − 14 = 7.
+
+其他思路
+Use a fraction bar for the 21 marbles left after removing white ones.
+
+备课提示
+Invite students to explain the approach and check the original problem statement.
+
+2005 · Grade 5–6 · Q9 · 3 分 · 数论 整除规则
+Which of 987, 444, 204, 105, and 103 cannot be three times a natural number?
+Correct Answer: E — 103
+
+延申拓展
+Which of 126, 213, 302 and 414 is not divisible by three?
+小改动：只替换各候选数，仍检验能否被3整除。
+
+同类方法提示
+Check whether the digit sum is divisible by three.
+
+拓展答案与解析
+302: 3+0+2=5, which is not a multiple of three.
+
+全部 Hint
+1. 回忆3的整除规则。
+2. 分别计算每个选项的数字和。
+3. 103的数字和是4。
+
+详细解答
+A number is divisible by three exactly when its digit sum is divisible by three. The digit sums are 24, 12, 6, 6, and 4 respectively. Only 103 fails.
+
+其他思路
+Divide directly by 3 to check remainders.
+
+备课提示
+Invite students to explain the approach and check the original problem statement.
+
+2005 · Grade 5–6 · Q10 · 3 分 · 分数 顺序运算
+How many hours are half of one-third of one-quarter of 24 hours?
+Correct Answer: C — 1
+
+延申拓展
+Find half of one-third of one-quarter of 48 hours.
+小改动：只把24小时改为48小时。
+
+同类方法提示
+Divide successively by 4, 3, then 2.
+
+拓展答案与解析
+2 hours: 48 ÷ 4 ÷ 3 ÷ 2 = 2.
+
+全部 Hint
+1. 先求24的四分之一。
+2. 再求6的三分之一。
+3. 最后求2的一半。
+
+详细解答
+A quarter of 24 hours is 6 hours; a third of 6 is 2 hours; half of 2 is 1 hour.
+
+其他思路
+Compute 24 × 1/4 × 1/3 × 1/2 in one expression.
+
+备课提示
+Invite students to explain the approach and check the original problem statement.
+
+2005 · Grade 5–6 · Q11 · 4 分 · 剪切 数列 增量
+A napkin is cut into 10 pieces, and one piece is cut into 10 pieces three more times. How many pieces are there at the end?
+Correct Answer: C — 37
+
+延申拓展
+Start with eight pieces; twice cut one existing piece into eight. How many pieces are there?
+小改动：将每次剪成10块改为8块，并只追加两次。
+
+同类方法提示
+Each subsequent cut adds seven, because one existing piece is replaced.
+
+拓展答案与解析
+22: 8 + 2 × 7 = 22.
+
+全部 Hint
+1. 第一次剪完有10块。
+2. 后面每把1块剪成10块，净增加9块。
+3. 一共追加三次这样的操作。
+
+详细解答
+After the first cut there are 10 pieces. Each subsequent operation replaces one piece with ten, adding a net nine. Three additional operations give 10 + 3 × 9 = 37.
+
+其他思路
+Write the sequence 10, 19, 28, 37.
+
+备课提示
+Invite students to explain the approach and check the original problem statement.
+
+2005 · Grade 5–6 · Q12 · 4 分 · 往返 速度时间
+Mowgli walks to the beach and rides an elephant back in 40 minutes. An elephant round trip takes 32 minutes. How long does walking both ways take?
+Correct Answer: D — 48 minutes
+
+延申拓展
+A walk-and-cycle round trip takes 50 minutes, while cycling both ways takes 30 minutes. How long would walking both ways take?
+小改动：把大象换成骑车，同时替换两个时间。
+
+同类方法提示
+First find the cycling time one way, then the walking time one way.
+
+拓展答案与解析
+70 minutes: cycling one way 15, walking one way 35, double gives 70.
+
+全部 Hint
+1. 先求坐大象单程所需时间。
+2. 从40分钟中减掉大象单程。
+3. 步行单程24分钟，往返要乘2。
+
+详细解答
+One elephant trip takes 32 ÷ 2 = 16 minutes. One walking trip takes 40 − 16 = 24 minutes. Two walking trips take 2 × 24 = 48 minutes.
+
+其他思路
+Use equations w + e = 40 and 2e = 32.
+
+备课提示
+Invite students to explain the approach and check the original problem statement.
+
+2005 · Grade 5–6 · Q14 · 4 分 · 平均数 分配 对比
+Peanuts are assigned to ten people: one gets 5 kg, two get 4 kg, four get 2 kg, two get 1.5 kg, and one gets nothing. How many would receive more under equal sharing?
+Correct Answer: E — 7
+
+延申拓展
+If the same ten people shared 30 kg equally, how many of the original recipients would receive more than in the original plan?
+小改动：把平均分配时的总重量从24改成30，保持原来的分配对照。
+
+同类方法提示
+Find the new average and count those originally below it.
+
+拓展答案与解析
+7 people: equal share is 3 kg, exceeding the original shares of 2, 1.5, and 0.
+
+全部 Hint
+1. 先计算花生总重量。
+2. 再除以总人数，求平均值。
+3. 数出原来少于2.4千克的人。
+
+详细解答
+Total = 5 + 2×4 + 4×2 + 2×1.5 = 24 kg. Equal sharing among ten gives 2.4 kg per person. All four at 2 kg, both at 1.5 kg, and the one with none gain: 4 + 2 + 1 = 7.
+
+其他思路
+Organize the original amounts into a frequency table.
+
+备课提示
+Invite students to explain the approach and check the original problem statement.
+
+2005 · Grade 5–6 · Q15 · 4 分 · 排列组合 奇数
+How many two-digit numbers can be formed using two different odd digits?
+Correct Answer: B — 20
+
+延申拓展
+How many three-digit numbers have three different odd digits?
+小改动：把两位数改成三位数。
+
+同类方法提示
+Multiply the choices for hundreds, tens, and units.
+
+拓展答案与解析
+60: 5 × 4 × 3 = 60.
+
+全部 Hint
+1. 可选的奇数数字有几个？
+2. 先选十位，再选个位。
+3. 个位不能与十位相同。
+
+详细解答
+The odd digits are 1, 3, 5, 7, 9. Choose the tens digit in five ways and a different units digit in four ways: 5 × 4 = 20.
+
+其他思路
+Make a five-row listing by tens digit.
+
+备课提示
+Invite students to explain the approach and check the original problem statement.
+
+
+2005 · Grade 5–6 — Past-Paper Question Bank and Answer Key
+Source: https://drive.google.com/file/d/12gXxfI6gYXiEsS4IUxZURw-DT0W8TaHt/view
+Note: Questions and answer letters below are transcribed from the source's extractable text and published answer key. Mathematical solutions, progressive hints and extensions are NOT independently solved or verified in this batch; figure- and formula-dependent text may be incomplete. Please use the PDF for diagrams.
+
+3-Point Questions
+
+2005 · Grade 5–6 · Q1 · 3 分 · 原题与答案（待完整备课）
+A butterfly sat down on a correctly
+solved problem. What number did it
+cover up?
+2005 + 205 - 3500
+(A) 1295
+(B) 1190
+(C) 1390
+(D) 1195
+(E) 1290
+
+Published Answer: E
+(This question may have a diagram or mathematical notation; please check the source PDF.)
+
+延申拓展
+Not yet prepared or verified from the original method.
+
+小改动：尚未设计；不能在原题方法未核实的情况下编造拓展题。
+
+同类方法提示
+To be completed after the problem's actual solution method has been verified.
+
+拓展答案与解析
+Not yet calculated.
+
+全部 Hint
+1. 先识别题目要求和全部已知条件。
+2. 检查单位、图形和选项，确认关键信息。
+3. 选定适当方法后逐步运算，并代回原题核验。
+
+详细解答
+Not yet independently worked through; consult the original PDF and published answer indicated above.
+
+其他思路
+Alternative solution not yet verified.
+
+备课提示
+For an image-based question, inspect the original diagram. Do not treat this answer-key transcription as a checked worked solution.
+
+2005 · Grade 5–6 · Q2 · 3 分 · 原题与答案（待完整备课）
+Together, Anna and Olla have ten
+pieces of candy. Olla has two more
+pieces of candy than Anna. How
+many pieces of candy does Olla
+have?
+(A) 8
+(B) 7
+(C) 6
+(D) 5
+(E) 4
+
+Published Answer: C
+(This question may have a diagram or mathematical notation; please check the source PDF.)
+
+延申拓展
+Not yet prepared or verified from the original method.
+
+小改动：尚未设计；不能在原题方法未核实的情况下编造拓展题。
+
+同类方法提示
+To be completed after the problem's actual solution method has been verified.
+
+拓展答案与解析
+Not yet calculated.
+
+全部 Hint
+1. 先识别题目要求和全部已知条件。
+2. 检查单位、图形和选项，确认关键信息。
+3. 选定适当方法后逐步运算，并代回原题核验。
+
+详细解答
+Not yet independently worked through; consult the original PDF and published answer indicated above.
+
+其他思路
+Alternative solution not yet verified.
+
+备课提示
+For an image-based question, inspect the original diagram. Do not treat this answer-key transcription as a checked worked solution.
+
+2005 · Grade 5–6 · Q3 · 3 分 · 原题与答案（待完整备课）
+There are eight kangaroos in the
+table (see the picture). What is the
+least number of kangaroos that have
+to be moved to the empty cells of
+the table in order to have two
+kangaroos in each row and each
+column?
+(A) 0
+(B) 1
+(C) 2
+(D) 3
+(E) 4
+
+Published Answer: B
+(This question may have a diagram or mathematical notation; please check the source PDF.)
+
+延申拓展
+Not yet prepared or verified from the original method.
+
+小改动：尚未设计；不能在原题方法未核实的情况下编造拓展题。
+
+同类方法提示
+To be completed after the problem's actual solution method has been verified.
+
+拓展答案与解析
+Not yet calculated.
+
+全部 Hint
+1. 先识别题目要求和全部已知条件。
+2. 检查单位、图形和选项，确认关键信息。
+3. 选定适当方法后逐步运算，并代回原题核验。
+
+详细解答
+Not yet independently worked through; consult the original PDF and published answer indicated above.
+
+其他思路
+Alternative solution not yet verified.
+
+备课提示
+For an image-based question, inspect the original diagram. Do not treat this answer-key transcription as a checked worked solution.
+
+2005 · Grade 5–6 · Q4 · 3 分 · 原题与答案（待完整备课）
+Eva lives with her parents, a brother, a
+dog, two cats, two parrots, and four
+goldfish. How many legs do they
+have altogether?
+(A) 40
+(B) 32
+(C) 28
+(D) 24
+(E) 22
+3 Points EachCopyright©. Mentorhood Limited. All Rights Reserved. Math Kangaroo Page
+
+Published Answer: D
+(This question may have a diagram or mathematical notation; please check the source PDF.)
+
+延申拓展
+Not yet prepared or verified from the original method.
+
+小改动：尚未设计；不能在原题方法未核实的情况下编造拓展题。
+
+同类方法提示
+To be completed after the problem's actual solution method has been verified.
+
+拓展答案与解析
+Not yet calculated.
+
+全部 Hint
+1. 先识别题目要求和全部已知条件。
+2. 检查单位、图形和选项，确认关键信息。
+3. 选定适当方法后逐步运算，并代回原题核验。
+
+详细解答
+Not yet independently worked through; consult the original PDF and published answer indicated above.
+
+其他思路
+Alternative solution not yet verified.
+
+备课提示
+For an image-based question, inspect the original diagram. Do not treat this answer-key transcription as a checked worked solution.
+
+2005 · Grade 5–6 · Q5 · 3 分 · 原题与答案（待完整备课）
+2005 x 100 + 2005
+(A) 22055
+(D) 202505
+(B) 20052005
+(E) 2005002005
+(C) 20072005
+
+Published Answer: D
+(This question may have a diagram or mathematical notation; please check the source PDF.)
+
+延申拓展
+Not yet prepared or verified from the original method.
+
+小改动：尚未设计；不能在原题方法未核实的情况下编造拓展题。
+
+同类方法提示
+To be completed after the problem's actual solution method has been verified.
+
+拓展答案与解析
+Not yet calculated.
+
+全部 Hint
+1. 先识别题目要求和全部已知条件。
+2. 检查单位、图形和选项，确认关键信息。
+3. 选定适当方法后逐步运算，并代回原题核验。
+
+详细解答
+Not yet independently worked through; consult the original PDF and published answer indicated above.
+
+其他思路
+Alternative solution not yet verified.
+
+备课提示
+For an image-based question, inspect the original diagram. Do not treat this answer-key transcription as a checked worked solution.
+
+2005 · Grade 5–6 · Q6 · 3 分 · 原题与答案（待完整备课）
+An ant is walking from point A to
+point B on a cube along the
+indicated path. The edge of the
+cube is 12 cm long. How far does the
+ant need to travel?
+(A) 40 cm
+(B) 48 cm
+(C) 50 cm
+(D) 60 cm
+(E) 36 cm
+
+Published Answer: D
+(This question may have a diagram or mathematical notation; please check the source PDF.)
+
+延申拓展
+Not yet prepared or verified from the original method.
+
+小改动：尚未设计；不能在原题方法未核实的情况下编造拓展题。
+
+同类方法提示
+To be completed after the problem's actual solution method has been verified.
+
+拓展答案与解析
+Not yet calculated.
+
+全部 Hint
+1. 先识别题目要求和全部已知条件。
+2. 检查单位、图形和选项，确认关键信息。
+3. 选定适当方法后逐步运算，并代回原题核验。
+
+详细解答
+Not yet independently worked through; consult the original PDF and published answer indicated above.
+
+其他思路
+Alternative solution not yet verified.
+
+备课提示
+For an image-based question, inspect the original diagram. Do not treat this answer-key transcription as a checked worked solution.
+
+2005 · Grade 5–6 · Q7 · 3 分 · 原题与答案（待完整备课）
+On a shelf, there are 24 marbles in
+three colors: white, red, and brown.
+1
+8
+of the marbles 8 white and 2
+3
+of the
+rest of the marbles are red. How
+many of the marbles are brown?
+(A) 4
+(B) 5
+(C) 6
+(D) 7
+(E) 8
+
+Published Answer: D
+(This question may have a diagram or mathematical notation; please check the source PDF.)
+
+延申拓展
+Not yet prepared or verified from the original method.
+
+小改动：尚未设计；不能在原题方法未核实的情况下编造拓展题。
+
+同类方法提示
+To be completed after the problem's actual solution method has been verified.
+
+拓展答案与解析
+Not yet calculated.
+
+全部 Hint
+1. 先识别题目要求和全部已知条件。
+2. 检查单位、图形和选项，确认关键信息。
+3. 选定适当方法后逐步运算，并代回原题核验。
+
+详细解答
+Not yet independently worked through; consult the original PDF and published answer indicated above.
+
+其他思路
+Alternative solution not yet verified.
+
+备课提示
+For an image-based question, inspect the original diagram. Do not treat this answer-key transcription as a checked worked solution.
+
+2005 · Grade 5–6 · Q8 · 3 分 · 原题与答案（待完整备课）
+There are five cards on the table,
+labeled with numbers 1 to 5 as shown
+in the top row. One move consists of
+switching any two cards. What is the
+smallest number of moves needed so
+that the cards are arranged in the
+way shown in the bottom row?
+(A) 2
+(B) 4
+(C) 1
+(D) 3
+(E) 5
+1
+2005
+
+Published Answer: A
+(This question may have a diagram or mathematical notation; please check the source PDF.)
+
+延申拓展
+Not yet prepared or verified from the original method.
+
+小改动：尚未设计；不能在原题方法未核实的情况下编造拓展题。
+
+同类方法提示
+To be completed after the problem's actual solution method has been verified.
+
+拓展答案与解析
+Not yet calculated.
+
+全部 Hint
+1. 先识别题目要求和全部已知条件。
+2. 检查单位、图形和选项，确认关键信息。
+3. 选定适当方法后逐步运算，并代回原题核验。
+
+详细解答
+Not yet independently worked through; consult the original PDF and published answer indicated above.
+
+其他思路
+Alternative solution not yet verified.
+
+备课提示
+For an image-based question, inspect the original diagram. Do not treat this answer-key transcription as a checked worked solution.
+
+2005 · Grade 5–6 · Q9 · 3 分 · 原题与答案（待完整备课）
+Tom picked a natural number and
+multiplied it by 3. Which number
+CANNOT be the result of this
+multiplication?
+(A) 987
+(B) 444
+(C) 204
+(D) 105
+(E) 103
+
+Published Answer: E
+(This question may have a diagram or mathematical notation; please check the source PDF.)
+
+延申拓展
+Not yet prepared or verified from the original method.
+
+小改动：尚未设计；不能在原题方法未核实的情况下编造拓展题。
+
+同类方法提示
+To be completed after the problem's actual solution method has been verified.
+
+拓展答案与解析
+Not yet calculated.
+
+全部 Hint
+1. 先识别题目要求和全部已知条件。
+2. 检查单位、图形和选项，确认关键信息。
+3. 选定适当方法后逐步运算，并代回原题核验。
+
+详细解答
+Not yet independently worked through; consult the original PDF and published answer indicated above.
+
+其他思路
+Alternative solution not yet verified.
+
+备课提示
+For an image-based question, inspect the original diagram. Do not treat this answer-key transcription as a checked worked solution.
+
+2005 · Grade 5–6 · Q10 · 3 分 · 原题与答案（待完整备课）
+How many hours is half of a third part
+of a quarter of 24 hours?
+(A)1
+3
+(B) 1
+2
+(C)1
+(D)2
+(E)3
+4 Points EachCopyright©. Mentorhood Limited. All Rights Reserved. Math Kangaroo Page
+
+Published Answer: C
+(This question may have a diagram or mathematical notation; please check the source PDF.)
+
+延申拓展
+Not yet prepared or verified from the original method.
+
+小改动：尚未设计；不能在原题方法未核实的情况下编造拓展题。
+
+同类方法提示
+To be completed after the problem's actual solution method has been verified.
+
+拓展答案与解析
+Not yet calculated.
+
+全部 Hint
+1. 先识别题目要求和全部已知条件。
+2. 检查单位、图形和选项，确认关键信息。
+3. 选定适当方法后逐步运算，并代回原题核验。
+
+详细解答
+Not yet independently worked through; consult the original PDF and published answer indicated above.
+
+其他思路
+Alternative solution not yet verified.
+
+备课提示
+For an image-based question, inspect the original diagram. Do not treat this answer-key transcription as a checked worked solution.
+
+4-Point Questions
+
+2005 · Grade 5–6 · Q11 · 4 分 · 原题与答案（待完整备课）
+Eva cut a paper napkin into 10
+pieces. She then also cut one of the
+pieces into 10 pieces. She repeated
+this process two more times. Into how
+many pieces did she cut the napkin?
+(A) 27
+(B) 30
+(C) 37
+(D) 40
+(E) 47
+
+Published Answer: C
+(This question may have a diagram or mathematical notation; please check the source PDF.)
+
+延申拓展
+Not yet prepared or verified from the original method.
+
+小改动：尚未设计；不能在原题方法未核实的情况下编造拓展题。
+
+同类方法提示
+To be completed after the problem's actual solution method has been verified.
+
+拓展答案与解析
+Not yet calculated.
+
+全部 Hint
+1. 先识别题目要求和全部已知条件。
+2. 检查单位、图形和选项，确认关键信息。
+3. 选定适当方法后逐步运算，并代回原题核验。
+
+详细解答
+Not yet independently worked through; consult the original PDF and published answer indicated above.
+
+其他思路
+Alternative solution not yet verified.
+
+备课提示
+For an image-based question, inspect the original diagram. Do not treat this answer-key transcription as a checked worked solution.
+
+2005 · Grade 5–6 · Q12 · 4 分 · 原题与答案（待完整备课）
+Mowgli usually walks from home to
+the beach and returns on an
+elephant. It takes him 40 minutes
+altogether. One day he traveled on
+the elephant from home to the
+beach and hack which took him 32
+minutes. How much time would he
+need to travel the same distance on
+foot both ways?
+(A) 24 minutes
+(B) 42 minutes
+(C) 46 minutes
+(D) 48 minutes
+(E) 50 minutes
+
+Published Answer: D
+(This question may have a diagram or mathematical notation; please check the source PDF.)
+
+延申拓展
+Not yet prepared or verified from the original method.
+
+小改动：尚未设计；不能在原题方法未核实的情况下编造拓展题。
+
+同类方法提示
+To be completed after the problem's actual solution method has been verified.
+
+拓展答案与解析
+Not yet calculated.
+
+全部 Hint
+1. 先识别题目要求和全部已知条件。
+2. 检查单位、图形和选项，确认关键信息。
+3. 选定适当方法后逐步运算，并代回原题核验。
+
+详细解答
+Not yet independently worked through; consult the original PDF and published answer indicated above.
+
+其他思路
+Alternative solution not yet verified.
+
+备课提示
+For an image-based question, inspect the original diagram. Do not treat this answer-key transcription as a checked worked solution.
+
+2005 · Grade 5–6 · Q13 · 4 分 · 原题与答案（待完整备课）
+A rectangular garden with an area of
+30 m² was divided into three
+rectangular sections of flowers,
+vegetables, and strawberries (some
+of the dimensions are shown in the
+diagram). What is the area of the
+vegetable section if the flower
+section has an area of 10 m²?
+(A) 4 m²
+(B) 6 m²
+(C) 8 m²
+(D) 10 m²
+(E) 12 m²
+2
+
+Published Answer: C
+(This question may have a diagram or mathematical notation; please check the source PDF.)
+
+延申拓展
+Not yet prepared or verified from the original method.
+
+小改动：尚未设计；不能在原题方法未核实的情况下编造拓展题。
+
+同类方法提示
+To be completed after the problem's actual solution method has been verified.
+
+拓展答案与解析
+Not yet calculated.
+
+全部 Hint
+1. 先识别题目要求和全部已知条件。
+2. 检查单位、图形和选项，确认关键信息。
+3. 选定适当方法后逐步运算，并代回原题核验。
+
+详细解答
+Not yet independently worked through; consult the original PDF and published answer indicated above.
+
+其他思路
+Alternative solution not yet verified.
+
+备课提示
+For an image-based question, inspect the original diagram. Do not treat this answer-key transcription as a checked worked solution.
+
+2005 · Grade 5–6 · Q14 · 4 分 · 原题与答案（待完整备课）
+Grandpa suggested dividing all the
+peanuts between the family
+members in the following way: one
+person would get 5 kg, two people
+would get 4 kg each, four people
+would get 2 kg each, two people
+would get 1.5 kg each, and one
+person would not get any peanuts.
+Grandma suggested dividing the
+peanuts equally among all the family
+members. How many people would
+get more peanuts in the division
+suggested by Grandma than in the
+division suggested by Grandpa?
+(A) 3
+(B) 4
+(C) 5
+(D) 6
+(E) 7
+
+Published Answer: E
+(This question may have a diagram or mathematical notation; please check the source PDF.)
+
+延申拓展
+Not yet prepared or verified from the original method.
+
+小改动：尚未设计；不能在原题方法未核实的情况下编造拓展题。
+
+同类方法提示
+To be completed after the problem's actual solution method has been verified.
+
+拓展答案与解析
+Not yet calculated.
+
+全部 Hint
+1. 先识别题目要求和全部已知条件。
+2. 检查单位、图形和选项，确认关键信息。
+3. 选定适当方法后逐步运算，并代回原题核验。
+
+详细解答
+Not yet independently worked through; consult the original PDF and published answer indicated above.
+
+其他思路
+Alternative solution not yet verified.
+
+备课提示
+For an image-based question, inspect the original diagram. Do not treat this answer-key transcription as a checked worked solution.
+
+2005 · Grade 5–6 · Q15 · 4 分 · 原题与答案（待完整备课）
+How many two-digit numbers are
+there which can be expressed by
+using only different odd digits?
+(A) 15
+(B) 20
+(C) 25
+(D) 30
+(E) 50
+
+Published Answer: B
+(This question may have a diagram or mathematical notation; please check the source PDF.)
+
+延申拓展
+Not yet prepared or verified from the original method.
+
+小改动：尚未设计；不能在原题方法未核实的情况下编造拓展题。
+
+同类方法提示
+To be completed after the problem's actual solution method has been verified.
+
+拓展答案与解析
+Not yet calculated.
+
+全部 Hint
+1. 先识别题目要求和全部已知条件。
+2. 检查单位、图形和选项，确认关键信息。
+3. 选定适当方法后逐步运算，并代回原题核验。
+
+详细解答
+Not yet independently worked through; consult the original PDF and published answer indicated above.
+
+其他思路
+Alternative solution not yet verified.
+
+备课提示
+For an image-based question, inspect the original diagram. Do not treat this answer-key transcription as a checked worked solution.
+
+2005 · Grade 5–6 · Q16 · 4 分 · 原题与答案（待完整备课）
+Which of the cubes below is
+represented by the net of the cube
+shown to the right?Copyright©. Mentorhood Limited. All Rights Reserved. Math Kangaroo Page
+
+Published Answer: B
+(This question may have a diagram or mathematical notation; please check the source PDF.)
+
+延申拓展
+Not yet prepared or verified from the original method.
+
+小改动：尚未设计；不能在原题方法未核实的情况下编造拓展题。
+
+同类方法提示
+To be completed after the problem's actual solution method has been verified.
+
+拓展答案与解析
+Not yet calculated.
+
+全部 Hint
+1. 先识别题目要求和全部已知条件。
+2. 检查单位、图形和选项，确认关键信息。
+3. 选定适当方法后逐步运算，并代回原题核验。
+
+详细解答
+Not yet independently worked through; consult the original PDF and published answer indicated above.
+
+其他思路
+Alternative solution not yet verified.
+
+备课提示
+For an image-based question, inspect the original diagram. Do not treat this answer-key transcription as a checked worked solution.
+
+2005 · Grade 5–6 · Q17 · 4 分 · 原题与答案（待完整备课）
+The sum of five consecutive natural
+numbers is equal to 2005. The
+greatest of these numbers is:
+(A) 401
+(B) 403
+(C) 404
+(D) 405
+(E) 2001
+
+Published Answer: B
+(This question may have a diagram or mathematical notation; please check the source PDF.)
+
+延申拓展
+Not yet prepared or verified from the original method.
+
+小改动：尚未设计；不能在原题方法未核实的情况下编造拓展题。
+
+同类方法提示
+To be completed after the problem's actual solution method has been verified.
+
+拓展答案与解析
+Not yet calculated.
+
+全部 Hint
+1. 先识别题目要求和全部已知条件。
+2. 检查单位、图形和选项，确认关键信息。
+3. 选定适当方法后逐步运算，并代回原题核验。
+
+详细解答
+Not yet independently worked through; consult the original PDF and published answer indicated above.
+
+其他思路
+Alternative solution not yet verified.
+
+备课提示
+For an image-based question, inspect the original diagram. Do not treat this answer-key transcription as a checked worked solution.
+
+2005 · Grade 5–6 · Q18 · 4 分 · 原题与答案（待完整备课）
+The number of all divisors of the
+number 100 is:
+(A) 3
+(B) 6
+(C) 7
+(D) 8
+(E) 9
+
+Published Answer: E
+(This question may have a diagram or mathematical notation; please check the source PDF.)
+
+延申拓展
+Not yet prepared or verified from the original method.
+
+小改动：尚未设计；不能在原题方法未核实的情况下编造拓展题。
+
+同类方法提示
+To be completed after the problem's actual solution method has been verified.
+
+拓展答案与解析
+Not yet calculated.
+
+全部 Hint
+1. 先识别题目要求和全部已知条件。
+2. 检查单位、图形和选项，确认关键信息。
+3. 选定适当方法后逐步运算，并代回原题核验。
+
+详细解答
+Not yet independently worked through; consult the original PDF and published answer indicated above.
+
+其他思路
+Alternative solution not yet verified.
+
+备课提示
+For an image-based question, inspect the original diagram. Do not treat this answer-key transcription as a checked worked solution.
+
+2005 · Grade 5–6 · Q19 · 4 分 · 原题与答案（待完整备课）
+The frame of a rectangular painting
+was made out of wooden pieces of
+the same width. What is the width of
+those pieces if the outer perimeter of
+the frame is 8 decimeters longer than
+the inner perimeter?
+(A) 4 decimeters
+(B) 6 decimeters
+(C) 1 decimeter
+(D) 8 decimeters
+(E) The width depends on the dimensions
+of the painting.
+
+Published Answer: C
+(This question may have a diagram or mathematical notation; please check the source PDF.)
+
+延申拓展
+Not yet prepared or verified from the original method.
+
+小改动：尚未设计；不能在原题方法未核实的情况下编造拓展题。
+
+同类方法提示
+To be completed after the problem's actual solution method has been verified.
+
+拓展答案与解析
+Not yet calculated.
+
+全部 Hint
+1. 先识别题目要求和全部已知条件。
+2. 检查单位、图形和选项，确认关键信息。
+3. 选定适当方法后逐步运算，并代回原题核验。
+
+详细解答
+Not yet independently worked through; consult the original PDF and published answer indicated above.
+
+其他思路
+Alternative solution not yet verified.
+
+备课提示
+For an image-based question, inspect the original diagram. Do not treat this answer-key transcription as a checked worked solution.
+
+2005 · Grade 5–6 · Q20 · 4 分 · 原题与答案（待完整备课）
+How many more triangles than
+squares are shown in the picture?
+(A) 4 more
+(B) 2 more
+(C) 1 more
+(D) 5 more
+(E) 3 more
+3
+
+Published Answer: E
+(This question may have a diagram or mathematical notation; please check the source PDF.)
+
+延申拓展
+Not yet prepared or verified from the original method.
+
+小改动：尚未设计；不能在原题方法未核实的情况下编造拓展题。
+
+同类方法提示
+To be completed after the problem's actual solution method has been verified.
+
+拓展答案与解析
+Not yet calculated.
+
+全部 Hint
+1. 先识别题目要求和全部已知条件。
+2. 检查单位、图形和选项，确认关键信息。
+3. 选定适当方法后逐步运算，并代回原题核验。
+
+详细解答
+Not yet independently worked through; consult the original PDF and published answer indicated above.
+
+其他思路
+Alternative solution not yet verified.
+
+备课提示
+For an image-based question, inspect the original diagram. Do not treat this answer-key transcription as a checked worked solution.
+
+5-Point Questions
+
+2005 · Grade 5–6 · Q21 · 5 分 · 原题与答案（待完整备课）
+There are five containers in a treasure
+chest, in each container there are
+three boxes, and in each box there
+are 10 golden coins. The treasure
+chest, the containers, and the boxes
+are all locked. How many locks do
+you need to open to get 50 coins?
+(A) 5
+(B) 7
+(C) 9
+(D) 6
+(E) 8
+
+Published Answer: E
+(This question may have a diagram or mathematical notation; please check the source PDF.)
+
+延申拓展
+Not yet prepared or verified from the original method.
+
+小改动：尚未设计；不能在原题方法未核实的情况下编造拓展题。
+
+同类方法提示
+To be completed after the problem's actual solution method has been verified.
+
+拓展答案与解析
+Not yet calculated.
+
+全部 Hint
+1. 先识别题目要求和全部已知条件。
+2. 检查单位、图形和选项，确认关键信息。
+3. 选定适当方法后逐步运算，并代回原题核验。
+
+详细解答
+Not yet independently worked through; consult the original PDF and published answer indicated above.
+
+其他思路
+Alternative solution not yet verified.
+
+备课提示
+For an image-based question, inspect the original diagram. Do not treat this answer-key transcription as a checked worked solution.
+
+2005 · Grade 5–6 · Q22 · 5 分 · 原题与答案（待完整备课）
+What number should replace x if we
+know that the number in any given
+circle above is the sum of the
+numbers in the two circles right
+below?
+(A) 32
+(B) 50
+(C) 55
+(D) 82
+(E) 100
+
+Published Answer: D
+(This question may have a diagram or mathematical notation; please check the source PDF.)
+
+延申拓展
+Not yet prepared or verified from the original method.
+
+小改动：尚未设计；不能在原题方法未核实的情况下编造拓展题。
+
+同类方法提示
+To be completed after the problem's actual solution method has been verified.
+
+拓展答案与解析
+Not yet calculated.
+
+全部 Hint
+1. 先识别题目要求和全部已知条件。
+2. 检查单位、图形和选项，确认关键信息。
+3. 选定适当方法后逐步运算，并代回原题核验。
+
+详细解答
+Not yet independently worked through; consult the original PDF and published answer indicated above.
+
+其他思路
+Alternative solution not yet verified.
+
+备课提示
+For an image-based question, inspect the original diagram. Do not treat this answer-key transcription as a checked worked solution.
+
+2005 · Grade 5–6 · Q23 · 5 分 · 原题与答案（待完整备课）
+In a two-digit number, a is the tens
+digit and b is the ones digit. Which of
+the conditions below ensures that the
+number will be divisible by 6?
+(A) a + b = 6
+(B) b = 6a
+(C) b = 5a
+(D) b = 2a
+(E) a = 2b
+
+Published Answer: D
+(This question may have a diagram or mathematical notation; please check the source PDF.)
+
+延申拓展
+Not yet prepared or verified from the original method.
+
+小改动：尚未设计；不能在原题方法未核实的情况下编造拓展题。
+
+同类方法提示
+To be completed after the problem's actual solution method has been verified.
+
+拓展答案与解析
+Not yet calculated.
+
+全部 Hint
+1. 先识别题目要求和全部已知条件。
+2. 检查单位、图形和选项，确认关键信息。
+3. 选定适当方法后逐步运算，并代回原题核验。
+
+详细解答
+Not yet independently worked through; consult the original PDF and published answer indicated above.
+
+其他思路
+Alternative solution not yet verified.
+
+备课提示
+For an image-based question, inspect the original diagram. Do not treat this answer-key transcription as a checked worked solution.
+
+2005 · Grade 5–6 · Q24 · 5 分 · 原题与答案（待完整备课）
+A wooden cube with the length of its
+side equal to 3 ft was painted with 0.25
+gallon of paint. The cube was then cut
+up into unit cubes (with a side length of 1
+ft). How much paint is needed to paint
+the unpainted sides of the unit cubes?
+(A) 1.25 gallon
+(B) 1 gallon
+(C) 0.75 gallon
+(D) 0.5 gallon
+(E) 0.25 gallon
+5 Points EachCopyright©. Mentorhood Limited. All Rights Reserved. Math Kangaroo Page 5
+
+Published Answer: D
+(This question may have a diagram or mathematical notation; please check the source PDF.)
+
+延申拓展
+Not yet prepared or verified from the original method.
+
+小改动：尚未设计；不能在原题方法未核实的情况下编造拓展题。
+
+同类方法提示
+To be completed after the problem's actual solution method has been verified.
+
+拓展答案与解析
+Not yet calculated.
+
+全部 Hint
+1. 先识别题目要求和全部已知条件。
+2. 检查单位、图形和选项，确认关键信息。
+3. 选定适当方法后逐步运算，并代回原题核验。
+
+详细解答
+Not yet independently worked through; consult the original PDF and published answer indicated above.
+
+其他思路
+Alternative solution not yet verified.
+
+备课提示
+For an image-based question, inspect the original diagram. Do not treat this answer-key transcription as a checked worked solution.
+
+2005 · Grade 5–6 · Q25 · 5 分 · 原题与答案（待完整备课）
+Five circles have radii of the same
+length. Four of them are touching the
+fifth circle and their centers are the
+vertices of a square (see the picture).
+The ratio of the area of the shaded
+region of the circles to the area of
+unshaded regions of the circles is:
+(A) 1:3
+(B) 1:4
+(C) 2:5
+(D) 2:3
+(E) 5:4
+
+Published Answer: D
+(This question may have a diagram or mathematical notation; please check the source PDF.)
+
+延申拓展
+Not yet prepared or verified from the original method.
+
+小改动：尚未设计；不能在原题方法未核实的情况下编造拓展题。
+
+同类方法提示
+To be completed after the problem's actual solution method has been verified.
+
+拓展答案与解析
+Not yet calculated.
+
+全部 Hint
+1. 先识别题目要求和全部已知条件。
+2. 检查单位、图形和选项，确认关键信息。
+3. 选定适当方法后逐步运算，并代回原题核验。
+
+详细解答
+Not yet independently worked through; consult the original PDF and published answer indicated above.
+
+其他思路
+Alternative solution not yet verified.
+
+备课提示
+For an image-based question, inspect the original diagram. Do not treat this answer-key transcription as a checked worked solution.
+
+2005 · Grade 5–6 · Q26 · 5 分 · 原题与答案（待完整备课）
+From noon until midnight, Wise Cat
+sleeps under a chestnut tree. From
+midnight until noon he is awake
+telling stories. There is a note on that
+tree which says: "Two hours ago, Wise
+Cat was doing the same thing that
+he will be doing in an hour." For how
+many hours out of 24 hours is the note
+true?
+(A) 6
+(B) 12
+(C) 18
+(D) 3
+(E) 21
+
+Published Answer: C
+(This question may have a diagram or mathematical notation; please check the source PDF.)
+
+延申拓展
+Not yet prepared or verified from the original method.
+
+小改动：尚未设计；不能在原题方法未核实的情况下编造拓展题。
+
+同类方法提示
+To be completed after the problem's actual solution method has been verified.
+
+拓展答案与解析
+Not yet calculated.
+
+全部 Hint
+1. 先识别题目要求和全部已知条件。
+2. 检查单位、图形和选项，确认关键信息。
+3. 选定适当方法后逐步运算，并代回原题核验。
+
+详细解答
+Not yet independently worked through; consult the original PDF and published answer indicated above.
+
+其他思路
+Alternative solution not yet verified.
+
+备课提示
+For an image-based question, inspect the original diagram. Do not treat this answer-key transcription as a checked worked solution.
+
+2005 · Grade 5–6 · Q27 · 5 分 · 原题与答案（待完整备课）
+Mark has 42 cubes with a side length
+of 1 cm. He used them to construct a
+prism, the base of which has a
+perimeter of 18 cm. The height of that
+prism is:
+(A) 6 cm
+(B) 5 cm
+(C) 4 cm
+(D) 3 cm
+(E) 2 cm
+4
+
+Published Answer: D
+(This question may have a diagram or mathematical notation; please check the source PDF.)
+
+延申拓展
+Not yet prepared or verified from the original method.
+
+小改动：尚未设计；不能在原题方法未核实的情况下编造拓展题。
+
+同类方法提示
+To be completed after the problem's actual solution method has been verified.
+
+拓展答案与解析
+Not yet calculated.
+
+全部 Hint
+1. 先识别题目要求和全部已知条件。
+2. 检查单位、图形和选项，确认关键信息。
+3. 选定适当方法后逐步运算，并代回原题核验。
+
+详细解答
+Not yet independently worked through; consult the original PDF and published answer indicated above.
+
+其他思路
+Alternative solution not yet verified.
+
+备课提示
+For an image-based question, inspect the original diagram. Do not treat this answer-key transcription as a checked worked solution.
+
+2005 · Grade 5–6 · Q28 · 5 分 · 原题与答案（待完整备课）
+Peter wrote on the board all threedigit numbers that have the following
+properties: the digits of each of the
+numbers are different, and the first is
+the square of the quotient of the
+second digit and the third digit. How
+many numbers did Peter write?
+(A) 1
+(B) 2
+(C) 3
+(D) 4
+(E) 8
+
+Published Answer: D
+(This question may have a diagram or mathematical notation; please check the source PDF.)
+
+延申拓展
+Not yet prepared or verified from the original method.
+
+小改动：尚未设计；不能在原题方法未核实的情况下编造拓展题。
+
+同类方法提示
+To be completed after the problem's actual solution method has been verified.
+
+拓展答案与解析
+Not yet calculated.
+
+全部 Hint
+1. 先识别题目要求和全部已知条件。
+2. 检查单位、图形和选项，确认关键信息。
+3. 选定适当方法后逐步运算，并代回原题核验。
+
+详细解答
+Not yet independently worked through; consult the original PDF and published answer indicated above.
+
+其他思路
+Alternative solution not yet verified.
+
+备课提示
+For an image-based question, inspect the original diagram. Do not treat this answer-key transcription as a checked worked solution.
+
+2005 · Grade 5–6 · Q29 · 5 分 · 原题与答案（待完整备课）
+The equilateral triangle ABC (all sides
+congruent) has an area equal to 1. A
+bigger triangle was constructed out
+of 49 of these triangles (see the
+picture).
+The area of the shaded region is equal
+to:
+(A) 20
+(B) 22.5
+(C) 23.5
+(D) 25
+(E) 32
+
+Published Answer: B
+(This question may have a diagram or mathematical notation; please check the source PDF.)
+
+延申拓展
+Not yet prepared or verified from the original method.
+
+小改动：尚未设计；不能在原题方法未核实的情况下编造拓展题。
+
+同类方法提示
+To be completed after the problem's actual solution method has been verified.
+
+拓展答案与解析
+Not yet calculated.
+
+全部 Hint
+1. 先识别题目要求和全部已知条件。
+2. 检查单位、图形和选项，确认关键信息。
+3. 选定适当方法后逐步运算，并代回原题核验。
+
+详细解答
+Not yet independently worked through; consult the original PDF and published answer indicated above.
+
+其他思路
+Alternative solution not yet verified.
+
+备课提示
+For an image-based question, inspect the original diagram. Do not treat this answer-key transcription as a checked worked solution.
+
+2005 · Grade 5–6 · Q30 · 5 分 · 原题与答案（待完整备课）
+Mary, Dorothy, Sylvia, Ella, and Kathy
+are sitting on a bench in the park.
+Mary is not sitting the farthest to the
+right; Dorothy is not sitting the farthest
+to the left. Sylvia is not sitting the
+farthest to the left nor the farthest to
+the right. Kathy is not sitting next to
+Sylvia, and Sylvia is not sitting next to
+Dorothy. Ella is sitting to the right of
+Dorothy, but not necessarily next to
+her. Which girl is sitting the farthest to
+the right?
+(A) Kathy
+(B) Dorothy
+(C) Sylvia
+(D) Ella
+(E) It cannot be determined.Copyright©. Mentorhood Limited. All Rights Reserved. Math Kangaroo Page 6
+
+Published Answer: Not found
+(This question may have a diagram or mathematical notation; please check the source PDF.)
+
+延申拓展
+Not yet prepared or verified from the original method.
+
+小改动：尚未设计；不能在原题方法未核实的情况下编造拓展题。
+
+同类方法提示
+To be completed after the problem's actual solution method has been verified.
+
+拓展答案与解析
+Not yet calculated.
+
+全部 Hint
+1. 先识别题目要求和全部已知条件。
+2. 检查单位、图形和选项，确认关键信息。
+3. 选定适当方法后逐步运算，并代回原题核验。
+
+详细解答
+Not yet independently worked through; consult the original PDF and published answer indicated above.
+
+其他思路
+Alternative solution not yet verified.
+
+备课提示
+For an image-based question, inspect the original diagram. Do not treat this answer-key transcription as a checked worked solution.
+
+2005 · Grade 5–6
+Source past paper: https://drive.google.com/file/d/12gXxfI6gYXiEsS4IUxZURw-DT0W8TaHt/view?usp=drivesdk
+Status: This tab has been created, but question-by-question teaching content has not yet been prepared or verified against the original exam. Do not use this tab as a completed answer key.
+
+Planned question format
+2005 · Grade 5–6 · Q[number] · [points] 分 · [中文知识点与题型]
+Original question and choices (English)
+延申拓展 — Extension question (English)
+小改动 — Change description (中文)
+同类方法提示 — Same-method hint (English)
+拓展答案与解析 — Extension answer and explanation (English)
+全部 Hint — Three progressive hints (中文)
+详细解答 — Worked solution (English)
+其他思路 — Alternative approaches (English)
+备课提示 — Teaching notes (English)

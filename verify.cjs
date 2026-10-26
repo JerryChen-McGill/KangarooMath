@@ -26,8 +26,8 @@ const path = require('node:path');
   await page.selectOption('#yearSel', '2000-g3-4');
   await page.selectOption('#gradeSel', '5-6');
   assert.equal(await page.locator('#yearSel').inputValue(), 'all');
-  assert.deepEqual(await page.locator('#yearSel option').allTextContents(), ['全部年份', '1999 年', '2000 年', '2001 年', '2002 年', '2003 年']);
-  assert.equal(await page.locator('.q-card').count(), 150);
+  assert.deepEqual(await page.locator('#yearSel option').allTextContents(), ['全部年份', ...Array.from({length:10},(_,i)=>`${1999+i} 年`)]);
+  assert.equal(await page.locator('.q-card').count(), 300);
   await selectPaper(page, 'all');
   // Teaching answers give the same feedback while preserving open lesson panels.
   await card.getByRole('button', {name:'详解', exact:true}).click();
@@ -137,12 +137,13 @@ const path = require('node:path');
     if (year === '1999') await page.click('#btnToggleTags');
   }
   await selectPaper(page, 'all');
-  assert.equal(await page.getByRole('button', {name:'延申拓展', exact:true}).count(), questionCount);
   assert.equal(await page.locator('.extension').count(), 0);
   const extensionKeys = await page.evaluate(() => Object.keys(KANGAROO_EXTENSIONS));
   const questionKeys = await page.evaluate(() => Object.entries(KANGAROO_DATA).flatMap(([y, qs]) => qs.map(q => y + '-' + q.no)));
-  assert.deepEqual(extensionKeys.sort(), questionKeys.sort());
-  for (const key of questionKeys) {
+  assert.equal(await page.getByRole('button', {name:'延申拓展', exact:true}).count(), extensionKeys.length);
+  assert.ok(extensionKeys.every(key => questionKeys.includes(key)));
+  assert.equal(questionKeys.length - extensionKeys.length, 20); // Source guide has 20 unprepared 2005 extensions.
+  for (const key of extensionKeys) {
     const year = key.slice(0, key.lastIndexOf('-')), no = key.slice(key.lastIndexOf('-') + 1);
     const current = page.locator(`.q-card[data-year="${year}"][data-no="${no}"]`);
     const toggle = current.getByRole('button', {name:'延申拓展', exact:true});
@@ -150,7 +151,8 @@ const path = require('node:path');
     assert.equal(await toggle.getAttribute('aria-expanded'), 'true');
     assert.equal(await current.locator('.extension details[open]').count(), 0);
     const expected = await page.evaluate(key => KANGAROO_EXTENSIONS[key], key);
-    for (const field of ['text', 'change', 'method', 'answer', 'solution']) assert.ok(expected[field]?.trim(), `${key}: ${field}`);
+    for (const field of ['text', 'change', 'method', 'answer']) assert.ok(expected[field]?.trim(), `${key}: ${field}`);
+    assert.equal(typeof expected.solution, 'string'); // Some source sections combine answer and explanation.
     assert.equal(await current.locator('.extension-text').innerText(), expected.text);
     await current.locator('.extension-answer summary').click();
     assert.equal(await current.locator('.extension-answer strong').innerText(), expected.answer);
