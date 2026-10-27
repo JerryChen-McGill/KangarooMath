@@ -47,15 +47,36 @@ header {
   box-shadow: var(--shadow);
 }
 header h1 { margin: 0; font-size: 15px; white-space: nowrap; flex-shrink: 0; line-height: 1.2; }
+#brand {
+  display: flex; align-items: center; gap: 6px; border: 0; background: none; padding: 0; margin: 0;
+  font: inherit; font-size: 15px; font-weight: 700; color: var(--text); cursor: pointer; line-height: 1.2;
+}
+#brand:hover { color: var(--accent); }
 .controls {
   display: flex; gap: 6px; align-items: center; flex: 1; min-width: 0;
   overflow-x: auto; overflow-y: hidden; padding: 0; scrollbar-width: thin;
 }
 .controls > * { flex-shrink: 0; }
-.controls select, .controls input, .controls button { font-size: 12px; line-height: 1.2; padding: 3px 7px; white-space: nowrap; }
+.controls select, .controls input, .controls button,
+.overflow-menu select, .overflow-menu input, .overflow-menu button { font-size: 12px; line-height: 1.2; padding: 3px 7px; white-space: nowrap; }
 .controls::-webkit-scrollbar { height: 6px; }
 .controls::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 3px; }
+/* Toolbar groups: paper selection | search & tags | reveal toggles. */
+.controls > .group-start { margin-left: 9px; padding-left: 9px; border-left: 1px solid var(--border); }
+.controls > #overflowBtn { margin-left: auto; letter-spacing: 1px; }
 #search { width: 160px; }
+#modeToggle { margin-left: 6px; }
+.overflow-menu {
+  position: absolute; top: 100%; right: 12px; z-index: 30; min-width: 190px; max-height: 60dvh; overflow-y: auto;
+  display: flex; flex-direction: column; gap: 8px; align-items: stretch;
+  padding: 12px; background: var(--surface); border: 1px solid var(--border); border-radius: 0 0 12px 12px; box-shadow: var(--shadow);
+}
+.overflow-menu.hidden { display: none; }
+.overflow-menu > * { width: 100%; text-align: left; justify-content: flex-start; }
+.overflow-menu #search { width: 100%; }
+.overflow-menu .tag-filter { flex-direction: column; align-items: stretch; gap: 6px; }
+.overflow-menu .tag-filter #btnToggleTags { justify-content: flex-start; }
+.overflow-menu .active-tags { max-width: none; flex-wrap: wrap; }
 .tag-filter { display: inline-flex; align-items: center; border: 1px solid var(--border); border-radius: 8px; background: var(--surface); }
 .tag-filter:has(.active-tag) { border-color: #bfdbfe; background: #eff6ff; }
 .tag-filter #btnToggleTags { border: 0; background: transparent; }
@@ -139,11 +160,14 @@ button:disabled { opacity: .4; cursor: default; }
 .feedback.incorrect { color: var(--danger); }
 .section.hint { background: #fffbeb; border-color: #fde68a; }
 button:focus-visible, main:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
-.controls :focus-visible { outline-offset: -2px; }
+header :focus-visible { outline-offset: -2px; }
 @media (max-width: 640px) {
   header { padding: 3px 6px; gap: 6px; } header h1 { font-size: 13px; }
+  .brand-text { display: none; }
   #modeToggle { font-size: 12px; padding: 3px 8px; }
   .controls { gap: 5px; }
+  .controls > .group-start { margin-left: 6px; padding-left: 6px; }
+  .overflow-menu { left: 12px; }
   main { padding: 8px 10px 10px; } .q-card { padding: 14px; }
   footer { display: none; }
 }
@@ -178,30 +202,32 @@ button.disclosure[aria-expanded="true"] { background: #eff6ff; border-color: #bf
 </head>
 <body>
 <header>
-  <h1>🦘 Math Kangaroo 备课站</h1>
-  <div class="controls" role="group" aria-label="题目筛选与功能">
-    <select id="gradeSel" aria-label="年级">
+  <h1><button type="button" id="brand" title="清除全部筛选，回到所有题目"><span aria-hidden="true">🦘</span><span class="brand-text">Math Kangaroo 备课站</span></button></h1>
+  <div class="controls" id="toolbar" role="group" aria-label="题目筛选与功能">
+    <select id="gradeSel" data-group="paper" data-priority="0" aria-label="年级">
       <option value="all">全部年级</option>
     </select>
-    <select id="yearSel" aria-label="年份" disabled>
+    <select id="yearSel" data-group="paper" data-priority="1" aria-label="年份" disabled>
       <option value="all">全部年份</option>
     </select>
-    <select id="viewSel">
+    <select id="viewSel" data-group="paper" data-priority="2">
       <option value="list">全部题目</option>
       <option value="single">单题查看</option>
       <option value="answers">全卷答案</option>
     </select>
-    <input type="number" id="singleNo" min="1" max="30" placeholder="题号" style="width:80px;display:none">
-    <input type="text" id="search" placeholder="搜索题目内容/关键词/标签">
-    <div class="tag-filter" role="group" aria-label="标签筛选">
+    <input type="number" id="singleNo" data-group="paper" data-priority="3" min="1" max="30" placeholder="题号" style="width:80px;display:none">
+    <input type="text" id="search" data-group="filter" data-priority="4" placeholder="搜索题目内容/关键词/标签">
+    <div class="tag-filter" data-group="filter" data-priority="5" role="group" aria-label="标签筛选">
       <span id="activeTags" class="active-tags"></span>
       <button id="btnToggleTags" class="secondary" aria-controls="tagCloud" aria-label="标签筛选">标签筛选</button>
     </div>
-    <button id="btnToggleAns" class="ok">显示所有答案</button>
-    <button id="btnExpandSol" class="secondary">展开全部详解</button>
-    <button type="button" id="modeToggle" aria-pressed="false">教学版</button>
+    <button id="btnToggleAns" data-group="reveal" data-priority="6" class="ok">显示所有答案</button>
+    <button id="btnExpandSol" data-group="reveal" data-priority="7" class="secondary">展开全部详解</button>
+    <button type="button" id="overflowBtn" class="secondary" hidden aria-expanded="false" aria-controls="overflowMenu" aria-label="更多工具" title="更多工具">⋯</button>
   </div>
   <div class="tag-cloud hidden" id="tagCloud" aria-label="可选标签"></div>
+  <nav class="overflow-menu hidden" id="overflowMenu" aria-label="更多工具"></nav>
+  <button type="button" id="modeToggle" aria-pressed="false">教学版</button>
 </header>
 
 <main id="app" tabindex="0" aria-label="题目浏览区"></main>
@@ -273,6 +299,12 @@ const btnToggleAns = document.getElementById('btnToggleAns');
 const btnExpandSol = document.getElementById('btnExpandSol');
 const btnToggleTags = document.getElementById('btnToggleTags');
 const activeTagsEl = document.getElementById('activeTags');
+const brand = document.getElementById('brand');
+const toolbar = document.getElementById('toolbar');
+const overflowBtn = document.getElementById('overflowBtn');
+const overflowMenu = document.getElementById('overflowMenu');
+const tagFilter = document.querySelector('.tag-filter');
+const toolbarItems = [...toolbar.children].filter(el => el !== overflowBtn);
 
 function toggleTag(tag, sourceCard = null) {
   let returnContext = null;
@@ -339,6 +371,87 @@ function updateTagToggleButton() {
   btnToggleTags.setAttribute('aria-label', label);
   btnToggleTags.title = (expanded ? '收起' : '展开') + '标签筛选';
 }
+
+/* Toolbar layout. Controls carry a priority so the row keeps the ones that matter
+   right now and hands the rest to an overflow panel, instead of scrolling away. */
+const overflowOpen = () => !overflowMenu.classList.contains('hidden');
+function setOverflowOpen(open) {
+  overflowMenu.classList.toggle('hidden', !open);
+  overflowBtn.setAttribute('aria-expanded', String(open));
+  overflowBtn.title = open ? '收起更多工具' : '更多工具';
+}
+function markGroupDividers() {
+  let prev = null;
+  toolbarItems.forEach(el => {
+    if (el.parentElement !== toolbar) { el.classList.remove('group-start'); return; }
+    el.classList.toggle('group-start', prev !== null && el.dataset.group !== prev);
+    prev = el.dataset.group;
+  });
+}
+function layoutToolbar() {
+  // Restore collapsed items back to front so the row keeps its original order. Only
+  // nodes that actually left the toolbar are re-inserted: rewriting every node would
+  // drop focus each time a control re-renders while someone is typing or tabbing.
+  let anchor = overflowBtn;
+  for (let i = toolbarItems.length - 1; i >= 0; i--) {
+    const el = toolbarItems[i];
+    const stayPut = el.parentElement === toolbar ||
+      (overflowOpen() && overflowMenu.contains(el) && el === document.activeElement);
+    if (!stayPut) toolbar.insertBefore(el, anchor);
+    anchor = el;
+  }
+  overflowBtn.hidden = true;
+  if (toolbar.scrollWidth <= toolbar.clientWidth + 1) {
+    setOverflowOpen(false);
+    markGroupDividers();
+    return;
+  }
+  overflowBtn.hidden = false;
+  const pinned = new Set([gradeSel]);
+  if (search.value.trim()) pinned.add(search);
+  if (state.tags.size) pinned.add(tagFilter);
+  if (state.view === 'single') pinned.add(singleNo);
+  const candidates = toolbarItems
+    .filter(el => el.offsetParent && !pinned.has(el))
+    .sort((a, b) => Number(b.dataset.priority) - Number(a.dataset.priority));
+  for (const el of candidates) {
+    overflowMenu.appendChild(el);
+    if (toolbar.scrollWidth <= toolbar.clientWidth + 1) break;
+  }
+  if (!overflowMenu.children.length) { overflowBtn.hidden = true; setOverflowOpen(false); }
+  markGroupDividers();
+}
+let layoutPending = false;
+function scheduleLayout() {
+  if (layoutPending) return;
+  layoutPending = true;
+  requestAnimationFrame(() => { layoutPending = false; layoutToolbar(); });
+}
+new ResizeObserver(scheduleLayout).observe(toolbar);
+overflowBtn.addEventListener('click', e => {
+  e.stopPropagation();
+  tagCloud.classList.add('hidden');
+  updateTagToggleButton();
+  setOverflowOpen(!overflowOpen());
+});
+document.addEventListener('click', e => {
+  if (overflowOpen() && !overflowMenu.contains(e.target) && e.target !== overflowBtn) setOverflowOpen(false);
+});
+// The site title doubles as a reset that clears every filter.
+brand.addEventListener('click', () => {
+  Object.assign(state, {grade: 'all', year: 'all', view: 'list', singleNo: 1, search: ''});
+  state.tags.clear();
+  tagReturnContext = null;
+  viewSel.value = 'list';
+  singleNo.value = 1;
+  singleNo.style.display = 'none';
+  search.value = '';
+  setOverflowOpen(false);
+  syncPaperSelectors();
+  renderTagCloud();
+  render();
+  app.scrollTop = 0;
+});
 
 function getQuestions() {
   const ys = selectedPapers();
@@ -486,7 +599,13 @@ function closePanel(panel, btn) {
   btn.disabled = true;
   panel.animate([{opacity: 1, transform: 'translateY(0)'}, {opacity: 0, transform: 'translateY(-6px)'}], {duration: 160, easing: 'ease-in'}).finished.finally(() => { panel.remove(); btn.disabled = false; });
 }
+// Hide the global reveal toggles when the current view already shows them.
+function syncGlobalToggles() {
+  const redundant = state.mode === 'practice' || state.view === 'answers';
+  btnToggleAns.hidden = btnExpandSol.hidden = redundant;
+}
 function render() {
+  syncGlobalToggles();
   renderContent();
   app.querySelectorAll('.q-actions > button').forEach(btn => {
     const action = btn.getAttribute('onclick') || '';
@@ -507,6 +626,9 @@ function render() {
   styleDisclosure(btnToggleAns, '全部答案', state.showAnswer);
   styleDisclosure(btnExpandSol, '全部详解', state.showSolution);
   updateTagToggleButton();
+  // Let the toolbar lay out after fonts settle, then on every width change.
+  scheduleLayout();
+  if (document.fonts?.ready) document.fonts.ready.then(scheduleLayout);
 }
 function escapeHtml(s) {
   if (!s) return '';
@@ -607,11 +729,15 @@ btnToggleAns.addEventListener('click', () => {
 btnExpandSol.addEventListener('click', () => { state.showSolution = !state.showSolution; btnExpandSol.textContent = state.showSolution ? '收起全部详解' : '展开全部详解'; render(); });
 
 btnToggleTags.addEventListener('click', () => {
-  tagCloud.classList.toggle('hidden');
+  const opening = tagCloud.classList.contains('hidden');
+  setOverflowOpen(false);
+  tagCloud.classList.toggle('hidden', !opening);
   updateTagToggleButton();
 });
 document.addEventListener('keydown', e => {
-  if (e.key === 'Escape' && !tagCloud.classList.contains('hidden')) {
+  if (e.key !== 'Escape') return;
+  if (overflowOpen()) { setOverflowOpen(false); overflowBtn.focus({preventScroll: true}); return; }
+  if (!tagCloud.classList.contains('hidden')) {
     tagCloud.classList.add('hidden');
     updateTagToggleButton();
     btnToggleTags.focus({preventScroll: true});
