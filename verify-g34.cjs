@@ -1,0 +1,10 @@
+const {chromium}=require(process.env.PLAYWRIGHT_MODULE || 'playwright');
+const assert=require('node:assert/strict'); const {pathToFileURL}=require('node:url'); const path=require('node:path');
+(async()=>{const b=await chromium.launch({headless:true,channel:'msedge'});const p=await b.newPage({viewport:{width:1280,height:800}});const errors=[];p.on('pageerror',e=>errors.push(e.message));await p.goto(pathToFileURL(path.resolve('index.html')).href);
+const summary=await p.evaluate(()=>({keys:Object.keys(KANGAROO_DATA),counts:Object.fromEntries(Object.entries(KANGAROO_DATA).map(([k,v])=>[k,v.length])),ext:Object.keys(KANGAROO_EXTENSIONS).length}));
+assert.deepEqual(summary.keys.filter(k=>/^(1998|2001|2002)-g3-4$/.test(k)).sort(),['1998-g3-4','2001-g3-4','2002-g3-4']);
+for(const id of ['1998-g3-4','2001-g3-4','2002-g3-4']) assert.equal(summary.counts[id],24); assert.ok(summary.ext>=72);
+await p.selectOption('#gradeSel','3-4'); assert.deepEqual(await p.locator('#yearSel option').allTextContents(),['全部年份','1998 年','1999 年','2000 年','2001 年','2002 年']); assert.equal(await p.locator('.q-card').count(),120);
+await p.selectOption('#yearSel','2001-g3-4'); const q6=p.locator('.q-card[data-no="6"]'); await q6.getByRole('button',{name:'答案',exact:true}).click(); assert.match(await q6.locator('.feedback').innerText(),/无正确选项|原卷/); assert.equal(await q6.locator('.option.correct').count(),0);
+await p.selectOption('#yearSel','1998-g3-4'); const q7=p.locator('.q-card[data-no="7"]'); assert.equal(await q7.locator('img').count(),1); await q7.getByRole('button',{name:'延申拓展',exact:true}).click(); assert.equal(await q7.locator('.extension').count(),1);
+assert.deepEqual(errors,[]);await b.close();console.log('PASS: G3-4 1998/2001/2002 data, selectors, figures, extension, and correction behavior.');})().catch(e=>{console.error(e);process.exitCode=1});

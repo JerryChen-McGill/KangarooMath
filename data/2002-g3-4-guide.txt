@@ -1,0 +1,507 @@
+# Math Kangaroo 2002 Grade 3–4 teaching guide
+
+Source: Math Kangaroo G3-4.docx (provided by the user).
+
+## Q1 · 图形补全
+Which small square completes the kangaroo competition symbol?
+OPTIONS: A. Tile A | B. Tile B | C. Tile C | D. Tile D | E. Tile E
+ANSWER: B
+HINTS:
+- 先标出缺格边缘的接点。
+- 同时检查上下左右。
+- B能使轮廓连续。
+SOLUTION:
+The missing tile must continue every contour where it meets the neighboring tiles. B matches the kangaroo's neck boundary and the short contour entering at the top; the other tiles introduce broken or misplaced lines.
+OTHER METHODS:
+- Trace boundary entry points before considering the inside of a tile.
+TEACHING TIP:
+Keep each choice in its printed orientation unless a rotation is explicitly allowed.
+EXTENSION:
+After inserting B, rotate the entire completed picture90°. Does the inserted tile still fit?
+EXTENSION ANSWER:
+Yes. Rotating the entire picture preserves all boundary matches.
+EXTENSION SOLUTION:
+Yes. Rotating the entire picture preserves all boundary matches.
+
+## Q2 · 连续加减
+Simplify2+2−2+2−2+2−2+2−2+2.
+OPTIONS: A. 0 | B. 2 | C. 4 | D. 12 | E. 20
+ANSWER: C
+HINTS:
+- 同级运算从左到右。
+- 可配成加2减2的抵消对。
+- 最后留下两个正2。
+SOLUTION:
+There are six positive2s and four negative2s. The result is12−8=4. Or cancel four(+2−2) pairs, leaving2+2.
+OTHER METHODS:
+- Calculate a running total:2,4,2,4,2,4,2,4,2,4.
+TEACHING TIP:
+Keep the initial positive term when counting signs.
+EXTENSION:
+Append−2+2 to the expression. What is the result?
+EXTENSION ANSWER:
+4
+EXTENSION SOLUTION:
+4; the added pair has net change0.
+
+## Q3 · 加法
+Andrzej receives3 toy cars,4 balls,3 teddy bears,10 pens,2 chocolate bars and1 book. How many items altogether?
+OPTIONS: A. 15 | B. 17 | C. 20 | D. 23 | E. 27
+ANSWER: D
+HINTS:
+- 逐类记录数量。
+- 别漏掉一本书。
+- 凑十再相加。
+SOLUTION:
+Add all categories:3+4+3+10+2+1=23. Grouping(3+3+4)+10+(2+1)=10+10+3 helps.
+OTHER METHODS:
+- Use a category-and-count table.
+TEACHING TIP:
+Distinguish the number of types of gifts from the number of individual items.
+EXTENSION:
+He receives2 additional books. How many items now?
+EXTENSION ANSWER:
+25
+EXTENSION SOLUTION:
+25;23+2=25.
+
+## Q4 · 分割图形
+Which piece is absent from the divided square?
+OPTIONS: A. Piece A | B. Piece B | C. Piece C | D. Piece D | E. Piece E
+ANSWER: D
+HINTS:
+- 先找所有独立区域。
+- 旋转后比形状与比例。
+- 图中没有U形的一块。
+SOLUTION:
+Trace the actual region boundaries. A is a square, B a rectangle, and the two differently proportioned L-shaped pieces match C and E after rotation. No region has D's U-shaped outline.
+OTHER METHODS:
+- Cut out or color the five regions and compare them one at a time.
+TEACHING TIP:
+Do not confuse a union of several regions with one original piece.
+EXTENSION:
+Rotate the whole divided square180°. Which option is still absent?
+EXTENSION ANSWER:
+D
+EXTENSION SOLUTION:
+D; rotating the whole picture does not change which shapes occur.
+
+## Q5 · 逻辑对应
+Gina, Lena, Suzie and Joanna have birthdays on March1, May17, July20 and March20. Lena and Suzie share a month; Gina and Suzie share a day number. Who was born May17?
+OPTIONS: A. Gina | B. Lena | C. Suzie | D. Joanna | E. Cannot be determined
+ANSWER: D
+HINTS:
+- 先找重复月份。
+- 再找重复日号20。
+- 用排除法安排剩余生日。
+SOLUTION:
+The repeated month is March, so Lena and Suzie take March1 and March20. The only repeated day number is20, so Suzie=March20, Gina=July20 and Lena=March1. Joanna is left with May17.
+OTHER METHODS:
+- Build a four-person matching grid and cross out impossible dates.
+TEACHING TIP:
+A day of the month means the numeral, not a weekday.
+EXTENSION:
+Change only May17 to May18. Who has that birthday?
+EXTENSION ANSWER:
+Joanna
+EXTENSION SOLUTION:
+Joanna; the two repeated-month/day deductions are unchanged.
+
+## Q6 · 单位换算
+A heart averages70 beats per minute. About how many beats per hour?
+OPTIONS: A. 42000 | B. 7000 | C. 4200 | D. 700 | E. 420
+ANSWER: C
+HINTS:
+- 一小时有60分钟。
+- 每分钟70次。
+- 70乘60。
+SOLUTION:
+One hour contains60 minutes. At70 beats per minute,70×60=4200 beats.
+OTHER METHODS:
+- Calculate7×6=42 and restore the two zero factors.
+TEACHING TIP:
+Write units so minutes cancel; this is the problem's assumed average.
+EXTENSION:
+At72 beats per minute, how many beats in one hour?
+EXTENSION ANSWER:
+4320
+EXTENSION SOLUTION:
+4320;72×60=4320.
+
+## Q7 · 周长差
+ABCD is a square of side10 cm. ATMD is a rectangle with short side3 cm and long sideAD=10 cm. What is the difference between their perimeters?
+OPTIONS: A. 14 cm | B. 10 cm | C. 7 cm | D. 6 cm | E. 4 cm
+ANSWER: A
+HINTS:
+- 矩形共享AD这条10厘米长边。
+- 分别求40和26。
+- 周长差14。
+SOLUTION:
+Square perimeter=4×10=40 cm. Rectangle perimeter=2×(10+3)=26 cm. Difference=14 cm. Two equal10 cm sides cancel, leaving2×(10−3).
+OTHER METHODS:
+- Compare only the two differing sides:2×(10−3).
+TEACHING TIP:
+The prompt omits a drawing here; use the shared sideAD to identify the rectangle's long side.
+EXTENSION:
+The rectangle's short side is4 cm instead. Find the perimeter difference.
+EXTENSION ANSWER:
+12 cm
+EXTENSION SOLUTION:
+12 cm;40−2×14=12.
+
+## Q8 · 折纸
+Which outline cannot be made by folding a rectangle just once?
+OPTIONS: A. Figure A | B. Figure B | C. Figure C | D. Figure D | E. Figure E
+ANSWER: B
+HINTS:
+- 一次折叠只有一条直折痕。
+- 沿折痕反射折过去的部分。
+- 检查B的凹口和尖角能否同时形成。
+SOLUTION:
+A single straight crease reflects one connected part of the sheet onto the other. Trace the reflected rectangle boundaries: A,C,D,E can be realized by suitable folds, whereas B's inner notch and diagonal outer tip cannot be produced together by one fold.
+OTHER METHODS:
+- Use paper trials or transparent overlays for all candidate outlines.
+TEACHING TIP:
+Evaluate the full visible union of the folded layers, not only the folded flap. 4-Point Questions
+EXTENSION:
+Fold a rectangle exactly in half along a line parallel to a side. What shape is its outside boundary?
+EXTENSION ANSWER:
+A rectangle with one dimension halved.
+EXTENSION SOLUTION:
+A rectangle with one dimension halved.
+
+## Q9 · 数字出现次数
+Houses are numbered1 through24. How many times does digit2 occur?
+OPTIONS: A. 2 | B. 4 | C. 8 | D. 16 | E. 32
+ANSWER: C
+HINTS:
+- 按个位和十位分开数。
+- 个位有2、12、22。
+- 十位有20到24，共5次。
+SOLUTION:
+Units-position2 occurs in2,12,22:3 times. Tens-position2 occurs in20,21,22,23,24:5 times. Total8;22 contributes twice.
+OTHER METHODS:
+- List2,12,20,21,22,23,24 and count their individual2s.
+TEACHING TIP:
+Number of labels containing2 is different from number of digit occurrences.
+EXTENSION:
+For houses1 through29, how many times does digit2 occur?
+EXTENSION ANSWER:
+13
+EXTENSION SOLUTION:
+13;3 in the units place plus10 in the tens place.
+
+## Q10 · 天平
+Six identical oranges balance two identical melons after one melon is added to the orange side. How many oranges weigh as much as one melon?
+OPTIONS: A. 2 | B. 3 | C. 4 | D. 5 | E. 6
+ANSWER: E
+HINTS:
+- 看加完后的平衡状态。
+- 两边同时拿走一个瓜。
+- 剩6个橙子等于1个瓜。
+SOLUTION:
+The final balance means6 oranges+1 melon=2 melons. Remove one melon from each side:6 oranges=1 melon.
+OTHER METHODS:
+- Write6o+m=2m and subtract m.
+TEACHING TIP:
+Do not treat the initially tilted scale as already balanced.
+EXTENSION:
+Eight oranges plus one melon balance three melons. How many oranges equal one melon?
+EXTENSION ANSWER:
+4
+EXTENSION SOLUTION:
+4;8 oranges=2 melons.
+
+## Q11 · 线条匹配
+Which line is not part of the castle sketch?
+OPTIONS: A. Line A | B. Line B | C. Line C | D. Line D | E. Line E
+ANSWER: C
+HINTS:
+- 沿候选线从一端走到另一端。
+- 转折次序也必须相同。
+- C的双尖峰凹口组合不在原图。
+SOLUTION:
+Follow each candidate through the castle outline. A matches the stepped section; B and D match sloping and vertical corners; E matches the double curved tower top. C's two roof peaks separated by a deep rectangular notch do not appear as one continuous part.
+OTHER METHODS:
+- Use transparent tracing paper to slide each line over the sketch.
+TEACHING TIP:
+A partial resemblance at one corner is insufficient; match the whole connected segment.
+EXTENSION:
+Trace the castle's double curved tower top. Which original choice matches it?
+EXTENSION ANSWER:
+E.
+EXTENSION SOLUTION:
+E.
+
+## Q12 · 最值常识
+Add17 to the smallest two-digit number, then divide by the largest one-digit number. What is the result?
+OPTIONS: A. 3 | B. 6 | C. 9 | D. 11 | E. 27
+ANSWER: A
+HINTS:
+- 先确定10和9。
+- 先加17得到27。
+- 再除以9。
+SOLUTION:
+The smallest two-digit positive integer is10 and the largest one-digit integer is9. Compute(10+17)÷9=27÷9=3.
+OTHER METHODS:
+- Write the entire calculation with parentheses before evaluating.
+TEACHING TIP:
+Use base10 positive integers; keep the addition inside the division's numerator.
+EXTENSION:
+Add26 to the smallest two-digit number, then divide by9. What is the result?
+EXTENSION ANSWER:
+4
+EXTENSION SOLUTION:
+4;(10+26)÷9=4.
+
+## Q13 · 符号计数
+Ancient symbols represent1,10 and60. Which notation represents124?
+OPTIONS: A. Notation A | B. Notation B | C. Notation C | D. Notation D | E. Notation E
+ANSWER: E
+HINTS:
+- 先用最大的60为单位。
+- 124减120余4。
+- 找两个60符号加四个1符号。
+SOLUTION:
+Decompose124=2×60+0×10+4×1. E has two60-symbols and four1-symbols. There is no10-symbol.
+OTHER METHODS:
+- Translate each option into a numeric sum.
+TEACHING TIP:
+Read the legend rather than inferring symbol value from size alone.
+EXTENSION:
+Write134 using the same symbols with the fewest symbols.
+EXTENSION ANSWER:
+Two60-symbols, one10-symbol and four1-symbols:120+10+4=134.
+EXTENSION SOLUTION:
+Two60-symbols, one10-symbol and four1-symbols:120+10+4=134.
+
+## Q14 · 时钟分组
+Which clock partition has four consecutive sums of the numbers in its parts?
+OPTIONS: A. Partition A | B. Partition B | C. Partition C | D. Partition D | E. Partition E
+ANSWER: B
+HINTS:
+- 先算1到12的总和78。
+- 四个连续和必须18、19、20、21。
+- 逐区核对B的分组。
+SOLUTION:
+The clock numbers sum1+…+12=78. If four consecutive sums are n,n+1,n+2,n+3, then4n+6=78, so they must be18,19,20,21. B groups(12,1,2,3),(9,10),(11,4,5),(6,7,8), giving18,19,20,21.
+OTHER METHODS:
+- Test each partition against the forced set18–21.
+TEACHING TIP:
+A curved region can contain separated labels around the rim; follow the actual boundary.
+EXTENSION:
+What four consecutive integers have sum86?
+EXTENSION ANSWER:
+20,21,22,23, since4n+6=86.
+EXTENSION SOLUTION:
+20,21,22,23, since4n+6=86.
+
+## Q15 · 周长分配
+Klara and Zoe have60 matches. Klara makes a triangle with6 matches per side. Zoe makes a rectangle from the rest with one side6 matches long. How many matches form each longer side?
+OPTIONS: A. 9 | B. 12 | C. 15 | D. 18 | E. 30
+ANSWER: C
+HINTS:
+- 三角形先用18根。
+- 剩42是矩形周长。
+- 减两条短边再除以2。
+SOLUTION:
+The triangle uses3×6=18, leaving42. The rectangle's two short sides use12, leaving30 for two long sides. Each long side uses15.
+OTHER METHODS:
+- Use rectangle semiperimeter42÷2=21 and subtract6.
+TEACHING TIP:
+A polygon side length in matches is not its full perimeter.
+EXTENSION:
+Start with66 matches and keep both given side lengths6. Find each long side.
+EXTENSION ANSWER:
+18
+EXTENSION SOLUTION:
+18;(66−18−12)÷2=18.
+
+## Q16 · 路径长度
+Miki, Niki and Oki jump at the same speed along the grid paths shown. Which statement is true?
+OPTIONS: A. Miki and Oki finish together | B. Niki finishes first | C. Oki finishes last | D. All finish together | E. Miki and Niki finish together
+ANSWER: E
+HINTS:
+- 把每段折线拆成单位格边。
+- 横向也要计入路程。
+- Miki和Niki等长、Oki较短。
+SOLUTION:
+Count unit grid edges: Miki's path has9 vertical and9 horizontal units, total18; Niki's has9 vertical and9 horizontal units, total18; Oki's has9 vertical and8 horizontal units, total17. With equal speeds Oki finishes first, and Miki and Niki finish together. Therefore E alone is true.
+OTHER METHODS:
+- Lay string along each path, straighten it, and compare.
+TEACHING TIP:
+Use equal-speed comparison only after counting all segments; do not compare just the picture heights. 5-Point Questions
+EXTENSION:
+Miki and Niki keep their equal path lengths, but Niki moves twice as fast. Who finishes first between them?
+EXTENSION ANSWER:
+Niki
+EXTENSION SOLUTION:
+Niki; time=distance÷speed, so Niki takes half Miki's time.
+
+## Q17 · 逻辑排除
+Mike, Nate, Oliver and Paul each own one different pet: cat, dog, goldfish, canary. Nate's has fur; Oliver's has four legs; Paul has a bird; Mike and Nate dislike cats. Which statement is NOT true?
+OPTIONS: A. Oliver has a dog | B. Paul has a canary | C. Mike has a goldfish | D. Oliver has a cat | E. Nate has a dog
+ANSWER: A
+HINTS:
+- 先确定Paul的鸟。
+- Nate有毛且不是猫，所以是狗。
+- Oliver是猫，Mike是鱼。
+SOLUTION:
+Paul=canary. Nate's furry pet is not a cat, so Nate=dog. Oliver's four-legged pet must then be cat. Mike=goldfish. Thus A is false and B–E are true.
+OTHER METHODS:
+- Make a person/pet elimination grid.
+TEACHING TIP:
+Underline NOT so students choose the false statement after solving the assignment.
+EXTENSION:
+Using the same clues, who has the dog?
+EXTENSION ANSWER:
+Nate.
+EXTENSION SOLUTION:
+Nate.
+
+## Q18 · 时间差
+Mary leaves6:55 and arrives7:32. Zoe needs12 minutes less and arrives7:45. When did Zoe leave?
+OPTIONS: A. 7:07 | B. 7:20 | C. 7:25 | D. 7:30 | E. 7:33
+ANSWER: B
+HINTS:
+- 跨整点计算Mary的37分钟。
+- Zoe少12分钟，需25分钟。
+- 从到校时刻倒减25分钟。
+SOLUTION:
+Mary travels37 minutes:5 to7:00 and32 more. Zoe takes37−12=25 minutes. Her departure is7:45−25 minutes=7:20.
+OTHER METHODS:
+- Use a timeline with departure, journey duration and arrival.
+TEACHING TIP:
+Separate a duration from a clock reading; do not subtract12 directly from the arrival time.
+EXTENSION:
+Zoe arrives8:00 with the same journey time. When did she leave?
+EXTENSION ANSWER:
+7:35
+EXTENSION SOLUTION:
+7:35;8:00−25 minutes=7:35.
+
+## Q19 · 立方体
+Robert uses half his cubes for a tunnel and some of the rest for a stepped pyramid. How many cubes remain?
+OPTIONS: A. 34 | B. 28 | C. 22 | D. 18 | E. 15
+ANSWER: D
+HINTS:
+- 隧道用外体减去贯通的洞。
+- 一半用64则另一半也64。
+- 金字塔按25、9、9、1、1、1分层。
+SOLUTION:
+The tunnel has a5×5 cross-section with a3×3 opening and depth4: (25−9)×4=64 cubes. Since this is half, another64 remain. The pyramid has a5×5 base layer, two3×3 layers and three1×1 layers:25+18+3=46. Leftover=64−46=18.
+OTHER METHODS:
+- Count tunnel layers as four identical frames of16 cubes.
+TEACHING TIP:
+Hidden cubes matter; the opening runs through the full depth, and the pyramid contains repeated layers.
+EXTENSION:
+Keep the same tunnel but remove the pyramid's topmost cube before building it. How many cubes remain?
+EXTENSION ANSWER:
+19
+EXTENSION SOLUTION:
+19; the pyramid then uses45, so64−45=19.
+
+## Q20 · 年龄倍数
+A daughter is3 years old; her mother is28 years older. How many years until the mother is three times the daughter's age?
+OPTIONS: A. 9 | B. 12 | C. 10 | D. 1 | E. 11
+ANSWER: E
+HINTS:
+- 年龄差始终28。
+- 三倍关系的差是女儿年龄的2倍。
+- 女儿14岁，还需11年。
+SOLUTION:
+The mother is31 now. Their difference stays28. At a3:1 age ratio the difference is two daughter-age units, so the daughter must be14. Wait14−3=11 years; the mother is then42.
+OTHER METHODS:
+- Solve31+t=3(3+t).
+TEACHING TIP:
+Both people age by the same amount; do not hold the mother's age fixed.
+EXTENSION:
+The daughter is5 with the same28-year gap. How long until the3:1 ratio?
+EXTENSION ANSWER:
+9 years
+EXTENSION SOLUTION:
+9 years; she must still reach14.
+
+## Q21 · 组合
+Choose a trio: one of2 violinists, one of2 pianists and one of2 drummers. How many trios must be tried to test every possibility?
+OPTIONS: A. 3 | B. 4 | C. 8 | D. 24 | E. 25
+ANSWER: C
+HINTS:
+- 按乐器分三步选择。
+- 每一步有2种。
+- 画三层树状图。
+SOLUTION:
+Each violinist can pair with either pianist and either drummer. Independent choices give2×2×2=8 trios.
+OTHER METHODS:
+- List binary labels111,112,121,122,211,212,221,222.
+TEACHING TIP:
+Roles are distinct; do not multiply by3! for ordering the same trio.
+EXTENSION:
+There are3 violinists,2 pianists and2 drummers. How many trios?
+EXTENSION ANSWER:
+12
+EXTENSION SOLUTION:
+12;3×2×2=12.
+
+## Q22 · 废料再利用
+One medal is cut from each square plate. Scraps from4 used plates make1 new plate. Starting with16 plates, what is the maximum number of medals?
+OPTIONS: A. 17 | B. 19 | C. 20 | D. 21 | E. 32
+ANSWER: D
+HINTS:
+- 第一轮16枚。
+- 16份废料可换4块板。
+- 4枚的废料再换1块板。
+SOLUTION:
+First make16 medals, whose scraps make4 plates. These give4 more medals; their scraps make1 plate, giving1 last medal. Total16+4+1=21. One scrap-unit remains, insufficient for another plate.
+OTHER METHODS:
+- Track whole plates and scrap-units separately; each recycling medal consumes a net3 scrap-units.
+TEACHING TIP:
+Include scraps generated from recycled plates, but do not borrow future material.
+EXTENSION:
+Start with20 plates under the same rule. What is the maximum?
+EXTENSION ANSWER:
+26
+EXTENSION SOLUTION:
+26;20 medals, then5, then1. After the last round2 scrap-units remain.
+
+## Q23 · 排名
+28 students finish with different scores. The number above Tom is half the number below him. What is his rank?
+OPTIONS: A. 6th | B. 7th | C. 8th | D. 9th | E. 10th
+ANSWER: E
+HINTS:
+- 总人数减去Tom。
+- 前后人数比1:2。
+- 前9人，所以第10。
+SOLUTION:
+Exclude Tom:27 students. Split them in ratio1:2, so9 are above and18 below. Rank=9+1=10.
+OTHER METHODS:
+- Solve a+2a=27 and then add one.
+TEACHING TIP:
+Scores differ, so ranks have no ties.
+EXTENSION:
+There are31 students with the same ratio. What is Tom's rank?
+EXTENSION ANSWER:
+11th
+EXTENSION SOLUTION:
+11th;30÷3=10 above.
+
+## Q24 · 数位
+An odometer reads187569, with all digits different. After how many more kilometers will it next show all distinct digits?
+OPTIONS: A. 777 | B. 12431 | C. 431 | D. 21 | E. 11
+ANSWER: D
+HINTS:
+- 先看个位进位后的前缀。
+- 18757x和18758x都已有重复。
+- 187590首次全部不同。
+SOLUTION:
+187570–187579 all repeat7 in the fixed prefix18757. 187580–187589 repeat8 in prefix18758. The next reading187590 has digits1,8,7,5,9,0 all distinct. Difference187590−187569=21. No smaller positive increment works.
+OTHER METHODS:
+- Scan short blocks sharing a repeated prefix rather than checking every number.
+TEACHING TIP:
+All-different is a condition on every digit, and the current valid reading is excluded by 'again after traveling'.
+EXTENSION:
+Starting from187590, after how many kilometers is the next all-distinct reading?
+EXTENSION ANSWER:
+2
+EXTENSION SOLUTION:
+2;187591 repeats1, while187592 has six different digits.

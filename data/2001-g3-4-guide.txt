@@ -1,0 +1,507 @@
+# Math Kangaroo 2001 Grade 3–4 teaching guide
+
+Source: Math Kangaroo G3-4.docx (provided by the user).
+
+## Q1 · 蜡烛
+Julia has four candles, each lasting3 hours. Two were partly burned near a window and blown out, after30 minutes and later after another hour. She then lights all four. How long until the last candle burns out?
+OPTIONS: A. 1 hr30 min | B. 2 hr | C. 3 hr | D. 7 hr30 min | E. 8 hr
+ANSWER: C
+HINTS:
+- 找出从未点过的蜡烛。
+- 同时燃烧看最长剩余时间。
+- 两支新蜡烛还可燃烧3小时。
+SOLUTION:
+Two candles have not yet burned at all. Once all four are lit, those two last the full3 hours; the partly used candles finish sooner. Thus the last burns out3 hours later.
+OTHER METHODS:
+- Compare remaining-life bars rather than adding lengths of time.
+TEACHING TIP:
+The earlier timing does not affect the maximum because two candles remain new.
+EXTENSION:
+Each new candle lasts4 hours, and two are still unused at the final lighting. When does the last go out?
+EXTENSION ANSWER:
+4 hours, provided the partly burned candles have at most4 hours left.
+EXTENSION SOLUTION:
+4 hours, provided the partly burned candles have at most4 hours left.
+
+## Q2 · 断棒
+Joseph has7 sticks and breaks one into two pieces. How many sticks or pieces does he now have?
+OPTIONS: A. 5 | B. 6 | C. 7 | D. 8 | E. 9
+ANSWER: D
+HINTS:
+- 取走被折的一根。
+- 放回两段。
+- 总数净增加1。
+SOLUTION:
+One old stick is replaced by two pieces:7−1+2=8. One break adds one piece.
+OTHER METHODS:
+- Model seven paper strips and cut one.
+TEACHING TIP:
+Count pieces, not the original named objects.
+EXTENSION:
+He breaks3 different sticks once each. How many pieces are there?
+EXTENSION ANSWER:
+10
+EXTENSION SOLUTION:
+10;7+3=10.
+
+## Q3 · 面积
+A chocolate heart is drawn on a square grid. Each square weighs10 g. What is the whole heart's weight?
+OPTIONS: A. 340 grams | B. 360 grams | C. 380 grams | D. 400 grams | E. 420 grams
+ANSWER: D
+HINTS:
+- 完整格与半格分别数。
+- 两个半格拼成一格。
+- 逐行面积相加得到40。
+SOLUTION:
+Pair the diagonal half-squares. From top to bottom the eight horizontal strips have areas2,6,8,8,7,5,3,1 unit squares. Sum40, giving40×10=400 g.
+OTHER METHODS:
+- Reflect or rearrange the half-squares into full squares.
+TEACHING TIP:
+Count area, not just the number of grid cells touched by the outline.
+EXTENSION:
+The same heart uses chocolate weighing12 g per square. What is its weight?
+EXTENSION ANSWER:
+480 g
+EXTENSION SOLUTION:
+480 g;40×12=480.
+
+## Q4 · 库存
+There are12 pairs of shoes on each of10 shelves. Three centipedes buy30 pairs each and two buy5 pairs each. How many pairs remain?
+OPTIONS: A. 10 | B. 15 | C. 20 | D. 25 | E. 30
+ANSWER: C
+HINTS:
+- 先算总库存。
+- 两类顾客分别算购买量。
+- 120−90−10。
+SOLUTION:
+Initial stock=12×10=120 pairs. Sold=3×30+2×5=100 pairs. Remaining=20 pairs.
+OTHER METHODS:
+- Subtract purchases customer by customer.
+TEACHING TIP:
+Keep the unit as pairs throughout.
+EXTENSION:
+There are13 pairs per shelf instead. How many pairs remain after the same purchases?
+EXTENSION ANSWER:
+30 pairs
+EXTENSION SOLUTION:
+30 pairs;130−100=30.
+
+## Q5 · 倍增
+Kaya gives her mother1 cup of berries on day1, then twice the previous day's amount each day for5 days. How many cups in total?
+OPTIONS: A. 5 | B. 31 | C. 21 | D. 11 | E. 16
+ANSWER: B
+HINTS:
+- 列出五天数量。
+- 每天翻倍。
+- 求总和而不是第五天数量。
+SOLUTION:
+Daily amounts are1,2,4,8,16. Their sum is31;16 is only the final day's contribution.
+OTHER METHODS:
+- For these powers of2, total through a day is twice the last amount minus1.
+TEACHING TIP:
+Use a day/amount/running-total table.
+EXTENSION:
+Keep doubling for6 days. What is the total?
+EXTENSION ANSWER:
+63 cups
+EXTENSION SOLUTION:
+63 cups;31+32=63.
+
+## Q6 · 运算顺序
+Which expression is correct? [The following reproduces the printed PDF; see the correction below.]
+OPTIONS: A. 12+(4+8)=11 | B. 8×2+3=40 | C. 2×3+4×5=50 | D. (10+8)+2=14 | E. 18−6+3=16
+ANSWER: E（原卷无正确选项）
+HINTS:
+- 逐项按运算顺序核算。
+- 加减同级从左往右。
+- E左边是15，与16不等。
+SOLUTION:
+As printed, none is correct: the left sides equal24,19,26,20,15 respectively. The source answer key says E, but18−6+3=15, not16. A possible intended repair is18−6÷3=16; this is a classroom correction, not a verified reading of the original.
+OTHER METHODS:
+- Alternatively change E's plus sign to division, producing18−6÷3=16.
+TEACHING TIP:
+Do not mark an invalid equality correct just because of the key. Show students the printed-error note; distinguish the source key E from the verified result.
+EXTENSION:
+Correct only E's right-hand side, keeping its printed operations. What should it be?
+EXTENSION ANSWER:
+15
+EXTENSION SOLUTION:
+15;18−6+3=12+3=15.
+
+## Q7 · 整除
+There are19 girls and12 boys. At least how many students must join so six equal-sized groups can be made?
+OPTIONS: A. 1 | B. 2 | C. 3 | D. 4 | E. 5
+ANSWER: E
+HINTS:
+- 先算总人数31。
+- 寻找不小于31的6的倍数。
+- 36−31。
+SOLUTION:
+There are31 students. The next multiple of6 is36, requiring36−31=5 additional students.
+OTHER METHODS:
+- Divide31 by6: remainder1, so another5 completes a group-size multiple.
+TEACHING TIP:
+Six equal groups need a divisible total; groups need not have equal gender mixes.
+EXTENSION:
+There are20 girls and12 boys. How many must join?
+EXTENSION ANSWER:
+4
+EXTENSION SOLUTION:
+4;32 rises to36.
+
+## Q8 · 间隔
+Four14 cm sticks lie in a row with three equal gaps; the total span is80 cm. How long is one gap?
+OPTIONS: A. 1 cm | B. 2 cm | C. 3 cm | D. 5 cm | E. 8 cm
+ANSWER: E
+HINTS:
+- 算木棒占用长度。
+- 四根之间只有三个间隔。
+- 24÷3。
+SOLUTION:
+Sticks occupy4×14=56 cm. Gaps occupy80−56=24 cm. Four sticks have three internal gaps, so24÷3=8 cm.
+OTHER METHODS:
+- Write14+g+14+g+14+g+14=80.
+TEACHING TIP:
+Demonstrate n objects have n−1 internal gaps. 4-Point Questions
+EXTENSION:
+Four14 cm sticks span83 cm. Find each equal gap.
+EXTENSION ANSWER:
+9 cm
+EXTENSION SOLUTION:
+9 cm; (83−56)÷3=9.
+
+## Q9 · 年龄
+Bobby was born on Abby's third birthday. How many years later will Abby be twice Bobby's age?
+OPTIONS: A. 1 | B. 2 | C. 3 | D. 4 | E. 5
+ANSWER: C
+HINTS:
+- 两人永远差3岁。
+- 两倍关系时差等于小者年龄。
+- 小者3岁，大者6岁。
+SOLUTION:
+Their age difference is always3 years. When Bobby is3 and Abby6, Abby is twice his age. This happens3 years after Bobby's birth.
+OTHER METHODS:
+- Use an age table or solve t+3=2t.
+TEACHING TIP:
+The reference point is Bobby's birth, not an unspecified present date.
+EXTENSION:
+Bobby was born on Abby's fourth birthday. How many years until Abby is twice his age?
+EXTENSION ANSWER:
+4 years
+EXTENSION SOLUTION:
+4 years; ages4 and8.
+
+## Q10 · 高差
+A cave's lowest point is221 m below its entrance and its highest point419 m above it. What is the distance between the two?
+OPTIONS: A. 198 m | B. 221 m | C. 419 m | D. 640 m | E. 650 m
+ANSWER: D
+HINTS:
+- 画入口为0的数轴。
+- 两点在0两侧。
+- 221+419。
+SOLUTION:
+The path on the vertical number line runs221 m up to entrance level and another419 m to the highest point. Total640 m.
+OTHER METHODS:
+- Compute419−(−221)=640.
+TEACHING TIP:
+Use signed height or two positive distances consistently.
+EXTENSION:
+The lower point is250 m below and upper point400 m above. Find the vertical range.
+EXTENSION ANSWER:
+650 m
+EXTENSION SOLUTION:
+650 m;250+400=650.
+
+## Q11 · 最值
+20 candies are shared among children. Each gets at least1, and all amounts differ. What is the greatest number of children?
+OPTIONS: A. 20 | B. 10 | C. 8 | D. 6 | E. 5
+ANSWER: E
+HINTS:
+- 要人数多就先用最小份数。
+- 六人的最低总数21。
+- 给出五人的可行分法。
+SOLUTION:
+Six children need at least1+2+3+4+5+6=21 candies, too many. Five are possible:1,2,3,4,10 sum20 and are distinct. Maximum5.
+OTHER METHODS:
+- Use cumulative triangular numbers and then exhibit a distribution.
+TEACHING TIP:
+A lower bound alone proves impossibility; also provide a construction for the claimed maximum.
+EXTENSION:
+With21 candies and the same rules, what is the maximum?
+EXTENSION ANSWER:
+6
+EXTENSION SOLUTION:
+6;1+2+3+4+5+6=21, while seven need28.
+
+## Q12 · 立体旋转
+Which solid differs from the others?
+OPTIONS: A. Solid A | B. Solid B | C. Solid C | D. Solid D | E. Solid E
+ANSWER: E
+HINTS:
+- 先找最长直线作参照。
+- 对齐后比较两端分支。
+- 旋转不能把镜像结构变成原结构。
+SOLUTION:
+Rotate each solid mentally so its longest straight run points in the same direction. A–D have the same relative placement of the two end branches. E has the reversed branch orientation and cannot be obtained by a rigid rotation.
+OTHER METHODS:
+- Build one model and rotate it to match A–D, then compare E.
+TEACHING TIP:
+Compare cube adjacency and end-branch direction, not the page silhouette.
+EXTENSION:
+Make solid A from cubes. If the whole model is rotated, do its cube connections or branch order change?
+EXTENSION ANSWER:
+Connections and handedness do not change
+EXTENSION SOLUTION:
+Connections and handedness do not change; it remains the same solid.
+
+## Q13 · 双向编号
+Ella is in the17th train car from the front and Bella in the34th from the rear. They are in the same car. How many cars?
+OPTIONS: A. 48 | B. 49 | C. 50 | D. 51 | E. 52
+ANSWER: C
+HINTS:
+- 同一车厢被两边都数到。
+- 先相加。
+- 再减重复的1节。
+SOLUTION:
+17+34 counts their shared car twice. Subtract one:17+34−1=50.
+OTHER METHODS:
+- Count16 cars before, one shared, and33 after.
+TEACHING TIP:
+Use an actual row of counters to show the overlap.
+EXTENSION:
+The shared car is12th from the front and20th from the rear. How many cars?
+EXTENSION ANSWER:
+31
+EXTENSION SOLUTION:
+31;12+20−1=31.
+
+## Q14 · 转移
+Adam and Bart initially have equal chestnut counts. Adam gives Bart half of his own chestnuts. How many times as many does Bart then have as Adam?
+OPTIONS: A. 2 | B. 3 | C. 4 | D. 5 | E. Depends on the initial amount
+ANSWER: B
+HINTS:
+- 把每人的原数量分两半。
+- Adam剩1份，Bart有3份。
+- 比的是转移后的数量。
+SOLUTION:
+Use2 units each initially. Adam transfers1 unit, leaving1; Bart now has3. Ratio3:1, independent of the initial even positive count.
+OTHER METHODS:
+- Try20 each: Adam10, Bart30.
+TEACHING TIP:
+Total chestnuts are conserved; state divisibility if using whole chestnuts.
+EXTENSION:
+Adam gives Bart one third of his chestnuts. What is Bart-to-Adam ratio now?
+EXTENSION ANSWER:
+2:1
+EXTENSION SOLUTION:
+2:1; begin with3 units each, end with2 and4.
+
+## Q15 · 顶点
+Squares and triangles have17 vertices altogether. How many triangles are there?
+OPTIONS: A. 1 | B. 2 | C. 3 | D. 4 | E. 5
+ANSWER: C
+HINTS:
+- 三角形3顶点，正方形4顶点。
+- 从17减去3t。
+- 余数要是4的倍数。
+SOLUTION:
+If t triangles and s squares,3t+4s=17. Test t=1,2,3,4,5: only t=3 leaves8, divisible by4, giving s=2.
+OTHER METHODS:
+- Reduce modulo4:3t≡1, so t≡3 mod4.
+TEACHING TIP:
+Count separate shape vertices; shapes do not share vertices on the table.
+EXTENSION:
+There are21 vertices and at least one of each shape. How many triangles?
+EXTENSION ANSWER:
+3
+EXTENSION SOLUTION:
+3;3×3+4×3=21. The other nonnegative solution t=7 has no square and is excluded.
+
+## Q16 · 火柴
+What is the least number of matches to add to obtain exactly11 squares?
+OPTIONS: A. 2 | B. 3 | C. 4 | D. 5 | E. 6
+ANSWER: A
+HINTS:
+- 先按边长数原来的8个。
+- 找左上内部的缺口。
+- 两根补出3个小正方形。
+SOLUTION:
+Use grid coordinates with top-left(0,0), rightward x, downward y. Add(2,1)–(2,2) and(1,2)–(2,2). These complete three unit squares. The final counts are6 unit squares,2 squares of side2 and3 squares of side3:11 total. Initially there are8; no single missing unit edge completes three squares, so one match cannot suffice.
+OTHER METHODS:
+- Mark missing unit edges and tally how many squares each would complete.
+TEACHING TIP:
+Use the coordinates to place the two matches unambiguously; count composite squares. 5-Point Questions
+EXTENSION:
+For that same completed figure, how many squares have side at least2 units?
+EXTENSION ANSWER:
+5
+EXTENSION SOLUTION:
+5; two of side2 and three of side3.
+
+## Q17 · 镜像
+Numbers1,2,3,4 are shown with mirror reflections. Which picture comes next?
+OPTIONS: A. Figure A | B. Figure B | C. Figure C | D. Figure D | E. Figure E
+ANSWER: C
+HINTS:
+- 先找镜轴方向。
+- 下一项应是数字5。
+- 将5上下反射并组合。
+SOLUTION:
+The examples combine each numeral with its reflection across a horizontal line. Apply the same reflection to5, preserving its position relative to the mirror line. The result is figure C.
+OTHER METHODS:
+- Fold tracing paper along a horizontal line.
+TEACHING TIP:
+Reflection reverses above/below; it is not simply rotating a numeral.
+EXTENSION:
+Draw6 together with its reflection across the same horizontal mirror line.
+EXTENSION ANSWER:
+A vertically reflected pair of6s
+EXTENSION SOLUTION:
+A vertically reflected pair of6s; corresponding points lie equally far above and below the line.
+
+## Q18 · 折叠剪纸
+Which napkin can result from the folded paper cut-out?
+OPTIONS: A. Napkin A | B. Napkin B | C. Napkin C | D. Napkin D | E. Napkin E
+ANSWER: C
+HINTS:
+- 先看切口是否靠折边。
+- 展开一次就反射一次。
+- 孔的位置和形状都要匹配。
+SOLUTION:
+Unfold one crease at a time and reflect the small cut across each crease. The notch at the folded edge produces two interior diamond-shaped holes, as in C, rather than square holes or edge notches.
+OTHER METHODS:
+- Use a folded paper model and cut the notch.
+TEACHING TIP:
+Track number, location and shape of holes; preserve the original folding sequence.
+EXTENSION:
+If the cut is repeated with a larger triangular notch at the same place, how do the unfolded holes change?
+EXTENSION ANSWER:
+There are still two diamond holes at corresponding symmetric positions, but they are larger, provided they do not meet an outer edge.
+EXTENSION SOLUTION:
+There are still two diamond holes at corresponding symmetric positions, but they are larger, provided they do not meet an outer edge.
+
+## Q19 · 增长差
+A Math Club has12 boys and8 girls. Each week1 boy and2 girls join. How many total members when the counts become equal?
+OPTIONS: A. 20 | B. 24 | C. 28 | D. 32 | E. 36
+ANSWER: D
+HINTS:
+- 初始人数差4。
+- 每周差距缩小1。
+- 四周后各16人。
+SOLUTION:
+The initial gap is4. Girls gain one more member per week than boys, so equality takes4 weeks. Counts become16 and16; total32.
+OTHER METHODS:
+- Solve12+w=8+2w.
+TEACHING TIP:
+Use difference growth, not total growth, to find the time.
+EXTENSION:
+Start with14 boys and8 girls and the same weekly intake. What is the total at equality?
+EXTENSION ANSWER:
+40
+EXTENSION SOLUTION:
+40; after6 weeks there are20 boys and20 girls.
+
+## Q20 · 数位和
+How many three-digit numbers have digit sum4?
+OPTIONS: A. 10 | B. 9 | C. 8 | D. 7 | E. 6
+ANSWER: A
+HINTS:
+- 百位至少1。
+- 按百位分类。
+- 每类分别4、3、2、1个。
+SOLUTION:
+Hundreds digit1 leaves a two-digit-position sum3, giving4 possibilities; hundreds2 gives3; hundreds3 gives2; hundreds4 gives1. Total4+3+2+1=10.
+OTHER METHODS:
+- List100-based,200-based,300-based and400-based cases.
+TEACHING TIP:
+Allow zeros in tens and units; do not allow zero hundreds.
+EXTENSION:
+How many three-digit numbers have digit sum5?
+EXTENSION ANSWER:
+15
+EXTENSION SOLUTION:
+15;5+4+3+2+1=15.
+
+## Q21 · 拼接
+Two square towels each have perimeter720 cm. Three identical rectangular towels fill the remaining strip to make the large square shown. What is one rectangle's perimeter?
+OPTIONS: A. 600 cm | B. 560 cm | C. 440 cm | D. 360 cm | E. 300 cm
+ANSWER: A
+HINTS:
+- 先求小正方形边长180。
+- 大正方形边长360。
+- 下方每块宽120、高180。
+SOLUTION:
+Each small square side is720÷4=180 cm. Two side-by-side squares make the large square width360, hence height360. The lower strip has height180 and is split into three equal widths120. Rectangle perimeter=2×(180+120)=600 cm.
+OTHER METHODS:
+- Use the ratio rectangle sides=3:2, or P_rectangle=(5/6)P_square.
+TEACHING TIP:
+The entire outside shape is square; use that to determine the lower strip's height.
+EXTENSION:
+Each square towel's perimeter becomes600 cm with the same arrangement. Find one rectangle's perimeter.
+EXTENSION ANSWER:
+500 cm
+EXTENSION SOLUTION:
+500 cm; square side150, rectangle150 by100.
+
+## Q22 · 和差
+Todd has as much money as Will and Kevin together. Will has$10 less than Kevin. They have$40 altogether. How much does Will have?
+OPTIONS: A. $4 | B. $5 | C. $10 | D. $15 | E. $20
+ANSWER: B
+HINTS:
+- 先把Todd与另外两人分两半。
+- Will和Kevin合计20、差10。
+- 较少数=(20−10)÷2。
+SOLUTION:
+Todd is half the total, so Todd=$20 and Will+Kevin=$20. Remove the$10 difference; the other$10 splits equally, giving Will=$5 and Kevin=$15.
+OTHER METHODS:
+- Let Will=w, Kevin=w+10, Todd=2w+10; solve4w+20=40.
+TEACHING TIP:
+Check both the total-money relation and the difference.
+EXTENSION:
+The total is$60 and the difference stays$10. How much does Will have?
+EXTENSION ANSWER:
+$10
+EXTENSION SOLUTION:
+$10; Will+Kevin=30, so Will=(30−10)÷2.
+
+## Q23 · 周期取物
+Each of three baskets has11 candy bars. Remove one at a time: left, middle, right, middle, then repeat. When middle is empty, what is the largest number left in one basket?
+OPTIONS: A. 1 | B. 2 | C. 5 | D. 6 | E. 11
+ANSWER: D
+HINTS:
+- 四步一周期。
+- 五轮后中篮剩1。
+- 再取左、中，立刻停止。
+SOLUTION:
+A cycle removes(1,2,1) from(left,middle,right). After5 cycles, counts are(6,1,6). The next left removal gives(5,1,6), then middle gives(5,0,6). The largest remaining count is6.
+OTHER METHODS:
+- Track only the final incomplete cycle after using whole cycles.
+TEACHING TIP:
+Stopping mid-cycle matters; do not finish a cycle after middle empties.
+EXTENSION:
+Start with12 bars in each basket instead. What is the largest remainder when middle empties?
+EXTENSION ANSWER:
+6
+EXTENSION SOLUTION:
+6; after6 full cycles the counts are(6,0,6).
+
+## Q24 · 骰子滚动
+A die has opposite faces summing to7. Roll it along the arrows to the starred square. What is on top?
+OPTIONS: A. 5 | B. 4 | C. 3 | D. 1 | E. Other number
+ANSWER: E
+HINTS:
+- 先补齐相对面。
+- 每步更新顶面和运动方向两侧面。
+- 沿右、后、右、后滚动。
+SOLUTION:
+Initially top=3, front=1, right=2; bottom=4, back=6, left=5. The arrows alternate one step right, away, right, away. Top faces after these rolls are5,1,4,2. The final top is2, so choose E.
+OTHER METHODS:
+- Use a labelled cube and physically follow the arrows.
+TEACHING TIP:
+Keep a fixed board orientation; turning the page is different from rolling the die.
+EXTENSION:
+What is the top after only the first two rolls along the same route?
+EXTENSION ANSWER:
+1
+EXTENSION SOLUTION:
+1; first right roll brings5 up, then the away roll brings the original front1 up.
