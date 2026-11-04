@@ -1,0 +1,9 @@
+Math Kangaroo 1998 (Grade 5–6) — source snapshot
+
+The question text and answer choices are transcribed from the local original paper:
+past papers/US Kangaroo G5-6/Math  Kangaroo G5-6 1998.pdf
+
+Answer key:
+B A B C A E C D D C B B D C D C D A C D D E C C B E B C D A
+
+Original page images are stored under assets/1998-g5-6/.
