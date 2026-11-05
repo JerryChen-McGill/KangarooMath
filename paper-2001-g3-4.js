@@ -83,7 +83,7 @@ KANGAROO_DATA["2001-g3-4"] = [
     "solution": "Pair the diagonal half-squares. From top to bottom the eight horizontal strips have areas2,6,8,8,7,5,3,1 unit squares. Sum40, giving40×10=400 g.",
     "tip": "Count area, not just the number of grid cells touched by the outline.",
     "answer": "D",
-    "figure": "assets/2001-g3-4/page-1.png"
+    "figure": "assets/2001-g3-4/q3.png"
   },
   {
     "no": 4,
@@ -227,7 +227,7 @@ KANGAROO_DATA["2001-g3-4"] = [
     "solution": "Sticks occupy4×14=56 cm. Gaps occupy80−56=24 cm. Four sticks have three internal gaps, so24÷3=8 cm.",
     "tip": "Demonstrate n objects have n−1 internal gaps. 4-Point Questions",
     "answer": "E",
-    "figure": "assets/2001-g3-4/page-2.png"
+    "figure": "assets/2001-g3-4/q8.png"
   },
   {
     "no": 9,
@@ -340,7 +340,7 @@ KANGAROO_DATA["2001-g3-4"] = [
     "solution": "Rotate each solid mentally so its longest straight run points in the same direction. A–D have the same relative placement of the two end branches. E has the reversed branch orientation and cannot be obtained by a rigid rotation.",
     "tip": "Compare cube adjacency and end-branch direction, not the page silhouette.",
     "answer": "E",
-    "figure": "assets/2001-g3-4/page-2.png"
+    "figure": "assets/2001-g3-4/q12.png"
   },
   {
     "no": 13,
@@ -453,7 +453,7 @@ KANGAROO_DATA["2001-g3-4"] = [
     "solution": "Use grid coordinates with top-left(0,0), rightward x, downward y. Add(2,1)–(2,2) and(1,2)–(2,2). These complete three unit squares. The final counts are6 unit squares,2 squares of side2 and3 squares of side3:11 total. Initially there are8; no single missing unit edge completes three squares, so one match cannot suffice.",
     "tip": "Use the coordinates to place the two matches unambiguously; count composite squares. 5-Point Questions",
     "answer": "A",
-    "figure": "assets/2001-g3-4/page-3.png"
+    "figure": "assets/2001-g3-4/q16.png"
   },
   {
     "no": 17,
@@ -482,7 +482,7 @@ KANGAROO_DATA["2001-g3-4"] = [
     "solution": "The examples combine each numeral with its reflection across a horizontal line. Apply the same reflection to5, preserving its position relative to the mirror line. The result is figure C.",
     "tip": "Reflection reverses above/below; it is not simply rotating a numeral.",
     "answer": "C",
-    "figure": "assets/2001-g3-4/page-3.png"
+    "figure": "assets/2001-g3-4/q17.png"
   },
   {
     "no": 18,
@@ -511,7 +511,7 @@ KANGAROO_DATA["2001-g3-4"] = [
     "solution": "Unfold one crease at a time and reflect the small cut across each crease. The notch at the folded edge produces two interior diamond-shaped holes, as in C, rather than square holes or edge notches.",
     "tip": "Track number, location and shape of holes; preserve the original folding sequence.",
     "answer": "C",
-    "figure": "assets/2001-g3-4/page-4.png"
+    "figure": "assets/2001-g3-4/q18.png"
   },
   {
     "no": 19,
@@ -596,7 +596,7 @@ KANGAROO_DATA["2001-g3-4"] = [
     "solution": "Each small square side is720÷4=180 cm. Two side-by-side squares make the large square width360, hence height360. The lower strip has height180 and is split into three equal widths120. Rectangle perimeter=2×(180+120)=600 cm.",
     "tip": "The entire outside shape is square; use that to determine the lower strip's height.",
     "answer": "A",
-    "figure": "assets/2001-g3-4/page-4.png"
+    "figure": "assets/2001-g3-4/q21.png"
   },
   {
     "no": 22,
@@ -681,7 +681,7 @@ KANGAROO_DATA["2001-g3-4"] = [
     "solution": "Initially top=3, front=1, right=2; bottom=4, back=6, left=5. The arrows alternate one step right, away, right, away. Top faces after these rolls are5,1,4,2. The final top is2, so choose E.",
     "tip": "Keep a fixed board orientation; turning the page is different from rolling the die.",
     "answer": "E",
-    "figure": "assets/2001-g3-4/page-5.png"
+    "figure": "assets/2001-g3-4/q24.png"
   }
 ];
 

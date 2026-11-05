@@ -27,7 +27,7 @@ KANGAROO_DATA["2002-g3-4"] = [
     "solution": "The missing tile must continue every contour where it meets the neighboring tiles. B matches the kangaroo's neck boundary and the short contour entering at the top; the other tiles introduce broken or misplaced lines.",
     "tip": "Keep each choice in its printed orientation unless a rotation is explicitly allowed.",
     "answer": "B",
-    "figure": "assets/2002-g3-4/page-1.png"
+    "figure": "assets/2002-g3-4/q1.png"
   },
   {
     "no": 2,
@@ -112,7 +112,7 @@ KANGAROO_DATA["2002-g3-4"] = [
     "solution": "Trace the actual region boundaries. A is a square, B a rectangle, and the two differently proportioned L-shaped pieces match C and E after rotation. No region has D's U-shaped outline.",
     "tip": "Do not confuse a union of several regions with one original piece.",
     "answer": "D",
-    "figure": "assets/2002-g3-4/page-1.png"
+    "figure": "assets/2002-g3-4/q4.png"
   },
   {
     "no": 5,
@@ -225,7 +225,7 @@ KANGAROO_DATA["2002-g3-4"] = [
     "solution": "A single straight crease reflects one connected part of the sheet onto the other. Trace the reflected rectangle boundaries: A,C,D,E can be realized by suitable folds, whereas B's inner notch and diagonal outer tip cannot be produced together by one fold.",
     "tip": "Evaluate the full visible union of the folded layers, not only the folded flap. 4-Point Questions",
     "answer": "B",
-    "figure": "assets/2002-g3-4/page-2.png"
+    "figure": "assets/2002-g3-4/q8.png"
   },
   {
     "no": 9,
@@ -310,7 +310,7 @@ KANGAROO_DATA["2002-g3-4"] = [
     "solution": "Follow each candidate through the castle outline. A matches the stepped section; B and D match sloping and vertical corners; E matches the double curved tower top. C's two roof peaks separated by a deep rectangular notch do not appear as one continuous part.",
     "tip": "A partial resemblance at one corner is insufficient; match the whole connected segment.",
     "answer": "C",
-    "figure": "assets/2002-g3-4/page-3.png"
+    "figure": "assets/2002-g3-4/q11.png"
   },
   {
     "no": 12,
@@ -367,7 +367,7 @@ KANGAROO_DATA["2002-g3-4"] = [
     "solution": "Decompose124=2×60+0×10+4×1. E has two60-symbols and four1-symbols. There is no10-symbol.",
     "tip": "Read the legend rather than inferring symbol value from size alone.",
     "answer": "E",
-    "figure": "assets/2002-g3-4/page-3.png"
+    "figure": "assets/2002-g3-4/q13.png"
   },
   {
     "no": 14,
@@ -396,7 +396,7 @@ KANGAROO_DATA["2002-g3-4"] = [
     "solution": "The clock numbers sum1+…+12=78. If four consecutive sums are n,n+1,n+2,n+3, then4n+6=78, so they must be18,19,20,21. B groups(12,1,2,3),(9,10),(11,4,5),(6,7,8), giving18,19,20,21.",
     "tip": "A curved region can contain separated labels around the rim; follow the actual boundary.",
     "answer": "B",
-    "figure": "assets/2002-g3-4/page-3.png"
+    "figure": "assets/2002-g3-4/q14.png"
   },
   {
     "no": 15,
@@ -453,7 +453,7 @@ KANGAROO_DATA["2002-g3-4"] = [
     "solution": "Count unit grid edges: Miki's path has9 vertical and9 horizontal units, total18; Niki's has9 vertical and9 horizontal units, total18; Oki's has9 vertical and8 horizontal units, total17. With equal speeds Oki finishes first, and Miki and Niki finish together. Therefore E alone is true.",
     "tip": "Use equal-speed comparison only after counting all segments; do not compare just the picture heights. 5-Point Questions",
     "answer": "E",
-    "figure": "assets/2002-g3-4/page-4.png"
+    "figure": "assets/2002-g3-4/q16.png"
   },
   {
     "no": 17,
@@ -538,7 +538,7 @@ KANGAROO_DATA["2002-g3-4"] = [
     "solution": "The tunnel has a5×5 cross-section with a3×3 opening and depth4: (25−9)×4=64 cubes. Since this is half, another64 remain. The pyramid has a5×5 base layer, two3×3 layers and three1×1 layers:25+18+3=46. Leftover=64−46=18.",
     "tip": "Hidden cubes matter; the opening runs through the full depth, and the pyramid contains repeated layers.",
     "answer": "D",
-    "figure": "assets/2002-g3-4/page-5.png"
+    "figure": "assets/2002-g3-4/q19.png"
   },
   {
     "no": 20,

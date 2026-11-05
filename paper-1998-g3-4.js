@@ -82,7 +82,8 @@ KANGAROO_DATA["1998-g3-4"] = [
     ],
     "solution": "There are six small triangles at the six tips and two large original triangles. Total: 6+2=8. The central hexagon is not a triangle.",
     "tip": "Count composite triangles as well as individual regions; avoid counting the central hexagon.",
-    "answer": "C"
+    "answer": "C",
+    "figure": "assets/1998-g3-4/q3.png"
   },
   {
     "no": 4,
@@ -195,7 +196,7 @@ KANGAROO_DATA["1998-g3-4"] = [
     "solution": "The central column has height 4. Each of four arms has columns of heights 3, 2 and 1. Total=4+4×(3+2+1)=28; the central column is counted once.",
     "tip": "Build a cross-shaped model and include hidden supporting cubes.",
     "answer": "D",
-    "figure": "assets/1998-g3-4/page-1.png"
+    "figure": "assets/1998-g3-4/q7.png"
   },
   {
     "no": 8,
@@ -252,7 +253,7 @@ KANGAROO_DATA["1998-g3-4"] = [
     "solution": "Name the upper-left, lower-left, upper-right and lower-right junctions A,B,C,D. Edges: SA=2, SB=8, AB=6, AC=2, BC=3, BD=2, CD=6, CF=7, DF=1. The route S–A–C–B–D–F costs 2+2+3+2+1=10. Best distances to A,C,B,D,F are 2,4,7,9,10.",
     "tip": "Shortest-looking routes need not have the smallest total time; arrows are not specified, so use the undirected paths.",
     "answer": "C",
-    "figure": "assets/1998-g3-4/page-2.png"
+    "figure": "assets/1998-g3-4/q9.png"
   },
   {
     "no": 10,
@@ -365,7 +366,7 @@ KANGAROO_DATA["1998-g3-4"] = [
     "solution": "Rotate Z and match its irregular cut boundary to each candidate. A has the complementary rises and dips, and the two straight outside boundaries complete a square without gaps or overlaps.",
     "tip": "Permit rotations; do not assume that merely similar jagged edges must fit.",
     "answer": "A",
-    "figure": "assets/1998-g3-4/page-2.png"
+    "figure": "assets/1998-g3-4/q13.png"
   },
   {
     "no": 14,
@@ -450,7 +451,7 @@ KANGAROO_DATA["1998-g3-4"] = [
     "solution": "Use the relative positions of the hands, not the page orientation. The long minute hand points exactly to an hour tick and the short hand to another tick, three intervals away. Of the choices, 3:00 has the correct hand lengths and clockwise order. At9:00 the short hand would lie on the opposite side of the minute hand.",
     "tip": "Use minute-hand alignment and clockwise order; a right angle alone cannot distinguish3:00 from9:00. 5-Point Questions",
     "answer": "E",
-    "figure": "assets/1998-g3-4/page-3.png"
+    "figure": "assets/1998-g3-4/q16.png"
   },
   {
     "no": 17,
@@ -479,7 +480,7 @@ KANGAROO_DATA["1998-g3-4"] = [
     "solution": "(5+x)/2=6 gives x=7. The right middle box is(7+9)/2=8, and the top is(6+8)/2=7.",
     "tip": "Check the example's average rule; do not substitute the usual addition-pyramid rule.",
     "answer": "B",
-    "figure": "assets/1998-g3-4/page-3.png"
+    "figure": "assets/1998-g3-4/q17.png"
   },
   {
     "no": 18,
@@ -564,7 +565,7 @@ KANGAROO_DATA["1998-g3-4"] = [
     "solution": "Each side contains100÷5=20 unit intervals. There are21 vertical lines with20 matches each and21 horizontal lines with20 each. Total2×21×20=840.",
     "tip": "Use a2×2 grid to demonstrate why adjacent cells share matches.",
     "answer": "D",
-    "figure": "assets/1998-g3-4/page-4.png"
+    "figure": "assets/1998-g3-4/q20.png"
   },
   {
     "no": 21,
