@@ -177,6 +177,10 @@ header :focus-visible { outline-offset: -2px; }
 }
 dialog { width: min(640px, 94vw); max-height: 85dvh; overflow: auto; border: 1px solid var(--border); border-radius: 14px; padding: 24px; }
 dialog::backdrop { background: #0f172a80; }
+.question-tag-options { display: flex; flex-wrap: wrap; gap: 8px; padding: 0; margin: 14px 0; border: 0; }
+.question-tag-option { display: inline-flex; align-items: center; gap: 6px; padding: 6px 10px; border: 1px solid var(--border); border-radius: 18px; background: var(--bg); cursor: pointer; }
+.question-tag-option:has(input:checked) { color: var(--accent); border-color: var(--accent); background: var(--accent-light); }
+.question-tag-option input { accent-color: var(--accent); }
 .hint-field { margin: 16px 0; }
 .hint-field textarea { display: block; width: 100%; min-height: 90px; resize: vertical; font: inherit; padding: 10px; border: 1px solid var(--border); border-radius: 8px; }
 .hint li { white-space: pre-wrap; margin: 8px 0; }
@@ -240,22 +244,51 @@ button.disclosure[aria-expanded="true"] { background: #eff6ff; border-color: #bf
 <div id="hintFields"></div><button type="button" id="addHint">＋ 添加一条</button>
 <p id="hintError" role="alert"></p><div class="q-actions"><button type="submit">保存 Hint</button><button type="button" id="cancelHints" class="secondary">取消</button></div></form>
 </dialog>
+<dialog id="tagEditor" aria-labelledby="tagEditorTitle">
+<form id="tagForm"><h2 id="tagEditorTitle">编辑题目标签</h2><p>从系统已有的数学标签中选择；更改保存在当前浏览器。</p>
+<fieldset id="questionTagOptions" class="question-tag-options" aria-label="可选数学标签"></fieldset>
+<div class="q-actions"><button type="submit">保存标签</button><button type="button" id="cancelTags" class="secondary">取消</button></div></form>
+</dialog>
 
 <footer>
   Generated for lesson prep · Math Kangaroo · Grade 3–4 / Grade 5–6
 </footer>
 
 <script>
+const QUESTION_TAGS = [
+  '几何', '角度', '周长与面积', '体积', '空间与立体', '图形变换', '网格与路径',
+  '数与运算', '位值与数字', '分数', '小数', '比例', '整除与余数', '代数与方程',
+  '不等式', '最值', '数列与规律', '计数', '逻辑推理', '集合与容斥', '图论',
+  '测量与单位', '分类讨论', '枚举', '排除法', '逆向思维', '表格法', '配对求和', '割补法'
+];
+const QUESTION_TAG_ALIASES = {
+  '三角形':'几何', '三角形不等式':'不等式', '中点':'几何', '六边形':'几何', '多边形':'几何', '圆':'几何', '正方形':'几何', '长方形':'几何', '图形识别':'几何', '对称':'图形变换', '旋转':'图形变换', '空间想象':'空间与立体', '立方体':'空间与立体', '坐标':'网格与路径', '路径':'网格与路径', '网格':'网格与路径', '等高模型':'周长与面积', '面积':'周长与面积', '周长':'周长与面积', '体积':'体积',
+  '乘法':'数与运算', '除法':'数与运算', '运算律':'数与运算', '巧算':'数与运算', '单位换算':'测量与单位', '测量':'测量与单位', '进一法':'数与运算', '数与运算':'数与运算',
+  '位值':'位值与数字', '数字和':'位值与数字', '数字特征':'位值与数字', '回文数':'位值与数字', '整除':'整除与余数', '余数':'整除与余数', '同余':'整除与余数', '分数':'分数', '小数':'小数', '比例':'比例', '代数':'代数与方程', '方程':'代数与方程', '不等式':'不等式', '最值':'最值', '数列':'数列与规律', '周期':'数列与规律', '数轴':'数与运算', '指数':'数与运算',
+  '一一对应':'计数', '乘法原理':'计数', '计数':'计数', '组合':'计数', '抽屉原理':'计数', '最坏情况':'最值', '分类':'分类讨论', '分类讨论':'分类讨论', '枚举':'枚举', '逻辑推理':'逻辑推理', '排除法':'排除法', '逆向思维':'逆向思维', '表格法':'表格法', '配对求和':'配对求和', '割补法':'割补法', '天平':'逻辑推理', '图论':'图论', '欧拉公式':'图论', '集合':'集合与容斥', '容斥原理':'集合与容斥', '韦恩图':'集合与容斥', '比较大小':'不等式', '符号':'数与运算'
+};
+const QUESTION_TAG_STORAGE_KEY = 'kangaroo-question-tags-v1';
+let savedQuestionTags = {};
+try {
+  const saved = JSON.parse(localStorage.getItem(QUESTION_TAG_STORAGE_KEY) || '{}');
+  if (saved && typeof saved === 'object' && !Array.isArray(saved)) savedQuestionTags = saved;
+} catch (_) { /* Use the built-in tags when saved choices are unavailable. */ }
+function normalizeQuestionTags(tags) {
+  return [...new Set((tags || []).map(tag => QUESTION_TAG_ALIASES[tag]).filter(tag => QUESTION_TAGS.includes(tag)))];
+}
 const years = Object.keys(KANGAROO_DATA).sort();
 // Paper IDs retain legacy keys so existing saved hints still resolve.
 const paperYear = id => id.split('-')[0];
 const paperLabel = id => paperYear(id) + ' 年 · Grade ' + KANGAROO_DATA[id][0].grade;
-const allTags = {};
 years.forEach(y => KANGAROO_DATA[y].forEach(q => {
-  (q.tags || []).forEach(t => { allTags[t] = (allTags[t] || 0) + 1; });
+  const key = y + '-' + q.no;
+  q.tags = normalizeQuestionTags(Object.prototype.hasOwnProperty.call(savedQuestionTags, key) ? savedQuestionTags[key] : q.tags);
 }));
+let allTags = {};
 const tagCloud = document.getElementById('tagCloud');
 function renderTagCloud() {
+  allTags = {};
+  years.forEach(y => KANGAROO_DATA[y].forEach(q => (q.tags || []).forEach(t => { allTags[t] = (allTags[t] || 0) + 1; })));
   tagCloud.innerHTML = '';
   Object.entries(allTags).sort((a,b)=>b[1]-a[1]).forEach(([tag, count]) => {
     const chip = document.createElement('button');
@@ -540,6 +573,7 @@ function questionCard(q) {
   if (svgFor(q.year, q.no) || q.diagram) html += '<button onclick="toggleOne(this, \'diagram\')">' + (state.showDiagram ? '隐藏图解' : '显示图解') + '</button>';
   if (q.tip) html += '<button onclick="toggleOne(this, \'tip\')">显示备课提示</button>';
   }
+  html += '<button type="button" class="secondary" onclick="editTags(this)">编辑标签</button>';
   if (KANGAROO_EXTENSIONS[questionKey(q)]) html += '<button type="button" onclick="toggleExtension(this)">延申拓展</button>';
   html += '</div>';
   const hintIndex = hintProgress.get(questionKey(q));
@@ -766,6 +800,39 @@ function hintsFor(q) { return customHints[questionKey(q)] || q.hints; }
 const hintEditor = document.getElementById('hintEditor');
 const hintFields = document.getElementById('hintFields');
 let editingQuestion = null;
+const tagEditor = document.getElementById('tagEditor');
+const questionTagOptions = document.getElementById('questionTagOptions');
+function renderQuestionTagOptions(selectedTags) {
+  questionTagOptions.replaceChildren();
+  QUESTION_TAGS.forEach((tag, index) => {
+    const label = document.createElement('label');
+    label.className = 'question-tag-option';
+    const input = document.createElement('input');
+    input.type = 'checkbox'; input.value = tag; input.id = 'question-tag-' + index;
+    input.checked = selectedTags.includes(tag);
+    const text = document.createElement('span'); text.textContent = tag;
+    label.append(input, text); questionTagOptions.appendChild(label);
+  });
+}
+window.editTags = function(btn) {
+  editingQuestion = cardQuestion(btn);
+  document.getElementById('tagEditorTitle').textContent = paperLabel(editingQuestion.year) + ' · Q' + editingQuestion.no + ' 编辑标签';
+  renderQuestionTagOptions(editingQuestion.tags || []);
+  tagEditor.showModal();
+};
+document.getElementById('cancelTags').onclick = () => tagEditor.close();
+document.getElementById('tagForm').onsubmit = e => {
+  e.preventDefault();
+  const tags = [...questionTagOptions.querySelectorAll('input:checked')].map(input => input.value);
+  const key = questionKey(editingQuestion);
+  const updated = {...savedQuestionTags, [key]: tags};
+  try { localStorage.setItem(QUESTION_TAG_STORAGE_KEY, JSON.stringify(updated)); }
+  catch (_) { return; }
+  savedQuestionTags = updated;
+  KANGAROO_DATA[editingQuestion.year].find(q => q.no === editingQuestion.no).tags = tags;
+  tagEditor.close();
+  const top = app.scrollTop; renderTagCloud(); render(); app.scrollTop = top;
+};
 function addHintField(value = '') {
   const row = document.createElement('div'); row.className = 'hint-field';
   const label = document.createElement('label'); label.textContent = 'Hint（由浅到深）';
