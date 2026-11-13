@@ -597,6 +597,7 @@ KANGAROO_DATA["2000-g3-4"] = [
     "title": "Clock Hands",
     "grade": "3-4",
     "tags": [
+      "时钟",
       "测量",
       "角度",
       "周期"
