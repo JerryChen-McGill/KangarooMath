@@ -1108,3 +1108,79 @@ Object.assign(KANGAROO_EXTENSIONS, {
     "solution": ""
   }
 });
+
+Object.assign(KANGAROO_EXTENSIONS["2008-g5-6-26"], {
+  text: "A train crosses a 160 m bridge in 60 seconds and passes a person in 20 seconds. How long is the train?",
+  answer: "80 m."
+});
+Object.assign(KANGAROO_EXTENSIONS["2008-g5-6-29"], {
+  answer: "2 values: n=5 and n=15."
+});
+const TEACHING_EXTENSIONS_2008_G56 = {
+  1: "Compare the results, paying attention to multiplication by zero.",
+  2: "Cancel the common product 2×3 from both sides.",
+  3: "Apply the named operations in the order P, then J, then N.",
+  4: "Read 10□ as the three-digit number formed by appending one digit to 10.",
+  5: "Two equilateral triangles share one side; count the four exposed equal sides.",
+  6: "Compare the shaded fraction with 3/5 after simplifying.",
+  7: "Add the two row totals, then subtract the three known entries.",
+  8: "Reverse the spending first, then subtract the borrowed amount.",
+  9: "Multiply the row heading by the column heading.",
+  10: "Add the white bricks in the two stated layers.",
+  11: "Keep one distinct letter per box; use the forced A and B assignments.",
+  12: "Add the two perimeters, then remove the shared side twice.",
+  13: "A triangle is possible when the longest side is shorter than the sum of the other two.",
+  14: "Find the original side by taking a square root, add 5, then square.",
+  15: "Multiply the fraction remaining after each pour.",
+  16: "List unordered score pairs and remove duplicate totals.",
+  17: "The three boxes plus 2 remaining CDs equal the one-third that did not fit.",
+  18: "One move can vacate at most one of the five original occupied positions.",
+  19: "Write 10^20−9 as nineteen 9s followed by 1.",
+  20: "Let the present age be x and form x+3=2(x−3).",
+  21: "Substitute A=2 into A+B=11.",
+  22: "Assign the doctor and engineer, then give the remaining profession to Farrell.",
+  23: "A path through nine alternating colors uses five of one color and four of the other.",
+  24: "Combine the three route equations so the shared edges cancel.",
+  25: "On a number line, the greatest separation is maximum coordinate minus minimum.",
+  26: "Use the train's crossing time difference to find speed, then multiply by person-passing time.",
+  27: "Check which two nonempty volumes form a 2:1 ratio; the remaining bottle is empty.",
+  28: "Sum the tens digits separately from the ones digits for 10 through 19.",
+  29: "Rewrite the quotient as 1+20/(n+5); the denominator must divide 20 and exceed 5.",
+  30: "Erase zero digits first; deleting any nonzero digit would lower the digit sum."
+};
+const SOLUTIONS_2008_G56 = {
+  1: "4+0=4、4×0=0、4−0=4，因此乘法结果0最小。",
+  2: "右侧为36，左侧已有2×3=6，缺失因子为36÷6=6。",
+  3: "依次计算：4+2=6，6×3=18，18−1=17。",
+  4: "在10后面补一位数字组成100，补上的个位数字是0。",
+  5: "共用的一边在内部；外轮廓由四条相等边组成，形成菱形。",
+  6: "12/20约分为3/5，符合要求。",
+  7: "四格总和为10+9=19；未知数为19−3−4−5=7。",
+  8: "设原有x美元，借入12美元后付28美元、剩9美元，则x+12−28=9，得x=$25。",
+  9: "乘法表该格为6×9=54。",
+  10: "两层白砖分别有5块和7块，总数12块。",
+  11: "第一盒只能留A；第二盒留B；第三盒必须留C，才能三盒字母各不相同。",
+  12: "组合图形周长为20+20−2×5=30 cm，共用边不在外边界上。",
+  13: "五根火柴可组成边长1、2、2的三角形；1+2>2，满足三角形不等式。",
+  14: "原正方形边长为√64=8 cm，新边长8+3=11 cm，面积11²=121 cm²。",
+  15: "第一次后剩3/4；第二次倒走剩余量的2/3，所以瓶中剩(3/4)(1/3)=1/4。",
+  16: "不同总分为0、1、2、4、5、8，共6种。",
+  17: "未放进书架的CD有4×5+3=23张，占总数的1/4，因此总数是23×4=92张。",
+  18: "五个原占用位置中移走一块，至少四个原位置仍被占用。",
+  19: "10^20−9=99999999999999999991，共19个9和一个1，数字和为19×9+1=172。",
+  20: "x+3=2(x−3)，解得x=9岁。",
+  21: "B=11−2=9。",
+  22: "医生是 Roberts，工程师是 Smith，剩下 Farrell 是音乐家。",
+  23: "九格路径颜色交替，五个深色和四个浅色时，路径必须从深色开始并在深色结束。",
+  24: "L4=L1+L2−L3=22+17−26=13 km。",
+  25: "最远两点为−5和20，距离20−(−5)=25。",
+  26: "火车车头走过桥的额外时间为60−20=40秒，速度160÷40=4 m/s；车长为4×20=80 m。",
+  27: "4 oz 与8 oz 的果汁量满足1:2，因此剩下的6 oz瓶为空。",
+  28: "十位数之和为10；个位数之和为45，因此总和差为10−45=−35。",
+  29: "(n+25)/(n+5)=1+20/(n+5)。大于5的20的正因数为10、20，故n=5、15，共2个。",
+  30: "十组2008含20个零。删掉全部零不改变数字和；任何非零数字被删都会降低数字和，因此最多删除20位。"
+};
+for (const [no, extension] of Object.entries(SOLUTIONS_2008_G56)) {
+  KANGAROO_EXTENSIONS["2008-g5-6-" + no].method = TEACHING_EXTENSIONS_2008_G56[no];
+  KANGAROO_EXTENSIONS["2008-g5-6-" + no].solution = extension;
+}
