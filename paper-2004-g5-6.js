@@ -670,7 +670,10 @@ KANGAROO_DATA["2004-g5-6"] = [
       "仅靠总数无法唯一确定每人的数量。"
     ],
     "solution": "The published key lists B (36). The fraction conditions are missing from both the guide and the local original, so the stated information does not determine Ella's share.",
-    "methods": [],
+    "methods": [
+      "设 Ella 有 e 个、Ola 有 70−e 个；没有给出题目所说的分数数值，因此方程中仍有未知条件，无法唯一求 e。",
+      "验证不唯一：若两人分别有 36 和 34 个，或分别有 40 和 30 个，都符合总数 70；缺少分数条件时无法排除其中任何一种。"
+    ],
     "tip": "Encourage students to justify each step.",
     "figure": "assets/2004-g5-6/q22.png",
     "figureAlt": "2004 Grade 5–6 question 22: original figure",
