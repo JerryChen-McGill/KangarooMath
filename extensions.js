@@ -444,3 +444,30 @@ Object.assign(KANGAROO_EXTENSIONS, {
   '2006-g3-4-23': {text:'Fill a 3×3 square with 1, 2, and 3 once per row and column. If the upper-left cell is 2, how many fillings are possible?',change:'把固定角格数字从 1 改为 2。',method:'交换数字名称可建立与原问题的一一对应。',answer:'4',solution:'对 1、2、3 作循环重命名，把左上角的 2 映射为 1；这与原题的填法一一对应，因此仍有 4 种。'},
   '2006-g3-4-24': {text:'A balanced mobile has a circle weighing 24 g. The square has the same weight as two circles. What does the square weigh?',change:'改变圆的重量及形状之间的关系。',method:'用圆的单位重量乘以对应数量。',answer:'48 g',solution:'正方形重两个圆，因此重量为 2×24=48 克。'},
 });
+
+Object.assign(KANGAROO_EXTENSIONS, {
+  '2007-g3-4-1': {text:'On a path that never goes backward, Anna passes the numbers 2, then 5, then 8. Which set of three numbers can she collect?',change:'明确路线中的数字顺序，替代依赖图示的路线。',method:'沿途按前进方向记录数字，不允许倒回。',answer:'{2, 5, 8}',solution:'路线前进时依次遇到 2、5、8，所以这组三个数字可以收集。'},
+  '2007-g3-4-2': {text:'How many distinct letters are shared by KANGAROO and GARDEN?',change:'替换要比较的两个单词。',method:'列出两词的字母集合并取交集。',answer:'4',solution:'共同字母为 A、G、N、R，共 4 个不同字母。'},
+  '2007-g3-4-3': {text:'Which has more unit squares: a 4×4 square grid or a 3×5 rectangle grid?',change:'把图案数格题改成明确的两种阵列。',method:'分别用行数乘列数求小方格数。',answer:'The 4×4 grid',solution:'4×4=16 格，3×5=15 格，因此 4×4 图形多一格。'},
+  '2007-g3-4-4': {text:'Mia has $5. Notebooks cost 80 cents each and pencils cost 30 cents each. She buys 4 notebooks. What is the greatest number of pencils she can buy?',change:'更换笔记本数量和预算。',method:'先扣除笔记本花费，再用剩余金额除以铅笔单价取整。',answer:'6 pencils',solution:'4 本笔记本花费 $3.20，剩 $1.80；可买 1.80÷0.30=6 支铅笔。'},
+  '2007-g3-4-5': {text:'There are 12 streetlights in a row, 7 m apart. How far is it from the first to the last?',change:'改变路灯数量和相邻间距。',method:'路灯数减一得到间隔数。',answer:'77 m',solution:'12 盏灯之间有 11 段间隔，距离为 11×7=77 米。'},
+  '2007-g3-4-6': {text:'How many three-digit codes can be made from 2, 4, and 6 if each is used once?',change:'替换密码数字。',method:'计算三个不同数字的排列数。',answer:'6',solution:'排列数为 3×2×1=6。'},
+  '2007-g3-4-7': {text:'Evaluate 5×5 + 5 + 5 + 5×5.',change:'把四替换为五并减少一个加数。',method:'先算乘法，再加总。',answer:'60',solution:'25+5+5+25=60。'},
+  '2007-g3-4-8': {text:'A 6×4 rectangle is missing a 2×4 rectangular piece. What dimensions must the replacement have?',change:'把拼图选择题改成直接补全矩形。',method:'比较缺口的长和宽。',answer:'2×4',solution:'缺失部分本身是 2×4 长方形，因此补片需具有相同尺寸。'},
+  '2007-g3-4-9': {text:'A number is doubled and then increased by 4 to give 20. What was the number?',change:'把云朵运算改成两步等式。',method:'按逆运算顺序先减 4，再除以 2。',answer:'8',solution:'原数为 (20−4)÷2=8。'},
+  '2007-g3-4-10': {text:'In a row of a 1,2,3 Latin square, the first two cells are 3 and 1. What must the third cell be?',change:'把格子布局改成明确的一行。',method:'每行中 1、2、3 各出现一次。',answer:'2',solution:'这一行已含 3 和 1，第三格必须填 2。'},
+  '2007-g3-4-11': {text:'What is the smallest number greater than 2007 with the same digit sum as 2007?',change:'保持原题数字和条件，改问最小值。',method:'求 2007 的数字和，再按数值顺序向上检查。',answer:'2016',solution:'2007 的数字和是 9。2016 是大于 2007 的最小数字和为 9 的整数。'},
+  '2007-g3-4-12': {text:'A 4×4×4 aquarium is filled with 20 unit cubes. How many more cubes fit?',change:'明确鱼缸尺寸和现有小立方体数。',method:'求总体积，再减已经放入的数量。',answer:'44',solution:'鱼缸可容纳 4³=64 个小方块，还需 64−20=44 个。'},
+  '2007-g3-4-13': {text:'Peter was born on January 1, 2020. Paul is exactly 1 year and 1 day younger. When was Paul born?',change:'替换出生年份。',method:'从 Peter 的日期向后推一年再加一天。',answer:'January 2, 2021',solution:'一年后是 2021 年 1 月 1 日，再过一天是 2021 年 1 月 2 日。'},
+  '2007-g3-4-14': {text:'A string is cut into 250 equal pieces, each 12 cm long. What was the original length in meters?',change:'更换段数和每段长度。',method:'先乘出总厘米数，再换成米。',answer:'30 m',solution:'250×12=3000 cm；3000÷100=30 m。'},
+  '2007-g3-4-15': {text:'A two-digit number plus 19 equals 72. What is its tens digit?',change:'替换加数和总和。',method:'先求原两位数，再读取十位。',answer:'5',solution:'两位数为 72−19=53，十位数字是 5。'},
+  '2007-g3-4-16': {text:'A digital watch shows 01:23. After how much time will the same four digits next appear in a different order?',change:'替换初始时间中的数字。',method:'按时间先后列出合法的数字排列。',answer:'9 minutes',solution:'下一种合法的排列是 01:32，比 01:23 晚 9 分钟。'},
+  '2007-g3-4-17': {text:'A cube with edge 4 cm is painted and cut into 1 cm cubes. How many small cubes have exactly two painted faces?',change:'把大立方体边长由3增至4。',method:'每条棱内部、但不在角上的小方块各有 n−2 个。',answer:'24',solution:'有 12 条棱，每条内部有 4−2=2 个小立方体，故 12×2=24 个。'},
+  '2007-g3-4-18': {text:'A five-digit odometer shows 24642. What is the next larger palindrome?',change:'替换里程表读数。',method:'构造首尾对称的五位数并从小到大检查。',answer:'24742',solution:'24742 从左向右和从右向左相同，是大于 24642 的最小回文数；差为 100。'},
+  '2007-g3-4-19': {text:'A 6×6 checkerboard is colored black and white, beginning with white in the upper-left corner. How many white squares are there?',change:'把图案序列改成明确的棋盘格。',method:'偶数边长棋盘的黑白格数量相同。',answer:'18',solution:'6×6=36 格，颜色交替且总格数为偶数，白格有 36÷2=18 个。'},
+  '2007-g3-4-20': {text:'Five people stand in line from the cashier: Celina, Daniel, Bob, Adam, Eve. What place is Eve in, counting the first person as number 1?',change:'将原位置逻辑替换为明确的队列次序。',method:'按队伍给出的顺序计数位置。',answer:'5th',solution:'从收银台数起，Eve 是第五个人。'},
+  '2007-g3-4-21': {text:'A 18 cm by 12 cm rectangle has a square of perimeter 8 cm cut from each corner. What is the new perimeter?',change:'改变矩形尺寸并明确四角切口周长。',method:'每个角切去两段边，同时增加两段等长边。',answer:'60 cm',solution:'原周长为 2(18+12)=60 cm。每个切角删去与新增的边长相等，周长保持 60 cm。'},
+  '2007-g3-4-22': {text:'At a round table, chair 3 is directly opposite chair 10. How many chairs are there?',change:'替换对坐椅号。',method:'对面椅子间隔半圈，椅子总数是间隔数的两倍。',answer:'14',solution:'3 到 10 相差 7 个座位间隔，正好是半圈，因此总共有 2×7=14 把椅子。'},
+  '2007-g3-4-23': {text:'How many digits are needed to write every integer from 1 through 120?',change:'将范围上限从100改为120。',method:'按一位、两位、三位数分段计数。',answer:'252',solution:'1–9 写 9 位，10–99 写 180 位，100–120 共 21 个三位数写 63 位，总计 9+180+63=252 位。'},
+  '2007-g3-4-24': {text:'A square is folded twice, once horizontally and once vertically. A corner where both folds meet is cut off. How many matching cut corners appear when unfolded?',change:'明确剪的是两条折痕交会的角。',method:'沿两条折痕依次镜像展开。',answer:'4',solution:'两条折痕将纸分成四个对应区域；剪掉交会角后展开，会出现四个对称切口。'}
+});
