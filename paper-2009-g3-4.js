@@ -25,3 +25,34 @@ KANGAROO_DATA["2009-g3-4"] = [
   {no:23,points:5,grade:"3-4",text:"Agnes was drawing figures made out of segments of length 1. At the end of each segment, she always turned at a right angle either to the left or to the right. Each time she turned right, she drew a heart on a piece of paper, and each time she turned left, she drew a spade. One day, she drew a figure and drew these symbols in this order: heart, spade, spade, spade, heart, heart. Which of the following figures could Agnes have drawn?",options:{A:"Figure A",B:"Figure B",C:"Figure C",D:"Figure D",E:"Figure E"},answer:"E",title:"转向与路径",tags:["空间想象","逻辑推理"],figure:"assets/2009-g3-4/q23.png",figureAlt:"按直角转弯规则绘制的五种线段图形",hints:["把符号依次换成右、左、左、左、右、右。","从任意方向开始，沿单位线段追踪每次转弯。","只有 E 的方向变化与整串指令一致。"],solution:"心形表示右转，黑桃表示左转，因此转向顺序为右、左、左、左、右、右。逐段按此规则追踪，只有图 E 与这一转向序列相符。"},
   {no:24,points:5,grade:"3-4",text:"In the land of Funnyfeet, the left foot of each man is two sizes bigger than his right foot, and the left foot of each woman is one size bigger than her right foot. Shoes are always sold in pairs of the same size, and only in whole sizes. A group of friends bought shoes together. After they all put on the shoes that fit them, exactly two shoes were left over, one size 36 and one size 45. What is the smallest possible number of people in the group?",options:{A:"4",B:"5",C:"6",D:"7",E:"9"},answer:"B",title:"鞋码与最小人数",tags:["逻辑推理","数与运算"],hints:["每个人需要一双左、右鞋，尺码差为 1 或 2。","36 是偶数、45 是奇数，光用相差 2 的尺码无法覆盖两端。","至少要有一位左鞋大 1 码的女性；按相邻尺码分组后至少需 5 人。"],solution:"36 到 45 的尺码跨度为 9。若每个人左右鞋相差 2 码，尺码变化始终保持同一奇偶性，无法同时覆盖 36 和 45，因此至少有一位左右鞋相差 1 码的女性。要使两端各剩一只鞋，朋友们的尺码区间必须覆盖 36 到 45；按可组成的左右鞋尺码对逐步排列，最少需要 5 人。"}
 ];
+
+const TEACHING_2009_G34 = {
+  1: [["按层数可见小立方体。", "从上层开始加上每层的立方体数。"], "被遮挡的小方块也要计入，按层数比透视图直接数更稳妥。"],
+  2: [["先算 200×9。", "再依次加上 200 和 9。"], "乘法先于加法；可把 200×9 与额外的 200 合并。"],
+  3: [["观察图中袋鼠所在区域与各边界。", "同时核对其相对于圆、正方形和三角形的位置。"], "区域交叠题要逐个条件检查，不能只根据袋鼠外观判断。"],
+  4: [["五个兄弟各有一个姐妹。", "这一个姐妹是大家共同的，不是每人各有一个。"], "“每人有一个姐妹”不意味着有五个姐妹。"],
+  5: [["把数字 930 和 806 分别拆成数码段。", "比较每个数码需要改变的线段格。"], "电子显示中改变一个方格可同时影响数字形状，逐位比较。"],
+  6: [["Carl 吃掉 16 的一半。", "Eva 吃 2 个，剩下的都给 Sophie。"], "两种分配顺序不会影响总数，最后用总量减已吃数量。"],
+  7: [["黑线连接相邻瓷砖的中心点。", "对每一对中心点求水平、竖直位移，再合计线段长。"], "路径由直线段组成，注意每块砖的 4 m 与 6 m 方向。"],
+  8: [["电影本身长 90 分钟。", "还要把两段广告时间加进去。"], "结束时刻等于开始时刻加电影时间和广告时间。"],
+  9: [["设灰袋鼠重量为 g。", "红袋鼠重 g−35，两者和为139。"], "和差问题可用 (总和+差)÷2 求较大数。"],
+  10: [["先数两行分别被分走的巧克力块。", "根据图中整板长宽求总块数。"], "给兄弟和姐姐的两行可能不在边缘，按小格行列数原板。"],
+  11: [["男孩比女孩多 6 人。", "每周女孩比男孩多加入 1 人。"], "人数差每周缩小 1，直至归零。"],
+  12: [["牛腿总数为30×4。", "鸡的腿数相同，先求鸡的只数再加牛。"], "鸡有两条腿，不要把腿数误当鸡数。"],
+  13: [["长方形两边是8 cm和4 cm。", "先求周长，再除以4得到正方形边长。"], "周长相等不表示面积相等。"],
+  14: [["四次掷骰总分为23。", "假设每次都是6分，再用差额求非6的次数。"], "每个非6结果至少比6少1分，差额限定次数。"],
+  15: [["三人至少各拿1个且数量互不相同。", "Hela最少、Mela最多，枚举三个递增正整数和为7。"], "排列顺序已确定，不需要把三人的分配重复排列。"],
+  16: [["Paul 的两侧人数相加得到队列总人数减一。", "再由 Peter 在队列正中确定其位置。"], "两人的位置差就是他们之间隔着的人数加一。"],
+  17: [["把两块骨牌看作覆盖4个单位格。", "逐项检查候选图形能否由两块骨牌铺出。"], "总面积相同只是必要条件，边界形状和格子邻接也要满足。"],
+  18: [["比较奇数位数字和与偶数位数字和。", "逐个检查候选六位码是否满足两组和相等。"], "首位、第三位、第五位是一组，其他位是另一组。"],
+  19: [["周三销量等于周一加周二。", "周四销量又等于周二加周三，代入已知60和96倒推。"], "写成相邻项递推，利用两天数据反解最早一天。"],
+  20: [["固定红花为第一朵。", "其余三朵有3!种排列，排除黄花后接白花的情形。"], "不允许黄→白，需从排列总数中扣除这一类。"],
+  21: [["反向钟从6:15开始倒走。", "计算经过的正向时间，再从6:15往回减。"], "从早晨6:15到晚上7:30共13小时15分。"],
+  22: [["计算每行和对3的余数。", "交换两个数只会改变它们所在两行的余数。"], "至少移动一次；检查单次交换能否同时修正两行。"],
+  23: [["把右转记作心形、左转记作黑桃。", "按给定符号序列逐步追踪每次90°转向。"], "转向顺序决定路径形状，需检查每一步方向。"],
+  24: [["男左鞋比右鞋大2码，女左鞋大1码。", "剩下的两个码数是36和45，需覆盖中间所需尺码。"], "选择能让相邻尺码连续衔接的鞋码组合以最少化人数。"]
+};
+KANGAROO_DATA["2009-g3-4"].forEach(q => {
+  q.methods = TEACHING_2009_G34[q.no][0];
+  q.tip = TEACHING_2009_G34[q.no][1];
+});
