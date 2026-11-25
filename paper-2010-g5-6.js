@@ -161,11 +161,80 @@ data2010G56.forEach(q=>{
   if(figures2010G56[q.no]){q.figure=`assets/2010-g5-6/${figures2010G56[q.no]}`;q.figureAlt="2010 年原卷题目示意图";}
 });
 
+const teacherTips2010G56=[
+  "这题的原答案键与年龄关系不符；请先让学生独立列年龄表，并比较题面推导和来源答案。",
+  "让学生先辨认目标图形在网格中的边界，再反向追踪需要剪开的内部边。",
+  "鼓励学生画出每根糖条移动前后的占位，说明为什么较少移动不够。",
+  "用天平或等式表示相同符号，提醒学生相同图案始终代表同一个数。",
+  "让学生逐项计算选项后再判断质数，避免只看表达式外形。",
+  "结合原图画几条极端方向的直线，讨论经过花点数量如何随斜率改变。",
+  "从 8 个点中选一对形成一条线段；可用配对图解释为何不重复计数。",
+  "强调正交封闭图形的左右向总长度相等、上下向总长度相等。",
+  "让学生把运算流程倒着做一遍，并用代回原式检查。",
+  "引导学生先用图中标记求出相关三角形角，再回到四边形内角和。",
+  "区分页数和纸张数：连续缺页包含端点，而一张纸有正反两页。",
+  "请学生严格按乘除从左到右计算，特别检查括号和加法的位置。",
+  "用腿数建立等式，先扣除鸟腿，再将剩下的腿数换算成猫数。",
+  "确认图形确实分成 8 个等面积三角形，再讨论分数是否需要约分。",
+  "将每行、每列保留黑格看成互不冲突的配对选择，借助棋盘图核验。",
+  "先说明题目问的是两个隐藏接触面的点数和，避免把骰子总点数混入。",
+  "中心数在行和列中各计一次；让学生检查“最大中心数”是否真的满足排布。",
+  "先从周长求两边之和，再结合 2:1 的比例求长和宽。",
+  "将封闭路径画在方格纸上，逐格核对题目所说的内部单位格数。",
+  "沿两条折痕分别追踪图案方向；可用透明纸翻折来验证旋转关系。",
+  "从已知正方形面积开平方求边长，再按拼接边关系分别累计矩形长和宽。",
+  "数位乘积为 5 限定数位为一个 5 和其余的 1，再用数位和确定长度。",
+  "同时使用被 4 整除的末两位条件和被 3 整除的数位和条件。",
+  "先弄清额外配料是四种任选组合且至少选一种，再使用乘法原理。",
+  "用三环链的总长先求每个接头的重叠量，再扩展到九个链环。",
+  "把两次计数的起点偏移画成圆圈，理解偏移变化对应完整一圈。",
+  "把 108 分解质因数，找最小的 n 使 n³ 能被 108 整除，再求 m。",
+  "制作头数与真假陈述表，逐种检查每条陈述是否符合说话者身份。",
+  "原题按座位图判断距离；请学生沿座位行列比较，不要只比较座号差。",
+  "将木板翻到背面时标记上下方向，突出左右会交换。"
+];
+
+const extensions2010G56Aligned=[
+  ["Two cats were 7 and 11 years old three years ago. How many years from now will the older cat be 20?","6 years","先求较大猫现在的年龄，再求到 20 岁的差。","11+3=14，20−14=6 年。"],
+  ["A 4×4 paper grid has numbered interior edges. Which four cuts isolate the central 2×2 block?","The four edges surrounding the block.","把中心 2×2 方块看成整体，找它与外圈相接的边。","剪开中心方块四周的四条内部边即可。"],
+  ["Six identical bars are arranged in a square tray. What is the fewest bars that must be moved to make room for one more bar?","2 bars","画出条形占据的区域，尝试保留最多原位条形并打开一条完整空位。","两根条形移到盒内相对的空位即可，少于两根时没有足够的连续空间。"],
+  ["If ○+○+○=24 and every ○ represents the same number, what is ○?","8","把相同加数写成乘法。","3○=24，所以 ○=8。"],
+  ["Which is prime: 31, 39, 49, 51, or 57?","31","只需检查不超过 √31 的质数因子。","31 不能被 2、3 或 5 整除，因此是质数。"],
+  ["A straight line crosses a 4×4 grid from its left edge to its right edge without passing through a grid vertex. What is the least number of unit squares it can cross?","4 squares","线段从一侧到另一侧，至少要穿过每一列中的一个格子。","取一条略微倾斜且不经过格点的线，可恰好穿过 4 个小格。"],
+  ["There are 10 marked points and every pair is joined. How many line segments are drawn?","45","每条线段由两个不同端点确定。","10×9÷2=45 条。"],
+  ["An orthogonal shape has horizontal side totals of 8 cm in each direction and vertical totals of 11 cm in each direction. Find its perimeter.","38 cm","封闭图形向右和向左的总长度相等，向上和向下也相等。","周长为 2×8+2×11=38 cm。"],
+  ["A number is divided by 4, then 3 is added, and the result is multiplied by 4 to get 80. Find the number.","68","按运算的相反顺序恢复原数。","80÷4=20，20−3=17，17×4=68。"],
+  ["A quadrilateral has angles 75°, 105°, and 115°. What is its fourth angle?","65°","利用四边形内角和 360°。","360−75−105−115=65°。"],
+  ["Pages 12 and 89 are the first pages before and after a missing consecutive section. How many sheets are missing?","38 sheets","先数缺失页码，再除以每张纸的两页。","缺页为 13 至 88，共 76 页；76÷2=38 张。"],
+  ["Which value differs from the others: 15×6, 180÷2, 10×9, 100−10, or 45+50?","15×6","分别计算并比较结果。","前四项都是 90，45+50=95；所以不同的是最后一项。"],
+  ["Four cats and three birds have how many legs altogether?","22","分别乘以每种动物的腿数后相加。","4×4+3×2=22 条腿。"],
+  ["A square is divided into 12 equal triangles, and 7 are shaded. What fraction is shaded?","7/12","阴影部分占全部等面积小块的比例。","7 个阴影块占 12 块，答案为 7/12。"],
+  ["A 6×6 board has exactly two black squares in each row and column. How many must be painted white to leave one black square in every row and column?","6 squares","每行保留一个黑格，且选中的格子不能落在同一列。","保留 6 个互不同行列的黑格，原有 12 个黑格，因此涂白 6 个。"],
+  ["Two dice are glued together. The hidden touching faces show 3 dots and 4 dots. What is the total number of dots on the glued faces?","7","只把两颗骰子相接的面相加。","3+4=7。"],
+  ["Place 1, 4, 7, 10, and 13 in a cross with the centre shared. What is the greatest equal row and column sum?","24","公共和等于四个外侧数的总和加上中心数；先试最大数作中心。","中心放 13，剩余数可配成 1+10=4+7=11，因此每行列和为 13+11=24。"],
+  ["A rectangle has perimeter 120 cm. The distance from its centre to one pair of sides is twice the distance to the other pair. Find its area.","800 cm²","中心到一对平行边的距离是对应边长的一半，因此两边长之比为 1:2。","边长和为 60 cm，边长为 20 cm 和 40 cm，面积为 800 cm²。"],
+  ["A simple loop on a square grid encloses a 4×5 rectangle. How many unit squares does it enclose?","20 squares","数出长和宽方向各有多少个单位格。","4×5=20 个单位方格。"],
+  ["A square is folded vertically and horizontally, then one hole is punched away from both creases. How many holes appear when it is unfolded?","4 holes","每次折叠都会把图案复制到对称位置。","两次折叠后有 4 层，展开得到 4 个孔。"],
+  ["A rectangle is tiled by squares with side lengths 6 cm, 8 cm, 10 cm, and 12 cm. If its sides are 30 cm and 24 cm, what is its area?","720 cm²","先由给定的长和宽求长方形面积。","30×24=720 cm²。"],
+  ["How many natural numbers have digit sum 100 and digit product 5?","96 numbers","乘积为 5 限定数位为一个 5 和其余的 1。","若有 n 位，则数位和为 5+(n−1)=100，所以 n=96；5 可在 96 个位置中的任意一处。"],
+  ["How many five-digit numbers of the form 1_82_ have distinct digits and are divisible by 12?","8 numbers","末两位须被 4 整除，数位和须被 3 整除；同时排除重复数字。","逐一检查个位只能为 0、4、6、8 中与固定数字不同者，再用数位和条件筛选，共 8 个。"],
+  ["A pizza comes in 3 sizes and may have any nonempty combination of 4 optional toppings. How many pizzas are possible?","45 pizzas","每种配料可以选或不选，但不能四种都不选。","有 2⁴−1=15 种配料组合；15×3=45 种。"],
+  ["A three-link chain is 17 cm long and one separate link is 7 cm long. What is the length of a chain made from nine links if every joint overlaps equally?","47 cm","用三环链长求出每个连接处的重叠长度。","三个单环总长 21 cm，两个接头共重叠 4 cm，每处重叠 2 cm；九环长为 9×7−8×2=47 cm。"],
+  ["Two counters walk in the same direction around a circular table. Their starting positions differ by 20 chairs. On the next comparison their offset is 80 chairs. How many chairs are around the table?","60 chairs","两次偏移之差对应完整一圈。","80−20=60，所以桌边有 60 把椅子。"],
+  ["For positive integers m and n, 108m=n³. Find the smallest possible value of m+n.","8","把 108 分解质因数，并找最小的 n 使 n³ 能被 108 整除。","108=2²×3³，最小可行 n=6；m=216÷108=2，因此 m+n=8。"],
+  ["Four dragons each have 6, 7, or 8 heads. Seven-headed dragons lie, while the others tell the truth. Exactly one dragon says that the total is 27; the others each name a different total. What is the total if the dragon with 6 heads is the only one telling the truth?","27 heads","诚实龙的陈述必须等于实际总数；其余七头龙的陈述必须不等于总数。","若只有一只 6 头龙诚实且它说总数为 27，则另外三只各有 7 头，总数确为 27。"],
+  ["Available seat numbers are 83, 97, 101, 108, and 122. Which number is closest to 100?","101","比较每个座号与 100 的绝对差。","距离分别为 17、3、1、8、22，因此 101 最近。"],
+  ["A cord follows a route over the front of a notched board. What changes when the board is viewed from behind?","Left and right are reversed; up and down stay the same.","把木板想成绕竖直轴翻面，追踪一个明显的凹口。","背面图是正面图的左右镜像，上下方向不变。"]
+];
+
 data2010G56.forEach((q,i)=>{
   const t=TEACHING_2010_G56[i];
   q.hints=t.slice(0,3);
   q.methods=t.slice(3);
-  q.tip="引导学生先把图形或文字条件转成关系式，再比较不同解法的关键假设；视觉题需结合原卷图核对。";
-  const e=EXTENSIONS_2010_G56[i];
+  q.tip=teacherTips2010G56[i];
+  q.teacherTip=teacherTips2010G56[i];
+  q.tags=q.tags.map(tag=>({"质数":"数论","图形":"几何","运算顺序":"数与运算","规律":"数列"}[tag]||tag));
+  q.tagsEditable=true;
+  const e=extensions2010G56Aligned[i];
   KANGAROO_EXTENSIONS[`2010-g5-6-${q.no}`]={text:e[0],answer:e[1],change:"保留原题考查的数学关系，改变条件或数量。",method:e[2],solution:e[3]};
 });
