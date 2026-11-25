@@ -64,7 +64,82 @@ const TEACHING_2009_G56 = {
   29: [["鞋码左右脚只差1或2码。", "从36到45构造覆盖所需尺码的最少人数组合。"], "连续尺码链的长度给出人数下界，再验证可行组合。"],
   30: [["把共边和共顶点都视为相邻。", "列出阴影格邻格已经使用的颜色。"], "四种颜色中只剩未在邻格出现的一种。"]
 };
+const methods2009G56 = [
+  ["看个位并逐项化简五个候选数。", "用偶数与奇数的乘法、加法封闭性分类。"],
+  ["在图上直接定位后检查集合包含关系。", "把圆、三角形、正方形视作集合，对照交集和补集。"],
+  ["从第一个整数列到最后一个整数。", "用闭区间端点计数公式计算并检查边界。"],
+  ["找最长回文子序列，再用原长度减保留长度。", "从两端匹配相同数字，动态比较可保留的对称长度。"],
+  ["先用苹果条件锁定红盒，再安排巧克力。", "逐个假设巧克力在白盒或红盒并排除冲突。"],
+  ["用等腰直角关系求正方形对角线角，再算三角形角。", "沿两条相交直线先找邻补角，再用内角和。"],
+  ["把河宽表示为桥长的一半。", "设桥长为 L，列 120=L−L/4−L/4。"],
+  ["按三种正方形边长分类累计粗线段。", "将每一段都换成最小正方形边长的倍数后求和。"],
+  ["设猫、狗数量分别为 c、d，直接列 4c=2d。", "比较每只猫贡献 4 个爪、每只狗贡献 1 个鼻子。"],
+  ["分别计算每个数字需要的小棒，再选最大的两位组合。", "证明每一位至多使用 7 根，且 88 可同时达到上界。"],
+  ["将 n+2 与 78 的因数一一对应。", "先数 78 的因数，再按 n 为正数排除不可能值。"],
+  ["沿对角线分割成两个直角三角形求面积。", "以两条直角边长作底和高，分别计算后相加。"],
+  ["列出每周男女加入人数并追踪人数差。", "设经过 w 周人数相等，解 39+6w=23+8w。"],
+  ["从两矩形面积扣除重叠部分。", "把大矩形拆成重叠区、未阴影区和目标阴影区。"],
+  ["利用总和 36 推出每组都要凑成 18。", "枚举三张互异卡片的 18 组合，找出必属 B 的数。"],
+  ["令共同周长为 P，分别求等边三角形和长方形边长。", "先由正方形边长得到 P，再用长方形周长公式解短边。"],
+  ["求三个棱长的最大公因数作为最大小立方体边长。", "分别计算每条棱可切成几段，再相乘计数。"],
+  ["按完整星期累计，再处理最后不足一周的天数。", "列出每日阅读量的周期表，找首次达到目标的日期。"],
+  ["用四个名次总和为 10 的条件列方程。", "依已知名次和先确定剩余名次集合，再用次序条件筛选。"],
+  ["分解 2009 并列出不计长宽顺序的因数配对。", "计算正因数个数后按配对对称性求长方形数。"],
+  ["把 8 写成 2³，与 5 的幂约去成 10 的幂。", "先消去成对的 2 和 5，再按十进制位数计数。"],
+  ["逐项代入 n=1 至 10 检查四句真假。", "排除真句数不等于两句的选项。"],
+  ["写出每个相邻面的顶点和方程。", "利用所有顶点和及每个顶点出现次数反求总和。"],
+  ["分开统计楼层标记、房号十位和个位中的数字 2。", "按每层房号 01–35 列出出现位置，再乘楼层数。"],
+  ["先求角落小正方形边长和面积，再求四个三角形面积。", "用整体面积减去所有未阴影区域。"],
+  ["由行和列的总和列关于 a、b、c 的方程组。", "先求变量差，再代回求 a+b−c。"],
+  ["固定一个骨牌端点 k，数与其它点数配对及双 k。", "统计每种点数在所有骨牌端面上的出现次数后乘总和。"],
+  ["把每行的和、差反解成上一行两个数。", "从底行逐层使用 (s+d)/2 和 (s−d)/2 逆推。"],
+  ["把需覆盖的鞋码区间看成步长至多为 2 的链。", "先由区间长度求人数下界，再构造可行鞋码配对。"],
+  ["圈出阴影格所有共边或共顶点的邻格。", "用邻格已用颜色集合的补集确定颜色。"]
+];
+
+const extensions2009G56 = [
+  ["Which is odd: 340, 125+7, 18×5, 100−8, or 77?","125+7","先把加减乘法算出，再看个位。","结果为 340、132、90、92、77；只有 77 是奇数。"],
+  ["A star lies inside the square and outside both the circle and triangle. Which of the three shapes contains it?","The square only.","分别核对星点在每个边界内还是外。","它满足正方形内部条件，同时不在圆和三角形中。"],
+  ["How many integers lie strictly between 4.5 and 15.2?","11","找第一个和最后一个符合条件的整数。","整数为 5 到 15，共 15−5+1=11 个。"],
+  ["What is the fewest digits to erase from 1234321 to make a palindrome?","0","检查数字序列是否已经左右对称。","1234321 本身是回文数，不必删除数字。"],
+  ["A blue box has the apple, the chocolate is in either the red or green box, and the white box is empty. Where is the chocolate?","The red or green box cannot be distinguished.","逐条列出已知位置，检查是否能唯一确定剩余物品。","苹果在蓝盒、白盒空着，巧克力只能在红盒或绿盒；条件不足以区分两者。"],
+  ["In a square, a diagonal makes a 45° angle with a side. What is the angle between the two diagonals?","90°","利用正方形对角线互相垂直。","两条对角线相交成直角，因此为 90°。"],
+  ["A river is 150 m wide. Each bank covers one fifth of a bridge. How long is the bridge?","250 m","河面部分占桥长的 1−1/5−1/5。","150 m 占桥长的 3/5，桥长为 150×5/3=250 m。"],
+  ["If the smallest square in the pictured pattern has side 15 cm and the bold line is 21 smallest sides long, find the bold line length.","315 cm","先求长度包含多少个最小边长，再乘 15。","21×15=315 cm。"],
+  ["There are 12 cats and dogs. Cat paws are twice dog noses. How many cats are there?","4 cats","设猫数 c、狗数 d，并使用总数和爪鼻关系。","4c=2d 得 d=2c；c+d=12，所以 3c=12，猫有 4 只。"],
+  ["Using matchsticks, what is the greatest total number of sticks for a two-digit number with different digits?","13 sticks","数字 8 和 9 分别需要 7 根与 6 根。","取 8 和 9，因数字须不同，最多为 7+6=13 根。"],
+  ["How many positive integers n have n+3 as a divisor of 60?","9","列出 60 的因数并保留至少为 4 的因数。","因数 4、5、6、10、12、15、20、30、60 共 9 个。"],
+  ["A quadrilateral is made from two right triangles with leg pairs 6,8 and 5,12. What is its area?","54 square units","分别计算两个直角三角形面积后相加。","(6×8)/2+(5×12)/2=24+30=54。"],
+  ["A group starts with 26 boys and 18 girls. Each week 2 boys and 4 girls join. After how many weeks are the numbers equal, and how many people are there?","4 weeks; 68 people","设周数 w，使人数相等后求总人数。","26+2w=18+4w，w=4；此时两组各 34 人，共 68 人。"],
+  ["A 12×10 rectangle has four non-overlapping corner squares of side 2 and four right triangles of legs 3 and 4. What area remains shaded?","80 square units","从总面积扣除角落正方形和三角形面积。","120−4×4−4×(3×4÷2)=120−16−24=80。"],
+  ["How many three-number subsets of {1,2,3,4,5,6} have sum 10?","3 subsets","按最小数分类列出三数和为 10 的组合。","组合为 {1,3,6}、{1,4,5}、{2,3,5}，共 3 组。"],
+  ["A rectangle has perimeter 48 cm and length 15 cm. What is its width?","9 cm","周长给出长与宽的和。","长宽和为 24 cm，因此宽为 24−15=9 cm。"],
+  ["Cut a 30×42×54 cm block into the largest identical cubes. How many cubes are needed?","315 cubes","最大立方体棱长是三条棱长的最大公因数。","gcd(30,42,54)=6；数量为 5×7×9=315。"],
+  ["A student reads 30 pages every Sunday and 5 pages on each other day. How many days to finish 320 pages, starting on Sunday?","39 days","先累计五个完整星期，再逐日加到达到 320。","五周读 300 页用 35 天；再读周一至周四共 20 页，用 4 天，合计 39 天。"],
+  ["Five runners have distinct places 1–5. Their places sum to 15. If the four non-Bart runners total 12, what place is Bart?","3rd place","用名次总和减去其余四人的和。","Bart 的名次为 15−12=3。"],
+  ["How many rectangles with integer side lengths have area 2025? Rotations count as the same rectangle.","8 rectangles","将 2025 分解质因数并计算因数配对。","2025=3⁴×5² 有 15 个正因数；配对后共有 (15+1)/2=8 种。"],
+  ["How many digits are in 8¹²×5³⁵?","36 digits","配出 2 和 5 形成 10 的幂。","8¹²=2³⁶，所以乘积为 2×10³⁵，即 2 后有 35 个零，共 36 位。"],
+  ["For which n from 1 to 10 are exactly two of these true: n is even, n<6, n is a multiple of 3?","n=2, 3, 4, 6","逐个检查三条陈述的真值。","n=2、3、4、6 时恰好两条为真；其余数不是一真两假就是三真。"],
+  ["A cube has vertices numbered 1 through 8, each used once. What is the sum of all vertex numbers?","36","直接求 1 到 8 的总和。","1+2+…+8=8×9÷2=36。"],
+  ["A building has 4 floors and each floor has rooms numbered 01 through 25. How many times does the digit 2 appear in all room labels, including the floor number?","37 times","分别统计房号中十位和个位的 2，再加楼层标记。","每层房号中 2 出现 9 次；四层共 36 次，另有一次楼层号 2，共 37 次。"],
+  ["A 12×10 rectangle is partitioned into four 2×2 squares, four right triangles of legs 3 and 4, and one shaded region. Find the shaded area.","80 square units","计算整块面积后减去已知分块。","120−4×4−4×6=80。"],
+  ["If a+b=9 and a−c=2, what is a+b−c?","11","把目标式拆成 (a+b)+(−c)，或由 a−c 条件直接替换。","a+b−c=(a+b)+(a−c)=9+2=11。"],
+  ["In a double-six domino set, how many dots appear on all ends marked 6?","48 dots","数出数字 6 在骨牌端点上出现的次数。","6 与 0–5 的六块骨牌各出现一次，双六出现两次，共 8 次；8×6=48。"],
+  ["The last row of a number pyramid gives sum 30 and difference 10 for the row above. What are the two numbers in that row?","20 and 10","由和 s 与差 d 反解两个数。","(30+10)/2=20，(30−10)/2=10。"],
+  ["A person needs shoes whose left and right sizes differ by at most 2. The needed sizes span 40 through 50. What is the minimum number of people if each pair covers two sizes?","5 people","每人最多跨 2 个尺码，区间长度为 10。","至少需要 10÷2=5 人；依次配 (40,42)、(42,44)、…、(48,50) 可达到。"],
+  ["A shaded grid square touches squares colored B, C, and D by a side or a corner. Which color can it use?","A","列出所有相邻格使用过的颜色。","B、C、D 都已被邻格占用，只能使用 A。"]
+];
+
 KANGAROO_DATA["2009-g5-6"].forEach(q => {
-  q.methods = TEACHING_2009_G56[q.no];
-  q.tip = "引导学生先说出条件、再说明为什么其他选项或情况不成立。";
+  const teacherTip = TEACHING_2009_G56[q.no][1];
+  q.methods = methods2009G56[q.no - 1];
+  q.tip = teacherTip;
+  q.teacherTip = teacherTip;
+  q.tags = q.tags.map(tag => tag === "图形" ? "几何" : tag);
+  q.tagsEditable = true;
+  const extension = extensions2009G56[q.no - 1];
+  KANGAROO_EXTENSIONS[`2009-g5-6-${q.no}`] = {
+    text: extension[0], answer: extension[1], method: extension[2],
+    solution: extension[3], change: "保留原题的推理结构，调整数字、图形条件或情境。"
+  };
 });
