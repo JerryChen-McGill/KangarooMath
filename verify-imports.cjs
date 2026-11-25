@@ -12,7 +12,8 @@ const {papers,extensions} = JSON.parse(vm.runInNewContext(scripts.map(f=>fs.read
 const expected = {
   '2000-g5-6': {key:'CADEDEDBEEBEDBCEDEDD DDBBAADEDA'.replace(/ /g,''), figures:[6,8,9,10,13,15,18,22,24,26,29]},
   '2001-g5-6': {key:'BDCBECDECA' + 'DACCBDCDEB' + 'ABACEDACCD', figures:[2,3,8,9,10,14,19,22,23,24,25,27,29]},
-  '2003-g5-6': {key:'CAACBAEDACCBDCBDBBCACDDBDEADCB', figures:[5,7,8,10,11,12,13,15,16,22,24,25,27,28]}
+  '2003-g5-6': {key:'CAACBAEDACCBDCBDBBCACDDBDEADCB', figures:[5,7,8,10,11,12,13,15,16,22,24,25,27,28]},
+  '2019-g5-6': {key:'BCCEEDDCBA' + 'CCCBACBCAD' + 'CEDCBBDADC', figures:[1,2,3,5,6,7,10,11,13,14,15,17,18,20,21,22,24,25,27,28]}
 };
 const ids = process.argv[2] ? [process.argv[2]] : Object.keys(expected).filter(id=>papers[id]);
 const oldTags = new Set([...papers['1999'],...papers['2002']].flatMap(q=>q.tags));
