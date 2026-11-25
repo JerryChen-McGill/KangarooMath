@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 360" role="img" aria-label="Five by five grid with ten labelled and unlabelled coins">
+<rect width="360" height="360" fill="#fff"/>
+<g stroke="#7d8790" stroke-width="2" fill="none">
+<path d="M30 30H330M30 90H330M30 150H330M30 210H330M30 270H330M30 330H330M30 30V330M90 30V330M150 30V330M210 30V330M270 30V330M330 30V330"/>
+</g>
+<g fill="#f8e7ad" stroke="#bd9738" stroke-width="2">
+<circle cx="60" cy="60" r="21"/><circle cx="300" cy="60" r="21"/><circle cx="120" cy="120" r="21"/><circle cx="240" cy="120" r="21"/><circle cx="180" cy="180" r="21"/><circle cx="240" cy="180" r="21"/><circle cx="60" cy="240" r="21"/><circle cx="60" cy="300" r="21"/><circle cx="180" cy="300" r="21"/><circle cx="300" cy="300" r="21"/>
+</g>
+<g font-family="Arial,sans-serif" font-size="23" font-weight="700" text-anchor="middle" dominant-baseline="central" fill="#26323a">
+<text x="60" y="60">A</text><text x="180" y="180">D</text><text x="60" y="240">B</text><text x="60" y="300">C</text><text x="180" y="300">E</text>
+</g>
+</svg>
