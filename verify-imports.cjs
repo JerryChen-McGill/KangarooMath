@@ -16,7 +16,8 @@ const expected = {
   '2019-g5-6': {key:'BCCEEDDCBA' + 'CCCBACBCAD' + 'CEDCBBDADC', figures:[1,2,3,5,6,7,10,11,13,14,15,17,18,20,21,22,24,25,27,28]},
   '2018-g5-6': {key:'ACBBDEDCCA' + 'EBEAACCEAA' + 'CCDCBDBCCE', figures:[1,2,3,4,5,6,7,9,10,11,12,13,14,16,18,19,20,22,26,27,28,29,30]},
   '2017-g5-6': {key:'BCEDBAECBD' + 'DCCCDEEDBC' + 'ADDCCCDDEC', figures:[1,3,5,6,8,10,11,12,14,15,17,18,19,21,22,23,25,28,29]},
-  '2016-g5-6': {key:'CEACEBDCCB' + 'ACCDBEADAC' + 'DBDBBDDECE', figures:[1,3,4,5,6,8,9,10,11,13,16,20,21,23,25,26,27,28]}
+  '2016-g5-6': {key:'CEACEBDCCB' + 'ACCDBEADAC' + 'DBDBBDDECE', figures:[1,3,4,5,6,8,9,10,11,13,16,20,21,23,25,26,27,28]},
+  '2015-g5-6': {key:'BCAABEDAAD' + 'ECCCCBCEBE' + 'CCDCBCBEED', figures:[1,2,3,5,8,9,10,12,13,17,19,26,28,30]}
 };
 const ids = process.argv[2] ? [process.argv[2]] : Object.keys(expected).filter(id=>papers[id]);
 const oldTags = new Set([...papers['1999'],...papers['2002']].flatMap(q=>q.tags));
