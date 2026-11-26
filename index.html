@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Math Kangaroo 备课站 · Grade 3–4 / Grade 5–6 历年试卷</title>
+<title>数学竞赛备课站 · Kangaroo / AMC 8 历年试卷</title>
 <script src="site_data.js"></script>
 <script src="diagrams.js"></script>
 <script src="hints.js"></script>
@@ -60,6 +60,7 @@
 <script src="paper-2022-g3-4.js"></script>
 <script src="paper-2024-g5-6.js"></script>
 <script src="paper-2025-g5-6.js"></script>
+<script src="paper-2026-amc8.js"></script>
 <style>
 :root {
   --bg: #f8fafc;
@@ -242,6 +243,14 @@ button.disclosure[aria-expanded="true"] { background: #eff6ff; border-color: #bf
 .disclosure svg { width: 16px; height: 16px; flex-shrink: 0; transition: transform 180ms ease; }
 .disclosure[aria-expanded="true"] svg { transform: rotate(90deg); }
 .section { animation: panel-in 180ms ease-out; }
+.option .opt-text { min-width: 0; }
+.option img { max-width: 100%; max-height: 180px; }
+.original-question { margin: 0 0 16px; }
+.original-question img { display: block; width: 100%; height: auto; }
+.original-question a { display: block; color: var(--muted); font-size: 12px; margin-top: 4px; }
+.q-actions button:disabled { background: #f1f5f9; color: #64748b; border-color: #cbd5e1; opacity: .65; cursor: not-allowed; }
+.paper-note, .question-source { color: var(--muted); font-size: 12px; line-height: 1.6; }
+.paper-note { margin: 0 0 16px; padding: 12px 16px; background: #eff6ff; border-radius: 10px; }
 @keyframes panel-in { from { opacity: 0; transform: translateY(-6px); } to { opacity: 1; transform: translateY(0); } }
 @media (prefers-reduced-motion: reduce) { .section { animation: none; } .disclosure svg { transition: none; } }
 </style>
@@ -250,8 +259,8 @@ button.disclosure[aria-expanded="true"] { background: #eff6ff; border-color: #bf
 <header>
   <h1><button type="button" id="brand" title="清除全部筛选，回到所有题目"><span aria-hidden="true">🦘</span><span class="brand-text">Math Kangaroo 备课站</span></button></h1>
   <div class="controls" id="toolbar" role="group" aria-label="题目筛选与功能">
-    <select id="gradeSel" data-group="paper" data-priority="0" aria-label="年级">
-      <option value="all">全部年级</option>
+    <select id="gradeSel" data-group="paper" data-priority="0" aria-label="竞赛与年级">
+      <option value="all">全部竞赛 / 年级</option>
     </select>
     <select id="yearSel" data-group="paper" data-priority="1" aria-label="年份" disabled>
       <option value="all">全部年份</option>
@@ -289,7 +298,7 @@ button.disclosure[aria-expanded="true"] { background: #eff6ff; border-color: #bf
 </dialog>
 
 <footer>
-  Generated for lesson prep · Math Kangaroo · Grade 3–4 / Grade 5–6
+  Generated for lesson prep · Kangaroo Grade 3-4 / Grade 5-6 · AMC 8
 </footer>
 
 <script>
@@ -310,7 +319,8 @@ function normalizeQuestionTags(tags) {
 const years = Object.keys(KANGAROO_DATA).sort();
 // Paper IDs retain legacy keys so existing saved hints still resolve.
 const paperYear = id => id.split('-')[0];
-const paperLabel = id => paperYear(id) + ' 年 · Grade ' + KANGAROO_DATA[id][0].grade;
+const gradeLabel = grade => grade === 'amc8' ? 'AMC 8' : 'Kangaroo Grade ' + grade;
+const paperLabel = id => paperYear(id) + ' 年 · ' + gradeLabel(KANGAROO_DATA[id][0].grade) + (KANGAROO_DATA[id][0].variant ? ' (' + KANGAROO_DATA[id][0].variant + ')' : '');
 years.forEach(y => KANGAROO_DATA[y].forEach(q => {
   const key = y + '-' + q.no;
   q.tags = normalizeQuestionTags(Object.prototype.hasOwnProperty.call(savedQuestionTags, key) ? savedQuestionTags[key] : q.tags);
@@ -346,7 +356,7 @@ const yearSel = document.getElementById('yearSel');
 const gradeSel = document.getElementById('gradeSel');
 const paperGrade = id => KANGAROO_DATA[id][0].grade;
 const grades = [...new Set(years.map(paperGrade))].sort((a, b) => a.localeCompare(b, undefined, {numeric: true}));
-grades.forEach(grade => gradeSel.add(new Option('Grade ' + grade.replace('-', '–'), grade)));
+grades.forEach(grade => gradeSel.add(new Option(gradeLabel(grade), grade)));
 function selectedPapers() {
   return state.year === 'all' ? years.filter(id => state.grade === 'all' || paperGrade(id) === state.grade) : [state.year];
 }
@@ -354,7 +364,14 @@ function syncPaperSelectors() {
   gradeSel.value = state.grade;
   yearSel.replaceChildren(new Option('全部年份', 'all'));
   if (state.grade !== 'all') {
-    years.filter(id => paperGrade(id) === state.grade).forEach(id => yearSel.add(new Option(paperYear(id) + ' 年', id)));
+    const available = years.filter(id => paperGrade(id) === state.grade);
+    if (state.grade === 'amc8') available.reverse();
+    available.forEach(id => yearSel.add(new Option(paperYear(id) + ' 年' + (KANGAROO_DATA[id][0].variant ? ' · ' + KANGAROO_DATA[id][0].variant : ''), id)));
+    if (state.grade === 'amc8') {
+      const gap = new Option('2021 年（未举办）', '2021-amc8');
+      gap.disabled = true;
+      yearSel.insertBefore(gap, [...yearSel.options].find(o => o.value === '2020-amc8') || null);
+    }
   }
   yearSel.disabled = state.grade === 'all';
   yearSel.value = state.year;
@@ -530,14 +547,14 @@ function getQuestions() {
   }
   if (state.search.trim()) {
     const term = state.search.toLowerCase();
-    qs = qs.filter(q => q.text.toLowerCase().includes(term) || String(q.no).includes(term) || (q.tags || []).some(t => t.toLowerCase().includes(term)));
+    qs = qs.filter(q => [q.text, q.searchText, q.title].some(t => (t || '').toLowerCase().includes(term)) || String(q.no).includes(term) || (q.tags || []).some(t => t.toLowerCase().includes(term)));
   }
   return qs;
 }
 
 function renderAnswers() {
   const ys = selectedPapers();
-  const selectionLabel = state.year !== 'all' ? paperLabel(state.year) : state.grade === 'all' ? '全部试卷' : 'Grade ' + state.grade + ' · 全部年份';
+  const selectionLabel = state.year !== 'all' ? paperLabel(state.year) : state.grade === 'all' ? '全部试卷' : gradeLabel(state.grade) + ' · 全部年份';
   let html = '<div class="view-ans"><h2>全卷答案</h2><p>选中试卷：' + selectionLabel + '</p>';
   ys.forEach(y => {
     html += '<h3>' + paperLabel(y) + '</h3><div class="ans-grid">';
@@ -552,12 +569,25 @@ function renderAnswers() {
 
 function svgFor(year, no) { return DIAGRAMS[year + '-' + no] || null; }
 
+function questionText(text, q) {
+  return escapeHtml(text).replace(/\n/g, '<br>');
+}
+
+function solutionSection(q) {
+  const content = q.solutionUrl ? '<a href="' + escapeHtml(q.solutionUrl) + '" target="_blank" rel="noopener noreferrer">查看 ' + paperLabel(q.year) + ' · Q' + q.no + ' 的 AoPS 解答 ↗</a>' : escapeHtml(q.solution).replace(/\n/g, '<br>');
+  return '<div class="section solution"><h4>详细解答</h4><p>' + content + '</p>' + (q.solutionNote ? '<p class="source-issue">' + escapeHtml(q.solutionNote) + '</p>' : '') + '</div>';
+}
+
+function paperNote() {
+  return state.grade === 'amc8' ? '<p class="paper-note">AMC 8 · 每卷 25 题 · 40 分钟 · 每题 1 分 · 不使用计算器。2021 年未举办，下一届移至 2022 年 1 月。</p>' : '';
+}
+
 function optionCard(q, letter, text, revealAnswer = state.mode === 'teaching' && state.showAnswer) {
   const selected = attempts.get(questionKey(q)) === letter;
   const correct = q.answer === letter;
   const reveal = revealAnswer && correct;
   const cls = 'option' + (reveal || (selected && correct) ? ' correct' : selected ? ' incorrect' : '');
-  return '<button type="button" class="' + cls + '" data-letter="' + letter + '" onclick="chooseAnswer(this)"><span class="letter">' + letter + '</span><span class="opt-text">' + escapeHtml(text) + '</span>' + (selected || reveal ? '<span class="check">' + (correct ? ' ✅' : ' ❌') + '</span>' : '') + '</button>';
+  return '<button type="button" class="' + cls + '" data-letter="' + letter + '" onclick="chooseAnswer(this)"><span class="letter">' + letter + '</span><span class="opt-text">' + questionText(text, q) + (q.optionFigures?.[letter] ? '<img src="' + escapeHtml(q.optionFigures[letter]) + '" alt="选项 ' + letter + ' 的图形">' : '') + '</span>' + (selected || reveal ? '<span class="check">' + (correct ? ' ✅' : ' ❌') + '</span>' : '') + '</button>';
 }
 
 function setCardAnswer(card, q, show) {
@@ -581,13 +611,16 @@ function tagClickHandler(e) {
 
 function questionCard(q) {
   let html = '<div class="q-card" data-year="' + q.year + '" data-no="' + q.no + '">';
-  html += '<div class="q-header"><span class="q-title">' + paperYear(q.year) + ' · Grade ' + q.grade + ' · Q' + q.no + '</span><span class="q-badge q-points">' + q.points + ' 分</span>';
+  html += '<div class="q-header"><span class="q-title">' + paperLabel(q.year) + ' · Q' + q.no + '</span><span class="q-badge q-points">' + q.points + ' 分</span>';
   (q.tags || []).forEach(t => {
     html += '<span class="q-badge q-tag" data-tag="' + escapeHtml(t) + '">' + escapeHtml(t) + '</span>';
   });
   html += '</div>';
-  html += '<div class="q-text">' + escapeHtml(q.text).replace(/\n/g, '<br>') + '</div>';
+  if (q.questionImage) html += '<figure class="original-question"><img src="' + escapeHtml(q.questionImage) + '" alt="' + escapeHtml(paperLabel(q.year) + ' Q' + q.no + '：' + q.title + '，原卷题干、公式和选项') + '" loading="lazy"><a href="' + escapeHtml(q.questionImage) + '" target="_blank" rel="noopener noreferrer">放大原题 ↗</a></figure>';
+  else html += '<div class="q-text">' + questionText(q.text, q) + '</div>';
   if (q.figure) html += '<figure class="question-figure"><img src="' + escapeHtml(q.figure) + '" alt="' + escapeHtml(q.figureAlt) + '" loading="lazy"><figcaption>原卷题图</figcaption></figure>';
+  (q.figures || []).forEach((src, i) => { html += '<figure class="question-figure"><img src="' + escapeHtml(src) + '" alt="' + paperYear(q.year) + ' AMC 8 第 ' + q.no + ' 题图 ' + (i + 1) + '" loading="lazy"><figcaption>题目配图</figcaption></figure>'; });
+  if (q.source) html += '<p class="question-source">© ' + paperYear(q.year) + ' MAA AMC · ' + paperYear(q.year) + ' AMC 8, Problem #' + q.no + ' · <a href="' + escapeHtml(q.source) + '" target="_blank" rel="noopener noreferrer">原题来源</a></p>';
   if (q.issue) html += '<p class="source-issue">' + escapeHtml(q.issue) + '</p>';
   html += '<div class="options">';
   ['A','B','C','D','E'].forEach(letter => {
@@ -595,25 +628,28 @@ function questionCard(q) {
   });
   html += '</div>';
   const attempt = attempts.get(questionKey(q));
-  html += '<div class="feedback ' + (attempt ? (attempt === q.answer ? 'correct' : 'incorrect') : '') + '" role="status">' + (!q.answer ? '原卷选项存在矛盾，本题不自动判分。' : attempt ? (attempt === q.answer ? '✅ 正确！' : '❌ 错误，再试一次。') : '请选择一个答案') + '</div>';
-  html += '<div class="q-actions"><button onclick="showHint(this)">' + (state.mode === 'teaching' && teachingHints.has(questionKey(q)) ? '隐藏 Hint' : '显示 Hint') + '</button>';
+  html += '<div class="feedback ' + (attempt ? (attempt === q.answer ? 'correct' : 'incorrect') : '') + '" role="status">' + (!q.answer ? (q.issue || '原卷选项存在矛盾，本题不自动判分。') : attempt ? (attempt === q.answer ? '✅ 正确！' : '❌ 错误，再试一次。') : '请选择一个答案') + '</div>';
+  const unavailable = ' disabled title="暂未提供"';
+  html += '<div class="q-actions"><button onclick="showHint(this)"' + (!q.hints?.length ? unavailable : '') + '>' + (state.mode === 'teaching' && teachingHints.has(questionKey(q)) ? '隐藏 Hint' : '显示 Hint') + '</button>';
   if (state.mode === 'teaching') {
-  html += '<button onclick="toggleOne(this, \'answer\')">' + (state.showAnswer ? '隐藏答案' : '显示答案') + '</button>';
-  if (q.solution) html += '<button onclick="toggleOne(this, \'solution\')">' + (state.showSolution ? '隐藏详解' : '显示详解') + '</button>';
+  html += '<button onclick="toggleOne(this, \'answer\')"' + (!q.answer ? unavailable : '') + '>' + (state.showAnswer ? '隐藏答案' : '显示答案') + '</button>';
+  if (q.solution || q.solutionUrl) html += '<button onclick="toggleOne(this, \'solution\')">' + (state.showSolution ? '隐藏详解' : '显示详解') + '</button>';
   if (q.methods?.length) html += '<button onclick="toggleOne(this, \'methods\')">' + (state.showMethods ? '隐藏思路' : '显示多种思路') + '</button>';
   if (svgFor(q.year, q.no) || q.diagram) html += '<button onclick="toggleOne(this, \'diagram\')">' + (state.showDiagram ? '隐藏图解' : '显示图解') + '</button>';
   if (q.tip) html += '<button onclick="toggleOne(this, \'tip\')">显示备课提示</button>';
+  if (q.grade === 'amc8') html += '<button' + unavailable + '>图解</button><button' + unavailable + '>备课提示</button>';
   }
   html += '<button type="button" class="secondary" onclick="editTags(this)">编辑标签</button>';
   if (KANGAROO_EXTENSIONS[questionKey(q)]) html += '<button type="button" onclick="toggleExtension(this)">延申拓展</button>';
+  else if (q.grade === 'amc8') html += '<button' + unavailable + '>延申拓展</button>';
   html += '</div>';
   const hintIndex = hintProgress.get(questionKey(q));
   if (state.mode === 'teaching' && teachingHints.has(questionKey(q))) html += teachingHintSection(q);
   else if (state.mode === 'practice' && hintIndex !== undefined) html += hintSection(q, hintIndex % hintsFor(q).length);
   if (openExtensions.has(questionKey(q))) html += extensionSection(q);
 
-  if (state.mode === 'teaching' && state.showSolution && q.solution) {
-    html += '<div class="section solution"><h4>详细解答</h4><p>' + escapeHtml(q.solution).replace(/\n/g, '<br>') + '</p></div>';
+  if (state.mode === 'teaching' && state.showSolution && (q.solution || q.solutionUrl)) {
+    html += solutionSection(q);
   }
   if (state.mode === 'teaching' && state.showMethods && q.methods && q.methods.length) {
     html += '<div class="section methods"><h4>其他思路</h4><ul>' + q.methods.map(m => '<li>' + escapeHtml(m).replace(/\n/g, '<br>') + '</li>').join('') + '</ul></div>';
@@ -633,7 +669,7 @@ function questionCard(q) {
 function renderList() {
   const qs = getQuestions();
   if (!qs.length) { app.innerHTML = '<div class="empty">没有匹配的题目</div>'; return; }
-  app.innerHTML = '<div class="q-list">' + qs.map(questionCard).join('') + '</div>';
+  app.innerHTML = paperNote() + '<div class="q-list">' + qs.map(questionCard).join('') + '</div>';
   document.querySelectorAll('.q-tag').forEach(el => el.addEventListener('click', tagClickHandler));
 }
 
@@ -645,7 +681,7 @@ function renderSingle() {
     if (q) { found = {...q, year: y}; break; }
   }
   if (!found) { app.innerHTML = '<div class="empty">未找到该题号，请切换年份或输入有效题号</div>'; return; }
-  app.innerHTML = '<div class="q-list">' + questionCard(found) + '</div>';
+  app.innerHTML = paperNote() + '<div class="q-list">' + questionCard(found) + '</div>';
   document.querySelectorAll('.q-tag').forEach(el => el.addEventListener('click', tagClickHandler));
 }
 
@@ -659,7 +695,7 @@ const buttonLabels = {answer: '答案', solution: '详解', methods: '多种思�
 function styleDisclosure(btn, label, expanded) {
   btn.classList.remove('ok', 'danger'); btn.classList.add('disclosure');
   btn.setAttribute('aria-expanded', String(expanded));
-  btn.title = (expanded ? '隐藏' : '显示') + label;
+  btn.title = btn.disabled ? '暂未提供' : (expanded ? '隐藏' : '显示') + label;
   btn.innerHTML = '<svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="m7 4 6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg><span>' + label + '</span>';
 }
 function closePanel(panel, btn) {
@@ -759,7 +795,7 @@ window.toggleOne = function(btn, kind) {
   if (section) { closePanel(section, btn); styleDisclosure(btn, buttonLabels[kind], false); return; }
   let insertHtml = '';
   if (kind === 'solution') {
-    insertHtml = '<div class="section solution"><h4>详细解答</h4><p>' + escapeHtml(mapped.solution).replace(/\n/g,'<br>') + '</p></div>';
+    insertHtml = solutionSection(mapped);
   } else if (kind === 'methods') {
     insertHtml = '<div class="section methods"><h4>其他思路</h4><ul>' + mapped.methods.map(m => '<li>' + escapeHtml(m).replace(/\n/g,'<br>') + '</li>').join('') + '</ul></div>';
   } else if (kind === 'tip') {
@@ -901,6 +937,7 @@ function hintSection(q, i) {
 }
 window.showHint = function(btn) {
   const q = cardQuestion(btn);
+  if (!q.hints?.length) return;
   if (state.mode === 'teaching') {
     const card = btn.closest('.q-card');
     if (teachingHints.has(questionKey(q))) {
